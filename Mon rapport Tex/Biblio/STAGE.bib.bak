@@ -1,0 +1,39 @@
+% Encoding: UTF-8
+
+@Online{LUSAC,
+  author     = {{LUSAC}},
+  editor     = {LUSAC},
+  title      = {Laboratoire Universitaire des Sciences Appliqu\'{e}es de Cherbourg},
+  year       = {2023},
+  date       = {2023/07/08},
+  url        = {https://normandie-univ.hal.science/LUSAC},
+  titleaddon = {{LUSAC}},
+  urldate    = {2023-07-09},
+  file       = {index - Laboratoire Universitaire des Sciences Appliqu�es de Cherbourg:/home/john/Zotero/storage/86QJCCI3/LUSAC.html:text/html},
+  langid     = {french},
+}
+
+@Online{CNAM,
+  author     = {{Cnam}},
+  editor     = {CNAM},
+  title      = {Formations et recherches dans les sciences techniques de la mer {\textbar} Intechmer {\textbar} Cnam},
+  year       = {2023},
+  date       = {2023-07-10},
+  url        = {https://www.intechmer.cnam.fr/intechmer},
+  titleaddon = {Intechmer},
+  urldate    = {2023-07-09},
+  file       = {Snapshot:/home/john/Zotero/storage/QTRAUSAG/www.intechmer.cnam.fr.html:text/html},
+  langid     = {french},
+}
+
+@Online{bellayersimulation,
+  author   = {Bellayer, Tino},
+  title    = {Simulation climatologique d{\'e}cennale de la circulation oc{\'e}anique en mer du Labrador {\`a} l’aide du mod{\`e}le CROCO},
+  year     = {2023},
+  date     = {2023-03-30},
+  url      = {https://tino-bellayer-etu.pedaweb.univ-amu.fr/extranet/BELLAYER_rapportOPB205.pdf},
+  language = {French},
+  urldate  = {2023-03-30},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
