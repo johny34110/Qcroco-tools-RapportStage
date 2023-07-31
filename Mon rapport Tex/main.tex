@@ -1,5 +1,5 @@
 \documentclass[a4paper, 12pt]{article}
-\usepackage[a4paper,left=1cm,right=1cm,top=0.5cm,bottom=3cm,includefoot]{geometry}
+\usepackage[a4paper,left=2.0cm,right=1.5cm,top=2.0cm,bottom=3cm,includefoot]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
@@ -16,11 +16,12 @@
 \usepackage{natbib}
 \usepackage{url}
 \usepackage[french]{babel}
+\usepackage{setspace}
 
 %header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhead{} 
+\fancyhead{}
 \fancyfoot{}
 \fancyfoot[R]{\thepage} % This line adds page numbers
 
@@ -31,35 +32,45 @@
 \begin{document}
 	\begin{titlepage}
 		\newgeometry{left=0.5cm,right=0.5cm,top=0.5cm,bottom=0cm,includefoot}
-		
+
 		\noindent \includegraphics[width=0.10\textwidth]{./IMAGES/LUSAC.png} \hfill \includegraphics[width=0.20\textwidth]{./IMAGES/INTECH.png}\\
 		[1.5cm]
-		\begin{center}		
-			\textsc{\large Rapport de stage \\[.5cm] Présenté par \\ [.5cm]Jonathan NEJMANN \\ Promotion (2022-2023)\\[.5cm]\textbf{Mise en Œuvre d'une Configuration CROCO:}\\ \textbf{ Une Nouvelle Approche grâce à QGIS}}\\
-			[1.5cm]
+		\begin{center}
+			\textsc{\large Rapport de stage \\[.5cm] Présenté par \\
+                [.5cm]
+                Jonathan NEJMANN \\
+                Promotion (2022-2023)\\
+                [.5cm]
+                \begin{minipage}{15cm}
+                    \begin{spacing}{1.5}
+                        \textbf{\Large Mise en place d'une configuration initiale pour le code de calcul hydro-sédimentaire CROCO: une nouvelle approche grâce à QGIS}\\
+                    \end{spacing}
+                \end{minipage}}
+            \newline
+            \vspace{1.5cm}
 			\includegraphics[width=0.15\textwidth]{./IMAGES/QCROCO.png}\\
-			[0.5cm]
+			\vspace{0.5cm}
 			\textsc{\Large Stage de 2ème année\\[0.5cm] Bachelor océanographe prospecteur}\\
-			[1.5cm]
+			\vspace{1.5cm}
 			\begin{tikzpicture}
 				\node[draw, rounded corners, align=left] {
 					\textbf{Maître de stage:} Emmanuel Poizot \\
 					\textbf{Date du stage:} du  au  ... \\
-					\textbf{Entreprise ou organisme:} LUSAC \\ 145 Chem. de la Crespinière, 50130 Cherbourg-Octeville \\ 02 33 01 42 00 
+					\textbf{Entreprise ou organisme:} LUSAC \\ 145 Chem. de la Crespinière, 50130 Cherbourg-Octeville \\ 02 33 01 42 00
 				};
-			\end{tikzpicture}	
+			\end{tikzpicture}
 		\end{center}
 		\vspace*{\fill}
 		\begin{flushright}
-			Boulevard de Collignon – Tourlaville – 50110 Cherbourg-en-Cotentin\\ \includegraphics[width=0.03\textwidth]{./IMAGES/telephone.png} 
+			Boulevard de Collignon – Tourlaville – 50110 Cherbourg-en-Cotentin\\ \includegraphics[width=0.03\textwidth]{./IMAGES/telephone.png}
 			02 33 88 73 33 www.intechmer.cnam.fr
 		\end{flushright}
 	\end{titlepage}
-	%---------------2EME PAGE------------------------------------------------	
+	%---------------2EME PAGE------------------------------------------------
 	\begin{titlepage}
-		
-		
-		\begin{center} 
+
+
+		\begin{center}
 			\thispagestyle{empty}
 			\noindent \includegraphics[width=0.10\textwidth]{./IMAGES/LUSAC.png} \hfill \includegraphics[width=0.20\textwidth]{./IMAGES/INTECH.png}\\
 			[1.5cm]
@@ -160,14 +171,14 @@
 
 %----------------------------------------------------
 \newpage
-\section{Conclusion}	
+\section{Conclusion}
 
 %----------------------------------------------------
 \newpage
 
 
 
-\section{Bibliographie}	
+\section{Bibliographie}
 \bibliographystyle{plainnat}
 \bibliography{./Biblio/STAGE}
 
