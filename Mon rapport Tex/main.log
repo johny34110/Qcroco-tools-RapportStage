@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  31 JUL 2023 10:51
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  31 JUL 2023 12:19
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -727,35 +727,88 @@ UTF-8 French hyphenation patterns
 fr.tex)))) (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (./main.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/easyreview/easyReview.sty
+Package: easyReview 2014/06/27 Package for Easy Review on LaTeX documents
+Package: easyReview 2013/12/09 Package for Easy Review on LaTeX documents
+
+(/usr/share/texlive/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks37
+\SOUL@lasttoken=\toks38
+\SOUL@cmds=\toks39
+\SOUL@buffer=\toks40
+\SOUL@token=\toks41
+\SOUL@spaceskip=\skip61
+\SOUL@ttwidth=\dimen278
+\SOUL@uldp=\dimen279
+\SOUL@ulht=\dimen280
+)
+(/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2021/06/04 v1.1.5 Todonotes source and documentation.
+Package: todonotes 2021/06/04
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks42
+\XKV@tempa@toks=\toks43
+)
+\XKV@depth=\count321
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count322
+\calc@Bcount=\count323
+\calc@Adimen=\dimen281
+\calc@Bdimen=\dimen282
+\calc@Askip=\skip62
+\calc@Bskip=\skip63
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count324
+\calc@Cskip=\skip64
+)
+\c@@todonotes@numberoftodonotes=\count325
+)) (./main.aux)
 \openout1 = main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-2.
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -793,17 +846,17 @@ LaTeX Font Info:    ... okay on input line 32.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count321
-\scratchdimen=\dimen278
+\scratchcounter=\count326
+\scratchdimen=\dimen283
 \scratchbox=\box65
-\nofMPsegments=\count322
-\nofMParguments=\count323
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count324
-\MPscratchDim=\dimen279
-\MPnumerator=\count325
-\makeMPintoPDFobject=\count326
-\everyMPtoPDFconversion=\toks38
+\nofMPsegments=\count327
+\nofMParguments=\count328
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count329
+\MPscratchDim=\dimen284
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
+\everyMPtoPDFconversion=\toks45
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -813,7 +866,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 32.
+Package hyperref Info: Link coloring OFF on input line 33.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -824,11 +877,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count327
+\c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 32.
-LaTeX Info: Redefining \pageref on input line 32.
-LaTeX Info: Redefining \nameref on input line 32.
+LaTeX Info: Redefining \ref on input line 33.
+LaTeX Info: Redefining \pageref on input line 33.
+LaTeX Info: Redefining \nameref on input line 33.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -844,23 +897,30 @@ File: translations-basic-dictionary-french.trsl (french translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `french'. on input line 32.
-LaTeX Info: Redefining \degres on input line 32.
-LaTeX Info: Redefining \up on input line 32.
+or `french'. on input line 33.
+LaTeX Info: Redefining \degres on input line 33.
+LaTeX Info: Redefining \up on input line 33.
+
+
+Package todonotes Warning: The length marginparwidth is less than 2cm and will 
+most likely cause issues with the appearance of inserted todonotes. The issue c
+an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
+loading the todonotes package. on input line 33.
+
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: luatex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includefoot 
-* h-part:(L,W,R)=(28.45274pt, 554.82877pt, 14.22636pt)
+* h-part:(L,W,R)=(14.22636pt, 569.05515pt, 14.22636pt)
 * v-part:(T,H,B)=(14.22636pt, 830.82048pt, 0.0pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=554.82877pt
+* \textwidth=569.05515pt
 * \textheight=800.82048pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
+* \oddsidemargin=-58.04362pt
+* \evensidemargin=-58.04362pt
 * \topmargin=-95.04362pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -882,34 +942,34 @@ LaTeX Info: Redefining \up on input line 32.
 <./IMAGES/LUSAC.png, id=71, 130.4875pt x 130.4875pt>
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
-Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 36.
-(luatex.def)             Requested size: 55.48625pt x 55.4873pt.
+Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 37.
+(luatex.def)             Requested size: 56.90898pt x 56.90894pt.
 <./IMAGES/INTECH.png, id=72, 273.02pt x 121.45375pt>
 File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
-Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 36.
-(luatex.def)             Requested size: 110.96405pt x 49.36269pt.
+Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 37.
+(luatex.def)             Requested size: 113.80928pt x 50.62845pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--38
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 50.
+(Font)              <12> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 50.
+(Font)              <8> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 50.
+(Font)              <6> on input line 52.
 <./IMAGES/QCROCO.png, id=73, 54.9252pt x 49.6254pt>
 File: ./IMAGES/QCROCO.png Graphic file (type png)
 <use ./IMAGES/QCROCO.png>
-Package luatex.def Info: ./IMAGES/QCROCO.png  used on input line 53.
-(luatex.def)             Requested size: 83.22092pt x 75.1951pt.
+Package luatex.def Info: ./IMAGES/QCROCO.png  used on input line 56.
+(luatex.def)             Requested size: 113.80928pt x 102.83293pt.
 <./IMAGES/telephone.png, id=74, 53.60025pt x 36.73724pt>
 File: ./IMAGES/telephone.png Graphic file (type png)
 <use ./IMAGES/telephone.png>
-Package luatex.def Info: ./IMAGES/telephone.png  used on input line 67.
-(luatex.def)             Requested size: 16.64418pt x 11.40747pt.
+Package luatex.def Info: ./IMAGES/telephone.png  used on input line 71.
+(luatex.def)             Requested size: 17.07095pt x 11.70009pt.
 [1
 
 
@@ -920,16 +980,16 @@ Missing character: There is no – (U+2013) in font ec-lmr12!
 e.png>]
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
-Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 77.
+Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 81.
 (luatex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
-Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 77.
+Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 81.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
 
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 101.
+(Font)              using `T1/lmr/bx/n' instead on input line 105.
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
@@ -952,11 +1012,11 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
 ] (./Introduction/introduction.tex
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
-Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 29.
+Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 20.
 (luatex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
-Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 29.
+Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 20.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
@@ -966,45 +1026,41 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 Missing character: There is no ’ (U+2019) in font ec-lmr12!
 Missing character: There is no ’ (U+2019) in font ec-lmr12!
 Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
 ])
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
-Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 151.
+Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 155.
 (luatex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
-Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 151.
+Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 155.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
  [2
 Missing character: There is no ’ (U+2019) in font ec-lmr12!
 ] (./chapitre/prsentreprise.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
 <./IMAGES/LUSACB.png, id=141, 807.015pt x 404.51125pt>
 File: ./IMAGES/LUSACB.png Graphic file (type png)
 <use ./IMAGES/LUSACB.png>
-Package luatex.def Info: ./IMAGES/LUSACB.png  used on input line 8.
+Package luatex.def Info: ./IMAGES/LUSACB.png  used on input line 11.
 (luatex.def)             Requested size: 497.92325pt x 249.5846pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
-Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 36.
+Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 25.
 (luatex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
-Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 36.
+Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 25.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
-[3
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-<./IMAGES/LUSACB.png>]
+[3<./IMAGES/LUSACB.png>]
 <./IMAGES/INtechmer.jpg, id=154, 231.264pt x 154.176pt>
 File: ./IMAGES/INtechmer.jpg Graphic file (type jpg)
 <use ./IMAGES/INtechmer.jpg>
@@ -1018,35 +1074,38 @@ File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
 Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 59.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
- [4]
-<./IMAGES/histostage.png, id=163, 434.3427pt x 652.5981pt>
+ [4
+Missing character: There is no ’ (U+2019) in font ec-lmr12!
+Missing character: There is no ’ (U+2019) in font ec-lmr12!
+]
+<./IMAGES/histostage.png, id=166, 434.3427pt x 652.5981pt>
 File: ./IMAGES/histostage.png Graphic file (type png)
 <use ./IMAGES/histostage.png>
-Package luatex.def Info: ./IMAGES/histostage.png  used on input line 74.
+Package luatex.def Info: ./IMAGES/histostage.png  used on input line 72.
 (luatex.def)             Requested size: 447.79552pt x 672.78308pt.
 )
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
-Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 155.
+Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 159.
 (luatex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
-Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 155.
+Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 159.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
  [5<./IMAGES/INtechmer.jpg>]
 Overfull \vbox (23.59999pt too high) has occurred while \output is active []
 
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
-Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 155.
+Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 159.
 (luatex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
-Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 155.
+Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 159.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
 
 [6<./IMAGES/histostage.png>] (./chapitre/Problem.tex
-<./IMAGES/croco.png, id=181, 932.73468pt x 246.1697pt>
+<./IMAGES/croco.png, id=184, 932.73468pt x 246.1697pt>
 File: ./IMAGES/croco.png Graphic file (type png)
 <use ./IMAGES/croco.png>
 Package luatex.def Info: ./IMAGES/croco.png  used on input line 14.
@@ -1054,23 +1113,14 @@ Package luatex.def Info: ./IMAGES/croco.png  used on input line 14.
 )
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
-Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 162.
+Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 166.
 (luatex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
-Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 162.
+Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 166.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
  [7<./IMAGES/croco.png>]
 (./chapitre/Implementation.tex)
-File: ./IMAGES/LUSAC.png Graphic file (type png)
-<use ./IMAGES/LUSAC.png>
-Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 167.
-(luatex.def)             Requested size: 49.79535pt x 49.79482pt.
-File: ./IMAGES/INTECH.png Graphic file (type png)
-<use ./IMAGES/INTECH.png>
-Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 167.
-(luatex.def)             Requested size: 99.58313pt x 44.29965pt.
- [8]
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
 Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 171.
@@ -1079,7 +1129,7 @@ File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
 Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 171.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
- [9]
+ [8]
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
 Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 175.
@@ -1088,7 +1138,7 @@ File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
 Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 175.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
- [10]
+ [9]
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
 Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 179.
@@ -1096,6 +1146,15 @@ Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 179.
 File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
 Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 179.
+(luatex.def)             Requested size: 99.58313pt x 44.29965pt.
+ [10]
+File: ./IMAGES/LUSAC.png Graphic file (type png)
+<use ./IMAGES/LUSAC.png>
+Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 183.
+(luatex.def)             Requested size: 49.79535pt x 49.79482pt.
+File: ./IMAGES/INTECH.png Graphic file (type png)
+<use ./IMAGES/INTECH.png>
+Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 183.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
  [11] (./main.bbl
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
@@ -1106,11 +1165,11 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
-Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 189.
+Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 193.
 (luatex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
-Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 189.
+Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 193.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
  [12
 Missing character: There is no ’ (U+2019) in font ec-lmr12!
@@ -1119,28 +1178,28 @@ Missing character: There is no ’ (U+2019) in font ec-lmr12!
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D909C810201625E70C603DC95DCC86B3;2005.
+(rerunfilecheck)             Checksum: 2137C64B6A44C0241A0B8C6907455AA7;2048.
 )
 
 Here is how much of LuaTeX's memory you used:
- 28685 strings out of 477805
- 100000,953878 words of node,token memory allocated
- 1025 words of node memory still in use:
-   4 hlist, 1 vlist, 1 rule, 32 glue, 3 kern, 1 penalty, 2 glyph, 159 attribute,
- 53 glue_spec, 24 attribute_list, 2 write, 2 pdf_action nodes
-   avail lists: 2:1373,3:245,4:42,5:377,6:48,7:7615,8:85,9:318,10:14,11:680
- 48129 multiletter control sequences out of 65536+600000
- 42 fonts using 2745783 bytes
- 84i,16n,85p,678b,777s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29602 strings out of 477805
+ 100000,1144653 words of node,token memory allocated
+ 1051 words of node memory still in use:
+   4 hlist, 1 vlist, 1 rule, 31 glue, 3 kern, 1 penalty, 3 glyph, 166 attribute,
+ 55 glue_spec, 25 attribute_list, 2 write, 2 pdf_action nodes
+   avail lists: 2:1468,3:254,4:42,5:384,6:48,7:7743,8:85,9:318,10:14,11:688
+ 48972 multiletter control sequences out of 65536+600000
+ 43 fonts using 2828583 bytes
+ 84i,15n,85p,676b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/pub
 lic/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (18 pages, 928422 bytes).
+Output written on main.pdf (18 pages, 930060 bytes).
 
-PDF statistics: 248 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
- 44 named destinations out of 1000 (max. 131072)
+PDF statistics: 251 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 131072)
  144 words of extra memory for PDF output out of 10000 (max. 100000000)
 

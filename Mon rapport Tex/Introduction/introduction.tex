@@ -1,45 +1,33 @@
 
 L'océanographie, branche de la géographie physique, se consacre à l'étude exhaustive des océans et des mers du monde. Ce domaine embrasse une multitude de sujets, allant de l'écosystème marin à l'océanographie physique, en passant par la géologie marine et la physique des océans. L'océanographie permet aux chercheurs de comprendre et de prédire les phénomènes océaniques, jouant ainsi un rôle crucial dans la gestion et la préservation de nos ressources marines, ainsi que dans notre compréhension du climat mondial.
 
-Dans ce vaste domaine, les modèles océanographiques occupent une place prépondérante. Ils sont des outils numériques qui simulent le comportement des océans en utilisant des équations mathématiques pour décrire les processus physiques, permettant ainsi d’étudier, de reproduire et de prédire des phénomènes océaniques variés tels que les courants, la température de surface de la mer, les mouvements sédimentaires et bien d'autres aspects.
+Dans ce vaste domaine, les modèles numériques océanographiques occupent une place prépondérante. Ce sont des outils qui simulent le comportement de processus physiques océaniques décrits par des équations mathématiques. Ils permettent ainsi d’étudier, de reproduire et de prédire des phénomènes océaniques variés tels que les courants, la température de surface de la mer, les mouvements sédimentaires et bien d'autres aspects.
 
+Mon stage s'inscrit dans ce contexte, avec une attention particulière portée sur le modèle océanographique CROCO (Coastal and Regional Ocean COmmunity model). CROCO est un code de calcul de simulation numérique qui intègre les dynamiques côtières et océaniques à grande échelle.
 
-Mon stage s'inscrit dans ce contexte, avec une attention particulière portée sur le modèle océanographique CROCO (Coastal and Regional Ocean COmmunity model). CROCO est un code de calcul de simulation numérique qui intègre les dynamiques côtières et océaniques à grande échelle, et il est largement utilisé par la communauté océanographique pour étudier et comprendre les phénomènes océaniques.
+CROCO est le résultat d'un travail coopératif, largement utilisé par la communauté océanographique pour étudier et comprendre les phénomènes océaniques. Les travaux sur le code CROCO portent essentiellement sur l'amélioration de ses fondements théoriques et l'intégration de nouveaux processus physiques. Son aspect communautaire n'a pas permis jusqu'ici de fédérer des développements en vue d'en faciliter la mise en \oe{uvre}.
 
+Dans le cadre de la thèse de Mme Morgane Mignot \alert{(ref ou footnote à voir)}, le développement d'un outil logiciel qui vise à faciliter la mise en place d'un modèle numérique basé sur CROCO et l'exploiter des résultats, a débuté: QCrocoFlow. Ce dernier est intégré en tant que plugin dans le logiciel de Système d'Information Géographique (SIG) QGIS \alert{(ref)}. L'objectif de mon stage est de développer les procédures de mise en place des conditions initiales nécessaires au démarrage d'un modèle CROCO.
 
-Mon rôle au cours de ce stage a été spécifiquement lié à la mise en place des conditions nécessaires à l’utilisation du modèle CROCO : le prétraitement des données, une étape qui consiste à créer un ensemble de fichiers nécessaires pour faire fonctionner le modèle.
+Mon travail se place dans la partie \og prétraitements \fg{} de QcrocoFlow et permet l'établissement des fichiers d'entrée nécessaires à la définition des conditions et des paramètres initiaux d'un modèle numérique. Ce sont des caractéristiques fondamentales des modèles numériques qui définissent, entres autres, l'exactitude des résultats de simulations. Mon rôle consiste à générer ces fichiers d'entrée, en veillant à ce qu'ils soient structurés de sorte qu’ils puissent être directement utilisés par le code de calcul CROCO.
 
+Mon projet se concentre sur la création de grilles initiales des domaines simulés. Ces grilles sont des éléments essentiels à tous modèles numériques (et donc à CROCO), car elles décrivent l'espace et les conditions physiques dans lequel le modèle simule les phénomènes océaniques.
 
+\alert{Deux étapes principales sont identifiées pour réaliser le travail qui m’est demandé.
+La première est de comprendre les conditions de mise en place du code de calcul CROCO. Cette tâche réclame une compréhension fine du fonctionnement à CROCO et de la nature des données initiales nécessaires.}
 
-Ces fichiers d'entrée définissent les conditions initiales et les paramètres du modèle et sont donc essentiels à l'exactitude des résultats de simulations. Mon rôle consiste à générer ces fichiers d'entrée, en veillant à ce qu'ils soient structurés de sort qu’ils puissent directement utilisés par le code de calcul CROCO.
+\alert{Ainsi que la capacité à générer et à intégrer les fichiers d'entrée nécessaires pour le faire fonctionner efficacement. Il s'agit d'un processus complexe qui nécessite une attention minutieuse aux détails, ainsi que des compétences en mathématique et en informatique.}
 
-Mon projet se concentre plus spécifiquement sur la création de grilles initiales des domaines simulés. Ces grilles sont des éléments essentiels au code de calcul CROCO, car elles décrivent l'espace et les conditions physiques dans lequel le modèle simule les phénomènes océaniques.
+\alert{La seconde mission de mon stage est le développement d'une interface utilisateur au sein d'une application existante, appelée Qcrocoflow. Qcrocoflow est un outil de visualisation et de gestion des données qui accompagne le modèle CROCO, permettant aux utilisateurs d'interagir plus facilement avec les fichiers sortants du modèle et de comprendre plus clairement les résultats qu'il produit. Mon objectif est de développer une interface qui soit intuitive et conviviale, tout en offrant toutes les fonctionnalités nécessaires pour exploiter pleinement le potentiel du modèle CROCO.}
 
+\alert{Ces deux missions, bien que différentes, sont étroitement liées. En permettant la mise en place du modèle CROCO et en améliorant son interface utilisateur au sein de Qcrocoflow, mon stage contribue à rendre cet outil plus accessible et plus facile à utiliser pour les chercheurs et les professionnels dans le domaine de l'océanographie.}
 
-Deux étapes principales sont identifiées pour réaliser le travail qui m’est demandé. La première est de comprendre les conditions de mise en place du code de calcul CROCO. Cette tâche réclame une compréhension fine du fonctionnement à CROCO et de la nature des données initiales nécessaires.
-
-Ainsi que la capacité à générer et à intégrer les fichiers d'entrée nécessaires pour le faire fonctionner efficacement. Il s'agit d'un processus complexe qui nécessite une attention minutieuse aux détails, ainsi que des compétences en mathématique et en informatique.
-
-
-
-La seconde mission de mon stage est le développement d'une interface utilisateur au sein d'une application existante, appelée Qcrocoflow. Qcrocoflow est un outil de visualisation et de gestion des données qui accompagne le modèle CROCO, permettant aux utilisateurs d'interagir plus facilement avec les fichiers sortants du modèle et de comprendre plus clairement les résultats qu'il produit. Mon objectif est de développer une interface qui soit intuitive et conviviale, tout en offrant toutes les fonctionnalités nécessaires pour exploiter pleinement le potentiel du modèle CROCO.
-
-
-
-Ces deux missions, bien que différentes, sont étroitement liées. En permettant la mise en place du modèle CROCO et en améliorant son interface utilisateur au sein de Qcrocoflow, mon stage contribue à rendre cet outil précieux plus accessible et plus facile à utiliser pour les chercheurs et les professionnels dans le domaine de l'océanographie.
-
-
+\alert{(revoir ces deux parties)}
 
 Pour accomplir mes missions, j'ai suivi une approche méthodique et structurée. Dans un premier temps, j'ai procédé à une recherche approfondie et à la lecture des concepts fondamentaux du modèle CROCO. Cela m'a permis de comprendre le fonctionnement interne du modèle, ainsi que les besoins spécifiques en matière de données d'entrée pour faire fonctionner le modèle de manière efficace.
 
-
-
-Une fois que j'ai eu une compréhension solide du modèle CROCO, j'ai entrepris d'identifier toutes les informations nécessaires à la création des fichiers d'entrée du modèle. Cette étape a nécessité une compréhension détaillée des conditions initiales et des paramètres du modèle. De plus, une expertise approfondie des données océanographiques pertinentes s'est avérée essentielle, particulièrement en ce qui concerne la sélection des modèles de marées.
-
-
+Une fois que j'ai eu une compréhension solide du modèle CROCO, j'ai entrepris d'identifier toutes les informations nécessaires à la création des fichiers d'entrée du modèle. Cette étape a nécessité une compréhension détaillée des conditions initiales et des paramètres du modèle. De plus, une expertise approfondie des données océanographiques pertinentes s'est avérée essentielle, notamment pour la sélection des modèles de marées.
 
 Après avoir recueilli toutes les informations nécessaires, j'ai mis en place la structure des données des fichiers d'entrée. J'ai également dû étudier la création des fichiers netCDF4 en recopiant des fichiers fonctionnels existants pour m'inspirer et reproduire le même processus.
 
-
-
-  Enfin, j'ai abordé l'aspect le plus technique de mon stage, à savoir l'implémentation de ces informations au sein de l'application Qcrocoflow. Là, j'ai dû rechercher la meilleure interface graphique possible pour optimiser l'expérience utilisateur. Mon objectif était de créer une interface intuitive et facile à utiliser, tout en garantissant un accès complet aux fonctionnalités du modèle CROCO. Cela a nécessité une combinaison d'expertise en design d'interface utilisateur et en programmation, pour s'assurer que l'interface soit à la fois esthétiquement agréable et simple d’utilisation.
+Enfin, j'ai abordé l'aspect le plus technique de mon stage, à savoir l'implémentation de ces informations au sein de l'application Qcrocoflow. Là, j'ai dû rechercher la meilleure interface graphique possible pour optimiser l'expérience utilisateur. Mon objectif était de créer une interface intuitive et facile à utiliser, tout en garantissant un accès complet aux fonctionnalités du modèle CROCO. Cela a nécessité une combinaison d'expertise en design d'interface utilisateur et en programmation, pour s'assurer que l'interface soit à la fois esthétiquement agréable et simple d’utilisation.
