@@ -17,6 +17,7 @@
 \usepackage{url}
 \usepackage[french]{babel}
 \usepackage{setspace}
+\usepackage{easyReview}
 
 %header and footer
 \usepackage{fancyhdr}
@@ -31,26 +32,28 @@
 
 \begin{document}
 	\begin{titlepage}
-		\newgeometry{left=1.0cm,right=0.5cm,top=0.5cm,bottom=0cm,includefoot}
+		\newgeometry{left=0.5cm,right=0.5cm,top=0.5cm,bottom=0cm,includefoot}
 
 		\noindent \includegraphics[width=0.10\textwidth]{./IMAGES/LUSAC.png} \hfill \includegraphics[width=0.20\textwidth]{./IMAGES/INTECH.png}\\
 		[1.5cm]
 		\begin{center}
-			\textsc{\large Rapport de stage \\[.5cm] Présenté par \\
+			\textsc{\large Rapport de stage \\[.5cm]
+                Présenté par \\
                 [.5cm]
                 Jonathan NEJMANN \\
                 Promotion (2022-2023)\\
                 [1.0cm]}
-            \begin{minipage}{0.8\textwidth}
+            \begin{minipage}{0.85\textwidth}
                \begin{center}
                   \begin{spacing}{1.5}
                      \textbf{\Large Mise en place d'une configuration initiale pour le code de calcul hydro-sédimentaire CROCO: une nouvelle approche grâce à QGIS}\\
                   \end{spacing}
                \end{center}
             \end{minipage}
+            \vspace{1.0cm}
             \newline
-            \vspace{1.5cm}
-			\includegraphics[width=0.15\textwidth]{./IMAGES/QCROCO.png}\\
+            %\vspace{1.5cm}
+			\includegraphics[width=0.2\textwidth]{./IMAGES/QCROCO.png}\\
 			\vspace{0.5cm}
 			\textsc{\Large Stage de 2ème année\\[0.5cm] Bachelor océanographe prospecteur}\\
 			\vspace{1.5cm}
@@ -58,7 +61,8 @@
 				\node[draw, rounded corners, align=left] {
 					\textbf{Maître de stage:} Emmanuel Poizot \\
 					\textbf{Date du stage:} du  au  ... \\
-					\textbf{Entreprise ou organisme:} LUSAC \\ 145 Chem. de la Crespinière, 50130 Cherbourg-Octeville \\ 02 33 01 42 00
+					\textbf{Entreprise ou organisme:} LUSAC \\ 145 Chem. de la Crespinière, 50130 Cherbourg-Octeville \\
+                    \textbf{Tél:} 02 33 01 42 00
 				};
 			\end{tikzpicture}
 		\end{center}
