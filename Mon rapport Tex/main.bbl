@@ -1,16 +1,9 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{2}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[Bellayer(2023)]{bellayersimulation}
-Tino Bellayer.
-\newblock Simulation climatologique d{\'e}cennale de la circulation
-  oc{\'e}anique en mer du labrador {\`a} l’aide du mod{\`e}le croco, 2023.
-\newblock URL
-  \url{https://tino-bellayer-etu.pedaweb.univ-amu.fr/extranet/BELLAYER_rapportOPB205.pdf}.
 
 \bibitem[{Cnam}(2023)]{CNAM}
 {Cnam}.
@@ -23,15 +16,5 @@ Tino Bellayer.
 \newblock Laboratoire universitaire des sciences appliqu\'{e}es de cherbourg,
   2023.
 \newblock URL \url{https://normandie-univ.hal.science/LUSAC}.
-
-\bibitem[Pianezze et~al.(2018)Pianezze, Barthe, Bielli, Tulet, Jullien, Cambon,
-  Bousquet, Claeys, and Cordier]{pianezze2018new}
-Joris Pianezze, Christelle Barthe, Soline Bielli, Pierre Tulet, Swen Jullien,
-  Gildas Cambon, Olivier Bousquet, Marine Claeys, and Emmanuel Cordier.
-\newblock A new coupled ocean-waves-atmosphere model designed for tropical
-  storm studies: Example of tropical cyclone bejisa (2013--2014) in the
-  south-west indian ocean.
-\newblock \emph{Journal of Advances in Modeling Earth Systems}, 10\penalty0
-  (3):\penalty0 801--825, 2018.
 
 \end{thebibliography}

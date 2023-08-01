@@ -7,47 +7,46 @@ Warning--entry type for "LUSAC" isn't style-file defined
 --line 3 of file ./Biblio/STAGE.bib
 Warning--entry type for "CNAM" isn't style-file defined
 --line 16 of file ./Biblio/STAGE.bib
-Warning--entry type for "bellayersimulation" isn't style-file defined
---line 29 of file ./Biblio/STAGE.bib
-You've used 4 entries,
+Warning--I didn't find a database entry for "Legrand"
+You've used 2 entries,
             2773 wiz_defined-function locations,
-            615 strings with 5779 characters,
-and the built_in function-call counts, 1730 in all, are:
-= -- 142
-> -- 114
-< -- 3
-+ -- 40
-- -- 36
-* -- 131
-:= -- 276
-add.period$ -- 12
-call.type$ -- 4
-change.case$ -- 24
-chr.to.int$ -- 4
-cite$ -- 8
-duplicate$ -- 66
-empty$ -- 138
-format.name$ -- 40
-if$ -- 351
+            605 strings with 5128 characters,
+and the built_in function-call counts, 627 in all, are:
+= -- 52
+> -- 20
+< -- 2
++ -- 8
+- -- 6
+* -- 32
+:= -- 100
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 8
+chr.to.int$ -- 2
+cite$ -- 4
+duplicate$ -- 30
+empty$ -- 65
+format.name$ -- 8
+if$ -- 129
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 28
-num.names$ -- 16
-pop$ -- 58
+missing$ -- 0
+newline$ -- 18
+num.names$ -- 8
+pop$ -- 24
 preamble$ -- 1
-purify$ -- 20
+purify$ -- 6
 quote$ -- 0
-skip$ -- 64
+skip$ -- 29
 stack$ -- 0
-substring$ -- 33
-swap$ -- 4
+substring$ -- 4
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
+type$ -- 22
 warning$ -- 0
-while$ -- 14
+while$ -- 6
 width$ -- 0
-write$ -- 56
+write$ -- 31
 (There were 3 warnings)
