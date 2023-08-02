@@ -1,15 +1,48 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Auclair et~al.(2022)Auclair, Benshila, Bordois, Boutet, Brémond,
+  Caillaud, Cambon, Capet, Debreu, Ducousso, Dufois, Dumas, Ethé, Gula,
+  Hourdin, Illig, Jullien, Corre, Gac, Gentil, Lemarié, Marchesiello, Mazoyer,
+  Morvan, Nguyen, Penven, Person, Pianezze, Pous, Renault, Roblou, Sepulveda,
+  and Theetten]{croco_soft}
+Francis Auclair, Rachid Benshila, Lucie Bordois, Martial Boutet, Maurice
+  Brémond, Matthieu Caillaud, Gildas Cambon, Xavier Capet, Laurent Debreu,
+  Nicolas Ducousso, François Dufois, Franck Dumas, Christian Ethé, Jonathan
+  Gula, Christophe Hourdin, Serena Illig, Swen Jullien, Matthieu~Le Corre,
+  Solène~Le Gac, Sylvie~Le Gentil, Florian Lemarié, Patrick Marchesiello,
+  Camille Mazoyer, Guillaume Morvan, Cyril Nguyen, Pierrick Penven, Renaud
+  Person, Joris Pianezze, Stéphane Pous, Lionel Renault, Laurent Roblou,
+  Andres Sepulveda, and Sebastien Theetten.
+\newblock Coastal and regional ocean community model, 2022.
+
 \bibitem[{Cnam}(2023)]{CNAM}
 {Cnam}.
 \newblock Formations et recherches dans les sciences techniques de la mer
   {\textbar} intechmer {\textbar} cnam, 2023.
 \newblock URL \url{https://www.intechmer.cnam.fr/intechmer}.
+
+\bibitem[IFREMER(2022)]{croco2022}
+IFREMER.
+\newblock Introduction to ocean modelling with croco, 2022.
+\newblock URL
+  \url{https://data-croco.ifremer.fr/DOC/PRES_TRAINING_CROCO_2022_2/BASICS/01_Basics-Monday/PRES01_2022_Introduction_Ocean_Modeling.pdf}.
+\newblock Accessed: 27/07/2023.
+
+\bibitem[Jullien et~al.(2022)Jullien, Caillaud, Benshila, Bordois, Cambon,
+  Dumas, Gentil, Lemarié, Marchesiello, Theetten, Dufois, Corre, Morvan,
+  {Solene Le Gac}, Gula, and Pianezze]{croco_doc}
+Swen Jullien, Matthieu Caillaud, Rachid Benshila, Lucie Bordois, Gildas Cambon,
+  Franck Dumas, Sylvie~Le Gentil, Florian Lemarié, Patrick Marchesiello,
+  Sébastien Theetten, François Dufois, Matthieu~Le Corre, Guillaume Morvan,
+  {Solene Le Gac}, Jonathan Gula, and Joris Pianezze.
+\newblock Croco technical and numerical documentation.
+\newblock 2022.
+\newblock \doi{10.5281/ZENODO.7400758}.
 
 \bibitem[Legrand(2017)]{Legrand}
 T{\'e}rence Legrand.
