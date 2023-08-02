@@ -36,4 +36,15 @@
   urldate  = {2023-03-30},
 }
 
+@Article{pianezze2018new,
+  author    = {Pianezze, Joris and Barthe, Christelle and Bielli, Soline and Tulet, Pierre and Jullien, Swen and Cambon, Gildas and Bousquet, Olivier and Claeys, Marine and Cordier, Emmanuel},
+  title     = {A new coupled ocean-waves-atmosphere model designed for tropical storm studies: Example of tropical cyclone Bejisa (2013--2014) in the South-West Indian Ocean},
+  journal   = {Journal of Advances in Modeling Earth Systems},
+  year      = {2018},
+  volume    = {10},
+  number    = {3},
+  pages     = {801--825},
+  publisher = {Wiley Online Library},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
