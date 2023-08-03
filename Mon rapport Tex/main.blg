@@ -7,51 +7,53 @@ Warning--entry type for "LUSAC" isn't style-file defined
 --line 3 of file ./Biblio/STAGE.bib
 Warning--entry type for "CNAM" isn't style-file defined
 --line 16 of file ./Biblio/STAGE.bib
+Warning--entry type for "bellayersimulation" isn't style-file defined
+--line 29 of file ./Biblio/STAGE.bib
 Warning--entry type for "QGIS" isn't style-file defined
 --line 50 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco2022" isn't style-file defined
 --line 90 of file ./Biblio/STAGE.bib
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
-You've used 7 entries,
+You've used 8 entries,
             2773 wiz_defined-function locations,
-            629 strings with 6745 characters,
-and the built_in function-call counts, 4524 in all, are:
-= -- 332
-> -- 497
-< -- 5
-+ -- 169
-- -- 162
-* -- 405
-:= -- 761
-add.period$ -- 24
-call.type$ -- 7
-change.case$ -- 75
-chr.to.int$ -- 7
-cite$ -- 16
-duplicate$ -- 115
-empty$ -- 223
-format.name$ -- 169
-if$ -- 881
+            633 strings with 6983 characters,
+and the built_in function-call counts, 4821 in all, are:
+= -- 358
+> -- 507
+< -- 6
++ -- 173
+- -- 165
+* -- 420
+:= -- 806
+add.period$ -- 27
+call.type$ -- 8
+change.case$ -- 79
+chr.to.int$ -- 8
+cite$ -- 18
+duplicate$ -- 130
+empty$ -- 255
+format.name$ -- 173
+if$ -- 945
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 2
-newline$ -- 46
-num.names$ -- 28
-pop$ -- 173
+newline$ -- 51
+num.names$ -- 32
+pop$ -- 185
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 71
 quote$ -- 0
-skip$ -- 142
+skip$ -- 156
 stack$ -- 0
-substring$ -- 14
-swap$ -- 5
+substring$ -- 16
+swap$ -- 6
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 77
+type$ -- 88
 warning$ -- 2
-while$ -- 21
+while$ -- 24
 width$ -- 0
-write$ -- 95
-(There were 6 warnings)
+write$ -- 107
+(There were 7 warnings)

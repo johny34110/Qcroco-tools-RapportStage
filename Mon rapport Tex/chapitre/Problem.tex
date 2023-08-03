@@ -32,13 +32,54 @@ La sélection du modèle océanographique employé au cours de mon stage a été
 \end{figure}
 \vspace{1cm}
 
-Le modèle océanographique CROCO (Coastal and Regional Ocean COmmunity model) \ref{fig:croco} est un système de modélisation océanique récent, construit sur la base de ROMS\_AGRIF (Regional Ocean Modeling System - Adaptive Grid Refinement In Fortran) et du noyau non-hydrostatique de SNH (actuellement en test). Il intègre progressivement des algorithmes de MARS3D (pour les sédiments) et de HYCOM (pour les coordonnées verticales) (\cite{croco_soft}).
+Le modèle océanographique CROCO, pour \textit{(Coastal and Regional Ocean COmmunity model)} \ref{fig:croco} est un système de modélisation océanique récent, construit sur la base de ROMS\_AGRIF (Regional Ocean Modeling System - Adaptive Grid Refinement In Fortran) et du noyau non-hydrostatique de SNH (actuellement en test). Il intègre progressivement des algorithmes de MARS3D (pour les sédiments) et de HYCOM (pour les coordonnées verticales) (\cite{croco_soft}).
 
 CROCO est maintenu par plusieurs instituts français travaillant sur l'environnement, notamment l'IRD (Institut de Recherche pour le Développement), l'INRIA (Institut National de Recherche en Informatique et en Automatique), le CNRS (Centre National de la Recherche Scientifique), l'IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer) et le SHOM (Service Hydrographique et Océanographique de la Marine) (\cite{croco_doc}).
 
-L'objectif de CROCO est double : il sert à la fois pour la recherche fondamentale, en aidant à comprendre le fonctionnement de l'océan, et pour la recherche appliquée et l'océanographie opérationnelle (\cite{croco2022}).
+Le travail de calcul du modèle CROCO est basé sur
+la résolution numérique des équations de conservation primitives - c’est-à-dire en coordonnées cartésiennes (x,y,z), héritées de la mécanique des fluides. Les programmes de résolution de ces équations et de simulation sont écrits puis compilés en langage Fortran, tandis que les outils de paramétrisation en amont et de visualisation graphique en aval (croco-tools) sont fournit et écrits en langage MATLAB (\cite{bellayersimulation}).
+
+L'objectif de CROCO est double : il sert à la fois pour la recherche fondamentale, en aidant à comprendre le fonctionnement de l'océan, et pour la recherche appliquée et l'océanographie opérationnelle (\cite{croco2022}).\\
+
+Mon stage se concentre sur l'analyse des fichiers d'entrée du modèle. Il n'est pas impératif pour moi d'acquérir une compréhension approfondie du fonctionnement interne du code CROCO ou de son système de résolution des équations de Navier-Stokes. Mon rôle  est de comprendre et de gérer efficacement la générations des fichiers d'entrée, qui déterminent la zone d'étude et intègrent les facteurs de forçage tels que les marées et les conditions météorologiques. Pour assurer un fonctionnement optimal, le modèle CROCO nécessite une série de fichiers d'entrée spécifiques, qui permettent de paramétrer la simulation de manière à refléter le plus fidèlement possible les conditions océanographiques réelles.
+
+\subsubsection{La Grille d'Entrée du Modèle CROCO}
+
+Dans le contexte de la modélisation océanographique, une grille est une représentation discrète de l'espace sur lequel le modèle fonctionne. Elle est utilisée pour diviser l'océan en une série de points de grille, auxquels sont associées des valeurs de variables telles que la température, la salinité, la vitesse du courant, etc.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/mailles.png}
+	\caption[Grille]{Illustration d'une grille de modélisation océanographique pour la région de la Manche. La grille, avec une résolution spatiale de 500 mètres, démontre la distribution des mailles utilisées pour la simulation. Chaque maille représente un point de données dans le modèle.\textit{Source : Qcrocoflow.}}
+	\label{fig:gridnorm}
+\end{figure}
+\vspace{1cm}
+La grille est généralement définie en trois dimensions : deux dimensions horizontales (souvent en longitude et en latitude, ou en coordonnées cartésiennes x et y dans le cas d'une grille curviligne) et une dimension verticale (profondeur). Chaque point de la grille en 3D est appelé une cellule de grille, ou une maille dans certains contextes.
+
+Il existe différents types de grilles en fonction de la manière dont les points de grille sont disposés. Par exemple, une grille régulière a des points de grille espacés uniformément, tandis qu'une grille irrégulière a des points de grille qui peuvent être plus rapprochés dans certaines régions (par exemple, près des côtes) et plus espacés dans d'autres.
+
+Dans le cas du modèle CROCO, une combinaison de grilles est utilisée. Pour les dimensions longitudinales et latitudinales, une grille régulière est employée, avec des lignes de grille droites et uniformément espacées. Cela facilite la représentation précise des caractéristiques océanographiques à grande échelle.
+
+En revanche, pour la dimension de la profondeur, une grille curviligne est utilisée. Une grille curviligne est une grille dont les lignes de grille peuvent être courbes, permettant une plus grande flexibilité dans la représentation des caractéristiques océanographiques verticales. Cela est particulièrement utile pour représenter avec précision les variations de profondeur, en particulier dans les régions côtières où la bathymétrie peut être complexe.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/Gridexpl.png}
+	\caption[Grid]{Schémas-types [a] d’une grille d’Arakawa-C en 3-dimensions, et [b] d’une grille de discrétisation en coordonnées-sigma.\textit{ Source: Researchgate.}}
+	\label{fig:Gridexplai}
+\end{figure}
+\vspace{1cm}
 
 
+Le modèle CROCO utilise une grille Arakawa C , qui est une manière spécifique d'organiser les variables sur la grille. Dans une grille Arakawa C, les variables scalaires (comme la température et la salinité) sont définies au centre des cellules de la maille, tandis que les variables vectorielles (comme les composantes de vitesse) sont définies aux coins des cellules de la grille. Cette disposition particulière aide à minimiser les erreurs numériques lors de la résolution des équations du modèle.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=3in]{./IMAGES/maille.png}
+	\caption[Mailles]{Figure 2 : Schéma illustrant une maille individuelle de la grille de modélisation. Les composantes de vitesse, u et v, sont représentées aux coins de la maille, tandis que les variables scalaires, telles que la température, la salinité et la vitesse du courant, sont localisées au centre de la maille.\textit{ Source: Researchgate.}}
+	\label{fig:mailles}
+\end{figure}
+\vspace{1cm}
 
 \subsection{Qcrocoflow}
 -Qgis\\GRID\\Conditions ini(TIDES/BULK)
