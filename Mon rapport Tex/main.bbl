@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -33,6 +33,24 @@ Tino Bellayer.
   {\textbar} intechmer {\textbar} cnam, 2023.
 \newblock URL \url{https://www.intechmer.cnam.fr/intechmer}.
 
+\bibitem[Community(2022)]{CROCOForum2022}
+CROCO Community.
+\newblock Interannual croco v1.1 with era5 and glorys, 2022.
+\newblock URL
+  \url{https://forum.croco-ocean.org/question/647/interannual-croco-v11-with-era5-and-glorys/}.
+\newblock Accessed: 2023-07-31.
+
+\bibitem[Donoso(2022)]{Donoso2022}
+David Donoso.
+\newblock Era5-request-to-croco-model, 2022.
+\newblock URL \url{https://github.com/d4viddonoso/ERA5-request-to-CROCO-model}.
+\newblock Accessed: 2023-07-31.
+
+\bibitem[Flather(1976)]{flather1976}
+R.A. Flather.
+\newblock A tidal model of the northwest european continental shelf.
+\newblock \emph{Memories de la Societe Royale des Sciences de Liege}, 1976.
+
 \bibitem[IFREMER(2022)]{croco2022}
 IFREMER.
 \newblock Introduction to ocean modelling with croco, 2022.
@@ -65,10 +83,24 @@ T{\'e}rence Legrand.
   2023.
 \newblock URL \url{https://normandie-univ.hal.science/LUSAC}.
 
+\bibitem[{National Oceanic and Atmospheric Administration}(2023)]{noaa2023}
+{National Oceanic and Atmospheric Administration}.
+\newblock About harmonic constituents, 2023.
+\newblock URL
+  \url{https://tidesandcurrents.noaa.gov/about_harmonic_constituents.html}.
+\newblock [Online; accessed 31-July-2023].
+
 \bibitem[{QGIS}(2023)]{QGIS}
 {QGIS}.
 \newblock Qgis, 2023.
 \newblock URL \url{https://www.qgis.com}.
 \newblock Open Source Geospatial Foundation Project.
+
+\bibitem[Renault and Marchesiello(2022)]{Tide}
+Lionel Renault and Patrick Marchesiello.
+\newblock Ocean tides can drag the atmosphere and cause tidal winds over broad
+  continental shelves.
+\newblock \emph{Communications Earth E Environment}, 3\penalty0 (1), mar 2022.
+\newblock \doi{10.1038/s43247-022-00403-y}.
 
 \end{thebibliography}

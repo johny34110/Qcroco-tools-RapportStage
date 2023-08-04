@@ -95,4 +95,31 @@
   note   = {Accessed: 27/07/2023},
 }
 
+@Article{Tide,
+  author    = {Lionel Renault and Patrick Marchesiello},
+  title     = {Ocean tides can drag the atmosphere and cause tidal winds over broad continental shelves},
+  journal   = {Communications Earth E Environment},
+  year      = {2022},
+  volume    = {3},
+  number    = {1},
+  month     = {mar},
+  doi       = {10.1038/s43247-022-00403-y},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+
+@Article{flather1976,
+  author  = {Flather, R.A.},
+  title   = {A tidal model of the northwest European continental shelf},
+  journal = {Memories de la Societe Royale des Sciences de Liege},
+  year    = {1976},
+}
+
+@Misc{noaa2023,
+  author = {{National Oceanic and Atmospheric Administration}},
+  title  = {About Harmonic Constituents},
+  year   = {2023},
+  note   = {[Online; accessed 31-July-2023]},
+  url    = {https://tidesandcurrents.noaa.gov/about_harmonic_constituents.html},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
