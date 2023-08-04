@@ -13,6 +13,10 @@ Warning--entry type for "QGIS" isn't style-file defined
 --line 50 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco2022" isn't style-file defined
 --line 90 of file ./Biblio/STAGE.bib
+Repeated entry---line 141 of file ./Biblio/STAGE.bib
+ : @misc{QGIS
+ :           ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
 You've used 13 entries,
@@ -56,4 +60,4 @@ warning$ -- 2
 while$ -- 39
 width$ -- 0
 write$ -- 176
-(There were 7 warnings)
+(There was 1 error message)
