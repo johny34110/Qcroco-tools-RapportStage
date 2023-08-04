@@ -1,13 +1,28 @@
-Dans certains cas, pour résoudre des problèmes complexes, l'élaboration de modèles numériques s'avère nécessaire.
-C'est dans ce contexte que s'inscrit mon stage. Mon objectif est de créer une interface utilisateur qui facilite et accélère le processus de mise en place d'un modèle numérique. Cette interface sera conçue pour être intuitive et conviviale, permettant ainsi aux chercheurs de se concentrer sur l'analyse et l'interprétation des résultats, plutôt que sur les aspects techniques de la mise en place du modèle.
-(
-\cite{bellayersimulation}
-\cite{pianezze2018new}
-)
+Dans le cadre de la résolution de problèmes de grande envergure, les modèles numériques sont des outils incontournables. Ces modèles, se basant sur des principes mathématiques, ont la capacité de simuler, d'analyser et de prédire le comportement de systèmes complexes. Ils agissent comme une liaison entre la théorie et la pratique, facilitant ainsi la prise de décisions informées et l'élaboration de stratégies optimales.
 
-\subsection{CROCO}
+Cependant, l'utilisation de ces modèles nécessite la génération de fichiers d'entrée. Ces derniers déterminent les conditions initiales du modèle, définissent la zone de travail, et fournissent d'autres paramètres essentiels. La création de ces fichiers peut s'avérer complexe sans une connaissance approfondie en programmation et en informatique.
 
-le model croco
+C'est dans le but de démocratiser l'accès à l'initialisation des modèles numériques et de réduire cette complexité que s'inscrit mon stage.
+
+Mon objectif est de concevoir une interface utilisateur pour simplifier et accélérer le processus de mise en œuvre de ces modèles numériques. Cette interface, prévue pour être intuitive et conviviale, a pour vocation d'alléger la charge de travail des chercheurs.
+
+Le but de cette initiative est de permettre aux chercheurs de consacrer leurs efforts à l'analyse approfondie et à l'interprétation des résultats, plutôt qu'à la gestion technique du modèle. Cela conduit à une amélioration significative de leur efficacité et de leur productivité dans leurs travaux de recherche.
+
+\subsection{Le modèle océanographique }
+
+\subsubsection{Introduction à la modélisation numérique}
+
+Il débute par l'histoire des prévisions météorologiques, avec Vilhelm Bjerknes au début du XXe siècle, qui a proposé que la prévision du temps impliquait de résoudre des équations non linéaires complexes dont la solution analytique n'est pas connue. L'idée initiale était d'employer des milliers de personnes pour effectuer les calculs nécessaires pour résoudre ces équations, comme le proposait le concept de "l'usine à prévoir le temps" de Richardson en 1922.
+
+Cependant, les premiers essais ont été décevants, notamment en raison des erreurs de discrétisation des équations primitives et de l'énorme défi logistique que représentait l'idée de rassembler un grand nombre de mathématiciens pour effectuer ces calculs. Ainsi, la précision des prévisions atmosphériques a largement dépendu des avancées technologiques.
+
+Avec l'apparition des premiers ordinateurs numériques après la Seconde Guerre mondiale, les premières modélisations atmosphériques ont été possibles. Ces développements ont conduit à la création de modèles océaniques dans les années 1960. Grâce à l'accroissement constant de la puissance de calcul (loi de Moore), ces modèles sont devenus de plus en plus précis et leur résolution a continué à s'affiner.
+(\cite{Legrand})
+
+\subsubsection{Choix du modèle}
+
+La sélection du modèle océanographique employé au cours de mon stage a été guidée par une décision stratégique de mon superviseur de stage.Cette décision a pris en compte divers facteurs, tels que l'efficacité du modèle, sa précision, sa robustesse. Il est important de noter que le choix du modèle océanographique est crucial car il influence directement la qualité et l'exactitude des résultats obtenus. 
+
 
 \begin{figure}[H]
 	\centering
@@ -16,9 +31,133 @@ le model croco
 	\label{fig:croco}
 \end{figure}
 \vspace{1cm}
-le model croco(RANS)\\
-prétraitement(Grid, FRC,BULK)\\Figure \ref{fig:croco}  citer le logo croco
+
+Le modèle océanographique CROCO, pour \textit{(Coastal and Regional Ocean COmmunity model)} \ref{fig:croco} est un système de modélisation océanique récent, construit sur la base de ROMS\_AGRIF (Regional Ocean Modeling System - Adaptive Grid Refinement In Fortran) et du noyau non-hydrostatique de SNH (actuellement en test). Il intègre progressivement des algorithmes de MARS3D (pour les sédiments) et de HYCOM (pour les coordonnées verticales) (\cite{croco_soft}).
+
+CROCO est maintenu par plusieurs instituts français travaillant sur l'environnement, notamment l'IRD (Institut de Recherche pour le Développement), l'INRIA (Institut National de Recherche en Informatique et en Automatique), le CNRS (Centre National de la Recherche Scientifique), l'IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer) et le SHOM (Service Hydrographique et Océanographique de la Marine) (\cite{croco_doc}).
+
+Le travail de calcul du modèle CROCO est basé sur
+la résolution numérique des équations de conservation primitives - c’est-à-dire en coordonnées cartésiennes (x,y,z), héritées de la mécanique des fluides. Les programmes de résolution de ces équations et de simulation sont écrits puis compilés en langage Fortran, tandis que les outils de paramétrisation en amont et de visualisation graphique en aval (croco-tools) sont fournit et écrits en langage MATLAB (\cite{bellayersimulation}).
+
+L'objectif de CROCO est double : il sert à la fois pour la recherche fondamentale, en aidant à comprendre le fonctionnement de l'océan, et pour la recherche appliquée et l'océanographie opérationnelle (\cite{croco2022}).\\
+
+Mon stage se concentre sur l'analyse des fichiers d'entrée du modèle. Il n'est pas impératif pour moi d'acquérir une compréhension approfondie du fonctionnement interne du code CROCO ou de son système de résolution des équations de Navier-Stokes. Mon rôle  est de comprendre et de gérer efficacement la générations des fichiers d'entrée, qui déterminent la zone d'étude et intègrent les facteurs de forçage tels que les marées et les conditions météorologiques. Pour assurer un fonctionnement optimal, le modèle CROCO nécessite une série de fichiers d'entrée spécifiques, qui permettent de paramétrer la simulation de manière à refléter le plus fidèlement possible les conditions océanographiques réelles.
+
+\subsubsection{La Grille d'Entrée du Modèle CROCO}
+
+Dans le contexte de la modélisation océanographique, une grille est une représentation discrète de l'espace sur lequel le modèle fonctionne. Elle est utilisée pour diviser l'océan en une série de points de grille, auxquels sont associées des valeurs de variables telles que la température, la salinité, la vitesse du courant, etc.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/mailles.png}
+	\caption[Grille]{Illustration d'une grille de modélisation océanographique pour la région de la Manche. La grille, avec une résolution spatiale de 500 mètres, démontre la distribution des mailles utilisées pour la simulation. Chaque maille représente un point de données dans le modèle.\textit{Source : Qcrocoflow.}}
+	\label{fig:gridnorm}
+\end{figure}
+\vspace{1cm}
+La grille est généralement définie en trois dimensions : deux dimensions horizontales (souvent en longitude et en latitude, ou en coordonnées cartésiennes x et y dans le cas d'une grille curviligne) et une dimension verticale (profondeur). Chaque point de la grille en 3D est appelé une cellule de grille, ou une maille dans certains contextes.
+
+Il existe différents types de grilles en fonction de la manière dont les points de grille sont disposés. Par exemple, une grille régulière a des points de grille espacés uniformément, tandis qu'une grille irrégulière a des points de grille qui peuvent être plus rapprochés dans certaines régions (par exemple, près des côtes) et plus espacés dans d'autres.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/ExG.png}
+	\caption[Gridcomp]{Comparaison entre une Grille Régulière [a] et une Grille Irrégulière [b] Utilisées en Modélisation Océanographique.\textit{ Source: Researchgate.}}
+	\label{fig:Gridexplain}
+\end{figure}
+Dans le cas du modèle CROCO, une combinaison de grilles est utilisée. Pour les dimensions longitudinales et latitudinales, une grille régulière est employée, avec des lignes de grille droites et uniformément espacées. Cela facilite la représentation précise des caractéristiques océanographiques à grande échelle.
+
+En revanche, pour la dimension de la profondeur, une grille curviligne est utilisée. Une grille curviligne est une grille dont les lignes de grille peuvent être courbes, permettant une plus grande flexibilité dans la représentation des caractéristiques océanographiques verticales. Cela est particulièrement utile pour représenter avec précision les variations de profondeur, en particulier dans les régions côtières où la bathymétrie peut être complexe.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/Gridexpl.png}
+	\caption[Grid]{Schémas-types [a] d’une grille d’Arakawa-C en 3-dimensions, et [b] d’une grille de discrétisation en coordonnées-sigma.\textit{ Source: Researchgate.}}
+	\label{fig:Gridexplai}
+\end{figure}
+\vspace{1cm}
 
 
+Le modèle CROCO utilise une grille Arakawa C , qui est une manière spécifique d'organiser les variables sur la grille. Dans une grille Arakawa C, les variables scalaires (comme la température et la salinité) sont définies au centre des cellules de la maille, tandis que les variables vectorielles (comme les composantes de vitesse) sont définies aux coins des cellules de la grille. Cette disposition particulière aide à minimiser les erreurs numériques lors de la résolution des équations du modèle.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=3in]{./IMAGES/maille.png}
+	\caption[Mailles]{Schéma illustrant une maille individuelle de la grille de modélisation. Les composantes de vitesse, u et v, sont représentées aux coins de la maille, tandis que les variables scalaires, telles que la température, la salinité et la vitesse du courant, sont localisées au centre de la maille.\textit{ Source: Researchgate.}}
+	\label{fig:mailles}
+\end{figure}
+\vspace{1cm}
+
+Mon projet initial s'inscrivait précisément dans ce contexte : la mise en œuvre de la génération des fichiers d'entrée 'grid'. Après de nombreuses heures de travail intensif, j'ai réussi à achever cette phase du projet plus tôt que prévu. Cette avance m'a permis de passer à des étapes supplémentaires, notamment la génération des fichiers de forçage par les marées et les conditions météorologiques. Cette progression a non seulement élargi la portée de mon travail, mais a également approfondi ma compréhension du fonctionnement global du modèle CROCO.
+
+\subsubsection{Les Fichiers de Forçage par les Marées}
+Dans le modèle CROCO, les fichiers de forçage par les marées jouent un rôle crucial pour simuler avec précision les dynamiques océaniques. Les marées océaniques, principalement produites par les forces gravitationnelles du Soleil et de la Lune, représentent l'une des principales sources d'énergie de l'océan mondial (\cite{Tide}).
+
+Afin de simuler avec précision les dynamiques maritimes, yy compris les variations complexes introduites par les harmoniques de marée, le modèle CROCO incorpore divers constituants de marée. Ces constituants sont propagés à partir des frontières latérales du modèle en utilisant la méthode décrite par Flather~\cite{flather1976}. Pour réaliser cette intégration, les constituants de marée, y compris les harmoniques, doivent être ajoutés au fichier de forçage. Les harmoniques de marée, qui oscillent à des fréquences multiples de la fréquence principale de la marée, sont essentielles pour une représentation fidèle des marées océaniques réelles (\cite{noaa2023}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/harmonique.png}
+	\caption[Harmoniques]{Visualisation des Différents Constituants Harmoniques de la Marée.\textit{ Source: https://promenade.imcce.fr/en/pages5/525.html.}}
+	\label{fig:harmoniques}
+\end{figure}
+\vspace{1cm}
+
+La préparation des fichiers de forçage nécessite un atlas de marées contenant des constituants harmoniques adaptés à la grille du modèle CROCO. Cet atlas est indispensable pour obtenir des conditions aux limites ouvertes (OBC)\footnote{OBC : Open Boundary Conditions} précises pour les marées sur la grille du modèle. Dans le cadre de ce projet, nous avons sollicité l'accès au modèle TPXO9 pour obtenir ces données. Nous approfondirons l'utilisation du modèle TPXO9 dans la section correspondante de ce document.
+
+En somme, les fichiers de forçage par les marées fournissent les informations nécessaires pour simuler les effets des marées sur les dynamiques océaniques dans le modèle CROCO. 
+Une fois que ces fichiers de forçage sont correctement préparés et intégrés, le modèle CROCO peut être mis en route. Cette étape initie la simulation océanographique, permettant au modèle de commencer à générer des sorties basées sur les conditions forçage fournies.
+
+\subsubsection{Préparation des Fichiers de Forçage Météorologique (Bulk) pour le Modèle CROCO}
+
+Après avoir travaillé sur les fichiers de forçage par les marées, j'ai ensuite orienté mes efforts vers les fichiers de forçage météorologique, également appelés fichiers "Bulk" dans le contexte du modèle CROCO. Ces fichiers sont tout aussi cruciaux pour la précision et la fiabilité des simulations océanographiques. Ils fournissent les informations nécessaires pour modéliser les effets des conditions météorologiques sur les dynamiques océaniques, y compris des facteurs tels que la pression atmosphérique, la température de l'air, la vitesse et la direction du vent, et le flux de chaleur net à la surface de l'océan, etc ...
+La préparation de ces fichiers de forçage météorologique nécessite une compréhension approfondie des interactions entre l'océan et l'atmosphère, ainsi que l'accès à des données météorologiques précises et à jour. Dans le cadre de ce projet, j'ai utilisé le modèle ERA5 pour obtenir ces données météorologiques. Le modèle ERA5, développé par le Centre européen pour les prévisions météorologiques à moyen terme (ECMWF), est une source de données météorologiques reconnue pour sa précision et sa résolution spatiale et temporelle élevé\cite{CROCOForum2022, Donoso2022}.
+
+Tout comme pour les fichiers de forçage par les marées, une fois que les fichiers de forçage météorologique, ou fichiers "Bulk", sont correctement préparés et intégrés, ils permettent au modèle CROCO de simuler avec précision les effets des conditions météorologiques sur les dynamiques océaniques. Nous discuterons plus en détail de l'utilisation du modèle ERA5 et de la préparation des fichiers "Bulk" dans la section correspondante de ce document.
 \subsection{Qcrocoflow}
--Qgis\\GRID\\Conditions ini(TIDES/BULK)
+\alert{-Qgis\\GRID\\Conditions ini(TIDES/BULK)}
+\subsubsection{Qgis}
+Mon maître de stage a opté pour l'utilisation d'un système d'information géographique (SIG) pour faciliter la manipulation et l'analyse des données géospatiales. QGIS (Quantum Geographic Information System), en tant que solution open source puissante et flexible, s'est avéré être l'outil idéal pour cette tâche.
+
+QGIS permet aux utilisateurs de créer, modifier, visualiser et analyser des données géospatiales. Il est largement utilisé par les chercheurs, les planificateurs, les cartographes et d'autres professionnels qui travaillent avec des données géographiques.
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=1in]{./IMAGES/Qgis.png}
+	\caption[QGIS]{Logo QGIS \textit{ Source: https://www.qgis.org/.}}
+	\label{fig:QGIS}
+\end{figure}
+QGIS prend en charge une variété de formats de données, y compris les formats vectoriels et raster, et offre une gamme d'outils pour la visualisation de données, l'analyse spatiale, la gestion de données et plus encore (\cite{QGIS}). Il est également extensible grâce à une large gamme de plugins, ce qui permet aux utilisateurs d'ajouter des fonctionnalités supplémentaires en fonction de leurs besoins spécifiques.
+
+
+\subsubsection{Les plugins Qgis}
+
+
+Les plugins sont des extensions logicielles qui ajoutent de nouvelles fonctionnalités à QGIS. Ils sont développés par la communauté QGIS et peuvent être utilisés pour étendre les capacités de QGIS au-delà de ses fonctionnalités de base. Les plugins peuvent être écrits en Python ou en C++ et sont généralement utilisés pour ajouter des fonctionnalités spécifiques qui ne sont pas présentes dans le logiciel de base (\cite{QGISPlugins}).
+
+
+L'utilisation de plugins dans QGIS offre une flexibilité considérable, permettant aux utilisateurs de personnaliser leur environnement de travail en fonction de leurs besoins spécifiques. Cela rend QGIS particulièrement adapté aux projets de recherche et de développement où les exigences peuvent varier considérablement.
+Dans le cadre de ce travail, un plugin spécifique, nommé QCrocoFlow, a été développé par mon maître de stage pour faciliter la manipulation des données nécessaires pour le modèle CROCO.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=1in]{./IMAGES/QCROCO.png}
+	\caption[QCROCOflow]{Logo QCrocoFlow}
+	\label{fig:QCROCOflow}
+\end{figure}
+
+Mon rôle dans ce projet a été de travailler sur ce plugin pour créer une interface utilisateur qui permettrait de générer les différents fichiers d'entrée nécessaires pour le modèle CROCO. L'objectif était de rendre QCrocoFlow capable non seulement de générer les fichiers d'entrée du modèle, mais aussi de visualiser les résultats des simulations. Cela a permis une meilleure compréhension des données d'entrée du modèle CROCO et a facilité la préparation des fichiers d'entrée nécessaires pour les simulations.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/capqcroco.png}
+	\caption[Plugin QCrocoflow]{PLugin QCrocoflow déployé}
+	\label{fig:PlQcroco}
+\end{figure}
+
+
+
+\newpage
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=8in]{./IMAGES/Cheminement.png}
+	\caption[Cheminent]{Résultat attendu}
+	\label{fig:Cheminent}
+\end{figure}
