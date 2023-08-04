@@ -13,51 +13,47 @@ Warning--entry type for "QGIS" isn't style-file defined
 --line 50 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco2022" isn't style-file defined
 --line 90 of file ./Biblio/STAGE.bib
-Repeated entry---line 141 of file ./Biblio/STAGE.bib
- : @misc{QGIS
- :           ,
-I'm skipping whatever remains of this entry
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
-You've used 13 entries,
+You've used 14 entries,
             2773 wiz_defined-function locations,
-            661 strings with 7845 characters,
-and the built_in function-call counts, 6425 in all, are:
-= -- 504
-> -- 568
-< -- 11
-+ -- 196
-- -- 183
-* -- 511
-:= -- 1058
-add.period$ -- 46
-call.type$ -- 13
-change.case$ -- 100
-chr.to.int$ -- 13
-cite$ -- 28
-duplicate$ -- 213
-empty$ -- 412
-format.name$ -- 198
-if$ -- 1286
+            665 strings with 7952 characters,
+and the built_in function-call counts, 6728 in all, are:
+= -- 532
+> -- 578
+< -- 12
++ -- 200
+- -- 186
+* -- 524
+:= -- 1105
+add.period$ -- 50
+call.type$ -- 14
+change.case$ -- 104
+chr.to.int$ -- 14
+cite$ -- 30
+duplicate$ -- 228
+empty$ -- 444
+format.name$ -- 202
+if$ -- 1352
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 4
-newline$ -- 80
-num.names$ -- 52
-pop$ -- 237
+newline$ -- 86
+num.names$ -- 56
+pop$ -- 249
 preamble$ -- 1
-purify$ -- 87
+purify$ -- 90
 quote$ -- 0
-skip$ -- 224
+skip$ -- 236
 stack$ -- 0
-substring$ -- 26
-swap$ -- 12
+substring$ -- 28
+swap$ -- 13
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 143
+type$ -- 154
 warning$ -- 2
-while$ -- 39
+while$ -- 42
 width$ -- 0
-write$ -- 176
-(There was 1 error message)
+write$ -- 190
+(There were 7 warnings)

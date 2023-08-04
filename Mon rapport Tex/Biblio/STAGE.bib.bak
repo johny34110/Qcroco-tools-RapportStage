@@ -122,4 +122,35 @@
   url    = {https://tidesandcurrents.noaa.gov/about_harmonic_constituents.html},
 }
 
+@misc{CROCOForum2022,
+  author = {CROCO Community},
+  title = {Interannual CROCO v1.1 with ERA5 and GLORYS},
+  year = {2022},
+  url = {https://forum.croco-ocean.org/question/647/interannual-croco-v11-with-era5-and-glorys/},
+  note = {Accessed: 2023-07-31}
+}
+
+@misc{Donoso2022,
+  author = {David Donoso},
+  title = {ERA5-request-to-CROCO-model},
+  year = {2022},
+  url = {https://github.com/d4viddonoso/ERA5-request-to-CROCO-model},
+  note = {Accessed: 2023-07-31}
+}
+
+@Misc{,
+  author       = {QGIS},
+  title        = {Welcome to the QGIS project!},
+  howpublished = {\url{https://qgis.org/en/site/}},
+  note         = {Accessed: 2023-08-04},
+}
+
+@Misc{QGISPlugins,
+  author       = {QGIS},
+  title        = {QGIS Plugins},
+  year         = {2023},
+  howpublished = {\url{https://docs.qgis.org/3.16/en/docs/user_manual/plugins/plugins.html}},
+  note         = {Accessed: 2023-07-31},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
