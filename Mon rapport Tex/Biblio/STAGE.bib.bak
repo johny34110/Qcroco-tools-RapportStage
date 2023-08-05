@@ -170,4 +170,11 @@
   pages   = {660-662},
 }
 
+@Online{croco_forum,
+  author = {CROCO Community},
+  title  = {CROCO Ocean Model Forum},
+  year   = {2023},
+  url    = {https://forum.croco-ocean.org/questions/},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}

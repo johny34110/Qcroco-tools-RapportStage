@@ -13,47 +13,51 @@ Warning--entry type for "QGIS" isn't style-file defined
 --line 50 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco2022" isn't style-file defined
 --line 90 of file ./Biblio/STAGE.bib
+Warning--entry type for "croco_forum" isn't style-file defined
+--line 173 of file ./Biblio/STAGE.bib
+Warning--entry type for "croco_video" isn't style-file defined
+--line 180 of file ./Biblio/STAGE.bib
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
-You've used 16 entries,
+You've used 18 entries,
             2773 wiz_defined-function locations,
-            677 strings with 8250 characters,
-and the built_in function-call counts, 7575 in all, are:
-= -- 606
-> -- 627
-< -- 13
-+ -- 217
-- -- 201
-* -- 589
-:= -- 1237
-add.period$ -- 57
-call.type$ -- 16
-change.case$ -- 115
-chr.to.int$ -- 16
-cite$ -- 34
-duplicate$ -- 264
-empty$ -- 516
-format.name$ -- 219
-if$ -- 1530
+            684 strings with 8410 characters,
+and the built_in function-call counts, 8169 in all, are:
+= -- 658
+> -- 647
+< -- 15
++ -- 225
+- -- 207
+* -- 619
+:= -- 1327
+add.period$ -- 63
+call.type$ -- 18
+change.case$ -- 123
+chr.to.int$ -- 18
+cite$ -- 38
+duplicate$ -- 294
+empty$ -- 580
+format.name$ -- 227
+if$ -- 1658
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 5
-newline$ -- 97
-num.names$ -- 64
-pop$ -- 273
+newline$ -- 107
+num.names$ -- 72
+pop$ -- 297
 preamble$ -- 1
-purify$ -- 99
+purify$ -- 105
 quote$ -- 0
-skip$ -- 265
+skip$ -- 293
 stack$ -- 0
-substring$ -- 53
-swap$ -- 15
+substring$ -- 57
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 176
+type$ -- 198
 warning$ -- 2
-while$ -- 49
+while$ -- 55
 width$ -- 0
-write$ -- 217
-(There were 7 warnings)
+write$ -- 241
+(There were 9 warnings)
