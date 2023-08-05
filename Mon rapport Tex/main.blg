@@ -15,45 +15,45 @@ Warning--entry type for "croco2022" isn't style-file defined
 --line 90 of file ./Biblio/STAGE.bib
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
-You've used 14 entries,
+You've used 16 entries,
             2773 wiz_defined-function locations,
-            665 strings with 7952 characters,
-and the built_in function-call counts, 6728 in all, are:
-= -- 532
-> -- 578
-< -- 12
-+ -- 200
-- -- 186
-* -- 524
-:= -- 1105
-add.period$ -- 50
-call.type$ -- 14
-change.case$ -- 104
-chr.to.int$ -- 14
-cite$ -- 30
-duplicate$ -- 228
-empty$ -- 444
-format.name$ -- 202
-if$ -- 1352
+            677 strings with 8250 characters,
+and the built_in function-call counts, 7575 in all, are:
+= -- 606
+> -- 627
+< -- 13
++ -- 217
+- -- 201
+* -- 589
+:= -- 1237
+add.period$ -- 57
+call.type$ -- 16
+change.case$ -- 115
+chr.to.int$ -- 16
+cite$ -- 34
+duplicate$ -- 264
+empty$ -- 516
+format.name$ -- 219
+if$ -- 1530
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 4
-newline$ -- 86
-num.names$ -- 56
-pop$ -- 249
+missing$ -- 5
+newline$ -- 97
+num.names$ -- 64
+pop$ -- 273
 preamble$ -- 1
-purify$ -- 90
+purify$ -- 99
 quote$ -- 0
-skip$ -- 236
+skip$ -- 265
 stack$ -- 0
-substring$ -- 28
-swap$ -- 13
+substring$ -- 53
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 154
+type$ -- 176
 warning$ -- 2
-while$ -- 42
+while$ -- 49
 width$ -- 0
-write$ -- 190
+write$ -- 217
 (There were 7 warnings)
