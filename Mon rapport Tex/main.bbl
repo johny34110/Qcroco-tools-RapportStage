@@ -1,4 +1,4 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -39,6 +39,17 @@ CROCO Community.
 \newblock URL
   \url{https://forum.croco-ocean.org/question/647/interannual-croco-v11-with-era5-and-glorys/}.
 \newblock Accessed: 2023-07-31.
+
+\bibitem[Community(2023)]{croco_forum}
+CROCO Community.
+\newblock Croco ocean model forum, 2023.
+\newblock URL \url{https://forum.croco-ocean.org/questions/}.
+
+\bibitem[CROCO(2023)]{crocoofficial}
+CROCO.
+\newblock Croco official website, 2023.
+\newblock URL \url{https://www.croco-ocean.org/}.
+\newblock Accessed: [date de consultation].
 
 \bibitem[Donoso(2022)]{Donoso2022}
 David Donoso.
@@ -83,12 +94,25 @@ T{\'e}rence Legrand.
   2023.
 \newblock URL \url{https://normandie-univ.hal.science/LUSAC}.
 
+\bibitem[Model(2023)]{croco_video}
+CROCO Model.
+\newblock Croco basics workshop, 2023.
+\newblock URL \url{https://www.youtube.com/watch?v=u2SFibx63I8}.
+
 \bibitem[{National Oceanic and Atmospheric Administration}(2023)]{noaa2023}
 {National Oceanic and Atmospheric Administration}.
 \newblock About harmonic constituents, 2023.
 \newblock URL
   \url{https://tidesandcurrents.noaa.gov/about_harmonic_constituents.html}.
 \newblock [Online; accessed 31-July-2023].
+
+\bibitem[Penven et~al.(2007)Penven, Marchesiello, Debreu, and
+  Lefevre]{crocotool2007}
+P.~Penven, P.~Marchesiello, L.~Debreu, and J.~Lefevre.
+\newblock Software tools for pre- and post-processing of oceanic regional
+  simulations.
+\newblock \emph{Environmental Modelling \& Software}, 23:\penalty0 660--662,
+  2007.
 
 \bibitem[Plugins(2023)]{QGISPlugins}
 QGIS Plugins.
