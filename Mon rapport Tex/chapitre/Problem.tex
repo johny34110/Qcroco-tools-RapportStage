@@ -4,15 +4,15 @@ Cependant, une mise en \oe{uvre} de ces modèles nécessite la génération de f
 
 C'est dans le but de démocratiser l'accès à l'initialisation des modèles numériques et de réduire cette complexité que s'inscrit mon stage.
 
-Mon objectif est de concevoir un interface graphique utilisateur (GUI) pour simplifier et accélérer le processus de mise en \oe{uvre} des modèles numériques à l'aide du code de calcul CROCO. Cet interface, prévu pour être intuitif et convivial, a pour vocation d'alléger la charge de travail des chercheurs afin de leur permettre de consacrer leurs efforts à l'analyse et à l'interprétation approfondie des résultats, plutôt qu'aux aspects techniques du modèle. Cela doit contribuer à une amélioration significative de l'efficacité et de la productivité dans les travaux de recherche.
+Mon objectif est de concevoir un interface graphique utilisateur (GUI) pour simplifier et accélérer le processus de mise en \oe{uvre} des modèles numériques. Cet interface, prévu pour être intuitif et convivial, a pour vocation d'alléger la charge de travail des chercheurs afin de leur permettre de consacrer leurs efforts à l'analyse et à l'interprétation approfondie des résultats, plutôt qu'aux aspects techniques du modèle. Cela doit contribuer à une amélioration significative de l'efficacité et de la productivité dans les travaux de recherche.
 
 \subsection{Les modèles numériques en océanographie}
 
-Bien que l'utilisation d'un code de calcul tel que CROCO ne soit pas l'objectif de mon stage, le travail que j'ai du réaliser, a nécessité d'en comprendre le fonctionnement de base dans ses aspects de mise en \oe{uvre}. C'est cette compréhension que je souhaite retransmettre ici, reflet de connaissances nouvelles acquises au cours du stage.
+Bien que l'utilisation d'un code de modélisation hydrodynamique ne soit pas l'objectif de mon stage, le travail que j'ai du réaliser, a nécessité d'en comprendre le fonctionnement de base dans ses aspects de mise en \oe{uvre}. C'est cette compréhension que je souhaite retransmettre ici, reflet de connaissances nouvelles acquises au cours du stage.
 
 \subsubsection{Introduction à la modélisation numérique}
 
-Il débute par l'histoire des prévisions météorologiques, avec Vilhelm Bjerknes (ref) au début du XXe siècle, qui a proposé que la prévision du temps impliquait de résoudre des équations non linéaires complexes dont la solution analytique n'est pas connue. L'idée initiale était d'employer des milliers de personnes pour effectuer les calculs nécessaires pour résoudre ces équations, comme le proposait le concept de \og L'usine à prévoir le temps \fg{} de Richardson en 1922 (ref).
+Il débute par l'histoire des prévisions météorologiques, avec Vilhelm Bjerknes (\textcolor{red}{ref}) au début du XXe siècle, qui a proposé que la prévision du temps impliquait de résoudre des équations non linéaires complexes dont la solution analytique n'est pas connue. L'idée initiale était d'employer des milliers de personnes pour effectuer les calculs nécessaires pour résoudre ces équations, comme le proposait le concept de \og L'usine à prévoir le temps \fg{} de Richardson en 1922 (\textcolor{red}{ref}).
 
 Cependant, les premiers essais ont été décevants, notamment en raison des erreurs de discrétisation des équations primitives et de l'énorme défi logistique que représentait l'idée de rassembler un grand nombre de mathématiciens pour effectuer ces calculs. Ainsi, la précision des prévisions atmosphériques a largement dépendu des avancées technologiques.
 
@@ -23,21 +23,18 @@ Avec l'apparition des premiers ordinateurs modernes après la seconde guerre mon
 
 La sélection du code de calcul des courants océanographiques employé au cours de mon stage a été guidée par une stratégie défini par mon superviseur de stage. Cette décision a pris en compte divers facteurs, tels que l'efficacité du modèle (parallélisme des calculs), sa précision (méthode de résolution des équations) et sa robustesse (validation du code de calcul). Il est important de noter que le choix du modèle est crucial car il influence directement la qualité et l'exactitude des résultats obtenus.
 
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=1in]{./IMAGES/croco.png}
-	\caption[LOGO CROCO]{croco logo}
+	\caption[LOGO CROCO]{Logo officiel du code de calcul CROCO (https://www.croco-ocean.org/)}
 	\label{fig:croco}
 \end{figure}
-\vspace{1cm}
 
-Le modèle océanographique CROCO, pour \textit{(Coastal and Regional Ocean COmmunity model)} \ref{fig:croco} est un système de modélisation océanique récent, construit sur la base de ROMS\_AGRIF (Regional Ocean Modeling System - Adaptive Grid Refinement In Fortran) et du noyau non-hydrostatique de SNH (actuellement en test). Il intègre progressivement des algorithmes de MARS3D (pour les sédiments) et de HYCOM (pour les coordonnées verticales) (\cite{croco_soft}).
+Le modèle océanographique CROCO, pour \textit{(\textbf{C}oastal and \textbf{R}egional \textbf{O}cean \textbf{CO}mmunity model)} est un code de calcul récent pour la modélisation océanique, construit sur la base de ROMS-AGRIF (\textbf{R}egional \textbf{O}cean \textbf{M}odeling \textbf{S}ystem - \textbf{A}daptive \textbf{G}rid \textbf{R}efinement \textbf{I}n \textbf{F}ortran) et du noyau non-hydrostatique de SNH \textcolor{red}{mettre la signification des initiales} (actuellement en test). Il intègre progressivement des algorithmes de MARS3D \textcolor{red}{mettre la signification des initiales} (notamment pour les sédiments) et de HYCOM \textcolor{red}{mettre la signification des initiales} (pour les coordonnées verticales) (\cite{croco_soft}).
 
-CROCO est maintenu par plusieurs instituts français travaillant sur l'environnement, notamment l'IRD (Institut de Recherche pour le Développement), l'INRIA (Institut National de Recherche en Informatique et en Automatique), le CNRS (Centre National de la Recherche Scientifique), l'IFREMER (Institut Français de Recherche pour l'Exploitation de la Mer) et le SHOM (Service Hydrographique et Océanographique de la Marine) (\cite{croco_doc}).
+CROCO est maintenu par plusieurs instituts français travaillant sur l'environnement, notamment l'IRD (\textbf{I}nstitut de \textbf{R}echerche pour le \textbf{D}éveloppement), l'INRIA (\textbf{I}nstitut \textbf{N}ational de \textbf{R}echerche en \textbf{I}nformatique et en \textbf{A}utomatique), le CNRS (\textbf{C}entre \textbf{N}ational de la \textbf{R}echerche \textbf{S}cientifique), l'IFREMER (\textbf{I}nstitut \textbf{F}rançais de \textbf{R}echerche pour l'\textbf{E}xploitation de la \textbf{MER}) et le SHOM (\textbf{S}ervice \textbf{H}ydrographique et \textbf{O}céanographique de la \textbf{M}arine) (\cite{croco_doc}).\\
 
-Le travail de calcul du modèle CROCO est basé sur
-la résolution numérique des équations de conservation primitives - c’est-à-dire en coordonnées cartésiennes (x,y,z), héritées de la mécanique des fluides. Les programmes de résolution de ces équations et de simulation sont écrits puis compilés en langage Fortran, tandis que les outils de paramétrisation en amont et de visualisation graphique en aval (croco-tools) sont fournit et écrits en langage MATLAB (\cite{bellayersimulation}).
+Les calculs du modèle CROCO sont basés sur la résolution numérique des équations de conservation primitives - c'est-à-dire en coordonnées cartésiennes (x,y,z), héritées de la mécanique des fluides. Les programmes de résolution de ces équations sont écrits puis compilés en langage Fortran, tandis que les outils de paramétrisation en amont et de visualisation graphique en aval (tels que croco-tools) sont fournit et écrits avec le langage MATLAB (\cite{bellayersimulation}).
 
 L'objectif de CROCO est double : il sert à la fois pour la recherche fondamentale, en aidant à comprendre le fonctionnement de l'océan, et pour la recherche appliquée et l'océanographie opérationnelle (\cite{croco2022}).\\
 
