@@ -38,7 +38,7 @@ Les calculs du modèle CROCO sont basés sur la résolution numérique des équa
 
 L'objectif de CROCO est double : il sert à la fois pour la recherche fondamentale, en aidant à comprendre le fonctionnement de l'océan, et pour la recherche appliquée et l'océanographie opérationnelle (\cite{croco2022}).\\
 
-Mon stage se concentre sur l'analyse des fichiers d'entrée du modèle. Il n'est pas impératif pour moi d'acquérir une compréhension approfondie du fonctionnement interne du code CROCO ou de son système de résolution des équations de Navier-Stokes. Mon rôle  est de comprendre et de gérer efficacement la générations des fichiers d'entrée, qui déterminent la zone d'étude et intègrent les facteurs de forçage tels que les marées et les conditions météorologiques. Pour assurer un fonctionnement optimal, le modèle CROCO nécessite une série de fichiers d'entrée spécifiques, qui permettent de paramétrer la simulation de manière à refléter le plus fidèlement possible les conditions océanographiques réelles.
+Pour assurer un fonctionnement optimal, le modèle CROCO nécessite une série de fichiers d'entrée spécifiques, qui permettent de paramétrer la simulation de manière à refléter le plus fidèlement possible les conditions océanographiques réelles. Mon stage se concentre sur la mise en place des fichiers d'entrée du modèle. Il n'est pas impératif pour moi d'acquérir une compréhension approfondie du fonctionnement interne du code CROCO ou de son système de résolution des équations. Mon rôle  est de comprendre et de gérer efficacement la générations des fichiers d'entrée, qui déterminent la zone d'étude et intègrent les facteurs de forçage tels que les marées et les conditions météorologiques.
 
 \subsubsection{La Grille d'Entrée du Modèle CROCO}
 
@@ -47,11 +47,12 @@ Dans le contexte de la modélisation océanographique, une grille est une repré
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{./IMAGES/mailles.png}
-	\caption[Grille]{Illustration d'une grille de modélisation océanographique pour la région de la Manche. La grille, avec une résolution spatiale de 500 mètres, démontre la distribution des mailles utilisées pour la simulation. Chaque maille représente un point de données dans le modèle.\textit{Source : Qcrocoflow.}}
+	\caption[Grille]{Illustration d'une grille de modélisation océanographique pour la région de la Manche. La grille, avec une résolution spatiale de 500 mètres, démontre la distribution des mailles utilisées pour la simulation. Chaque maille représente un point de données dans le modèle. \textit{Source : Qcrocoflow.}}
 	\label{fig:gridnorm}
 \end{figure}
-\vspace{1cm}
-La grille est généralement définie en trois dimensions : deux dimensions horizontales (souvent en longitude et en latitude, ou en coordonnées cartésiennes x et y dans le cas d'une grille curviligne) et une dimension verticale (profondeur). Chaque point de la grille en 3D est appelé une cellule de grille, ou une maille dans certains contextes.
+\textcolor{red}{Cette figure ne représente pas bien ce qu'est une grille (ce que tu veux expliquer). Tu devrais ajouter des points (en noir) qui correspondraient à un exemple d'une grille rectangulaire par exemple}
+
+La grille est généralement définie en trois dimensions : deux dimensions horizontales (en longitude et en latitude, ou en coordonnées cartésiennes x et y) et une dimension verticale (profondeur). Chaque point de la grille en 3D est appelé une cellule de grille, ou une maille dans certains contextes.
 
 Il existe différents types de grilles en fonction de la manière dont les points de grille sont disposés. Par exemple, une grille régulière a des points de grille espacés uniformément, tandis qu'une grille irrégulière a des points de grille qui peuvent être plus rapprochés dans certaines régions (par exemple, près des côtes) et plus espacés dans d'autres.
 \begin{figure}[H]
