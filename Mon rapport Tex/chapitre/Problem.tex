@@ -98,9 +98,8 @@ Afin de simuler avec précision la dynamique marine induite par la marée, le mo
 	\caption[Harmoniques]{Visualisation des Différents Constituants Harmoniques de la Marée.\textit{ Source: https://promenade.imcce.fr/en/pages5/525.html.}}
 	\label{fig:harmoniques}
 \end{figure}
-\vspace{1cm}
 
-La préparation des fichiers de forçage nécessite un atlas de marées contenant des constituants harmoniques adaptés à la grille du modèle CROCO. Cet atlas est indispensable pour obtenir des conditions aux limites ouvertes (OBC)\footnote{OBC : Open Boundary Conditions} précises pour les marées sur la grille du modèle. Dans le cadre de ce projet, nous avons sollicité l'accès au modèle TPXO9 pour obtenir ces données. Nous approfondirons l'utilisation du modèle TPXO9 dans la section correspondante de ce document.
+La préparation des fichiers de forçage nécessite un atlas de marées contenant des constituants harmoniques adaptés à la grille du modèle CROCO. Cet atlas est indispensable pour obtenir des conditions aux limites ouvertes du modèle appelées \og \textit{\textbf{O}pen \textbf{B}oundary \textbf{C}onditions} \fg{} (OBC). Dans le cadre de ce projet, nous avons sollicité un accès au modèle TPXO9 (\textcolor{red}{Ref}) pour obtenir ces données. Nous approfondirons l'utilisation du modèle TPXO9 dans la section correspondante de ce document.
 
 En somme, les fichiers de forçage par les marées fournissent les informations nécessaires pour simuler les effets des marées sur les dynamiques océaniques dans le modèle CROCO.
 Une fois que ces fichiers de forçage sont correctement préparés et intégrés, le modèle CROCO peut être mis en route. Cette étape initie la simulation océanographique, permettant au modèle de commencer à générer des sorties basées sur les conditions forçage fournies.
@@ -127,7 +126,6 @@ QGIS prend en charge une variété de formats de données, y compris les formats
 
 
 \subsubsection{Les plugins Qgis}
-
 
 Les plugins sont des extensions logicielles qui ajoutent de nouvelles fonctionnalités à QGIS. Ils sont développés par la communauté QGIS et peuvent être utilisés pour étendre les capacités de QGIS au-delà de ses fonctionnalités de base. Les plugins peuvent être écrits en Python ou en C++ et sont généralement utilisés pour ajouter des fonctionnalités spécifiques qui ne sont pas présentes dans le logiciel de base (\cite{QGISPlugins}).
 
