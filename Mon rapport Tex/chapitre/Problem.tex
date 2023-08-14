@@ -105,23 +105,28 @@ En somme, les fichiers de forçage par les marées fournissent les informations 
 
 \subsubsection{Le Forçage météorologique}
 
-Après avoir travaillé sur les fichiers de forçage par les marées, j'ai ensuite continué mes efforts vers les fichiers de forçage météorologique, également appelés fichiers "Bulk" dans le contexte du modèle CROCO. Ces fichiers sont tout aussi cruciaux pour la précision et la fiabilité des simulations océanographiques. Ils fournissent les informations nécessaires pour modéliser les effets des conditions météorologiques sur les dynamiques océaniques, y compris des facteurs tels que la pression atmosphérique, la température de l'air, la vitesse et la direction du vent, et le flux de chaleur net à la surface de l'océan, etc ...
-La préparation de ces fichiers de forçage météorologique nécessite une compréhension approfondie des interactions entre l'océan et l'atmosphère, ainsi que l'accès à des données météorologiques précises et à jour. Dans le cadre de ce projet, j'ai utilisé le modèle ERA5 pour obtenir ces données météorologiques. Le modèle ERA5, développé par le Centre européen pour les prévisions météorologiques à moyen terme (ECMWF), est une source de données météorologiques reconnue pour sa précision et sa résolution spatiale et temporelle élevé\cite{CROCOForum2022, Donoso2022}.
+Après avoir travaillé sur les fichiers de forçage par la marée, j'ai ensuite continué mes efforts sur la création de fichiers de forçage météorologique, également appelés fichiers \og \textit{Bulk} \fg{}, toujours pour le modèle CROCO. Ces fichiers sont tout aussi cruciaux pour la précision et la fiabilité des simulations océanographiques. Ils fournissent au modèle numérique les informations nécessaires pour simuler les effets des conditions météorologiques sur la dynamique océanique. Les paramètres tels que la pression atmosphérique, la température de l'air, la vitesse et la direction du vent, le flux de chaleur net à la surface de l'océan, etc., sont pris en compte.
 
-Tout comme pour les fichiers de forçage par les marées, une fois que les fichiers de forçage météorologique, ou fichiers "Bulk", sont correctement préparés et intégrés, ils permettent au modèle CROCO de simuler avec précision les effets des conditions météorologiques sur les dynamiques océaniques. Nous discuterons plus en détail de l'utilisation du modèle ERA5 et de la préparation des fichiers "Bulk" dans la section correspondante de ce document.
-\subsection{Qcrocoflow}
-\alert{-Qgis\\GRID\\Conditions ini(TIDES/BULK)}
-\subsubsection{Qgis}
-Mon maître de stage a opté pour l'utilisation d'un système d'information géographique (SIG) pour faciliter la manipulation et l'analyse des données géospatiales. QGIS (Quantum Geographic Information System), en tant que solution open source puissante et flexible, s'est avéré être l'outil idéal pour cette tâche.
+La préparation de ces fichiers de forçage météorologique nécessite une compréhension approfondie des interactions entre l'océan et l'atmosphère, ainsi que l'accès à des données météorologiques précises et à jour. Dans le cadre de ce projet, j'ai utilisé le modèle ERA5 (\textcolor{red}{Ref}) pour obtenir ces données météorologiques. Le modèle ERA5, développé par le centre européen pour les prévisions météorologiques à moyen terme (\textbf{E}uropean \textbf{C}enter for \textbf{M}ean \textbf{W}eather \textbf{F}orcast (ECMWF)), est une source de données météorologiques reconnue pour sa précision et sa résolution spatiale et temporelle élevé \cite{CROCOForum2022, Donoso2022}.\\
+
+Tout comme pour les fichiers de forçage par les marées, une fois que les fichiers de forçage météorologique, ou fichiers \og \textit{Bulk} \fg{}, sont correctement préparés et intégrés, ils permettent au modèle CROCO de simuler avec précision les effets des conditions météorologiques sur les dynamiques océaniques. Nous discuterons plus en détail de l'utilisation du modèle ERA5 et de la préparation des fichiers \og \textit{Bulk} \fg{} dans la section correspondante de ce document.
+
+\subsection{Le développement d'un plugin}
+
+
+\subsubsection{Le logiciel QGIS}
+
+Mon maître de stage a opté pour l'utilisation d'un \textbf{S}ystème d'\textbf{I}nformation \textbf{G}éographique (SIG) pour faciliter la manipulation et l'analyse des données spatialisées. \textit{\textbf{QGIS}} (\textbf{Q}uantum \textbf{G}eographic \textbf{I}nformation \textbf{S}ystem) (\cite{QGIS}), en tant que solution \og open source \fg{} puissante et flexible, s'est avéré être l'outil idéal pour cette tâche.\\
 
 QGIS permet aux utilisateurs de créer, modifier, visualiser et analyser des données géospatiales. Il est largement utilisé par les chercheurs, les planificateurs, les cartographes et d'autres professionnels qui travaillent avec des données géographiques.
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=1in]{./IMAGES/Qgis.png}
-	\caption[QGIS]{Logo QGIS \textit{ Source: https://www.qgis.org/.}}
+	\caption[QGIS]{Logo officiel QGIS (https://www.qgis.org/.)}
 	\label{fig:QGIS}
 \end{figure}
-QGIS prend en charge une variété de formats de données, y compris les formats vectoriels et raster, et offre une gamme d'outils pour la visualisation de données, l'analyse spatiale, la gestion de données et plus encore (\cite{QGIS}). Il est également extensible grâce à une large gamme de plugins, ce qui permet aux utilisateurs d'ajouter des fonctionnalités supplémentaires en fonction de leurs besoins spécifiques.
+
+QGIS prend en charge une variété de formats de données, à la fois dans les formats vectoriels et raster et offre une large gamme d'outils pour la visualisation de données, l'analyse spatiale, la gestion de données et plus encore (\cite{QGIS}). Il est également extensible grâce à la présence d'un \og \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface \fg{} (API). Cette caractéristique importante de QGIS a permis le développement d'une large gamme de plugins. Les utilisateurs de QGIS peuvent ajouter des fonctionnalités supplémentaires en fonction de leurs besoins spécifiques.
 
 
 \subsubsection{Les plugins Qgis}
