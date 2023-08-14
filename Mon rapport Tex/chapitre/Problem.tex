@@ -42,37 +42,38 @@ Pour assurer un fonctionnement optimal, le modèle CROCO nécessite une série d
 
 \subsubsection{La Grille d'Entrée du Modèle CROCO}
 
-Dans le contexte de la modélisation océanographique, une grille est une représentation discrète de l'espace sur lequel le modèle fonctionne. Elle est utilisée pour diviser l'océan en une série de points de grille, auxquels sont associées des valeurs de variables telles que la température, la salinité, la vitesse du courant, etc.
-
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/mailles.png}
-	\caption[Grille]{Illustration d'une grille de modélisation océanographique pour la région de la Manche. La grille, avec une résolution spatiale de 500 mètres, démontre la distribution des mailles utilisées pour la simulation. Chaque maille représente un point de données dans le modèle. \textit{Source : Qcrocoflow.}}
-	\label{fig:gridnorm}
+    \centering
+    \includegraphics[width=\textwidth]{./IMAGES/ExG.png}
+    \caption[Gridcomp]{Comparaison entre une Grille Régulière [a] et une Grille Irrégulière [b] Utilisées en Modélisation Océanographique.\textit{ Source: Researchgate.}}
+    \label{fig:Gridexplain01}
 \end{figure}
-\textcolor{red}{Cette figure ne représente pas bien ce qu'est une grille (ce que tu veux expliquer). Tu devrais ajouter des points (en noir) qui correspondraient à un exemple d'une grille rectangulaire par exemple}
+
+Dans le contexte de la modélisation océanographique, une grille est une représentation discrète de l'espace sur lequel le modèle fonctionne. Elle est utilisée pour diviser l'océan en une série de points de grille, auxquels sont associées des valeurs de variables telles que la température, la salinité, la vitesse du courant, etc (Fig. \ref{fig:Gridexplain01}).
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=\textwidth]{./IMAGES/mailles.png}
+%	\caption[Grille]{Illustration d'une grille de modélisation océanographique pour la région de la Manche. La grille, avec une résolution spatiale de 500 mètres, démontre la distribution des mailles utilisées pour la simulation. Chaque maille représente un point de données dans le modèle. \textit{Source : Qcrocoflow.}}
+%	\label{fig:gridnorm}
+%\end{figure}
+
+\textcolor{red}{Je pense que cette figure doit être placée ici car elle explique mieux ce qu'est une grille}
 
 La grille est généralement définie en trois dimensions : deux dimensions horizontales (en longitude et en latitude, ou en coordonnées cartésiennes x et y) et une dimension verticale (profondeur). Chaque point de la grille en 3D est appelé une cellule de grille, ou une maille dans certains contextes.
 
-Il existe différents types de grilles en fonction de la manière dont les points de grille sont disposés. Par exemple, une grille régulière a des points de grille espacés uniformément, tandis qu'une grille irrégulière a des points de grille qui peuvent être plus rapprochés dans certaines régions (par exemple, près des côtes) et plus espacés dans d'autres.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/ExG.png}
-	\caption[Gridcomp]{Comparaison entre une Grille Régulière [a] et une Grille Irrégulière [b] Utilisées en Modélisation Océanographique.\textit{ Source: Researchgate.}}
-	\label{fig:Gridexplain}
-\end{figure}
+Il existe différents types d'organisation de grilles en fonction de la manière dont les points de grille sont disposés. Par exemple, une grille régulière a des points de grille espacés uniformément, tandis qu'une grille irrégulière a des points de grille qui peuvent être plus rapprochés dans certaines régions (par exemple, près des côtes) et plus espacés dans d'autres (Fig. \ref{fig:Gridexplain01}).\\
+
 Dans le cas du modèle CROCO, une combinaison de grilles est utilisée. Pour les dimensions longitudinales et latitudinales, une grille régulière est employée, avec des lignes de grille droites et uniformément espacées. Cela facilite la représentation précise des caractéristiques océanographiques à grande échelle.
 
-En revanche, pour la dimension de la profondeur, une grille curviligne est utilisée. Une grille curviligne est une grille dont les lignes de grille peuvent être courbes, permettant une plus grande flexibilité dans la représentation des caractéristiques océanographiques verticales. Cela est particulièrement utile pour représenter avec précision les variations de profondeur, en particulier dans les régions côtières où la bathymétrie peut être complexe.
-
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/Gridexpl.png}
-	\caption[Grid]{Schémas-types [a] d’une grille d’Arakawa-C en 3-dimensions, et [b] d’une grille de discrétisation en coordonnées-sigma.\textit{ Source: Researchgate.}}
-	\label{fig:Gridexplai}
+    \centering
+    \includegraphics[width=\textwidth]{./IMAGES/Gridexpl.png}
+    \caption[Grid]{Schémas-types [a] d’une grille d’Arakawa-C en 3-dimensions, et [b] d’une grille de discrétisation en coordonnées-sigma.\textit{ Source: Researchgate.}}
+    \label{fig:Gridexplain02}
 \end{figure}
-\vspace{1cm}
 
+En revanche, pour la dimension de la profondeur, une grille curviligne est utilisée. Une grille curviligne est une grille dont les lignes peuvent être courbes, permettant une plus grande flexibilité dans la représentation des caractéristiques océanographiques verticales. Cela est particulièrement utile pour représenter avec précision les variations de profondeur, en particulier dans les régions côtières où la bathymétrie peut être complexe (Fig. \ref{fig:Gridexplain02}).
 
 Le modèle CROCO utilise une grille Arakawa C , qui est une manière spécifique d'organiser les variables sur la grille. Dans une grille Arakawa C, les variables scalaires (comme la température et la salinité) sont définies au centre des cellules de la maille, tandis que les variables vectorielles (comme les composantes de vitesse) sont définies aux coins des cellules de la grille. Cette disposition particulière aide à minimiser les erreurs numériques lors de la résolution des équations du modèle.
 
