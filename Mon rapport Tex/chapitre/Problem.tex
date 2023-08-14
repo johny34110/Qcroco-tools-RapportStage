@@ -90,7 +90,7 @@ Mon projet initial s'inscrit précisément dans ce contexte~: la mise en \oe{uvr
 
 Dans le modèle CROCO, les fichiers de forçage par la marée jouent un rôle crucial pour simuler avec précision les dynamiques océaniques. Les marées océaniques, principalement produites par les forces gravitationnelles du Soleil et de la Lune, représentent l'une des principales sources de forçage pour la mise en mouvement des masses d'eau océaniques (\cite{Tide}).
 
-Afin de simuler avec précision les dynamiques maritimes, yy compris les variations complexes introduites par les harmoniques de marée, le modèle CROCO incorpore divers constituants de marée. Ces constituants sont propagés à partir des frontières latérales du modèle en utilisant la méthode décrite par Flather~\cite{flather1976}. Pour réaliser cette intégration, les constituants de marée, y compris les harmoniques, doivent être ajoutés au fichier de forçage. Les harmoniques de marée, qui oscillent à des fréquences multiples de la fréquence principale de la marée, sont essentielles pour une représentation fidèle des marées océaniques réelles (\cite{noaa2023}).
+Afin de simuler avec précision la dynamique marine induite par la marée, le modèle CROCO incorpore divers constituants de marée (plusieurs harmoniques de marée). Ces constituants sont propagés à partir des frontières latérales du modèle en utilisant la méthode décrite dans \cite{flather1976}. Les constituants de marée sont ajoutés dans un fichier spécifique de forçage. Les harmoniques de marée, qui oscillent à des fréquences multiples de la fréquence principale de la marée, sont essentielles pour une représentation fidèle des marées océaniques réelles (\cite{noaa2023}).
 
 \begin{figure}[H]
 	\centering
