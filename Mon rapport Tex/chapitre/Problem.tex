@@ -75,20 +75,20 @@ Dans le cas du modèle CROCO, une combinaison de grilles est utilisée. Pour les
 
 En revanche, pour la dimension de la profondeur, une grille curviligne est utilisée. Une grille curviligne est une grille dont les lignes peuvent être courbes, permettant une plus grande flexibilité dans la représentation des caractéristiques océanographiques verticales. Cela est particulièrement utile pour représenter avec précision les variations de profondeur, en particulier dans les régions côtières où la bathymétrie peut être complexe (Fig. \ref{fig:Gridexplain02}).
 
-Le modèle CROCO utilise une grille Arakawa C , qui est une manière spécifique d'organiser les variables sur la grille. Dans une grille Arakawa C, les variables scalaires (comme la température et la salinité) sont définies au centre des cellules de la maille, tandis que les variables vectorielles (comme les composantes de vitesse) sont définies aux coins des cellules de la grille. Cette disposition particulière aide à minimiser les erreurs numériques lors de la résolution des équations du modèle.
-
 \begin{figure}[H]
-	\centering
-	\includegraphics[height=3in]{./IMAGES/maille.png}
-	\caption[Mailles]{Schéma illustrant une maille individuelle de la grille de modélisation. Les composantes de vitesse, u et v, sont représentées aux coins de la maille, tandis que les variables scalaires, telles que la température, la salinité et la vitesse du courant, sont localisées au centre de la maille.\textit{ Source: Researchgate.}}
-	\label{fig:mailles}
+    \centering
+    \includegraphics[height=3in]{./IMAGES/maille.png}
+    \caption[Mailles]{Schéma illustrant une maille individuelle de la grille de modélisation. Les composantes de vitesse, u et v, sont représentées aux coins de la maille, tandis que les variables scalaires, telles que la température, la salinité et la vitesse du courant, sont localisées au centre de la maille.\textit{ Source: Researchgate.}}
+    \label{fig:mailles}
 \end{figure}
-\vspace{1cm}
 
-Mon projet initial s'inscrivait précisément dans ce contexte : la mise en œuvre de la génération des fichiers d'entrée 'grid'. Après de nombreuses heures de travail intensif, j'ai réussi à achever cette phase du projet plus tôt que prévu. Cette avance m'a permis de passer à des étapes supplémentaires, notamment la génération des fichiers de forçage par les marées et les conditions météorologiques. Cette progression a non seulement élargi la portée de mon travail, mais a également approfondi ma compréhension du fonctionnement global du modèle CROCO.
+Le modèle CROCO utilise une grille Arakawa C, qui est une manière spécifique d'organiser les variables sur la grille (Fig. \ref{fig:mailles}). Dans une grille Arakawa C, les variables scalaires (comme la température et la salinité) sont définies au centre des cellules de la maille, tandis que les variables vectorielles (comme les composantes de vitesse) sont définies aux coins des cellules de la grille. Cette disposition particulière aide à minimiser les erreurs numériques lors de la résolution des équations du modèle.\\
+
+Mon projet initial s'inscrit précisément dans ce contexte~: la mise en \oe{uvre} de la génération des fichiers d'entrée \og grid \fg{}. Après de nombreuses heures de travail, j'ai réussi à achever cette phase du projet plus tôt que prévu. Cette avance m'a permis de passer à des étapes supplémentaires, notamment la génération des fichiers de forçage par les marées et les conditions météorologiques. Cette progression a non seulement élargi la portée de mon travail, mais a également approfondi ma compréhension du fonctionnement global du modèle CROCO.
 
 \subsubsection{Les Fichiers de Forçage par les Marées}
-Dans le modèle CROCO, les fichiers de forçage par les marées jouent un rôle crucial pour simuler avec précision les dynamiques océaniques. Les marées océaniques, principalement produites par les forces gravitationnelles du Soleil et de la Lune, représentent l'une des principales sources d'énergie de l'océan mondial (\cite{Tide}).
+
+Dans le modèle CROCO, les fichiers de forçage par la marée jouent un rôle crucial pour simuler avec précision les dynamiques océaniques. Les marées océaniques, principalement produites par les forces gravitationnelles du Soleil et de la Lune, représentent l'une des principales sources de forçage pour la mise en mouvement des masses d'eau océaniques (\cite{Tide}).
 
 Afin de simuler avec précision les dynamiques maritimes, yy compris les variations complexes introduites par les harmoniques de marée, le modèle CROCO incorpore divers constituants de marée. Ces constituants sont propagés à partir des frontières latérales du modèle en utilisant la méthode décrite par Flather~\cite{flather1976}. Pour réaliser cette intégration, les constituants de marée, y compris les harmoniques, doivent être ajoutés au fichier de forçage. Les harmoniques de marée, qui oscillent à des fréquences multiples de la fréquence principale de la marée, sont essentielles pour une représentation fidèle des marées océaniques réelles (\cite{noaa2023}).
 
