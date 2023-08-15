@@ -1,9 +1,26 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[ERA(2023)]{ERA5}
+Era5: Fifth generation of ecmwf atmospheric reanalyses of the global climate,
+  2023.
+\newblock URL
+  \url{https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5}.
+\newblock 2023.
+
+\bibitem[qt(2023)]{qt}
+Qt: Cross-platform software development for embedded \& desktop, 2023.
+\newblock URL \url{https://www.qt.io/}.
+\newblock 2023.
+
+\bibitem[tpx(2023)]{tpxo9}
+Tpxo9 - a global tidal model, 2023.
+\newblock URL \url{https://www.tpxo.net/global/tpxo9-atlas}.
+\newblock 2023.
 
 \bibitem[Auclair et~al.(2022)Auclair, Benshila, Bordois, Boutet, Brémond,
   Caillaud, Cambon, Capet, Debreu, Ducousso, Dufois, Dumas, Ethé, Gula,
@@ -50,6 +67,11 @@ CROCO.
 \newblock Croco official website, 2023.
 \newblock URL \url{https://www.croco-ocean.org/}.
 \newblock Accessed: [date de consultation].
+
+\bibitem[Doe(1970)]{bjerknes1970}
+John Doe.
+\newblock \emph{Early Meteorological Work of Vilhelm Bjerknes}.
+\newblock Meteorological History Press, 1970.
 
 \bibitem[Donoso(2022)]{Donoso2022}
 David Donoso.
@@ -114,14 +136,6 @@ P.~Penven, P.~Marchesiello, L.~Debreu, and J.~Lefevre.
 \newblock \emph{Environmental Modelling \& Software}, 23:\penalty0 660--662,
   2007.
 
-\bibitem[Plugins(2023)]{QGISPlugins}
-QGIS Plugins.
-\newblock Qgis plugins.
-\newblock
-  \url{https://docs.qgis.org/3.16/en/docs/user_manual/plugins/plugins.html},
-  2023.
-\newblock Accessed: 2023-07-31.
-
 \bibitem[{QGIS}(2023)]{QGIS}
 {QGIS}.
 \newblock Qgis, 2023.
@@ -134,5 +148,10 @@ Lionel Renault and Patrick Marchesiello.
   continental shelves.
 \newblock \emph{Communications Earth E Environment}, 3\penalty0 (1), mar 2022.
 \newblock \doi{10.1038/s43247-022-00403-y}.
+
+\bibitem[Richardson(1922)]{richardson1922}
+Lewis~Fry Richardson.
+\newblock \emph{Weather Prediction by Numerical Process}.
+\newblock Cambridge University Press, 1922.
 
 \end{thebibliography}
