@@ -41,8 +41,6 @@ L'objectif de CROCO est double : il sert à la fois pour la recherche fondamenta
 
 Pour assurer un fonctionnement optimal, le modèle CROCO nécessite une série de fichiers d'entrée spécifiques, qui permettent de paramétrer la simulation de manière à refléter le plus fidèlement possible les conditions océanographiques réelles. Mon stage se concentre sur la mise en place des fichiers d'entrée du modèle. Il n'est pas impératif pour moi d'acquérir une compréhension approfondie du fonctionnement interne du code CROCO ou de son système de résolution des équations. Mon rôle  est de comprendre et de gérer efficacement la générations des fichiers d'entrée, qui déterminent la zone d'étude et intègrent les facteurs de forçage tels que les marées et les conditions météorologiques.
 
-
-
 \subsubsection{La Grille d'Entrée du Modèle CROCO}
 
 \begin{figure}[H]
@@ -52,21 +50,13 @@ Pour assurer un fonctionnement optimal, le modèle CROCO nécessite une série d
 	\label{fig:Gridexplain01}
 \end{figure}
 
-Dans le contexte de la modélisation océanographique, une grille est une représentation discrète de l'espace sur lequel le modèle fonctionne. Elle est utilisée pour diviser l'océan en une série de points de grille, auxquels sont associées des valeurs de variables telles que la température, la salinité, la vitesse du courant, etc (Fig. \ref{fig:Gridexplain01})
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[height=3in]{./IMAGES/maille.png}
-	\caption[Mailles]{Schéma illustrant une maille individuelle de la grille de modélisation. Les composantes de vitesse, u et v, sont représentées aux coins de la maille, tandis que les variables scalaires, telles que la température, la salinité et la vitesse du courant, sont localisées au centre de la maille.\textit{ Source: Researchgate.}}
-	\label{fig:mailles}
-\end{figure}
-\vspace{1cm}
+Dans le contexte de la modélisation océanographique, une grille est une représentation discrète de l'espace sur lequel le modèle fonctionne. Elle est utilisée pour diviser l'espace continu de l'océan en une série de points de grille, sur lesquels vont être calculées des valeurs de variables telles que la température, la salinité, la vitesse du courant, etc. (Fig. \ref{fig:Gridexplain01}).\\
 
 La grille est généralement définie en trois dimensions : deux dimensions horizontales (en longitude et en latitude, ou en coordonnées cartésiennes x et y) et une dimension verticale (profondeur). Chaque point de la grille en 3D est appelé une cellule de grille, ou une maille dans certains contextes.
 
 Il existe différents types d'organisation de grilles en fonction de la manière dont les points de grille sont disposés. Par exemple, une grille régulière a des points de grille espacés uniformément, tandis qu'une grille irrégulière a des points de grille qui peuvent être plus rapprochés dans certaines régions (par exemple, près des côtes) et plus espacés dans d'autres (Fig. \ref{fig:Gridexplain01}).\\
 
-Dans le cas du modèle CROCO, une combinaison de grilles est utilisée. Pour les dimensions longitudinales et latitudinales, une grille régulière est employée, avec des lignes de grille droites et uniformément espacées. Cela facilite la représentation précise des caractéristiques océanographiques à grande échelle.
+Dans le cas du modèle CROCO, une combinaison de grilles est utilisée. Pour les dimensions longitudinales et latitudinales, une grille régulière est employée, avec des lignes de grille droites et uniformément espacées.
 
 \begin{figure}[H]
 	\centering
@@ -75,18 +65,19 @@ Dans le cas du modèle CROCO, une combinaison de grilles est utilisée. Pour les
 	\label{fig:Gridexplain02}
 \end{figure}
 
-En revanche, pour la dimension de la profondeur, une grille curviligne est utilisée. Une grille curviligne est une grille dont les lignes peuvent être courbes, permettant une plus grande flexibilité dans la représentation des caractéristiques océanographiques verticales. Cela est particulièrement utile pour représenter avec précision les variations de profondeur, en particulier dans les régions côtières où la bathymétrie peut être complexe (Fig. \ref{fig:Gridexplain02}).
+Pour la dimension verticale (la profondeur), une grille curviligne est utilisée. Une grille curviligne est une grille dont les lignes peuvent être courbes, permettant une plus grande flexibilité dans la représentation des caractéristiques océanographiques verticales. Cela est particulièrement utile pour représenter avec précision les variations de profondeurs, en particulier dans les régions côtières où la bathymétrie peut être complexe (Fig. \ref{fig:Gridexplain02}[b]).\\
 
+Le modèle CROCO utilise une grille Arakawa C, qui est une manière spécifique d'organiser les variables sur la grille (Fig. \ref{fig:Gridexplain02}[a]). Dans une grille Arakawa C, les variables scalaires (comme la température et la salinité) sont définies au centre des cellules de la maille, tandis que les variables vectorielles (comme les composantes de vitesse) sont définies aux coins des cellules de la grille. Cette disposition particulière aide à minimiser les erreurs numériques lors de la résolution des équations du modèle.\\
 
-Le modèle CROCO utilise une grille Arakawa C, qui est une manière spécifique d'organiser les variables sur la grille (Fig. \ref{fig:mailles}). Dans une grille Arakawa C, les variables scalaires (comme la température et la salinité) sont définies au centre des cellules de la maille, tandis que les variables vectorielles (comme les composantes de vitesse) sont définies aux coins des cellules de la grille. Cette disposition particulière aide à minimiser les erreurs numériques lors de la résolution des équations du modèle.\\
-
-Mon projet initial s'inscrit précisément dans ce contexte~: la mise en \oe{uvre} de la génération des fichiers d'entrée \og grid \fg{}. Après de nombreuses heures de travail, j'ai réussi à achever cette phase du projet plus tôt que prévu. Cette avance m'a permis de passer à des étapes supplémentaires, notamment la génération des fichiers de forçage par les marées et les conditions météorologiques. Cette progression a non seulement élargi la portée de mon travail, mais a également approfondi ma compréhension du fonctionnement global du modèle CROCO.
+Mon projet initial s'inscrit précisément dans ce contexte~: la mise en \oe{uvre} de la génération des fichiers d'entrée nommés \og grid \fg{}. Après de nombreuses heures de travail, j'ai réussi à achever cette phase du projet plus tôt que prévu. Cette avance m'a permis de passer à des étapes supplémentaires, notamment la génération des fichiers de forçage par les marées et les conditions météorologiques. Cette progression a non seulement élargi la portée de mon travail, mais a également approfondi ma compréhension du fonctionnement global du modèle CROCO.
 
 \subsubsection{Le Forçage par les Marées}
 
 Dans le modèle CROCO, les fichiers de forçage par la marée jouent un rôle crucial pour simuler avec précision les dynamiques océaniques. Les marées océaniques, principalement produites par les forces gravitationnelles du Soleil et de la Lune, représentent l'une des principales sources de forçage pour la mise en mouvement des masses d'eau océaniques (\cite{Tide}).
 
-Afin de simuler avec précision la dynamique marine induite par la marée, le modèle CROCO incorpore divers constituants de marée (plusieurs harmoniques de marée). Ces constituants sont propagés à partir des frontières latérales du modèle en utilisant la méthode décrite dans \cite{flather1976}. Les constituants de marée sont ajoutés dans un fichier spécifique de forçage. Les harmoniques de marée, qui oscillent à des fréquences multiples de la fréquence principale de la marée, sont essentielles pour une représentation fidèle des marées océaniques réelles (\cite{noaa2023}).
+Afin de simuler avec précision la dynamique marine induite par la marée, le modèle CROCO incorpore divers constituants de marée (plusieurs harmoniques de marée). Ces constituants sont propagés à partir des frontières latérales du modèle en utilisant la méthode décrite dans \cite{flather1976}.
+
+Les constituants de marée sont ajoutés dans un fichier spécifique de forçage. Les harmoniques de marée, qui oscillent à des fréquences multiples de la fréquence principale de la marée, sont essentielles pour une représentation fidèle des marées océaniques réelles (\cite{noaa2023}).
 
 \begin{figure}[H]
 	\centering
@@ -95,17 +86,20 @@ Afin de simuler avec précision la dynamique marine induite par la marée, le mo
 	\label{fig:harmoniques}
 \end{figure}
 
-La préparation des fichiers de forçage nécessite un atlas de marées contenant des constituants harmoniques adaptés à la grille du modèle CROCO. Cet atlas est indispensable pour obtenir des conditions aux limites ouvertes du modèle appelées \og \textit{\textbf{O}pen \textbf{B}oundary \textbf{C}onditions} \fg{} (OBC). Dans le cadre de ce projet, nous avons sollicité un accès au modèle TPXO9 (\cite{tpxo9}) pour obtenir ces données. Nous approfondirons l'utilisation du modèle TPXO9 dans la section correspondante de ce document.
+La préparation des fichiers de forçage nécessite un atlas de marées contenant des constituants harmoniques adaptés à la grille du modèle CROCO. Cet atlas est indispensable pour obtenir des conditions aux limites ouvertes du modèle appelées \og \textit{\textbf{O}pen \textbf{B}oundary \textbf{C}onditions} \fg{} (OBC). Dans le cadre de ce projet, nous avons sollicité un accès au modèle TPXO9 (\cite{tpxo9}) pour obtenir ces données. Nous approfondirons l'utilisation du modèle TPXO9 dans la section \ref{sub:tides}.
 
-En somme, les fichiers de forçage par les marées fournissent les informations nécessaires pour simuler les effets des marées sur les dynamiques océaniques dans le modèle CROCO. Une fois que ces fichiers de forçage sont correctement préparés, une la simulation océanographique peut être initiée, permettant au modèle de commencer à générer des sorties basées sur les conditions de forçage fournies.
+
+En résumé, les fichiers de forçage par les marées fournissent les informations nécessaires pour simuler les effets des marées sur les dynamiques océaniques dans le modèle CROCO. Une fois que ces fichiers de forçage sont correctement préparés, une simulation océanographique peut être initiée, permettant au modèle de commencer à générer des résultats basées sur les conditions de forçage fournies.
 
 \subsubsection{Le Forçage météorologique}
 
 Après avoir travaillé sur les fichiers de forçage par la marée, j'ai ensuite continué mes efforts sur la création de fichiers de forçage météorologique, également appelés fichiers \og \textit{Bulk} \fg{}, toujours pour le modèle CROCO. Ces fichiers sont tout aussi cruciaux pour la précision et la fiabilité des simulations océanographiques. Ils fournissent au modèle numérique les informations nécessaires pour simuler les effets des conditions météorologiques sur la dynamique océanique. Les paramètres tels que la pression atmosphérique, la température de l'air, la vitesse et la direction du vent, le flux de chaleur net à la surface de l'océan, etc., sont pris en compte.
 
-La préparation de ces fichiers de forçage météorologique nécessite une compréhension approfondie des interactions entre l'océan et l'atmosphère, ainsi que l'accès à des données météorologiques précises et à jour. Dans le cadre de ce projet, j'ai utilisé le modèle ERA5 (\cite{ERA5}) pour obtenir ces données météorologiques. Le modèle ERA5, développé par le centre européen pour les prévisions météorologiques à moyen terme (\textbf{E}uropean \textbf{C}enter for \textbf{M}ean \textbf{W}eather \textbf{F}orcast (ECMWF)), est une source de données météorologiques reconnue pour sa précision et sa résolution spatiale et temporelle élevé \cite{CROCOForum2022, Donoso2022}.\\
+La création de ces fichiers de forçage météorologique réclame sur le plan théorique, une compréhension approfondie des interactions entre l'océan et l'atmosphère (notions d'océanographie physique) et sur le plan pratique, un accès à des données météorologiques précises et à jour.
 
-Tout comme pour les fichiers de forçage par les marées, une fois que les fichiers de forçage météorologique, ou fichiers \og \textit{Bulk} \fg{}, sont correctement préparés et intégrés, ils permettent au modèle CROCO de simuler avec précision les effets des conditions météorologiques sur les dynamiques océaniques. Nous discuterons plus en détail de l'utilisation du modèle ERA5 et de la préparation des fichiers \og \textit{Bulk} \fg{} dans la section correspondante de ce document.
+Dans le cadre de ce projet, j'ai utilisé le modèle ERA5 (\cite{ERA5}) pour obtenir ces données météorologiques. Le modèle ERA5, développé par le centre européen pour les prévisions météorologiques à moyen terme (\textbf{E}uropean \textbf{C}enter for \textbf{M}ean \textbf{W}eather \textbf{F}orcast (ECMWF)), est une source de données météorologiques reconnue pour sa précision, sa résolution spatiale et temporelle élevé \cite{CROCOForum2022, Donoso2022}.\\
+
+Tout comme pour les fichiers de forçage par les marées, une fois que les fichiers de forçage météorologique, ou fichiers \og \textit{Bulk} \fg{}, sont correctement préparés et intégrés, ils permettent au modèle CROCO de simuler avec précision les effets des conditions météorologiques sur les dynamiques océaniques. Nous discuterons plus en détail de l'utilisation du modèle ERA5 et de la préparation des fichiers \og \textit{Bulk} \fg{} dans la section \ref{sub:bulk}.
 
 
 \subsection{Le développement d'un plugin}
@@ -124,17 +118,31 @@ QGIS permet aux utilisateurs de créer, modifier, visualiser et analyser des don
 \end{figure}
 
 QGIS prend en charge une variété de formats de données, à la fois dans les formats vectoriels et raster et offre une large gamme d'outils pour la visualisation de données, l'analyse spatiale, la gestion de données et plus encore (\cite{QGIS}). Il est également extensible grâce à la présence d'un \og \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface \fg{} (API). Cette caractéristique importante de QGIS a permis le développement d'une large gamme de plugins. Les utilisateurs de QGIS peuvent ajouter des fonctionnalités supplémentaires en fonction de leurs besoins spécifiques.
-
 \subsubsection{Les plugins dans QGIS}
 
-Les plugins sont des extensions logicielles qui ajoutent de nouvelles fonctionnalités à un logiciel principal support. Les plugins sont développés soit par la société propriétaire du logiciel support, soit par une communauté d'utilisateur. Ils permettent d'étendre les capacités au-delà de ses fonctionnalités de base du logiciel principal. Le langage utilisé pour le développement d'un plugin varie d'un logiciel à un autre et peut tout à fait être différence de celui du logiciel hôte. Néanmoins, depuis quelques années, le langage de programmation Python connaît un engouement croissant et tant à devenir un standard dans le développement d'extensions.\\
+Les plugins sont des extensions logicielles qui ajoutent de nouvelles fonctionnalités à un logiciel principal support. Les plugins sont développés soit par la société propriétaire du logiciel support, soit par une communauté d'utilisateur, soit les deux à la fois. Un plugin permet d'étendre les capacités au-delà des fonctionnalités de base du logiciel principal. Le langage utilisé pour le développement d'un plugin varie d'un logiciel à un autre et peut tout à fait être différence de celui du logiciel hôte. Néanmoins, depuis quelques années, le langage de programmation Python connaît un engouement croissant et tant à devenir un standard dans le développement d'extensions.\\
+%QGIS prend en charge une variété de formats de données, à la fois dans les formats vectoriels et raster et offre une large gamme d'outils pour la visualisation de données, l'analyse spatiale, la gestion de données et plus encore (\cite{QGIS}). Il est également extensible grâce à la présence d'un \og \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface \fg{} (API). Cette caractéristique importante de QGIS a permis le développement d'une large gamme de plugins. Les utilisateurs de QGIS peuvent ajouter des fonctionnalités supplémentaires en fonction de leurs besoins spécifiques.
 
 
-L'utilisation de plugins dans QGIS offre une flexibilité considérable et permet aux utilisateurs de personnaliser leur environnement de travail en fonction de leurs besoins spécifiques. Cela rend QGIS particulièrement adapté aux projets de recherche et de développement où les exigences peuvent varier considérablement.
+%\subsubsection{Les plugins dans QGIS}
+%
+%Les plugins sont des extensions logicielles qui ajoutent de nouvelles fonctionnalités à un logiciel principal support. Les plugins sont développés soit par la société propriétaire du logiciel support, soit par une communauté d'utilisateur. Ils permettent d'étendre les capacités au-delà de ses fonctionnalités de base du logiciel principal. Le langage utilisé pour le développement d'un plugin varie d'un logiciel à un autre et peut tout à fait être différence de celui du logiciel hôte. Néanmoins, depuis quelques années, le langage de programmation Python connaît un engouement croissant et tant à devenir un standard dans le développement d'extensions.\\
+%
+%% Les plugins peuvent être écrits en Python ou en C++ et sont généralement utilisés pour ajouter des fonctionnalités spécifiques qui ne sont pas présentes dans le logiciel de base (\cite{QGISPlugins}).
+%
+%L'utilisation de plugins dans QGIS offre une flexibilité considérable et permet aux utilisateurs de personnaliser leur environnement de travail en fonction de leurs besoins spécifiques. Cela rend QGIS particulièrement adapté aux projets de recherche et de développement où les exigences peuvent varier considérablement.
+%
+%Le développement d'un plugin spécifique, nommé \og QCrocoFlow \fg{}, a été initié par mon maître de stage pour faciliter la manipulation des données nécessaires pour le modèle CROCO. Il est complètement intégré à QGIS, mais pas encore disponible pour la communauté d'utilisateur, car encore en phase de développement.
+%
+%QCrcoFlow est organisé logiquement en deux grandes parties. La première comprte tous les outils de pré-traitement et de mise en place des conditions nécessaires au démarrage d'un modèle CROCO. La seconde partie s'attachent à fournir des outils de post-traitements pour l'exploitation des résultats issus d'une simulation CROCO, tels que la génération de graphiques divers, l'extraction de données, etc..
+%
+%=======
+L'utilisation de plugins dans QGIS offre une flexibilité considérable et permet aux utilisateurs de personnaliser leur environnement de travail en fonction de leurs besoins spécifiques. Cela rend QGIS particulièrement adapté aux projets de recherche et de développement où les exigences peuvent varier considérablement.\\
 
 Le développement d'un plugin spécifique, nommé \og QCrocoFlow \fg{}, a été initié par mon maître de stage pour faciliter la manipulation des données nécessaires pour le modèle CROCO. Il est complètement intégré à QGIS, mais pas encore disponible pour la communauté d'utilisateur, car encore en phase de développement.
 
-QCrcoFlow est organisé logiquement en deux grandes parties. La première comprte tous les outils de pré-traitement et de mise en place des conditions nécessaires au démarrage d'un modèle CROCO. La seconde partie s'attachent à fournir des outils de post-traitements pour l'exploitation des résultats issus d'une simulation CROCO, tels que la génération de graphiques divers, l'extraction de données, etc..
+QCrocoFlow est organisé logiquement en deux grandes parties. La première comporte tous les outils de pré-traitement et de mise en place des conditions nécessaires au démarrage d'un modèle CROCO. La seconde partie s'attachent à fournir des outils de post-traitements pour l'exploitation des résultats issus d'une simulation CROCO, tels que la génération de graphiques divers, l'extraction de données, etc..
+
 
 \begin{figure}[H]
 	\centering
@@ -153,12 +161,12 @@ Mon rôle dans ce projet s'est intégré dans la partie pré-traitement des donn
 	\label{fig:PlQcroco}
 \end{figure}
 
-Après avoir exploré en profondeur les capacités et l'importance des plugins dans QGIS, en particulier le plugin QCROCOFLOW, il est temps de se tourner vers une nouvelle dimension de ce projet. Dans le chapitre suivant, intitulé "Implémentation", je détaillerai les étapes et les méthodologies que j'ai adoptées pour mettre en œuvre ces outils et techniques. Nous plongerons dans les coulisses du développement, en examinant comment chaque composant a été conçu et intégré pour répondre aux besoins spécifiques de ce projet.
+Après avoir exploré en profondeur les capacités et l'importance des plugins dans QGIS, en particulier le plugin QCrocoFlow, il est temps de se tourner vers une nouvelle dimension de ce projet. Dans le chapitre suivant, intitulé \og Implémentation \fg{}, je détaillerai les étapes et les méthodologies que j'ai adoptées pour mettre en \oe{uvre} ces outils et techniques. Nous plongerons dans les coulisses du développement, en examinant comment chaque composant a été conçu et intégré pour répondre aux besoins spécifiques de ce projet.
 
 \newpage
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=8in]{./IMAGES/Cheminement.png}
-	\caption[Cheminent]{\textcolor{red}{Mettre un autre titre. Eventuellement mettre un cadre en pointillé autour de la partie qui concerne ton travail pour bie mettre en évidence où se situe ton action}}
+	\caption[Cheminent]{Vue d'ensemble du processus : De l'entrée utilisateur au modèle CROCO via QCROCOFLOW}
 	\label{fig:Cheminent}
 \end{figure}
