@@ -103,7 +103,6 @@ Tout comme pour les fichiers de forçage par les marées, une fois que les fichi
 
 \subsection{Le développement d'un plugin}
 
-
 \subsubsection{Le logiciel QGIS}
 
 Mon maître de stage a opté pour l'utilisation d'un \textbf{S}ystème d'\textbf{I}nformation \textbf{G}éographique (SIG) pour faciliter la manipulation et l'analyse des données spatialisées. \textit{\textbf{QGIS}} (\textbf{Q}uantum \textbf{G}eographic \textbf{I}nformation \textbf{S}ystem) (\cite{QGIS}), en tant que solution \og open source \fg{} puissante et flexible, s'est avéré être l'outil idéal pour cette tâche.\\
@@ -120,11 +119,10 @@ QGIS prend en charge une variété de formats de données, à la fois dans les f
 
 \subsubsection{Les plugins dans QGIS}
 
-Les plugins sont des extensions logicielles qui ajoutent de nouvelles fonctionnalités à un logiciel principal support. Les plugins sont développés soit par la société propriétaire du logiciel support, soit par une communauté d'utilisateur. Ils permettent d'étendre les capacités au-delà de ses fonctionnalités de base du logiciel principal. Le langage utilisé pour le développement d'un plugin varie d'un logiciel à un autre et peut tout à fait être différence de celui du logiciel hôte. Néanmoins, depuis quelques années, le langage de programmation Python connaît un engouement croissant et tant à devenir un standard dans le développement d'extensions.\\
+Les plugins sont des extensions logicielles qui ajoutent de nouvelles fonctionnalités à un logiciel principal support. Les plugins sont développés soit par la société propriétaire du logiciel support, soit par une communauté d'utilisateur, soit les deux à la fois. Un plugin permet d'étendre les capacités au-delà des fonctionnalités de base du logiciel principal. Le langage utilisé pour le développement d'un plugin varie d'un logiciel à un autre et peut tout à fait être différence de celui du logiciel hôte. Néanmoins, depuis quelques années, le langage de programmation Python connaît un engouement croissant et tant à devenir un standard dans le développement d'extensions.\\
+%QGIS prend en charge une variété de formats de données, à la fois dans les formats vectoriels et raster et offre une large gamme d'outils pour la visualisation de données, l'analyse spatiale, la gestion de données et plus encore (\cite{QGIS}). Il est également extensible grâce à la présence d'un \og \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface \fg{} (API). Cette caractéristique importante de QGIS a permis le développement d'une large gamme de plugins. Les utilisateurs de QGIS peuvent ajouter des fonctionnalités supplémentaires en fonction de leurs besoins spécifiques.
 
-QGIS prend en charge une variété de formats de données, à la fois dans les formats vectoriels et raster et offre une large gamme d'outils pour la visualisation de données, l'analyse spatiale, la gestion de données et plus encore (\cite{QGIS}). Il est également extensible grâce à la présence d'un \og \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface \fg{} (API). Cette caractéristique importante de QGIS a permis le développement d'une large gamme de plugins. Les utilisateurs de QGIS peuvent ajouter des fonctionnalités supplémentaires en fonction de leurs besoins spécifiques.
 
-<<<<<<< HEAD
 %\subsubsection{Les plugins dans QGIS}
 %
 %Les plugins sont des extensions logicielles qui ajoutent de nouvelles fonctionnalités à un logiciel principal support. Les plugins sont développés soit par la société propriétaire du logiciel support, soit par une communauté d'utilisateur. Ils permettent d'étendre les capacités au-delà de ses fonctionnalités de base du logiciel principal. Le langage utilisé pour le développement d'un plugin varie d'un logiciel à un autre et peut tout à fait être différence de celui du logiciel hôte. Néanmoins, depuis quelques années, le langage de programmation Python connaît un engouement croissant et tant à devenir un standard dans le développement d'extensions.\\
@@ -138,11 +136,11 @@ QGIS prend en charge une variété de formats de données, à la fois dans les f
 %QCrcoFlow est organisé logiquement en deux grandes parties. La première comprte tous les outils de pré-traitement et de mise en place des conditions nécessaires au démarrage d'un modèle CROCO. La seconde partie s'attachent à fournir des outils de post-traitements pour l'exploitation des résultats issus d'une simulation CROCO, tels que la génération de graphiques divers, l'extraction de données, etc..
 %
 %=======
-L'utilisation de plugins dans QGIS offre une flexibilité considérable et permet aux utilisateurs de personnaliser leur environnement de travail en fonction de leurs besoins spécifiques. Cela rend QGIS particulièrement adapté aux projets de recherche et de développement où les exigences peuvent varier considérablement.
+L'utilisation de plugins dans QGIS offre une flexibilité considérable et permet aux utilisateurs de personnaliser leur environnement de travail en fonction de leurs besoins spécifiques. Cela rend QGIS particulièrement adapté aux projets de recherche et de développement où les exigences peuvent varier considérablement.\\
 
 Le développement d'un plugin spécifique, nommé \og QCrocoFlow \fg{}, a été initié par mon maître de stage pour faciliter la manipulation des données nécessaires pour le modèle CROCO. Il est complètement intégré à QGIS, mais pas encore disponible pour la communauté d'utilisateur, car encore en phase de développement.
 
-QCrcoFlow est organisé logiquement en deux grandes parties. La première comprte tous les outils de pré-traitement et de mise en place des conditions nécessaires au démarrage d'un modèle CROCO. La seconde partie s'attachent à fournir des outils de post-traitements pour l'exploitation des résultats issus d'une simulation CROCO, tels que la génération de graphiques divers, l'extraction de données, etc..
+QCrocoFlow est organisé logiquement en deux grandes parties. La première comporte tous les outils de pré-traitement et de mise en place des conditions nécessaires au démarrage d'un modèle CROCO. La seconde partie s'attachent à fournir des outils de post-traitements pour l'exploitation des résultats issus d'une simulation CROCO, tels que la génération de graphiques divers, l'extraction de données, etc..
 
 
 \begin{figure}[H]
@@ -162,7 +160,7 @@ Mon rôle dans ce projet s'est intégré dans la partie pré-traitement des donn
 	\label{fig:PlQcroco}
 \end{figure}
 
-Après avoir exploré en profondeur les capacités et l'importance des plugins dans QGIS, en particulier le plugin QCROCOFLOW, il est temps de se tourner vers une nouvelle dimension de ce projet. Dans le chapitre suivant, intitulé "Implémentation", je détaillerai les étapes et les méthodologies que j'ai adoptées pour mettre en œuvre ces outils et techniques. Nous plongerons dans les coulisses du développement, en examinant comment chaque composant a été conçu et intégré pour répondre aux besoins spécifiques de ce projet.
+Après avoir exploré en profondeur les capacités et l'importance des plugins dans QGIS, en particulier le plugin QCrocoFlow, il est temps de se tourner vers une nouvelle dimension de ce projet. Dans le chapitre suivant, intitulé \og Implémentation \fg{}, je détaillerai les étapes et les méthodologies que j'ai adoptées pour mettre en \oe{uvre} ces outils et techniques. Nous plongerons dans les coulisses du développement, en examinant comment chaque composant a été conçu et intégré pour répondre aux besoins spécifiques de ce projet.
 
 \newpage
 \begin{figure}[H]
