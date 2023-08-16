@@ -17,47 +17,50 @@ Warning--entry type for "croco_forum" isn't style-file defined
 --line 173 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco_video" isn't style-file defined
 --line 180 of file ./Biblio/STAGE.bib
+Warning--to sort, need author or key in tpxo9
+Warning--to sort, need author or key in ERA5
+Warning--to sort, need author or key in qt
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
-You've used 18 entries,
+You've used 22 entries,
             2773 wiz_defined-function locations,
-            684 strings with 8410 characters,
-and the built_in function-call counts, 8169 in all, are:
-= -- 658
-> -- 647
-< -- 15
-+ -- 225
-- -- 207
-* -- 619
-:= -- 1327
-add.period$ -- 63
-call.type$ -- 18
-change.case$ -- 123
-chr.to.int$ -- 18
-cite$ -- 38
-duplicate$ -- 294
-empty$ -- 580
-format.name$ -- 227
-if$ -- 1658
+            702 strings with 8882 characters,
+and the built_in function-call counts, 9200 in all, are:
+= -- 752
+> -- 657
+< -- 16
++ -- 232
+- -- 210
+* -- 684
+:= -- 1442
+add.period$ -- 74
+call.type$ -- 22
+change.case$ -- 134
+chr.to.int$ -- 22
+cite$ -- 52
+duplicate$ -- 364
+empty$ -- 717
+format.name$ -- 231
+if$ -- 1900
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 5
-newline$ -- 107
-num.names$ -- 72
-pop$ -- 297
+missing$ -- 9
+newline$ -- 126
+num.names$ -- 76
+pop$ -- 348
 preamble$ -- 1
-purify$ -- 105
+purify$ -- 114
 quote$ -- 0
-skip$ -- 293
+skip$ -- 344
 stack$ -- 0
-substring$ -- 57
-swap$ -- 17
+substring$ -- 68
+swap$ -- 21
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 198
-warning$ -- 2
-while$ -- 55
+type$ -- 232
+warning$ -- 5
+while$ -- 58
 width$ -- 0
-write$ -- 241
-(There were 9 warnings)
+write$ -- 287
+(There were 12 warnings)

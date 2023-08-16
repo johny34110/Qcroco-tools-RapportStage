@@ -184,4 +184,25 @@
   url    = {https://www.youtube.com/watch?v=u2SFibx63I8},
 }
 
+@Book{bjerknes1970,
+  author    = {John Doe},
+  title     = {Early Meteorological Work of Vilhelm Bjerknes},
+  year      = {1970},
+  publisher = {Meteorological History Press},
+}
+
+@Book{richardson1922,
+  author    = {Lewis Fry Richardson},
+  title     = {Weather Prediction by Numerical Process},
+  year      = {1922},
+  publisher = {Cambridge University Press},
+}
+
+@Misc{tpxo9,
+  title = {TPXO9 - A global tidal model},
+  year  = {Year of Publication},
+  note  = {Accessed: Date of Access},
+  url   = {https://www.tpxo.net/global/tpxo9-atlas},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}

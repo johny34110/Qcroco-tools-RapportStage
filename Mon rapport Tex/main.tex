@@ -37,6 +37,7 @@
 		[1.5cm]
 		\begin{center}
 			\textsc{\large Rapport de stage \\[.5cm]
+<<<<<<< HEAD
                 Présenté par \\
                 [.5cm]
                 Jonathan NEJMANN \\
@@ -50,6 +51,21 @@
                \end{center}
             \end{minipage}
             \vspace{1.0cm}
+=======
+				Présenté par \\
+				[.5cm]
+				Jonathan NEJMANN \\
+				Promotion (2022-2023)\\
+				[1.0cm]}
+			\begin{minipage}{0.85\textwidth}
+				\begin{center}
+					\begin{spacing}{1.5}
+						\textbf{\Large Mise en place d'une configuration initiale pour le code de calcul hydro-sédimentaire CROCO~: une nouvelle approche grâce à QGIS}\\
+					\end{spacing}
+				\end{center}
+			\end{minipage}
+			\vspace{1.0cm}
+>>>>>>> f22b5ddd57393f853883c03814a75564952bd3c8
 			\newline
 			%\vspace{1.5cm}
 			\includegraphics[width=0.2\textwidth]{./IMAGES/QCROCO.png}\\
@@ -101,6 +117,7 @@
 			\textsc{\large Soutenu le \textbf{06/09/2023}}\\
 			\textsc{\large Devant le jury composé de}\\
 			[0.25cm]
+<<<<<<< HEAD
             \textsc{\normalsize P.BAILLY DU BOIS,  	Professeur des Universités}\\
             \vspace{-0.5em}
             \textsc{\normalsize Y.MEAR, Professeur des Universités}\\
@@ -185,4 +202,90 @@
 %----------------------------------------------------
 \newpage
 
+=======
+			\textsc{\normalsize P.BAILLY DU BOIS,  	Professeur des Universités}\\
+			\vspace{-0.5em}
+			\textsc{\normalsize Y.MEAR, Professeur des Universités}\\
+			
+		\end{center}
+		%-----------------------------------------------------
+	\end{titlepage}
+	
+	
+	\pagenumbering{roman}
+	\newpage
+	\thispagestyle{empty}
+	\null
+	\newpage
+	
+	%-----------------------------------------------------
+	\setlength{\headheight}{3cm}
+	\vspace*{0.5cm}
+	\setcounter{page}{1}
+	\section*{Remerciement}
+	\thispagestyle{plain}
+	%\addcontentsline{toc}{section}{\numberline{}Remerciement}
+	\input{Remerciement/remerciement}
+	\cleardoublepage
+	%------------------------------------------
+	
+	%table of content
+	
+	\tableofcontents
+	\thispagestyle{empty}
+	\cleardoublepage
+	%table des figures
+	\thispagestyle{plain}
+	\listoffigures
+	%\addcontentsline{toc}{section}{\numberline{}Table des figures}
+	\cleardoublepage
+	
+	
+	%INIT
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	\pagestyle{fancy}
+	%----------------------------------------------------
+	\vspace*{1cm}
+	\section{Introduction}\label{sec:intro}
+	\vspace*{0.5cm}
+	\input{Introduction/introduction}
+	%----------------------------------------------------
+	\newpage
+	\section{Présentation de l'entreprise}
+	\input{chapitre/prsentreprise}
+	
+	%----------------------------------------------------
+	\newpage
+	\section{Problématique}
+	\input{chapitre/Problem}
+	
+	%----------------------------------------------------
+	\newpage
+	\section{Implémentation}
+	\input{chapitre/Implementation}
+	
+	%----------------------------------------------------
+	\newpage
+	\section{Résultats}
+	
+	%----------------------------------------------------
+	\newpage
+	\section{Perspectives}
+	
+	%----------------------------------------------------
+	\newpage
+	\section{Conclusion}
+	
+	%----------------------------------------------------
+	\newpage
+	
+	\section{Bibliographie}
+	\bibliographystyle{plainnat}
+	\bibliography{./Biblio/STAGE}
+	
+	%----------------------------------------------------
+	\newpage
+	
+>>>>>>> f22b5ddd57393f853883c03814a75564952bd3c8
 \end{document}
