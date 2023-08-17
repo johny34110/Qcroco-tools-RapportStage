@@ -1,9 +1,26 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[adv(2019)]{advancingDynamicalCores}
+Advancing dynamical cores of oceanic models across all scales.
+\newblock \emph{Journal of the American Meteorological Society}, 2019.
+\newblock URL
+  \url{https://journals.ametsoc.org/view/journals/bams/100/3/bams-d-18-0303.1.xml}.
+
+\bibitem[cha(2019)]{challengesProspects}
+Challenges and prospects in ocean circulation models.
+\newblock \emph{Frontiers in Marine Science}, 2019.
+\newblock URL
+  \url{https://www.frontiersin.org/articles/10.3389/fmars.2019.00065}.
+
+\bibitem[spa(2021)]{spatioTemporalFeatures}
+Assessing the spatio-temporal features and mechanisms of oceanic models.
+\newblock \emph{MDPI}, 2021.
+\newblock URL \url{https://www.mdpi.com/2077-1312/11/2/431}.
 
 \bibitem[ERA(2023)]{ERA5}
 Era5: Fifth generation of ecmwf atmospheric reanalyses of the global climate,
