@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  18 AUG 2023 11:23
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  19 AUG 2023 09:09
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1374,6 +1374,11 @@ File: ./IMAGES/INTECH.png Graphic file (type png)
 Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 49.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
 [18] (./chapitre/grid.tex
+Overfull \hbox (21.77701pt too wide) in paragraph at lines 3--4
+\T1/lmtt/m/n/12 gitlab.inria.fr/croco-[]ocean/croco_tools/-[]/blob/master/Prepro
+cessing_tools/make_grid.
+ []
+
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
 Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 7.
@@ -1382,22 +1387,21 @@ File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
 Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 7.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
- [19]
-<./IMAGES/DiagrammeGrid.png, id=427, 800.39024pt x 620.16693pt>
-File: ./IMAGES/DiagrammeGrid.png Graphic file (type png)
-<use ./IMAGES/DiagrammeGrid.png>
-Package luatex.def Info: ./IMAGES/DiagrammeGrid.png  used on input line 10.
-(luatex.def)             Requested size: 497.92325pt x 385.80542pt.
-)
+[19]
+<./IMAGES/figure13.png, id=428, 569.7285pt x 628.3475pt>
+File: ./IMAGES/figure13.png Graphic file (type png)
+<use ./IMAGES/figure13.png>
+Package luatex.def Info: ./IMAGES/figure13.png  used on input line 10.
+(luatex.def)             Requested size: 497.92325pt x 549.16032pt.
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
-Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 58.
+Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 16.
 (luatex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
-Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 58.
+Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 16.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
- [20<./IMAGES/DiagrammeGrid.png>])
+ [20<./IMAGES/figure13.png>]))
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
 Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 165.
@@ -1424,8 +1428,7 @@ File: ./IMAGES/INTECH.png Graphic file (type png)
 <use ./IMAGES/INTECH.png>
 Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 173.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
-
-[23]
+ [23]
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
 Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 177.
@@ -1465,7 +1468,7 @@ Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 184.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DDD81044B23152C1536D022D5C5C2352;4497.
+(rerunfilecheck)             Checksum: 8D169696A96F7D4669923367BABDC836;4497.
 )
 
 Here is how much of LuaTeX's memory you used:
@@ -1497,10 +1500,10 @@ m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmtt12.pfb>
-Output written on main.pdf (32 pages, 1750544 bytes).
+Output written on main.pdf (32 pages, 1919845 bytes).
 
-PDF statistics: 530 PDF objects out of 1000 (max. 8388607)
- 449 compressed objects within 5 object streams
+PDF statistics: 531 PDF objects out of 1000 (max. 8388607)
+ 450 compressed objects within 5 object streams
  105 named destinations out of 1000 (max. 131072)
  208 words of extra memory for PDF output out of 10000 (max. 100000000)
 
