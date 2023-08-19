@@ -67,5 +67,21 @@ Afin d'assurer une intégrité et une précision maximales, j'ai mis en œuvre l
 	\centering
 	\includegraphics[width=\textwidth]{./IMAGES/Gestioncrs.png}
 	\caption{Processus de gestion des CRS dans QGIS pour la création de fichiers \og grid\fg{}}
-	\label{fig:BathyF}
+	\label{fig:Gestioncrs}
+\end{figure}
+
+Suite à la gestion d'intégration du fichier topographique, l'étape suivante consiste à définir la résolution et à sélectionner une zone de travail. L'utilisateur est invité à spécifier la résolution en mètres. Grâce à l'étape précédente, nous sommes désormais en mesure de travailler en unités métriques, indépendamment du CRS du fichier topographique.\\
+
+Pour délimiter la zone d'étude, j'ai intégré une fonction permettant à l'utilisateur de dessiner un rectangle directement sur la carte, représentant la zone d'intérêt. Cette fonctionnalité s'appuie sur l'outil \texttt{qgsMapToolExtent} de QGIS. Une fois le rectangle dessiné, une fonction que j'ai conçue, nommée \texttt{on\_extent\_changed}, récupère les coordonnées longitudinales et latitudinales minimales et maximales de la zone. Ces coordonnées seront essentielles pour les étapes ultérieures du script.\\
+
+Afin d'optimiser l'expérience utilisateur, j'ai intégré une fonctionnalité permettant d'afficher les coordonnées selon divers formats : DMS, DD et DM\footnote{DMS : Degrés, Minutes, Secondes. DD : Degrés Décimaux. DM : Degrés, Minutes. Ces notations sont fréquemment employées pour exprimer des coordonnées géographiques.}. L'utilisateur a la flexibilité d'ajuster la zone de travail en modifiant directement ces coordonnées via une interface dédiée. Tout changement apporté est immédiatement reflété sur la carte, assurant une mise à jour en temps réel et un feedback visuel direct. De surcroît, à ce stade, j'ai prévu une option d'enregistrement du projet. Cela offre la possibilité de recharger ultérieurement le projet avec les mêmes configurations, que ce soit pour des corrections, des ajustements ou d'autres besoins.\\
+
+
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/gridonmap.png}
+	\caption{Processus de gestion des CRS dans QGIS pour la création de fichiers \og grid\fg{}}
+	\label{fig:gridonmap}
 \end{figure}
