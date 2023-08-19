@@ -2,13 +2,10 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
-\global\let\oldcontentsline\contentsline
-\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
-\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -18,6 +15,10 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \providecommand\babel@aux[2]{}
 \@nameuse{bbl@beforestart}
+\catcode `:\active 
+\catcode `;\active 
+\catcode `!\active 
+\catcode `?\active 
 \@writefile{toc}{\acswitchoff }
 \@writefile{lof}{\acswitchoff }
 \@writefile{lot}{\acswitchoff }
@@ -95,13 +96,22 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}les fichiers \@FB@og  Grid \@FB@fg  \relax {}}{19}{subsection.4.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Schéma fonctionnel général du script make\_grid.\relax }}{20}{figure.caption.16}\protected@file@percent }
 \newlabel{fig:AlgoGrid}{{13}{20}{Schéma fonctionnel général du script make\_grid.\relax }{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}les fichiers \@FB@og  Tides \@FB@fg  \relax {} \@FB@fg  \relax {}}{21}{subsection.4.3}\protected@file@percent }
-\newlabel{sub:tides}{{4.3}{21}{les fichiers \og Tides \fg {} \fg {}}{subsection.4.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}les fichiers \@FB@og  Bulk \@FB@fg  \relax {}}{21}{subsection.4.4}\protected@file@percent }
-\newlabel{sub:bulk}{{4.4}{21}{les fichiers \og Bulk \fg {}}{subsection.4.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Résultats}{22}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Perspectives}{23}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{24}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Traitement des Données Utilisateur pour la Création du Fichier Grid}{21}{subsubsection.4.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Schéma du Processus d'Entrée Utilisateur pour la Génération du Fichier Grid\relax }}{21}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:AlgoGrid}{{14}{21}{Schéma du Processus d'Entrée Utilisateur pour la Génération du Fichier Grid\relax }{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Interface graphique de l'outil Qcrocoflow dans QGIS : Gestion des Paramètres d'Entrée\relax }}{22}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:GISUSER}{{15}{22}{Interface graphique de l'outil Qcrocoflow dans QGIS : Gestion des Paramètres d'Entrée\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Interface graphique de l'outil Qcrocoflow : intégration et Visualisation d'un Fichier Topographique dans QGIS\relax }}{23}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:BathyF}{{16}{23}{Interface graphique de l'outil Qcrocoflow : intégration et Visualisation d'un Fichier Topographique dans QGIS\relax }{figure.caption.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Processus de gestion des CRS dans QGIS pour la création de fichiers \@FB@og  grid\@FB@fg  \relax {}\relax }}{24}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:BathyF}{{17}{24}{Processus de gestion des CRS dans QGIS pour la création de fichiers \og grid\fg {}\relax }{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}les fichiers \@FB@og  Tides \@FB@fg  \relax {} \@FB@fg  \relax {}}{24}{subsection.4.3}\protected@file@percent }
+\newlabel{sub:tides}{{4.3}{24}{les fichiers \og Tides \fg {} \fg {}}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}les fichiers \@FB@og  Bulk \@FB@fg  \relax {}}{24}{subsection.4.4}\protected@file@percent }
+\newlabel{sub:bulk}{{4.4}{24}{les fichiers \og Bulk \fg {}}{subsection.4.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Résultats}{25}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Perspectives}{26}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{27}{section.7}\protected@file@percent }
 \bibstyle{plainnat}
 \bibdata{./Biblio/STAGE}
 \bibcite{advancingDynamicalCores}{{1}{2019}{{adv}}{{}}}
@@ -119,7 +129,7 @@
 \bibcite{bjerknes1970}{{13}{1970}{{Doe}}{{}}}
 \bibcite{Donoso2022}{{14}{2022}{{Donoso}}{{}}}
 \bibcite{flather1976}{{15}{1976}{{Flather}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Bibliographie}{25}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Bibliographie}{28}{section.8}\protected@file@percent }
 \bibcite{croco2022}{{16}{2022}{{IFREMER}}{{}}}
 \bibcite{croco_doc}{{17}{2022}{{Jullien et~al.}}{{Jullien, Caillaud, Benshila, Bordois, Cambon, Dumas, Gentil, Lemarié, Marchesiello, Theetten, Dufois, Corre, Morvan, {Solene Le Gac}, Gula, and Pianezze}}}
 \bibcite{Legrand}{{18}{2017}{{Legrand}}{{}}}
@@ -131,8 +141,4 @@
 \bibcite{Tide}{{24}{2022}{{Renault and Marchesiello}}{{}}}
 \bibcite{richardson1922}{{25}{1922}{{Richardson}}{{}}}
 \ACRO{total-barriers}{1}
-\ACRO{usage}{}
-\ACRO{pages}{}
-\ACRO{barriers}{}
-\ACRO{readaux}
-\gdef \@abspage@last{32}
+\gdef \@abspage@last{35}

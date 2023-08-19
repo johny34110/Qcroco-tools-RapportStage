@@ -18,9 +18,10 @@
 \contentsline {subsection}{\numberline {4.1}Recherche d'informations}{17}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Exploration de CROCO-Tool et Autres Ressources}{18}{subsubsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.2}les fichiers \@FB@og Grid \@FB@fg \relax {}}{19}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}les fichiers \@FB@og Tides \@FB@fg \relax {} \@FB@fg \relax {}}{21}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}les fichiers \@FB@og Bulk \@FB@fg \relax {}}{21}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Résultats}{22}{section.5}%
-\contentsline {section}{\numberline {6}Perspectives}{23}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{24}{section.7}%
-\contentsline {section}{\numberline {8}Bibliographie}{25}{section.8}%
+\contentsline {subsubsection}{\numberline {4.2.1}Traitement des Données Utilisateur pour la Création du Fichier Grid}{21}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.3}les fichiers \@FB@og Tides \@FB@fg \relax {} \@FB@fg \relax {}}{24}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}les fichiers \@FB@og Bulk \@FB@fg \relax {}}{24}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Résultats}{25}{section.5}%
+\contentsline {section}{\numberline {6}Perspectives}{26}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{27}{section.7}%
+\contentsline {section}{\numberline {8}Bibliographie}{28}{section.8}%
