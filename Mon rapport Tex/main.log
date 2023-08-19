@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  19 AUG 2023 09:09
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  19 AUG 2023 09:49
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1096,11 +1096,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-<./IMAGES/histostage.png, id=233, 434.3427pt x 652.5981pt>
-File: ./IMAGES/histostage.png Graphic file (type png)
-<use ./IMAGES/histostage.png>
-Package luatex.def Info: ./IMAGES/histostage.png  used on input line 67.
-(luatex.def)             Requested size: 447.79552pt x 672.78308pt.
+<./IMAGES/histostage02.png, id=233, 543.2295pt x 754.4185pt>
+File: ./IMAGES/histostage02.png Graphic file (type png)
+<use ./IMAGES/histostage02.png>
+Package luatex.def Info: ./IMAGES/histostage02.png  used on input line 67.
+(luatex.def)             Requested size: 484.4674pt x 672.78308pt.
 )
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
@@ -1122,7 +1122,7 @@ File: ./IMAGES/INTECH.png Graphic file (type png)
 Package luatex.def Info: ./IMAGES/INTECH.png  used on input line 153.
 (luatex.def)             Requested size: 99.58313pt x 44.29965pt.
 
-[6<./IMAGES/histostage.png>] (./chapitre/Problem.tex
+[6<./IMAGES/histostage02.png>] (./chapitre/Problem.tex
 File: ./IMAGES/LUSAC.png Graphic file (type png)
 <use ./IMAGES/LUSAC.png>
 Package luatex.def Info: ./IMAGES/LUSAC.png  used on input line 25.
@@ -1500,7 +1500,7 @@ m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmtt12.pfb>
-Output written on main.pdf (32 pages, 1919845 bytes).
+Output written on main.pdf (32 pages, 2023420 bytes).
 
 PDF statistics: 531 PDF objects out of 1000 (max. 8388607)
  450 compressed objects within 5 object streams
