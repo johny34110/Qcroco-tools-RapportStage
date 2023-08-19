@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.8)  19 AUG 2023 13:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.8)  19 AUG 2023 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1546,7 +1546,7 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
  </home/john/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk>
  </home/john/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk>
  </home/john/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1440.600pk>
-Output written on main.pdf (36 pages, 3488728 bytes).
+Output written on main.pdf (36 pages, 3488762 bytes).
 PDF statistics:
  1305 PDF objects out of 1440 (max. 8388607)
  545 compressed objects within 6 object streams
