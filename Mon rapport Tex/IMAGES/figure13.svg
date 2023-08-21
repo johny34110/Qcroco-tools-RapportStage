@@ -27,14 +27,15 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.8000088"
-     inkscape:cx="426.24531"
+     inkscape:cx="418.1204"
      inkscape:cy="491.2446"
      inkscape:window-width="1916"
      inkscape:window-height="1025"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showguides="false" />
   <defs
      id="defs1275">
     <inkscape:path-effect
@@ -826,130 +827,121 @@
        inkscape:path-effect="#path-effect44618-1"
        inkscape:original-d="m 107.46951,215.16578 c -0.0152,3.91419 -0.0306,7.82811 -0.0463,11.74178"
        sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#deffff;stroke:#0066cc;stroke-width:0.365001;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect45301"
+       width="92.862312"
+       height="36.305145"
+       x="61.018749"
+       y="26.083626"
+       rx="0.10047869"
+       ry="2.5351872" />
     <g
-       id="g48965"
-       transform="translate(-3.9768397,24.977797)">
+       id="g48931"
+       transform="translate(93.140843,21.670373)">
       <rect
-         style="fill:#deffff;stroke:#0066cc;stroke-width:0.365001;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
-         id="rect45301"
-         width="92.862312"
-         height="36.305145"
-         x="64.99559"
-         y="1.1058282"
-         rx="0.10047869"
-         ry="2.5351872" />
-      <g
-         id="g45277"
-         transform="translate(-0.63940808,2.8594113)">
-        <g
-           id="g48931"
-           transform="translate(97.757091,-6.1668353)">
-          <rect
-             style="fill:#e0ffff;stroke:#4169e1;stroke-width:0.452547;stroke-linejoin:bevel"
-             id="rect846"
-             width="33.560505"
-             height="8.4634571"
-             x="-23.802704"
-             y="15.313437"
-             rx="0.086138792"
-             ry="3.9135206" />
-          <text
-             xml:space="preserve"
-             style="font-size:4.9389px;line-height:1.75;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-             x="-19.85643"
-             y="21.069342"
-             id="text6246"><tspan
-               sodipodi:role="line"
-               id="tspan6244"
-               style="stroke-width:0.264583"
-               x="-19.85643"
-               y="21.069342">Résolution</tspan></text>
-        </g>
-        <g
-           id="g48936"
-           transform="translate(44.701858,5.7946227)">
-          <rect
-             style="fill:#e0ffff;stroke:#4169e1;stroke-width:0.452547;stroke-linejoin:bevel"
-             id="rect846-2"
-             width="33.560505"
-             height="8.4634571"
-             x="29.252529"
-             y="15.313437"
-             rx="0.086138792"
-             ry="3.9135206" />
-          <text
-             xml:space="preserve"
-             style="font-size:4.9389px;line-height:1.75;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-             x="40.935925"
-             y="21.06934"
-             id="text6246-0"><tspan
-               sodipodi:role="line"
-               id="tspan6244-7"
-               style="stroke-width:0.264583"
-               x="40.935925"
-               y="21.06934">CRS</tspan></text>
-        </g>
-        <g
-           id="g48941"
-           transform="translate(31.72397,5.7946232)">
-          <rect
-             style="fill:#e0ffff;stroke:#4169e1;stroke-width:0.474782;stroke-linejoin:bevel"
-             id="rect846-2-0"
-             width="36.939415"
-             height="8.4634571"
-             x="80.618294"
-             y="15.324554"
-             rx="0.094811343"
-             ry="3.9135206" />
-          <text
-             xml:space="preserve"
-             style="font-size:4.9389px;line-height:1.75;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-             x="82.77668"
-             y="21.080458"
-             id="text6246-0-5"><tspan
-               sodipodi:role="line"
-               id="tspan6244-7-6"
-               style="stroke-width:0.264583"
-               x="82.77668"
-               y="21.080458">Coordonnées</tspan></text>
-        </g>
-        <g
-           id="g48946"
-           transform="translate(-21.331259,-6.1668348)">
-          <rect
-             style="fill:#e0ffff;stroke:#4169e1;stroke-width:0.474782;stroke-linejoin:bevel"
-             id="rect846-2-0-6"
-             width="36.939415"
-             height="8.4634571"
-             x="133.67352"
-             y="15.324554"
-             rx="0.094811343"
-             ry="3.9135206" />
-          <text
-             xml:space="preserve"
-             style="font-size:4.9389px;line-height:1.75;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-             x="136.36107"
-             y="21.080458"
-             id="text6246-0-5-4"><tspan
-               sodipodi:role="line"
-               id="tspan6244-7-6-6"
-               style="stroke-width:0.264583"
-               x="136.36107"
-               y="21.080458">Bathymétrie</tspan></text>
-        </g>
-      </g>
+         style="fill:#e0ffff;stroke:#4169e1;stroke-width:0.452547;stroke-linejoin:bevel"
+         id="rect846"
+         width="33.560505"
+         height="8.4634571"
+         x="-23.802704"
+         y="15.313437"
+         rx="0.086138792"
+         ry="3.9135206" />
       <text
          xml:space="preserve"
          style="font-size:4.9389px;line-height:1.75;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-         x="70.522507"
-         y="7.8134727"
-         id="text48479"><tspan
+         x="-19.85643"
+         y="21.069342"
+         id="text6246"><tspan
            sodipodi:role="line"
-           id="tspan48477"
+           id="tspan6244"
            style="stroke-width:0.264583"
-           x="70.522507"
-           y="7.8134727">Données saisies pour l'utilisateur</tspan></text>
+           x="-19.85643"
+           y="21.069342">Résolution</tspan></text>
     </g>
+    <g
+       id="g5412">
+      <rect
+         style="fill:#e0ffff;stroke:#4169e1;stroke-width:0.452547;stroke-linejoin:bevel"
+         id="rect846-2"
+         width="33.560505"
+         height="8.4634571"
+         x="69.677513"
+         y="48.945267"
+         rx="0.086138792"
+         ry="3.9135206" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.9389px;line-height:1.75;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+         x="74.92804"
+         y="55.117104"
+         id="text6246-0"><tspan
+           sodipodi:role="line"
+           id="tspan6244-7"
+           style="stroke-width:0.264583"
+           x="74.92804"
+           y="55.117104">Géodésie</tspan></text>
+    </g>
+    <g
+       id="g48941"
+       transform="translate(27.107722,33.631831)">
+      <rect
+         style="fill:#e0ffff;stroke:#4169e1;stroke-width:0.474782;stroke-linejoin:bevel"
+         id="rect846-2-0"
+         width="36.939415"
+         height="8.4634571"
+         x="80.618294"
+         y="15.324554"
+         rx="0.094811343"
+         ry="3.9135206" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.9389px;line-height:1.75;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+         x="82.77668"
+         y="21.080458"
+         id="text6246-0-5"><tspan
+           sodipodi:role="line"
+           id="tspan6244-7-6"
+           style="stroke-width:0.264583"
+           x="82.77668"
+           y="21.080458">Coordonnées</tspan></text>
+    </g>
+    <g
+       id="g48946"
+       transform="translate(-25.947507,21.670373)">
+      <rect
+         style="fill:#e0ffff;stroke:#4169e1;stroke-width:0.474782;stroke-linejoin:bevel"
+         id="rect846-2-0-6"
+         width="36.939415"
+         height="8.4634571"
+         x="133.67352"
+         y="15.324554"
+         rx="0.094811343"
+         ry="3.9135206" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.9389px;line-height:1.75;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+         x="136.36107"
+         y="21.080458"
+         id="text6246-0-5-4"><tspan
+           sodipodi:role="line"
+           id="tspan6244-7-6-6"
+           style="stroke-width:0.264583"
+           x="136.36107"
+           y="21.080458">Bathymétrie</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.75;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+       x="66.54567"
+       y="32.791271"
+       id="text48479"><tspan
+         sodipodi:role="line"
+         id="tspan48477"
+         style="stroke-width:0.264583"
+         x="66.54567"
+         y="32.791271">Données saisies pour l'utilisateur</tspan></text>
     <g
        id="g78265"
        transform="translate(-20.071821,-3.2700025)">

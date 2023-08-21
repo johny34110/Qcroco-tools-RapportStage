@@ -27,14 +27,14 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.8000088"
-     inkscape:cx="466.86986"
+     inkscape:cx="459.36995"
      inkscape:cy="157.49827"
      inkscape:window-width="1916"
      inkscape:window-height="1025"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g23645" />
+     inkscape:current-layer="g48936" />
   <defs
      id="defs2">
     <inkscape:path-effect
@@ -235,26 +235,29 @@
         <g
            id="g48936"
            transform="translate(-30.318616,-1.8579342)">
-          <rect
-             style="fill:#e0ffff;stroke:#4169e1;stroke-width:0.452547;stroke-linejoin:bevel"
-             id="rect846-2"
-             width="33.560505"
-             height="8.4634571"
-             x="29.252529"
-             y="15.313437"
-             rx="0.086138792"
-             ry="3.9135206" />
-          <text
-             xml:space="preserve"
-             style="font-size:4.9389px;line-height:1.75;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
-             x="40.935925"
-             y="21.06934"
-             id="text6246-0"><tspan
-               sodipodi:role="line"
-               id="tspan6244-7"
-               style="stroke-width:0.264583"
-               x="40.935925"
-               y="21.06934">CRS</tspan></text>
+          <g
+             id="g2128">
+            <rect
+               style="fill:#e0ffff;stroke:#4169e1;stroke-width:0.452547;stroke-linejoin:bevel"
+               id="rect846-2"
+               width="33.561001"
+               height="8.4634571"
+               x="29.591652"
+               y="15.313437"
+               rx="0.086138792"
+               ry="3.9135206" />
+            <text
+               xml:space="preserve"
+               style="font-size:4.9389px;line-height:1.75;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';stroke-width:0.264583"
+               x="34.842426"
+               y="21.485275"
+               id="text6246-0"><tspan
+                 sodipodi:role="line"
+                 id="tspan6244-7"
+                 style="stroke-width:0.264583"
+                 x="34.842426"
+                 y="21.485275">Géodésie</tspan></text>
+          </g>
         </g>
         <g
            id="g48941"
