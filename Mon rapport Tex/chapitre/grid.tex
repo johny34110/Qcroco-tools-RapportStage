@@ -4,7 +4,10 @@ La génération des fichiers \og grid \fg{} est une tâche qui exige une compré
 
 Dans le but d'extraire un algorithme clair et compréhensible du script \og make\_grid \fg{}, j'ai entrepris une dissection détaillée de chaque segment de code. Cette démarche a abouti à la découverte de l'algorithme sous-jasent, illustré dans la Figure \ref{fig:AlgoGrid}. Cette étape a été cruciale pour parvenir à reproduire le processus de génération des fichiers \og grid \fg{} de manière autonome, tout en l'adaptant à nos besoins spécifiques.
 
+<<<<<<< HEAD
 \newpage
+=======
+>>>>>>> d8e52a844062412cc65324df3df466a7ebe4a8f5
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{./IMAGES/figure13.png}
@@ -14,4 +17,252 @@ Dans le but d'extraire un algorithme clair et compréhensible du script \og make
 
 Suite à cette compréhension approfondie de l'algorithme, l'objectif suivant était clair : adapter ces scripts MATLAB pour les rendre opérationnels dans un contexte différent. En effet, bien que MATLAB soit un outil puissant pour le traitement numérique, notre ambition était de rendre ces scripts plus performants, en les intégrant à l'environnement SIG de QGIS. Pour ce faire, la transition vers Python s'est imposée comme une évidence, étant donné sa flexibilité, sa performance et sa compatibilité avec l'API de QGIS. Ainsi, le défi était non seulement de traduire le code, mais aussi d'optimiser et d'adapter les fonctions pour qu'elles s'intègrent harmonieusement dans l'écosystème QGIS, offrant ainsi aux utilisateurs une expérience fluide et intégrée.
 
+<<<<<<< HEAD
 Afin d'assurer une compréhension exhaustive du processus de génération des fichiers \og grid \fg{}, il est impératif de décomposer et d'analyser chaque composant de l'algorithme initial. Dans cette section, nous nous attarderons sur les détails techniques de chaque étape de l'algorithme. Nous discuterons également des adaptations nécessaires pour garantir une intégration optimale au sein du plugin QCrocoFlow, tout en respectant les spécificités de l'environnement QGIS. Cette démarche méthodique vise à mettre en lumière les mécanismes fondamentaux, ainsi que les améliorations apportées pour assurer une performance optimale et une compatibilité avec les systèmes d'information géographique (SIG). La suite de ce chapitre se consacrera à une exploration rigoureuse des étapes de transformation et d'adaptation des fichiers \og grid \fg{}.
+=======
+Afin d'assurer une compréhension exhaustive du processus de génération des fichiers \og grid \fg{}, il est impératif de décomposer et d'analyser chaque composant de l'algorithme initial. Dans cette section, nous nous attarderons sur les détails techniques de chaque étape de l'algorithme. Nous discuterons également des adaptations nécessaires pour garantir une intégration optimale au sein du plugin QCrocoFlow, tout en respectant les spécificités de l'environnement QGIS. Cette démarche méthodique vise à mettre en lumière les mécanismes fondamentaux, ainsi que les améliorations apportées pour assurer une performance optimale et une compatibilité avec les systèmes d'information géographique (SIG). La suite de ce chapitre se consacrera à une exploration rigoureuse des étapes de transformation et d'adaptation des fichiers \og grid \fg{}.
+
+\subsubsection{Traitement des Données Utilisateur pour la Création du Fichier Grid}
+
+La première étape cruciale dans la création du fichier \textit{grid} a été de définir précisément les entrées nécessaires de la part de l'utilisateur. Ces entrées constituent les informations brutes indispensables pour le bon fonctionnement du script. Plus concrètement, l'utilisateur doit fournir :
+
+\begin{itemize}
+	\item Un \textbf{répertoire de travail} : Il s'agit de l'emplacement où les fichiers générés seront sauvegardés et où l'utilisateur pourra les retrouver ultérieurement.
+	\item Un \textbf{nom de projet} : Pour identifier et organiser ses simulations.
+	\item Un \textbf{titre} : Pour une description plus détaillée de la simulation.
+	\item Une \textbf{période de simulation} : L'utilisateur doit spécifier une date de début et une date de fin pour délimiter la durée de sa simulation.
+	\item Un \textbf{fichier de topographie} : L'utilisateur a la flexibilité de travailler avec divers formats de fichiers, tels que NetCDF, GRD\footnote{Gradient} ou même TIF\footnote{Tagged Image File Format}.
+	\item Une \textbf{résolution} : Elle détermine la taille de chaque maille du fichier grid.
+\end{itemize}
+
+Ces informations fournies par l'utilisateur sont essentielles pour adapter le script à des besoins spécifiques et garantir une génération de fichier \textit{grid} conforme aux attentes.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=2in]{./IMAGES/figure14.png}
+	\caption{Schéma du Processus d'Entrée Utilisateur pour la Génération du Fichier Grid}
+	\label{fig:AlgoGrid}
+\end{figure}
+
+La Figure~\ref{fig:AlgoGrid} met en évidence l'importance cruciale des choix de l'utilisateur dans l'ensemble du processus. Dans cette optique, la mise en place d'une interface graphique claire et intuitive était primordiale. Elle devait permettre à l'utilisateur de suivre un parcours logique pour renseigner les paramètres essentiels sans ambiguïté.
+Pour répondre à cette exigence, j'ai fait appel à l'outil \textit{Qt5 Designer} de QGIS. Cet instrument m'a offert la possibilité de concevoir une interface sur mesure, adaptée aux spécificités de notre projet. Chaque composant de cette interface a été pensé pour optimiser la saisie des informations, assurant ainsi une interaction fluide et efficace pour l'utilisateur. L'expertise apportée par \textit{Qt5 Designer} a été déterminante pour atteindre cet objectif d'excellence en matière d'expérience utilisateur.
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=5in]{./IMAGES/paramuser.png}
+	\caption{Interface graphique de l'outil Qcrocoflow dans QGIS : Gestion des Paramètres d'Entrée}
+	\label{fig:GISUSER}
+\end{figure}
+
+Une fois les paramètres saisis, nous exploitons pleinement les capacités offertes par QGIS, en particulier son environnement SIG, pour générer un fichier \og grid\fg{} avec la plus grande précision. Dans un souci de clarté et d'efficacité, j'ai intégré une fonctionnalité lors de la sélection du fichier topographique. Cette fonction permet une visualisation instantanée de son contenu directement sur la carte. De plus, dès l'intégration du fichier dans l'outil, celui-ci est stocké dans une base de données SQL\footnote{Structured Query Language}, intégrée à QGIS. Cela offre à l'utilisateur la commodité de sélectionner directement des fichiers topographiques précédemment chargés dans son projet. Voir la Figure~\ref{fig:BathyF}.
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/BathyF.png}
+	\caption{Interface graphique de l'outil Qcrocoflow : intégration et Visualisation d'un Fichier Topographique dans QGIS}
+	\label{fig:BathyF}
+\end{figure}
+
+Lorsque l'on travaille au sein d'un Système d'Information Géographique (SIG), la gestion des systèmes de référence spatiale est cruciale. Ces systèmes, également connus sous le nom de CRS (pour Coordinate Reference System\footnote{Coordinate Reference System (CRS) : Un système qui utilise des coordonnées pour localiser précisément des points sur la Terre.}), déterminent comment les données sont projetées sur la Terre. Pour le modèle CROCO, le système de référence requis est le WGS84\footnote{WGS84 (World Geodetic System 1984) est la norme mondiale pour l'astronomie, la cartographie et la navigation. Il établit un cadre fixe pour la Terre, indépendant de la position ou de l'orientation de sa surface.}.
+
+Afin d'assurer une intégrité et une précision maximales, j'ai mis en œuvre l'API de QGIS. Cet outil puissant permet de détecter automatiquement le CRS associé à un fichier topographique lors de son importation. QGIS est conçu pour gérer simultanément plusieurs CRS, permettant par exemple d'afficher une carte du monde en WGS84 à côté d'un fichier topographique en Lambert\footnote{Lambert : Un système de projection conique conforme, couramment utilisé pour les cartes de régions étendues, notamment en Europe.}. Si le CRS d'un fichier n'est pas spécifié ou est indétectable, j'ai développé une fonction qui convertit automatiquement ce fichier en WGS84. Cette démarche garantit que toutes les données traitées sont cohérentes et précises, évitant ainsi d'éventuels problèmes lors des étapes ultérieures du processus.~\ref{fig:Gestioncrs}.
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/Gestioncrs.png}
+	\caption{Processus de gestion des CRS dans QGIS pour la création de fichiers \og grid\fg{}}
+	\label{fig:Gestioncrs}
+\end{figure}
+
+Suite à la gestion d'intégration du fichier topographique, l'étape suivante consiste à définir la résolution et à sélectionner une zone de travail. L'utilisateur est invité à spécifier la résolution en mètres. Grâce à l'étape précédente, nous sommes désormais en mesure de travailler en unités métriques, indépendamment du CRS du fichier topographique.\\
+
+Afin de définir précisément la zone d'étude, j'ai mis en place une fonctionnalité permettant à l'utilisateur de dessiner un rectangle directement sur la carte de QGIS, délimitant ainsi sa zone d'intérêt. Cette fonction s'appuie sur l'outil \texttt{qgsMapToolExtent} de QGIS. Une fois cette zone définie, une fonction spécialement conçue pour ce projet, nommée \texttt{on\_extent\_changed}, est appelée pour récupérer les coordonnées longitudinales et latitudinales minimales et maximales du rectangle. Il est à noter que la grille est générée dans le système de coordonnées WGS84/Pseudo-Mercator (EPSG:3857). Ce choix a été fait car ce système de coordonnées traite les mesures en mètres, ce qui facilite grandement la gestion de la résolution, contrairement à d'autres systèmes qui utilisent des degrés. Ces coordonnées, une fois récupérées, sont essentielles pour les étapes ultérieures du processus de génération du fichier grid.
+
+
+Afin d'optimiser l'expérience utilisateur, j'ai intégré une fonctionnalité permettant d'afficher les coordonnées selon divers formats : DMS, DD et DM\footnote{DMS : Degrés, Minutes, Secondes. DD : Degrés Décimaux. DM : Degrés, Minutes. Ces notations sont fréquemment employées pour exprimer des coordonnées géographiques.}. L'utilisateur a la flexibilité d'ajuster la zone de travail en modifiant directement ces coordonnées via une interface dédiée. Tout changement apporté est immédiatement reflété sur la carte, assurant une mise à jour en temps réel et un feedback visuel direct. De surcroît, à ce stade, j'ai prévu une option d'enregistrement du projet. Cela offre la possibilité de recharger ultérieurement le projet avec les mêmes configurations, que ce soit pour des corrections, des ajustements ou d'autres besoins.\\
+
+
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/gridonmap.png}
+	\caption{Interface de Configuration de la Grille et Affichage des Coordonnées}
+	\label{fig:gridonmap}
+\end{figure}
+
+Après avoir soigneusement configuré toutes les données requises, l'utilisateur n'a plus qu'à cliquer sur le bouton \og \textit{Process} \fg{} pour initier la génération du fichier \textit{grid}.
+
+\subsubsection{Processus de Création du Fichier Grid}
+
+
+La création du fichier \og grid\fg{} est le fruit d'une combinaison efficace entre le langage Python et les capacités offertes par l'API de QGIS. Dans ce sous-chapitre, nous détaillerons minutieusement la conception et le fonctionnement du script responsable de cette génération.
+
+Au cœur de ce processus se trouve la fonction principale nommée \texttt{make\_grid}. Cette fonction est invoquée dès que l'utilisateur lance la génération depuis l'interface du plugin. Elle a pour rôle de collecter l'ensemble des informations et paramètres préalablement renseignés par l'utilisateur, comme discuté dans la section précédente, et de les utiliser comme base pour la création du fichier \og grid\fg{}.
+comme expliqué par la figure \ref{fig:AlgoGrid}.
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/scriptdet.png}
+	\caption{Détail de la structure d'un script}
+	\label{fig:scriptdet}
+\end{figure}
+
+Comme illustré dans la Figure~\ref{fig:scriptdet}, une structuration rigoureuse a été adoptée pour chaque fonction afin d'assurer une lisibilité optimale du code. À chaque création de fonction, un commentaire descriptif est systématiquement ajouté. Ce dernier précise le rôle de la fonction, les données qu'elle consomme et les résultats qu'elle produit. Cette méthodologie, inculquée par mon maître de stage, est essentielle pour naviguer aisément au sein du code, éviter les ambiguïtés et faciliter la maintenance.\\
+
+
+Chaque élément de la grille est caractérisé par quatre coordonnées distinctes : $\rho$\footnote{rho} représentant le centre de la maille, $u$ et $v$ qui désignent les composantes de vitesse, et $\psi$\footnote{psi} qui correspond à la coordonnée située à chaque intersection de maille. Comme illustré dans la Figure~\ref{fig:gridRepresentation}, ces coordonnées jouent un rôle crucial pour le modèle CROCO. La première étape de notre processus est donc la génération de ces variables essentielles.\\
+
+
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+	% Carré
+	\draw (0,0) rectangle (3,3);
+	
+	% psi
+	\node at (0,0) {$\psi$};
+	\node at (0,3) {$\psi$};
+	\node at (3,0) {$\psi$};
+	\node at (3,3) {$\psi$};
+	
+	% u
+	\node at (1.5,0) [below] {$u$};
+	\node at (1.5,3) [above] {$u$};
+	
+	% v
+	\node at (0,1.5) [left] {$v$};
+	\node at (3,1.5) [right] {$v$};
+	
+	% rho
+	\node at (1.5,1.5) {$\rho$};
+\end{tikzpicture}
+\caption{Représentation schématique des éléments de la grille : $\psi$, $\rho$, u, et v.}
+\label{fig:gridRepresentation}
+\end{figure}
+
+	
+Une fois les coordonnées minimales et maximales en latitude et longitude définies, une grille est élaborée en Python en exploitant la bibliothèque \textit{numpy} et, plus précisément, sa fonction \texttt{np\_meshgrid}. Cette grille, initialement générée dans le système de coordonnées WGS84/Pseudo-Mercator (EPSG:3857) pour bénéficier d'une mesure métrique, est ensuite transformée en EPSG:4326 afin de convertir les valeurs métriques en degrés.
+
+La résolution `dl`, mentionnée par l'utilisateur, joue un rôle crucial dans cette étape. Elle détermine l'écart entre chaque point de la grille, ce qui influence directement la densité et la précision des données générées. Dans le code, `dl` est utilisé pour calculer les variables `pn` et `pm`, qui représentent respectivement les inverses des résolutions en longitude et en latitude\footnote{L'inverse de la résolution, \( \frac{1}{dl} \), est souvent utilisé dans les modèles numériques pour simplifier les calculs. Il permet de représenter le taux de variation d'une quantité par rapport à une unité de distance, facilitant ainsi les opérations sur les équations différentielles et améliorant la stabilité numérique.}
+. Ces variables sont essentielles pour définir la taille des mailles de la grille dans le modèle CROCO.
+
+Voici un extrait du code employé pour effectuer cette conversion :
+
+\begin{verbatim}
+	# Create 2D longitude and latitude grids.
+	Lonr, Latr = np.meshgrid(x, y)
+	
+	# Transform each grid point to EPSG:4326.
+	for i in range(Lonr.shape[0]):
+	for j in range(Lonr.shape[1]):
+	point_4326 = transform_4326.transform(QgsPointXY(Lonr[i, j], Latr[i, j]))
+	Lonr[i, j] = point_4326.x()
+	Latr[i, j] = point_4326.y()
+	
+	# Initialize new variables.
+	dndx = np.zeros(Latr.shape)
+	dmde = np.zeros(Latr.shape)
+	pn = np.full_like(Latr, 1/dl)
+	pm = np.full_like(Latr, 1/dl)
+\end{verbatim}
+
+La transition vers Python a nécessité la traduction et l'adaptation de certaines fonctions essentielles du \textit{croco\_tool} en MATLAB. Parmi ces fonctions, \texttt{rho2uvp} \footnote{\url{https://gitlab.inria.fr/croco-ocean/croco_tools/-/blob/master/Preprocessing_tools/rho2uvp.m}}
+. Originellement conçue pour MATLAB, cette fonction a été méticuleusement transposée en Python afin de garantir une compatibilité et une cohérence avec le reste du script.
+
+La fonction \texttt{rho2uvp} est dédiée à la récupération automatique des variables associées aux points $\rho$, $u$, $v$, et $\psi$ sur la grille. Elle assure la conversion entre ces différents points, permettant ainsi d'obtenir les composantes de vitesse $u$ et $v$ à partir des coordonnées centrales $\rho$, et vice versa. Cette étape est primordiale pour assurer la précision et la fiabilité des simulations réalisées avec le modèle CROCO.\\
+
+Après avoir obtenu toutes les coordonnées variables, la dimension exacte de notre grille peut être déterminée à l'aide de la commande suivante :
+\begin{verbatim}
+	# Get grid dimensions.
+	M, L = Latp.shape
+\end{verbatim}
+Après avoir obtenu toutes les coordonnées variables, la dimension exacte de notre grille peut être déterminée à l'aide de la commande suivante :
+\begin{verbatim}
+	# Get grid dimensions.
+	M, L = Latp.shape
+\end{verbatim}
+
+\subsubsection{Géneration d'un fichier NetCDF Grid}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=2in]{./IMAGES/ZoneDiag/zone1.png}
+	\caption{Fonction initialisation d'un fichier Modèle NetCDF}
+	\label{fig:zone1}
+\end{figure}
+
+La phase suivante du script concerne la création d'un fichier NetCDF vierge grâce à la fonction \texttt{create\_grid.py}. Cette étape s'appuie sur une approche de \textit{reverse engineering}. En utilisant un fichier grille que mon maître de stage m'a fourni comme référence, j'ai pu recréer un fichier NetCDF possédant les mêmes caractéristiques. Ce fichier est automatiquement créé dans le répertoire de travail que l'utilisateur a préalablement sélectionné, et porte le nom qu'il a choisi. Ce fichier servira de fondation solide pour l'intégration des variables générées ultérieurement.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/createnc.png}
+	\caption{Extrait du script create\_grid pour la création initiale du fichier NetCDF}
+	\label{fig:AlgoGrid}
+\end{figure}
+
+\subsubsection{Calcul de l'Angle entre les Coordonnées Géodésiques et Sphériques avec Intégration du Paramètre de Coriolis}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=2in]{./IMAGES/ZoneDiag/zone2.png}
+	\caption{Fonction Calcul de l'Angle et intégration du Paramètre de Coriolis}
+	\label{fig:zone2}
+\end{figure}
+Lors de la modélisation océanographique, la représentation précise des coordonnées est cruciale. Les océans ne sont pas simplement des entités plates; ils suivent la courbure de la Terre. Ainsi, lors de la simulation des mouvements océaniques, il est essentiel de prendre en compte cette courbure pour obtenir des résultats précis.
+
+La fonction \texttt{get\_angle.py} joue un rôle clé dans cette représentation. Elle est en réalité une traduction directe en Python du code \texttt{get\_angle} provenant de l'outil \textit{croco\_tools} écrit en MATLAB\footnote{\url{https://www.croco-ocean.org/documentation/croco\_tools/}}. Voici une explication détaillée de son importance et de son fonctionnement :
+
+\begin{itemize}
+	\item \textbf{Objectif Principal} : La fonction est conçue pour calculer l'angle entre les coordonnées géodésiques, qui sont basées sur la forme réelle de la Terre (ellipsoïdale), et les coordonnées sphériques, qui simplifient la Terre en une sphère parfaite. Cet angle est crucial pour transformer correctement les données entre ces deux systèmes de coordonnées.
+	
+	\item \textbf{Pourquoi est-ce Nécessaire?} :
+	\begin{itemize}
+		\item Les coordonnées géodésiques sont couramment utilisées en cartographie et navigation car elles reflètent la forme réelle de la Terre. Cependant, les modèles océanographiques, comme CROCO, peuvent utiliser des coordonnées sphériques pour simplifier les calculs.
+		\item Lors de la simulation des mouvements de l'eau, comme les courants, il est essentiel que les vecteurs de vitesse soient correctement orientés. Sans une transformation appropriée des coordonnées, les vecteurs pourraient pointer dans la mauvaise direction, conduisant à des résultats de simulation inexactes.
+	\end{itemize}
+	
+	\item \textbf{Fonctionnement de la Fonction} :
+	\begin{itemize}
+		\item La fonction prend en entrée les latitudes et longitudes d'une grille et un sphéroïde de référence (par défaut "wgs84").
+		\item Elle calcule ensuite l'azimut, ou l'angle, entre les points de grille adjacents en utilisant les coordonnées géodésiques.
+		\item Cet azimut est ensuite utilisé pour déterminer l'angle de rotation nécessaire pour passer des coordonnées géodésiques aux coordonnées sphériques.
+	\end{itemize}
+	
+	\item \textbf{Résultat} :
+	\begin{itemize}
+		\item La sortie, \texttt{angle}, donne l'angle de rotation pour chaque point de la grille. Cette information est essentielle pour les étapes ultérieures du processus de modélisation, garantissant que les données sont correctement orientées et que les simulations sont précises.
+	\end{itemize}
+\end{itemize}
+
+En résumé, la fonction \texttt{get\_angle.py} est un outil essentiel dans le processus de préparation des données pour la modélisation océanographique. Elle assure que les coordonnées sont correctement transformées, permettant des simulations précises et fiables.\\
+
+En plus de la transformation des coordonnées, un autre aspect essentiel de la modélisation océanographique est la prise en compte de l'effet de Coriolis. Cet effet, résultant de la rotation de la Terre, influence considérablement la direction et la magnitude des courants océaniques. Pour intégrer cet effet dans le modèle, la ligne de code suivante est utilisée :
+
+\begin{verbatim}
+	# Compute the Coriolis parameter.
+	f = 4 * np.pi * np.sin(np.pi * Latr / 180) * 366.25 / (24 * 3600 * 365.25)
+\end{verbatim}
+
+Cette ligne calcule le paramètre de Coriolis, souvent noté \( f \). Pour comprendre son importance :
+\begin{itemize}
+	\item \textbf{Rôle du Paramètre de Coriolis} : Il représente la force qui agit perpendiculairement à la direction du mouvement d'un fluide, comme l'eau de mer, en raison de la rotation de la Terre.
+	
+	\item \textbf{Détails de la Formule} :
+	\begin{itemize}
+		\item \(\pi\) est la constante mathématique Pi.
+		\item \texttt{Latr} est la latitude en degrés.
+		\item La fonction \texttt{np.sin} calcule le sinus de la latitude, convertie en radians.
+		\item Le facteur \( \frac{366.25}{24 \times 3600 \times 365.25} \) convertit la fréquence angulaire de rotation de la Terre en une valeur quotidienne, en tenant compte des jours bissextiles.
+	\end{itemize}
+	
+	\item \textbf{Importance pour la Modélisation} : Sans une estimation précise du paramètre de Coriolis, les simulations océanographiques pourraient ne pas refléter fidèlement les mouvements réels de l'eau, en particulier dans les régions proches de l'équateur où cet effet est le plus prononcé.
+\end{itemize}
+
+Ainsi, en combinant la transformation précise des coordonnées avec la prise en compte de l'effet de Coriolis, le modèle est bien équipé pour fournir des simulations océanographiques précises et fiables.
+>>>>>>> d8e52a844062412cc65324df3df466a7ebe4a8f5
