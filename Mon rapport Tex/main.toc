@@ -1,9 +1,9 @@
 \acswitchoff 
 \babel@toc {french}{}\relax 
-\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
-\contentsline {section}{\numberline {2}Présentation de l'entreprise}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Laboratoire Universitaire des Sciences Appliquées de Cherbourg (LUSAC)}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Le Cnam-INTECHMER}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {1}Présentation de l'entreprise}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Laboratoire Universitaire des Sciences Appliquées de Cherbourg (LUSAC)}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Le Cnam-INTECHMER}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Introduction}{5}{section.2}%
 \contentsline {section}{\numberline {3}Problématique}{7}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Les modèles numériques en océanographie}{7}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Introduction à la modélisation numérique}{7}{subsubsection.3.1.1}%
@@ -27,8 +27,14 @@
 \contentsline {paragraph}{Fonctionnement de la fonction:\\}{33}{section*.30}%
 \contentsline {paragraph}{Détails techniques:\\}{34}{section*.31}%
 \contentsline {subsubsection}{\numberline {4.2.7}Traitement des fichiers topographiques au format Raster}{34}{subsubsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.3}Les fichiers \@FB@og Tides \@FB@fg \relax {} \@FB@fg \relax {}}{35}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Les fichiers \@FB@og Bulk \@FB@fg \relax {}}{35}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Résultats}{36}{section.5}%
-\contentsline {section}{\numberline {6}Conclusion et perspectives}{37}{section.6}%
-\contentsline {section}{\numberline {7}Bibliographie}{38}{section.7}%
+\contentsline {paragraph}{BathyView : Interface de Vérification et de Correction des Données Raster\\}{35}{section*.34}%
+\contentsline {paragraph}{Fonctionnement de la fonction :\\}{36}{section*.36}%
+\contentsline {paragraph}{Détail techniques :\\}{37}{section*.37}%
+\contentsline {subsubsection}{\numberline {4.2.8}Génération du masque pour le fichier \texttt {grid\_croco}}{37}{subsubsection.4.2.8}%
+\contentsline {subsubsection}{\numberline {4.2.9}Finalisation, exportation et visualisation du fichier }{38}{subsubsection.4.2.9}%
+\contentsline {paragraph}{Conclusion sur la génération du fichier \texttt {grid\_croco}:}{39}{section*.40}%
+\contentsline {subsection}{\numberline {4.3}Les fichiers \@FB@og Tides \@FB@fg \relax {} \@FB@fg \relax {}}{39}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Les fichiers \@FB@og Bulk \@FB@fg \relax {}}{39}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Résultats}{40}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion et perspectives}{41}{section.6}%
+\contentsline {section}{\numberline {7}Bibliographie}{42}{section.7}%

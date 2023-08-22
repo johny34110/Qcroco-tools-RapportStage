@@ -1,8 +1,8 @@
 \acswitchoff 
 \babel@toc {french}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Bâtiment LUSAC}}{3}{figure.caption.4}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Bâtiment INTECHMER}}{5}{figure.caption.5}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Contexte Stage.}}{6}{figure.caption.6}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Bâtiment LUSAC}}{1}{figure.caption.4}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Bâtiment INTECHMER}}{3}{figure.caption.5}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Contexte Stage.}}{4}{figure.caption.6}%
 \contentsline {figure}{\numberline {4}{\ignorespaces LOGO CROCO}}{8}{figure.caption.7}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Gridcomp}}{9}{figure.caption.8}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Grid}}{10}{figure.caption.9}%
@@ -28,3 +28,6 @@
 \contentsline {figure}{\numberline {26}{\ignorespaces Structure d'un fichier topographique NetCDF.\relax }}{33}{figure.caption.29}%
 \contentsline {figure}{\numberline {27}{\ignorespaces Interpolation de la topographie : du fichier NetCDF à la grille CROCO\relax }}{34}{figure.caption.32}%
 \contentsline {figure}{\numberline {28}{\ignorespaces Représentation schématique d'une grille raster avec des données.\relax }}{35}{figure.caption.33}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Interface de BathyView montrant les fonctionnalités de vérification et de correction des données raster\relax }}{36}{figure.caption.35}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Visualisation du masque généré pour la grille CROCO.\relax }}{38}{figure.caption.38}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Visualisation du masque généré pour la grille CROCO.\relax }}{39}{figure.caption.39}%
