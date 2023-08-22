@@ -24,19 +24,19 @@ La sélection du code de calcul des courants océanographiques employé au cours
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=1in]{./IMAGES/croco.png}
+	\includegraphics[height=1in]{./IMAGES/Logo/croco.png}
 	\caption[LOGO CROCO]{Logo officiel du code de calcul CROCO (https://www.croco-ocean.org/)}
 	\label{fig:croco}
 \end{figure}
 
 Le modèle océanographique CROCO, pour \textit{(\textbf{C}oastal and \textbf{R}egional \textbf{O}cean \textbf{CO}mmunity model)} est un code de calcul récent pour la modélisation océanique, construit sur la base de ROMS-AGRIF (\textit{\textbf{R}egional \textbf{O}cean \textbf{M}odeling \textbf{S}ystem - \textbf{A}daptive \textbf{G}rid \textbf{R}efinement \textbf{I}n \textbf{F}ortran}) et du noyau non-hydrostatique de SNH \footnote{simulated Non-Hydrostatique} (actuellement en test). Il intègre progressivement des algorithmes de MARS3D \footnote{Model for Applications at Regional Scale} (notamment pour les sédiments) et de HYCOM \footnote{HYCOM: HYbrid Coordinate Ocean Model}
- (pour les coordonnées verticales) (\cite{croco_soft}).
+ (pour les coordonnées verticales) \citep{croco_soft}.
 
-CROCO est maintenu par plusieurs instituts français travaillant sur l'environnement, notamment l'IRD (\textit{\textbf{I}nstitut de \textbf{R}echerche pour le \textbf{D}éveloppement}), l'INRIA (\textit{\textbf{I}nstitut \textbf{N}ational de \textbf{R}echerche en \textbf{I}nformatique et en \textbf{A}utomatique}), le CNRS (\textit{\textbf{C}entre \textbf{N}ational de la \textbf{R}echerche \textbf{S}cientifique}), l'IFREMER (\textit{\textbf{I}nstitut \textbf{F}rançais de \textbf{R}echerche pour l'\textbf{E}xploitation de la \textbf{MER}}) et le SHOM (\textit{\textbf{S}ervice \textbf{H}ydrographique et \textbf{O}céanographique de la \textbf{M}arine) (\cite{croco_doc}}).\\
+CROCO est maintenu par plusieurs instituts français travaillant sur l'environnement, notamment l'IRD (\textit{\textbf{I}nstitut de \textbf{R}echerche pour le \textbf{D}éveloppement}), l'INRIA (\textit{\textbf{I}nstitut \textbf{N}ational de \textbf{R}echerche en \textbf{I}nformatique et en \textbf{A}utomatique}), le CNRS (\textit{\textbf{C}entre \textbf{N}ational de la \textbf{R}echerche \textbf{S}cientifique}), l'IFREMER (\textit{\textbf{I}nstitut \textbf{F}rançais de \textbf{R}echerche pour l'\textbf{E}xploitation de la \textbf{MER}}) et le SHOM (\textit{\textbf{S}ervice \textbf{H}ydrographique et \textbf{O}céanographique de la \textbf{M}arine) \citep{croco_doc}}.\\
 
-Les calculs du modèle CROCO sont basés sur la résolution numérique des équations de conservation primitives - c'est-à-dire en coordonnées cartésiennes (x,y,z), héritées de la mécanique des fluides. Les programmes de résolution de ces équations sont écrits puis compilés en langage Fortran, tandis que les outils de paramétrisation en amont et de visualisation graphique en aval (tels que croco-tools) sont fournit et écrits avec le langage MATLAB (\cite{bellayersimulation}).
+Les calculs du modèle CROCO sont basés sur la résolution numérique des équations de conservation primitives - c'est-à-dire en coordonnées cartésiennes (x,y,z), héritées de la mécanique des fluides. Les programmes de résolution de ces équations sont écrits puis compilés en langage Fortran, tandis que les outils de paramétrisation en amont et de visualisation graphique en aval (tels que croco-tools) sont fournit et écrits avec le langage MATLAB \citep{bellayersimulation}.
 
-L'objectif de CROCO est double : il sert à la fois pour la recherche fondamentale, en aidant à comprendre le fonctionnement de l'océan, et pour la recherche appliquée et l'océanographie opérationnelle (\cite{croco2022}).\\
+L'objectif de CROCO est double : il sert à la fois pour la recherche fondamentale, en aidant à comprendre le fonctionnement de l'océan, et pour la recherche appliquée et l'océanographie opérationnelle \citep{croco2022}.\\
 
 Pour assurer un fonctionnement optimal, le modèle CROCO nécessite une série de fichiers d'entrée spécifiques, qui permettent de paramétrer la simulation de manière à refléter le plus fidèlement possible les conditions océanographiques réelles. Mon stage se concentre sur la mise en place des fichiers d'entrée du modèle. Il n'est pas impératif pour moi d'acquérir une compréhension approfondie du fonctionnement interne du code CROCO ou de son système de résolution des équations. Mon rôle  est de comprendre et de gérer efficacement la générations des fichiers d'entrée, qui déterminent la zone d'étude et intègrent les facteurs de forçage tels que les marées et les conditions météorologiques.
 
@@ -72,11 +72,11 @@ Mon projet initial s'inscrit précisément dans ce contexte~: la mise en \oe{uvr
 
 \subsubsection{Le Forçage par les Marées}
 
-Dans le modèle CROCO, les fichiers de forçage par la marée jouent un rôle crucial pour simuler avec précision les dynamiques océaniques. Les marées océaniques, principalement produites par les forces gravitationnelles du Soleil et de la Lune, représentent l'une des principales sources de forçage pour la mise en mouvement des masses d'eau océaniques (\cite{Tide}).
+Dans le modèle CROCO, les fichiers de forçage par la marée jouent un rôle crucial pour simuler avec précision les dynamiques océaniques. Les marées océaniques, principalement produites par les forces gravitationnelles du Soleil et de la Lune, représentent l'une des principales sources de forçage pour la mise en mouvement des masses d'eau océaniques \citep{Tide}.
 
 Afin de simuler avec précision la dynamique marine induite par la marée, le modèle CROCO incorpore divers constituants de marée (plusieurs harmoniques de marée). Ces constituants sont propagés à partir des frontières latérales du modèle en utilisant la méthode décrite dans \cite{flather1976}.
 
-Les constituants de marée sont ajoutés dans un fichier spécifique de forçage. Les harmoniques de marée, qui oscillent à des fréquences multiples de la fréquence principale de la marée, sont essentielles pour une représentation fidèle des marées océaniques réelles (\cite{noaa2023}).
+Les constituants de marée sont ajoutés dans un fichier spécifique de forçage. Les harmoniques de marée, qui oscillent à des fréquences multiples de la fréquence principale de la marée, sont essentielles pour une représentation fidèle des marées océaniques réelles \citep{noaa2023}.
 
 \begin{figure}[H]
 	\centering
@@ -85,7 +85,7 @@ Les constituants de marée sont ajoutés dans un fichier spécifique de forçage
 	\label{fig:harmoniques}
 \end{figure}
 
-La préparation des fichiers de forçage nécessite un atlas de marées contenant des constituants harmoniques adaptés à la grille du modèle CROCO. Cet atlas est indispensable pour obtenir des conditions aux limites ouvertes du modèle appelées \og \textit{\textbf{O}pen \textbf{B}oundary \textbf{C}onditions} \fg{} (OBC). Dans le cadre de ce projet, nous avons sollicité un accès au modèle TPXO9 (\cite{tpxo9}) pour obtenir ces données. Nous approfondirons l'utilisation du modèle TPXO9 dans la section \ref{sub:tides}.
+La préparation des fichiers de forçage nécessite un atlas de marées contenant des constituants harmoniques adaptés à la grille du modèle CROCO. Cet atlas est indispensable pour obtenir des conditions aux limites ouvertes du modèle appelées \og \textit{\textbf{O}pen \textbf{B}oundary \textbf{C}onditions} \fg{} (OBC). Dans le cadre de ce projet, nous avons sollicité un accès au modèle TPXO9 \citep{tpxo9} pour obtenir ces données. Nous approfondirons l'utilisation du modèle TPXO9 dans la section \ref{sub:tides}.
 
 
 En résumé, les fichiers de forçage par les marées fournissent les informations nécessaires pour simuler les effets des marées sur les dynamiques océaniques dans le modèle CROCO. Une fois que ces fichiers de forçage sont correctement préparés, une simulation océanographique peut être initiée, permettant au modèle de commencer à générer des résultats basées sur les conditions de forçage fournies.
@@ -96,7 +96,7 @@ Après avoir travaillé sur les fichiers de forçage par la marée, j'ai ensuite
 
 La création de ces fichiers de forçage météorologique réclame sur le plan théorique, une compréhension approfondie des interactions entre l'océan et l'atmosphère (notions d'océanographie physique) et sur le plan pratique, un accès à des données météorologiques précises et à jour.
 
-Dans le cadre de ce projet, j'ai utilisé le modèle ERA5 (\cite{ERA5}) pour obtenir ces données météorologiques. Le modèle ERA5, développé par le centre européen pour les prévisions météorologiques à moyen terme (\textbf{E}uropean \textbf{C}enter for \textbf{M}ean \textbf{W}eather \textbf{F}orcast (ECMWF)), est une source de données météorologiques reconnue pour sa précision, sa résolution spatiale et temporelle élevé \cite{CROCOForum2022, Donoso2022}.\\
+Dans le cadre de ce projet, j'ai utilisé le modèle ERA5 \citep{ERA5} pour obtenir ces données météorologiques. Le modèle ERA5, développé par le centre européen pour les prévisions météorologiques à moyen terme (\textbf{E}uropean \textbf{C}enter for \textbf{M}ean \textbf{W}eather \textbf{F}orcast (ECMWF)), est une source de données météorologiques reconnue pour sa précision, sa résolution spatiale et temporelle élevé \citep{CROCOForum2022, Donoso2022}.\\
 
 A l'instar des fichiers de forçage par les marées, une fois que les fichiers de forçage météorologique, ou fichiers \og \textit{Bulk} \fg{}, sont correctement préparés et intégrés, ils permettent au modèle CROCO de simuler avec précision les effets des conditions météorologiques sur les dynamiques océaniques. Nous discuterons plus en détail de l'utilisation du modèle ERA5 et de la préparation des fichiers \og \textit{Bulk} \fg{} dans la section \ref{sub:bulk}.
 
@@ -104,17 +104,17 @@ A l'instar des fichiers de forçage par les marées, une fois que les fichiers d
 
 \subsubsection{Le logiciel QGIS}
 
-Mon maître de stage a opté pour l'utilisation d'un \textbf{S}ystème d'\textbf{I}nformation \textbf{G}éographique (SIG) pour faciliter la manipulation et l'analyse des données spatialisées. \textit{\textbf{QGIS}} (\textbf{Q}uantum \textbf{G}eographic \textbf{I}nformation \textbf{S}ystem) (\cite{QGIS}), en tant que solution \og open source \fg{} puissante et flexible, s'est avéré être l'outil idéal pour cette tâche.\\
+Mon maître de stage a opté pour l'utilisation d'un \textbf{S}ystème d'\textbf{I}nformation \textbf{G}éographique (SIG) pour faciliter la manipulation et l'analyse des données spatialisées. \textit{\textbf{QGIS}} (\textbf{Q}uantum \textbf{G}eographic \textbf{I}nformation \textbf{S}ystem) \citep{QGIS}, en tant que solution \og open source \fg{} puissante et flexible, s'est avéré être l'outil idéal pour cette tâche.\\
 
 QGIS permet aux utilisateurs de créer, modifier, visualiser et analyser des données géospatiales. Il est largement utilisé par les chercheurs, les planificateurs, les cartographes et d'autres professionnels qui travaillent avec des données géographiques.
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=1in]{./IMAGES/Qgis.png}
+	\includegraphics[height=1in]{./IMAGES/Logo/Qgis.png}
 	\caption[QGIS]{Logo officiel QGIS (https://www.qgis.org/.)}
 	\label{fig:QGIS}
 \end{figure}
 
-QGIS prend en charge une variété de formats de données, à la fois dans les formats vectoriels et raster et offre une large gamme d'outils pour la visualisation de données, l'analyse spatiale, la gestion de données et plus encore (\cite{QGIS}). Il est également extensible grâce à la présence d'un \og \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface \fg{} (API). Cette caractéristique importante de QGIS a permis le développement d'une large gamme de plugins. Les utilisateurs de QGIS peuvent ajouter des fonctionnalités supplémentaires en fonction de leurs besoins spécifiques.
+QGIS prend en charge une variété de formats de données, à la fois dans les formats vectoriels et raster et offre une large gamme d'outils pour la visualisation de données, l'analyse spatiale, la gestion de données et plus encore \citep{QGIS}. Il est également extensible grâce à la présence d'un \og \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface \fg{} (API). Cette caractéristique importante de QGIS a permis le développement d'une large gamme de plugins. Les utilisateurs de QGIS peuvent ajouter des fonctionnalités supplémentaires en fonction de leurs besoins spécifiques.
 
 \subsubsection{Les plugins dans QGIS}
 
@@ -129,7 +129,7 @@ QCrocoFlow est organisé logiquement en deux grandes parties. La première compo
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=1in]{./IMAGES/QCROCO.png}
+	\includegraphics[height=1in]{./IMAGES/Logo/QCROCO.png}
 	\caption[QCROCOflow]{Logo QCrocoFlow}
 	\label{fig:QCROCOflow}
 \end{figure}

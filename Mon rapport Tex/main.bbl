@@ -1,139 +1,201 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{29}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[\protect\citename{adv, }2019]{advancingDynamicalCores}
- 2019.
-\newblock Advancing Dynamical Cores of Oceanic Models across All Scales.
-\newblock {\em Journal of the American Meteorological Society}.
+\bibitem[adv(2019)]{advancingDynamicalCores}
+Advancing dynamical cores of oceanic models across all scales.
+\newblock \emph{Journal of the American Meteorological Society}, 2019.
+\newblock URL
+  \url{https://journals.ametsoc.org/view/journals/bams/100/3/bams-d-18-0303.1.xml}.
 
-\bibitem[\protect\citename{cha, }2019]{challengesProspects}
- 2019.
-\newblock Challenges and Prospects in Ocean Circulation Models.
-\newblock {\em Frontiers in Marine Science}.
+\bibitem[cha(2019)]{challengesProspects}
+Challenges and prospects in ocean circulation models.
+\newblock \emph{Frontiers in Marine Science}, 2019.
+\newblock URL
+  \url{https://www.frontiersin.org/articles/10.3389/fmars.2019.00065}.
 
-\bibitem[\protect\citename{spa, }2021]{spatioTemporalFeatures}
- 2021.
-\newblock Assessing the Spatio-Temporal Features and Mechanisms of Oceanic
-  Models.
-\newblock {\em MDPI}.
+\bibitem[spa(2021)]{spatioTemporalFeatures}
+Assessing the spatio-temporal features and mechanisms of oceanic models.
+\newblock \emph{MDPI}, 2021.
+\newblock URL \url{https://www.mdpi.com/2077-1312/11/2/431}.
 
-\bibitem[\protect\citename{Auclair {\em et~al.}, }2022]{croco_soft}
-Auclair, Francis, Benshila, Rachid, Bordois, Lucie, Boutet, Martial, Brémond,
-  Maurice, Caillaud, Matthieu, Cambon, Gildas, Capet, Xavier, Debreu, Laurent,
-  Ducousso, Nicolas, Dufois, François, Dumas, Franck, Ethé, Christian, Gula,
-  Jonathan, Hourdin, Christophe, Illig, Serena, Jullien, Swen, Corre,
-  Matthieu~Le, Gac, Solène~Le, Gentil, Sylvie~Le, Lemarié, Florian,
-  Marchesiello, Patrick, Mazoyer, Camille, Morvan, Guillaume, Nguyen, Cyril,
-  Penven, Pierrick, Person, Renaud, Pianezze, Joris, Pous, Stéphane, Renault,
-  Lionel, Roblou, Laurent, Sepulveda, Andres, \& Theetten, Sebastien. 2022.
-\newblock {\em Coastal and Regional Ocean COmmunity model}.
-
-\bibitem[\protect\citename{Bellayer, }2023]{bellayersimulation}
-Bellayer, Tino. 2023.
-\newblock {\em Simulation climatologique d{\'e}cennale de la circulation
-  oc{\'e}anique en mer du Labrador {\`a} l’aide du mod{\`e}le CROCO}.
-
-\bibitem[\protect\citename{{Cnam}, }2023]{CNAM}
-{Cnam}. 2023.
-\newblock {\em Formations et recherches dans les sciences techniques de la mer
-  {\textbar} Intechmer {\textbar} Cnam}.
-
-\bibitem[\protect\citename{Community, }2022]{CROCOForum2022}
-Community, CROCO. 2022.
-\newblock {\em Interannual CROCO v1.1 with ERA5 and GLORYS}.
+\bibitem[Wik(2023{\natexlab{a}})]{Wikipedia2023Bicubic}
+Bicubic interpolation.
+\newblock \url{https://en.wikipedia.org/wiki/Bicubic_interpolation},
+  2023{\natexlab{a}}.
 \newblock Accessed: 2023-07-31.
 
-\bibitem[\protect\citename{Community, }2023]{croco_forum}
-Community, CROCO. 2023.
-\newblock {\em CROCO Ocean Model Forum}.
+\bibitem[Wik(2023{\natexlab{b}})]{Wikipedia2023Bilinear}
+Bilinear interpolation.
+\newblock \url{https://en.wikipedia.org/wiki/Bilinear_interpolation},
+  2023{\natexlab{b}}.
+\newblock Accessed: 2023-07-31.
 
-\bibitem[\protect\citename{CROCO, }2023]{crocoofficial}
-CROCO. 2023.
-\newblock {\em CROCO Official Website}.
+\bibitem[Wik(2023{\natexlab{c}})]{Wikipedia2023Linear}
+Linear interpolation.
+\newblock \url{https://en.wikipedia.org/wiki/Linear_interpolation},
+  2023{\natexlab{c}}.
+\newblock Accessed: 2023-07-31.
+
+\bibitem[Wik(2023{\natexlab{d}})]{Wikipedia2023Spline}
+Spline interpolation.
+\newblock \url{https://en.wikipedia.org/wiki/Spline_interpolation},
+  2023{\natexlab{d}}.
+\newblock Accessed: 2023-07-31.
+
+\bibitem[Auclair et~al.(2022)Auclair, Benshila, Bordois, Boutet, Brémond,
+  Caillaud, Cambon, Capet, Debreu, Ducousso, Dufois, Dumas, Ethé, Gula,
+  Hourdin, Illig, Jullien, Corre, Gac, Gentil, Lemarié, Marchesiello, Mazoyer,
+  Morvan, Nguyen, Penven, Person, Pianezze, Pous, Renault, Roblou, Sepulveda,
+  and Theetten]{croco_soft}
+Francis Auclair, Rachid Benshila, Lucie Bordois, Martial Boutet, Maurice
+  Brémond, Matthieu Caillaud, Gildas Cambon, Xavier Capet, Laurent Debreu,
+  Nicolas Ducousso, François Dufois, Franck Dumas, Christian Ethé, Jonathan
+  Gula, Christophe Hourdin, Serena Illig, Swen Jullien, Matthieu~Le Corre,
+  Solène~Le Gac, Sylvie~Le Gentil, Florian Lemarié, Patrick Marchesiello,
+  Camille Mazoyer, Guillaume Morvan, Cyril Nguyen, Pierrick Penven, Renaud
+  Person, Joris Pianezze, Stéphane Pous, Lionel Renault, Laurent Roblou,
+  Andres Sepulveda, and Sebastien Theetten.
+\newblock Coastal and regional ocean community model, 2022.
+
+\bibitem[Bellayer(2023)]{bellayersimulation}
+Tino Bellayer.
+\newblock Simulation climatologique d{\'e}cennale de la circulation
+  oc{\'e}anique en mer du labrador {\`a} l’aide du mod{\`e}le croco, 2023.
+\newblock URL
+  \url{https://tino-bellayer-etu.pedaweb.univ-amu.fr/extranet/BELLAYER_rapportOPB205.pdf}.
+
+\bibitem[{Cnam}(2023)]{CNAM}
+{Cnam}.
+\newblock Formations et recherches dans les sciences techniques de la mer
+  {\textbar} intechmer {\textbar} cnam, 2023.
+\newblock URL \url{https://www.intechmer.cnam.fr/intechmer}.
+
+\bibitem[Community(2022)]{CROCOForum2022}
+CROCO Community.
+\newblock Interannual croco v1.1 with era5 and glorys, 2022.
+\newblock URL
+  \url{https://forum.croco-ocean.org/question/647/interannual-croco-v11-with-era5-and-glorys/}.
+\newblock Accessed: 2023-07-31.
+
+\bibitem[Community(2023)]{croco_forum}
+CROCO Community.
+\newblock Croco ocean model forum, 2023.
+\newblock URL \url{https://forum.croco-ocean.org/questions/}.
+
+\bibitem[CROCO(2023)]{crocoofficial}
+CROCO.
+\newblock Croco official website, 2023.
+\newblock URL \url{https://www.croco-ocean.org/}.
 \newblock Accessed: [date de consultation].
 
-\bibitem[\protect\citename{Doe, }1970]{bjerknes1970}
-Doe, John. 1970.
-\newblock {\em Early Meteorological Work of Vilhelm Bjerknes}.
-\newblock Meteorological History Press.
+\bibitem[Doe(1970)]{bjerknes1970}
+John Doe.
+\newblock \emph{Early Meteorological Work of Vilhelm Bjerknes}.
+\newblock Meteorological History Press, 1970.
 
-\bibitem[\protect\citename{Donoso, }2022]{Donoso2022}
-Donoso, David. 2022.
-\newblock {\em ERA5-request-to-CROCO-model}.
+\bibitem[Donoso(2022)]{Donoso2022}
+David Donoso.
+\newblock Era5-request-to-croco-model, 2022.
+\newblock URL \url{https://github.com/d4viddonoso/ERA5-request-to-CROCO-model}.
 \newblock Accessed: 2023-07-31.
 
-\bibitem[\protect\citename{ERA5, }2023]{ERA5}
-ERA5. 2023.
-\newblock {\em Fifth generation of ECMWF atmospheric reanalyses of the global
-  climate}.
+\bibitem[ERA5(2023)]{ERA5}
+ERA5.
+\newblock Fifth generation of ecmwf atmospheric reanalyses of the global
+  climate, 2023.
+\newblock URL
+  \url{https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5}.
 \newblock 2023.
 
-\bibitem[\protect\citename{Flather, }1976]{flather1976}
-Flather, R.A. 1976.
-\newblock A tidal model of the northwest European continental shelf.
-\newblock {\em Memories de la Societe Royale des Sciences de Liege}.
+\bibitem[Flather(1976)]{flather1976}
+R.A. Flather.
+\newblock A tidal model of the northwest european continental shelf.
+\newblock \emph{Memories de la Societe Royale des Sciences de Liege}, 1976.
 
-\bibitem[\protect\citename{IFREMER, }2022]{croco2022}
-IFREMER. 2022.
-\newblock {\em Introduction to Ocean Modelling with CROCO}.
+\bibitem[IFREMER(2022)]{croco2022}
+IFREMER.
+\newblock Introduction to ocean modelling with croco, 2022.
+\newblock URL
+  \url{https://data-croco.ifremer.fr/DOC/PRES_TRAINING_CROCO_2022_2/BASICS/01_Basics-Monday/PRES01_2022_Introduction_Ocean_Modeling.pdf}.
 \newblock Accessed: 27/07/2023.
 
-\bibitem[\protect\citename{Jullien {\em et~al.}, }2022]{croco_doc}
-Jullien, Swen, Caillaud, Matthieu, Benshila, Rachid, Bordois, Lucie, Cambon,
-  Gildas, Dumas, Franck, Gentil, Sylvie~Le, Lemarié, Florian, Marchesiello,
-  Patrick, Theetten, Sébastien, Dufois, François, Corre, Matthieu~Le, Morvan,
-  Guillaume, {Solene Le Gac}, Gula, Jonathan, \& Pianezze, Joris. 2022.
-\newblock CROCO Technical and Numerical Documentation.
+\bibitem[Jullien et~al.(2022)Jullien, Caillaud, Benshila, Bordois, Cambon,
+  Dumas, Gentil, Lemarié, Marchesiello, Theetten, Dufois, Corre, Morvan,
+  {Solene Le Gac}, Gula, and Pianezze]{croco_doc}
+Swen Jullien, Matthieu Caillaud, Rachid Benshila, Lucie Bordois, Gildas Cambon,
+  Franck Dumas, Sylvie~Le Gentil, Florian Lemarié, Patrick Marchesiello,
+  Sébastien Theetten, François Dufois, Matthieu~Le Corre, Guillaume Morvan,
+  {Solene Le Gac}, Jonathan Gula, and Joris Pianezze.
+\newblock Croco technical and numerical documentation.
+\newblock 2022.
+\newblock \doi{10.5281/ZENODO.7400758}.
 
-\bibitem[\protect\citename{Legrand, }2017]{Legrand}
-Legrand, T{\'e}rence. 2017.
+\bibitem[Legrand(2017)]{Legrand}
+T{\'e}rence Legrand.
 \newblock Projet de mod{\'e}lisation de la circulation oc{\'e}anique
   r{\'e}gionale.
+\newblock 2017.
+\newblock URL
+  \url{https://people.mio.osupytheas.fr/~doglioli/Legrand_rapportOPB205.pdf}.
 
-\bibitem[\protect\citename{{LUSAC}, }2023]{LUSAC}
-{LUSAC}. 2023.
-\newblock {\em Laboratoire Universitaire des Sciences Appliqu\'{e}es de
-  Cherbourg}.
+\bibitem[{LUSAC}(2023)]{LUSAC}
+{LUSAC}.
+\newblock Laboratoire universitaire des sciences appliqu\'{e}es de cherbourg,
+  2023.
+\newblock URL \url{https://normandie-univ.hal.science/LUSAC}.
 
-\bibitem[\protect\citename{Model, }2023]{croco_video}
-Model, CROCO. 2023.
-\newblock {\em CROCO Basics workshop}.
+\bibitem[Model(2023)]{croco_video}
+CROCO Model.
+\newblock Croco basics workshop, 2023.
+\newblock URL \url{https://www.youtube.com/watch?v=u2SFibx63I8}.
 
-\bibitem[\protect\citename{{National Oceanic and Atmospheric Administration},
-  }2023]{noaa2023}
-{National Oceanic and Atmospheric Administration}. 2023.
-\newblock {\em About Harmonic Constituents}.
+\bibitem[{National Oceanic and Atmospheric Administration}(2023)]{noaa2023}
+{National Oceanic and Atmospheric Administration}.
+\newblock About harmonic constituents, 2023.
+\newblock URL
+  \url{https://tidesandcurrents.noaa.gov/about_harmonic_constituents.html}.
 \newblock [Online; accessed 31-July-2023].
 
-\bibitem[\protect\citename{Penven {\em et~al.}, }2007]{crocotool2007}
-Penven, P., Marchesiello, P., Debreu, L., \& Lefevre, J. 2007.
+\bibitem[Penven et~al.(2007)Penven, Marchesiello, Debreu, and
+  Lefevre]{crocotool2007}
+P.~Penven, P.~Marchesiello, L.~Debreu, and J.~Lefevre.
 \newblock Software tools for pre- and post-processing of oceanic regional
   simulations.
-\newblock {\em Environmental Modelling \& Software}, {\bf 23}, 660--662.
+\newblock \emph{Environmental Modelling \& Software}, 23:\penalty0 660--662,
+  2007.
 
-\bibitem[\protect\citename{{QGIS}, }2023]{QGIS}
-{QGIS}. 2023.
-\newblock {\em QGIS}.
+\bibitem[{QGIS}(2023)]{QGIS}
+{QGIS}.
+\newblock Qgis, 2023.
+\newblock URL \url{https://www.qgis.com}.
 \newblock Open Source Geospatial Foundation Project.
 
-\bibitem[\protect\citename{Qt, }2023]{qt}
-Qt. 2023.
-\newblock {\em Cross-platform software development for embedded \& desktop}.
+\bibitem[Qt(2023)]{qt}
+Qt.
+\newblock Cross-platform software development for embedded \& desktop, 2023.
+\newblock URL \url{https://www.qt.io/}.
 \newblock 2023.
 
-\bibitem[\protect\citename{Renault \& Marchesiello, }2022]{Tide}
-Renault, Lionel, \& Marchesiello, Patrick. 2022.
+\bibitem[Renault and Marchesiello(2022)]{Tide}
+Lionel Renault and Patrick Marchesiello.
 \newblock Ocean tides can drag the atmosphere and cause tidal winds over broad
   continental shelves.
-\newblock {\em Communications Earth E Environment}, {\bf 3}(1).
+\newblock \emph{Communications Earth E Environment}, 3\penalty0 (1), mar 2022.
+\newblock \doi{10.1038/s43247-022-00403-y}.
 
-\bibitem[\protect\citename{Richardson, }1922]{richardson1922}
-Richardson, Lewis~Fry. 1922.
-\newblock {\em Weather Prediction by Numerical Process}.
-\newblock Cambridge University Press.
+\bibitem[Richardson(1922)]{richardson1922}
+Lewis~Fry Richardson.
+\newblock \emph{Weather Prediction by Numerical Process}.
+\newblock Cambridge University Press, 1922.
 
-\bibitem[\protect\citename{TPXO9, }2023]{tpxo9}
-TPXO9. 2023.
-\newblock {\em A global tidal model}.
+\bibitem[TPXO9(2023)]{tpxo9}
+TPXO9.
+\newblock A global tidal model, 2023.
+\newblock URL \url{https://www.tpxo.net/global/tpxo9-atlas}.
 \newblock Accessed: 07/2023.
 
 \end{thebibliography}

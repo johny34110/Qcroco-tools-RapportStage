@@ -1,7 +1,7 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2022/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-The style file: authordate1.bst
+The style file: plainnat.bst
 Database file #1: ./Biblio/STAGE.bib
 Warning--entry type for "LUSAC" isn't style-file defined
 --line 3 of file ./Biblio/STAGE.bib
@@ -20,50 +20,54 @@ Warning--entry type for "croco_video" isn't style-file defined
 Warning--to sort, need author or key in advancingDynamicalCores
 Warning--to sort, need author or key in challengesProspects
 Warning--to sort, need author or key in spatioTemporalFeatures
+Warning--to sort, need author or key in Wikipedia2023Linear
+Warning--to sort, need author or key in Wikipedia2023Bilinear
+Warning--to sort, need author or key in Wikipedia2023Bicubic
+Warning--to sort, need author or key in Wikipedia2023Spline
 Warning--empty author in advancingDynamicalCores
 Warning--empty author in challengesProspects
 Warning--empty author in spatioTemporalFeatures
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
-You've used 25 entries,
-            2441 wiz_defined-function locations,
-            680 strings with 7793 characters,
-and the built_in function-call counts, 7821 in all, are:
-= -- 714
-> -- 341
-< -- 67
-+ -- 103
-- -- 99
-* -- 621
-:= -- 1394
-add.period$ -- 92
-call.type$ -- 25
-change.case$ -- 148
-chr.to.int$ -- 25
-cite$ -- 36
-duplicate$ -- 313
-empty$ -- 509
-format.name$ -- 120
-if$ -- 1501
-int.to.chr$ -- 1
-int.to.str$ -- 0
+You've used 29 entries,
+            2773 wiz_defined-function locations,
+            738 strings with 9927 characters,
+and the built_in function-call counts, 11147 in all, are:
+= -- 943
+> -- 687
+< -- 19
++ -- 251
+- -- 219
+* -- 808
+:= -- 1684
+add.period$ -- 98
+call.type$ -- 29
+change.case$ -- 158
+chr.to.int$ -- 26
+cite$ -- 77
+duplicate$ -- 481
+empty$ -- 947
+format.name$ -- 243
+if$ -- 2343
+int.to.chr$ -- 4
+int.to.str$ -- 1
 missing$ -- 12
-newline$ -- 120
-num.names$ -- 66
-pop$ -- 126
+newline$ -- 164
+num.names$ -- 88
+pop$ -- 424
 preamble$ -- 1
-purify$ -- 173
+purify$ -- 131
 quote$ -- 0
-skip$ -- 327
+skip$ -- 426
 stack$ -- 0
-substring$ -- 303
-swap$ -- 50
+substring$ -- 86
+swap$ -- 32
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 196
-warning$ -- 8
-while$ -- 45
+type$ -- 309
+warning$ -- 12
+while$ -- 67
 width$ -- 0
-write$ -- 285
-(There were 15 warnings)
+write$ -- 377
+(There were 19 warnings)

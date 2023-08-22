@@ -245,35 +245,36 @@
 	year={2021}
 }
 
-@misc{Wikipedia2023Linear,
-	title = {Linear interpolation},
-	howpublished = {\url{https://en.wikipedia.org/wiki/Linear_interpolation}},
-	year = {2023},
-	note = {Accessed: 2023-07-31}
+@Misc{Wikipedia2023Linear,
+  author       = {Wikipédia},
+  title        = {Linear interpolation},
+  year         = {2023},
+  howpublished = {\url{https://en.wikipedia.org/wiki/Linear_interpolation}},
+  note         = {Accessed: 2023-07-31},
 }
 
-@misc{Wikipedia2023Bilinear,
-	title = {Bilinear interpolation},
-	howpublished = {\url{https://en.wikipedia.org/wiki/Bilinear_interpolation}},
-	year = {2023},
-	note = {Accessed: 2023-07-31}
+@Misc{Wikipedia2023Bilinear,
+  author       = {Wikipédia},
+  title        = {Bilinear interpolation},
+  year         = {2023},
+  howpublished = {\url{https://en.wikipedia.org/wiki/Bilinear_interpolation}},
+  note         = {Accessed: 2023-07-31},
 }
 
-@misc{Wikipedia2023Bicubic,
-	title = {Bicubic interpolation},
-	howpublished = {\url{https://en.wikipedia.org/wiki/Bicubic_interpolation}},
-	year = {2023},
-	note = {Accessed: 2023-07-31}
+@Misc{Wikipedia2023Bicubic,
+  author       = {Wikipédia},
+  title        = {Bicubic interpolation},
+  year         = {2023},
+  howpublished = {\url{https://en.wikipedia.org/wiki/Bicubic_interpolation}},
+  note         = {Accessed: 2023-07-31},
 }
 
-@misc{Wikipedia2023Spline,
-	title = {Spline interpolation},
-	howpublished = {\url{https://en.wikipedia.org/wiki/Spline_interpolation}},
-	year = {2023},
-	note = {Accessed: 2023-07-31}
+@Misc{Wikipedia2023Spline,
+  author       = {Wikipédia},
+  title        = {Spline interpolation},
+  year         = {2023},
+  howpublished = {\url{https://en.wikipedia.org/wiki/Spline_interpolation}},
+  note         = {Accessed: 2023-07-31},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
-
-
-

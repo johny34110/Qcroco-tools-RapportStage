@@ -59,7 +59,7 @@ Une fois les paramètres saisis, nous exploitons pleinement les capacités offer
 	\label{fig:BathyF}
 \end{figure}
 
-Lorsque l'on travaille au sein d'un Système d'Information Géographique (SIG), la gestion des systèmes de référence spatiale est cruciale. Ces systèmes, également connus sous le nom de CRS (pour Coordinate Reference System\footnote{Coordinate Reference System (CRS) : Un système qui utilise des coordonnées pour localiser précisément des points sur la Terre.}), déterminent comment les données sont projetées sur la Terre. Pour le modèle CROCO, le système de référence requis est le WGS84\footnote{WGS84 (World Geodetic System 1984) est la norme mondiale pour l'astronomie, la cartographie et la navigation. Il établit un cadre fixe pour la Terre, indépendant de la position ou de l'orientation de sa surface.}.
+Lorsque l'on travaille au sein d'un Système d'Information Géographique (SIG), la gestion des systèmes de référence spatiale est cruciale. Ces systèmes, également connus sous le nom de CRS (\textit{\textbf{C}}oordinate \textbf{\textit{R}}eference \textbf{\textit{S}}ystem\footnote{\textit{\textbf{C}}oordinate \textbf{\textit{R}}eference \textbf{\textit{S}}ystem (CRS) : Un système qui utilise des coordonnées pour localiser précisément des points sur la Terre.}), déterminent comment les données sont projetées sur la Terre. Pour le modèle CROCO, le système de référence requis est le WGS84\footnote{WGS84 (World Geodetic System 1984) est la norme mondiale pour l'astronomie, la cartographie et la navigation. Il établit un cadre fixe pour la Terre, indépendant de la position ou de l'orientation de sa surface.}.
 
 Afin d'assurer une intégrité et une précision maximales, j'ai mis en œuvre l'API de QGIS. Cet outil puissant permet de détecter automatiquement le CRS associé à un fichier topographique lors de son importation. QGIS est conçu pour gérer simultanément plusieurs CRS, permettant par exemple d'afficher une carte du monde en WGS84 à côté d'un fichier topographique en Lambert\footnote{Lambert : Un système de projection conique conforme, couramment utilisé pour les cartes de régions étendues, notamment en Europe.}. Si le CRS d'un fichier n'est pas spécifié ou est indétectable, j'ai développé une fonction qui convertit automatiquement ce fichier en WGS84. Cette démarche garantit que toutes les données traitées sont cohérentes et précises, évitant ainsi d'éventuels problèmes lors des étapes ultérieures du processus.~\ref{fig:Gestioncrs}.
 
@@ -83,7 +83,7 @@ Afin d'optimiser l'expérience utilisateur, j'ai intégré une fonctionnalité p
 \newpage
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/gridonmap.png}
+	\includegraphics[width=\textwidth]{./IMAGES/Script/gridonmap.png}
 	\caption{Interface de Configuration de la Grille et Affichage des Coordonnées}
 	\label{fig:gridonmap}
 \end{figure}
@@ -101,7 +101,7 @@ comme expliqué par la figure \ref{fig:AlgoGrid}.
 \newpage
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/scriptdet.png}
+	\includegraphics[width=\textwidth]{./IMAGES/Script/scriptdet.png}
 	\caption{Détail de la structure d'un script}
 	\label{fig:scriptdet}
 \end{figure}
@@ -194,7 +194,7 @@ Après avoir obtenu toutes les coordonnées variables, la dimension exacte de no
 La phase suivante du script concerne la création d'un fichier NetCDF vierge grâce à la fonction \texttt{create\_grid.py}. Cette étape s'appuie sur une approche de \textit{reverse engineering}. En utilisant un fichier grille que mon maître de stage m'a fourni comme référence, j'ai pu recréer un fichier NetCDF possédant les mêmes caractéristiques. Ce fichier est automatiquement créé dans le répertoire de travail que l'utilisateur a préalablement sélectionné, et porte le nom qu'il a choisi. Ce fichier servira de fondation solide pour l'intégration des variables générées ultérieurement.
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/createnc.png}
+	\includegraphics[width=\textwidth]{./IMAGES/Script/createnc.png}
 	\caption{Extrait du script create\_grid pour la création initiale du fichier NetCDF}
 	\label{fig:AlgoGrid}
 \end{figure}
@@ -258,5 +258,142 @@ Cette ligne calcule le paramètre de Coriolis, souvent noté \( f \). Pour compr
 	\item \textbf{Importance pour la Modélisation} : Sans une estimation précise du paramètre de Coriolis, les simulations océanographiques pourraient ne pas refléter fidèlement les mouvements réels de l'eau, en particulier dans les régions proches de l'équateur où cet effet est le plus prononcé.
 \end{itemize}
 
-Ainsi, en combinant la transformation précise des coordonnées avec la prise en compte de l'effet de Coriolis, le modèle est bien équipé pour fournir des simulations océanographiques précises et fiables.
+Avec ces étapes, nous avons généré deux nouvelles variables essentielles : l'angle de rotation et le paramètre de Coriolis. Ces variables seront intégrées progressivement dans le fichier netCDF précédemment généré, enrichissant ainsi notre modèle avec des informations cruciales pour des simulations océanographiques précises. il est temps de nous tourner vers une autre composante essentielle de notre fichier : l'intégration des données topographiques.
+
+\subsubsection{Interpolation à partir du fichier topographique}
+
+Après avoir élaboré les variables initiales de la zone d'étude, nous abordons désormais l'intégration des données topographiques au sein du fichier grid. Ces données, fournies par l'utilisateur via le plugin \textit{qcrocoflow}, sont essentielles pour définir les caractéristiques physiques du fond marin dans notre modèle, ainsi que le masque qui définit les partie submergé. Cependant, étant donné la diversité des formats de fichiers topographiques disponibles (tels que netCDF, TIFF, GRD, etc.), il est impératif d'avoir un mécanisme robuste pour traiter chaque type de fichier.
+
+L'interpolation est une méthode mathématique utilisée pour déduire des valeurs à des emplacements non spécifiés, dans notre cas dans chaque maille de la grille généré, à partir d'un ensemble de valeurs connues à savoir le fichier topographique. Plusieurs méthodes d'interpolation peuvent être utilisées, chacune ayant ses propres avantages et inconvénients. Voici quelques-unes des méthodes d'interpolation les plus couramment utilisées :
+
+\begin{itemize}
+	\item \textbf{Interpolation linéaire} : Elle est basée sur la première équation du polynôme de Taylor et est la plus simple et la plus rapide. Elle est idéale pour des données sans grandes variations\citep{Wikipedia2023Linear}.
+	
+	\item \textbf{Interpolation bilinéaire} : Utilisée pour les données spatiales 2D, elle prend en compte les valeurs des quatre points les plus proches pour estimer une valeur\citep{Wikipedia2023Bilinear}.
+	
+	\item \textbf{Interpolation bicubique} : Plus complexe, elle utilise les valeurs des 16 points les plus proches dans une grille 2D. Elle est plus précise que la bilinéaire, mais aussi plus coûteuse en termes de calcul\citep{Wikipedia2023Bicubic}.
+	
+	\item \textbf{Interpolation spline} : Elle utilise des polynômes de degré faible pour interpoler les données, garantissant la continuité et la douceur des courbes interpolées\citep{Wikipedia2023Spline}.
+\end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/Interpolation/Interpolation.png}
+	\caption{Différents Types d'Interpolationsource. {\textit{Source: SciPy Documentation}}}
+	\label{fig:Interpolation}
+\end{figure}
+
+En fonction de l'extension du fichier topographique fourni, différents scripts sont déclenchés pour garantir que chaque type de fichier est traité avec précision. Dans les sections suivantes, nous détaillerons les spécificités de chaque script en fonction du type de fichier.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=6in]{./IMAGES/Interpolation/ShemaUser.png}
+	\caption{Processus de Détection et de Traitement des Extensions de Fichiers Topographiques}
+	\label{fig:UserTOPO}
+\end{figure}
+
+
+\subsubsection{Traitement des fichiers topographiques au format NetCDF}
+
+Le format NetCDF (\textit{\textbf{N}etwork \textbf{C}ommon \textbf{D}ata \textbf{F}orm}) est un format de fichier largement utilisé pour stocker et partager des données scientifiques multidimensionnelles. Dans le contexte de la topographie, un fichier NetCDF offre une structure organisée pour représenter les informations topographiques de manière efficace et interopérable\footnote{Capacité de matériels, de logiciels ou de protocoles différents à fonctionner ensemble et à partager des informations}.
+
+
+\newpage
+Un fichier topographique NetCDF est généralement structuré comme suit :
+\vspace*{0.5cm}
+
+\begin{itemize}
+	\item \textbf{Dimensions} : Ces dimensions définissent l'espace dans lequel les données topographiques sont représentées. Les plus courantes sont la latitude, la longitude et, dans certains cas, l'altitude ou la profondeur.
+	
+	\item \textbf{Variables} : Les variables contiennent les données effectives. Pour un fichier topographique, la variable principale serait la hauteur ou la profondeur à chaque point de coordonnée. D'autres variables peuvent également être présentes, telles que la pente, l'aspect ou d'autres caractéristiques topographiques.
+	
+	\item \textbf{Attributs} : Les attributs fournissent des métadonnées sur les données contenues dans le fichier. Cela peut inclure des informations sur la source des données, la méthode de collecte, les unités utilisées, et d'autres détails pertinents.
+\end{itemize}
+
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[scale=1.5] % Ajustez la valeur de "scale" pour agrandir ou réduire la figure
+		% Draw the main rectangle
+		\draw (0,0) rectangle (7,5);
+		\node at (3.5,4.5) {\large Fichier NetCDF};
+		
+		% Draw internal rectangles
+		\draw (1,3) rectangle (6,4);
+		\node[text width=4cm, align=center] at (3.5,3.5) {\small Dimensions (Latitude, Longitude)};
+		
+		\draw (1,1.5) rectangle (6,2.5);
+		\node[text width=4cm, align=center] at (3.5,2) {\small Variables (Hauteur, Profondeur)};
+		
+		\draw (1,0.5) rectangle (6,1.5);
+		\node[text width=4cm, align=center] at (3.5,1) {\small Attributs (Métadonnées)};
+	\end{tikzpicture}
+	\caption{Structure d'un fichier topographique NetCDF.}
+	\label{fig:netcdf_structure}
+\end{figure}
+
+La fonction \texttt{Add\_topo\_nc} est conçue pour interpoler les données topographiques dans la grille CROCO. Cette interpolation est cruciale pour garantir que les caractéristiques topographiques, telles que les montagnes sous-marines et les fosses océaniques, sont correctement représentées dans le modèle.
+
+\paragraph{Fonctionnement de la fonction:\\}
+
+La fonction commence par charger la grille CROCO et extraire les coordonnées, ainsi que les métriques de la grille. Elle calcule ensuite la résolution moyenne de la grille CROCO.
+
+Ensuite, la fonction définit une boîte englobante pour extraire les données topographiques pertinentes. Cette boîte englobante est légèrement plus grande que la grille CROCO pour s'assurer que toutes les données nécessaires sont capturées.
+
+Après avoir chargé le fichier topographique, la fonction extrait les données topographiques qui se trouvent à l'intérieur de la boîte englobante. Elle ajuste ensuite la résolution des données topographiques pour qu'elle corresponde à celle de la grille CROCO.
+
+Enfin, la fonction utilise une interpolation cubique pour estimer les valeurs de la topographie à chaque point de la grille CROCO.
+
+\paragraph{Détails techniques:\\}
+
+\begin{itemize}
+	\item \textbf{Chargement de la grille CROCO} : La grille est chargée à l'aide de la bibliothèque \texttt{netCDF4}. Les coordonnées et les métriques de la grille sont extraites pour une utilisation ultérieure.
+	
+	\item \textbf{Définition de la boîte englobante} : La boîte englobante est définie en ajoutant un petit tampon à la grille CROCO. Ce tampon est calculé en fonction de la résolution de la grille.
+	
+	\item \textbf{Chargement et sous-ensemble des données topographiques} : Les données topographiques sont chargées et un sous-ensemble est extrait en fonction de la boîte englobante.
+	
+	\item \textbf{Ajustement de la résolution} : Si la résolution des données topographiques est trop fine par rapport à la grille CROCO, elle est ajustée pour correspondre à la résolution de la grille.
+	
+	\item \textbf{Interpolation} : Une fois que les données topographiques ont la bonne résolution, elles sont interpolées dans la grille CROCO à l'aide d'une interpolation cubique.
+\end{itemize}
+
+Cette fonction garantit que les données topographiques sont correctement intégrées dans la grille CROCO, ce qui est essentiel pour des simulations océanographiques précises.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./IMAGES/Interpolation/interpolationNC.png}
+	\caption{Interpolation de la topographie : du fichier NetCDF à la grille CROCO}
+	\label{fig:interpolationNC}
+\end{figure}
+Le fichier \texttt{grid} intègre désormais les données topographiques interpolées fournies par l'utilisateur.
+
+\subsubsection{Traitement des fichiers topographiques au format Raster}
+
+Les fichiers Raster sont des représentations matricielles de données spatiales. Chaque cellule (ou pixel) d'un raster contient une valeur, qui peut représenter divers types d'informations, telles que la température, l'altitude, ou même une couleur pour une image. Ces fichiers sont particulièrement adaptés pour représenter des données continues sur une zone géographique, comme la topographie ou la température de surface.
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\draw[step=1cm,gray,very thin] (0,0) grid (4,4);
+		
+		\node at (0.5, 3.5) {15};
+		\node at (1.5, 3.5) {20};
+		\node at (2.5, 3.5) {18};
+		\node at (3.5, 3.5) {22};
+		
+		\node[anchor=east] at (0,0.5) {1};
+		\node[anchor=east] at (0,1.5) {2};
+		
+		\node[anchor=north] at (0.5,0) {1};
+		\node[anchor=north] at (1.5,0) {2};
+		
+	\end{tikzpicture}
+	\caption{Représentation schématique d'une grille raster avec des données.}
+	\label{fig:rastergrid}
+\end{figure}
+
+QGIS, en tant que système d'information géographique (SIG), est parfaitement équipé pour lire et traiter les fichiers Raster. Lorsqu'un fichier Raster est chargé dans QGIS, le logiciel interprète les données et les affiche sous forme de carte comme mentionné dans la figure \ref{fig:BathyF}.
+
+
 
