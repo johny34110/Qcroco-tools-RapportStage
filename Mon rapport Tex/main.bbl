@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{33}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -21,30 +21,6 @@ Challenges and prospects in ocean circulation models.
 Assessing the spatio-temporal features and mechanisms of oceanic models.
 \newblock \emph{MDPI}, 2021.
 \newblock URL \url{https://www.mdpi.com/2077-1312/11/2/431}.
-
-\bibitem[Wik(2023{\natexlab{a}})]{Wikipedia2023Bicubic}
-Bicubic interpolation.
-\newblock \url{https://en.wikipedia.org/wiki/Bicubic_interpolation},
-  2023{\natexlab{a}}.
-\newblock Accessed: 2023-07-31.
-
-\bibitem[Wik(2023{\natexlab{b}})]{Wikipedia2023Bilinear}
-Bilinear interpolation.
-\newblock \url{https://en.wikipedia.org/wiki/Bilinear_interpolation},
-  2023{\natexlab{b}}.
-\newblock Accessed: 2023-07-31.
-
-\bibitem[Wik(2023{\natexlab{c}})]{Wikipedia2023Linear}
-Linear interpolation.
-\newblock \url{https://en.wikipedia.org/wiki/Linear_interpolation},
-  2023{\natexlab{c}}.
-\newblock Accessed: 2023-07-31.
-
-\bibitem[Wik(2023{\natexlab{d}})]{Wikipedia2023Spline}
-Spline interpolation.
-\newblock \url{https://en.wikipedia.org/wiki/Spline_interpolation},
-  2023{\natexlab{d}}.
-\newblock Accessed: 2023-07-31.
 
 \bibitem[Auclair et~al.(2022)Auclair, Benshila, Bordois, Boutet, Brémond,
   Caillaud, Cambon, Capet, Debreu, Ducousso, Dufois, Dumas, Ethé, Gula,
@@ -103,6 +79,12 @@ David Donoso.
 \newblock URL \url{https://github.com/d4viddonoso/ERA5-request-to-CROCO-model}.
 \newblock Accessed: 2023-07-31.
 
+\bibitem[Egbert and Erofeeva(2002)]{egbert2002efficient}
+Gary~D Egbert and Svetlana~Y Erofeeva.
+\newblock Efficient inverse modeling of barotropic ocean tides.
+\newblock \emph{Journal of Atmospheric and Oceanic Technology}, 19\penalty0
+  (2):\penalty0 183--204, 2002.
+
 \bibitem[ERA5(2023)]{ERA5}
 ERA5.
 \newblock Fifth generation of ecmwf atmospheric reanalyses of the global
@@ -110,6 +92,13 @@ ERA5.
 \newblock URL
   \url{https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5}.
 \newblock 2023.
+
+\bibitem[Erofeeva and Egbert(2010)]{erofeeva2010high}
+Svetlana~Y Erofeeva and Gary~D Egbert.
+\newblock High-resolution harmonic analysis based on 17 years of topex/poseidon
+  altimetry.
+\newblock \emph{Journal of Geophysical Research: Oceans}, 115\penalty0 (C12),
+  2010.
 
 \bibitem[Flather(1976)]{flather1976}
 R.A. Flather.
@@ -180,6 +169,12 @@ Qt.
 \newblock URL \url{https://www.qt.io/}.
 \newblock 2023.
 
+\bibitem[Ray and Egbert(2012)]{ray2012tide}
+Richard~D Ray and Gary~D Egbert.
+\newblock Tide prediction at ungauged locations using the tpxo tide model.
+\newblock \emph{Journal of Atmospheric and Oceanic Technology}, 29\penalty0
+  (4):\penalty0 514--522, 2012.
+
 \bibitem[Renault and Marchesiello(2022)]{Tide}
 Lionel Renault and Patrick Marchesiello.
 \newblock Ocean tides can drag the atmosphere and cause tidal winds over broad
@@ -192,10 +187,44 @@ Lewis~Fry Richardson.
 \newblock \emph{Weather Prediction by Numerical Process}.
 \newblock Cambridge University Press, 1922.
 
+\bibitem[Stammer et~al.(2014)]{stammer2014accuracy}
+Detlef Stammer et~al.
+\newblock Accuracy assessment of global barotropic ocean tide models.
+\newblock \emph{Reviews of Geophysics}, 52\penalty0 (3):\penalty0 243--282,
+  2014.
+
 \bibitem[TPXO9(2023)]{tpxo9}
 TPXO9.
 \newblock A global tidal model, 2023.
 \newblock URL \url{https://www.tpxo.net/global/tpxo9-atlas}.
 \newblock Accessed: 07/2023.
+
+\bibitem[Wikipédia(2023{\natexlab{a}})]{Wikipedia2023Bicubic}
+Wikipédia.
+\newblock Bicubic interpolation.
+\newblock \url{https://en.wikipedia.org/wiki/Bicubic_interpolation},
+  2023{\natexlab{a}}.
+\newblock Accessed: 2023-07-31.
+
+\bibitem[Wikipédia(2023{\natexlab{b}})]{Wikipedia2023Bilinear}
+Wikipédia.
+\newblock Bilinear interpolation.
+\newblock \url{https://en.wikipedia.org/wiki/Bilinear_interpolation},
+  2023{\natexlab{b}}.
+\newblock Accessed: 2023-07-31.
+
+\bibitem[Wikipédia(2023{\natexlab{c}})]{Wikipedia2023Linear}
+Wikipédia.
+\newblock Linear interpolation.
+\newblock \url{https://en.wikipedia.org/wiki/Linear_interpolation},
+  2023{\natexlab{c}}.
+\newblock Accessed: 2023-07-31.
+
+\bibitem[Wikipédia(2023{\natexlab{d}})]{Wikipedia2023Spline}
+Wikipédia.
+\newblock Spline interpolation.
+\newblock \url{https://en.wikipedia.org/wiki/Spline_interpolation},
+  2023{\natexlab{d}}.
+\newblock Accessed: 2023-07-31.
 
 \end{thebibliography}

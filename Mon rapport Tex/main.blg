@@ -20,54 +20,50 @@ Warning--entry type for "croco_video" isn't style-file defined
 Warning--to sort, need author or key in advancingDynamicalCores
 Warning--to sort, need author or key in challengesProspects
 Warning--to sort, need author or key in spatioTemporalFeatures
-Warning--to sort, need author or key in Wikipedia2023Linear
-Warning--to sort, need author or key in Wikipedia2023Bilinear
-Warning--to sort, need author or key in Wikipedia2023Bicubic
-Warning--to sort, need author or key in Wikipedia2023Spline
 Warning--empty author in advancingDynamicalCores
 Warning--empty author in challengesProspects
 Warning--empty author in spatioTemporalFeatures
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
-You've used 29 entries,
+You've used 33 entries,
             2773 wiz_defined-function locations,
-            738 strings with 9927 characters,
-and the built_in function-call counts, 11147 in all, are:
-= -- 943
-> -- 687
-< -- 19
-+ -- 251
-- -- 219
-* -- 808
-:= -- 1684
-add.period$ -- 98
-call.type$ -- 29
-change.case$ -- 158
-chr.to.int$ -- 26
+            768 strings with 10599 characters,
+and the built_in function-call counts, 13099 in all, are:
+= -- 1115
+> -- 810
+< -- 27
++ -- 291
+- -- 255
+* -- 939
+:= -- 2047
+add.period$ -- 114
+call.type$ -- 33
+change.case$ -- 181
+chr.to.int$ -- 30
 cite$ -- 77
-duplicate$ -- 481
-empty$ -- 947
-format.name$ -- 243
-if$ -- 2343
+duplicate$ -- 560
+empty$ -- 1086
+format.name$ -- 294
+if$ -- 2723
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 12
-newline$ -- 164
-num.names$ -- 88
-pop$ -- 424
+missing$ -- 16
+newline$ -- 188
+num.names$ -- 120
+pop$ -- 451
 preamble$ -- 1
-purify$ -- 131
+purify$ -- 150
 quote$ -- 0
-skip$ -- 426
+skip$ -- 490
 stack$ -- 0
-substring$ -- 86
-swap$ -- 32
+substring$ -- 165
+swap$ -- 36
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 309
-warning$ -- 12
-while$ -- 67
+type$ -- 353
+warning$ -- 8
+while$ -- 97
 width$ -- 0
-write$ -- 377
-(There were 19 warnings)
+write$ -- 437
+(There were 15 warnings)

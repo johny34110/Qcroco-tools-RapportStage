@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.8)  22 AUG 2023 20:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.8)  23 AUG 2023 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -860,12 +860,12 @@ loading the todonotes package. on input line 33.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<./IMAGES/Logo/LUSAC.png, id=135, 130.4875pt x 130.4875pt>
+<./IMAGES/Logo/LUSAC.png, id=159, 130.4875pt x 130.4875pt>
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
 Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 36.
 (pdftex.def)             Requested size: 56.90898pt x 56.90894pt.
-<./IMAGES/Logo/INTECH.png, id=136, 273.02pt x 121.45375pt>
+<./IMAGES/Logo/INTECH.png, id=160, 273.02pt x 121.45375pt>
 File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 36.
@@ -881,12 +881,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 51.
-<./IMAGES/Logo/QCROCO.png, id=137, 54.9252pt x 49.6254pt>
+<./IMAGES/Logo/QCROCO.png, id=161, 54.9252pt x 49.6254pt>
 File: ./IMAGES/Logo/QCROCO.png Graphic file (type png)
 <use ./IMAGES/Logo/QCROCO.png>
 Package pdftex.def Info: ./IMAGES/Logo/QCROCO.png  used on input line 55.
 (pdftex.def)             Requested size: 113.80928pt x 102.83293pt.
-<./IMAGES/Logo/telephone.png, id=139, 53.60025pt x 36.73724pt>
+<./IMAGES/Logo/telephone.png, id=163, 53.60025pt x 36.73724pt>
 File: ./IMAGES/Logo/telephone.png Graphic file (type png)
 <use ./IMAGES/Logo/telephone.png>
 Package pdftex.def Info: ./IMAGES/Logo/telephone.png  used on input line 70.
@@ -941,7 +941,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<./IMAGES/Logo/LUSACB.png, id=282, 807.015pt x 404.51125pt>
+<./IMAGES/Logo/LUSACB.png, id=314, 807.015pt x 404.51125pt>
 File: ./IMAGES/Logo/LUSACB.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSACB.png>
 Package pdftex.def Info: ./IMAGES/Logo/LUSACB.png  used on input line 10.
@@ -972,7 +972,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-<./IMAGES/Logo/INtechmer.jpg, id=295, 231.264pt x 154.176pt>
+<./IMAGES/Logo/INtechmer.jpg, id=327, 231.264pt x 154.176pt>
 File: ./IMAGES/Logo/INtechmer.jpg Graphic file (type jpg)
 <use ./IMAGES/Logo/INtechmer.jpg>
 Package pdftex.def Info: ./IMAGES/Logo/INtechmer.jpg  used on input line 51.
@@ -990,7 +990,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-<./IMAGES/histostage02.png, id=307, 543.2295pt x 754.4185pt>
+<./IMAGES/histostage02.png, id=339, 543.2295pt x 754.4185pt>
 File: ./IMAGES/histostage02.png Graphic file (type png)
 <use ./IMAGES/histostage02.png>
 Package pdftex.def Info: ./IMAGES/histostage02.png  used on input line 66.
@@ -1063,7 +1063,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 24.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [7]
-<./IMAGES/Logo/croco.png, id=348, 932.73468pt x 246.1697pt>
+<./IMAGES/Logo/croco.png, id=380, 932.73468pt x 246.1697pt>
 File: ./IMAGES/Logo/croco.png Graphic file (type png)
 <use ./IMAGES/Logo/croco.png>
 Package pdftex.def Info: ./IMAGES/Logo/croco.png  used on input line 27.
@@ -1087,7 +1087,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 42.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
 [8 <./IMAGES/Logo/croco.png>]
-<./IMAGES/ExG.png, id=373, 820.06375pt x 269.005pt>
+<./IMAGES/ExG.png, id=405, 820.06375pt x 269.005pt>
 File: ./IMAGES/ExG.png Graphic file (type png)
 <use ./IMAGES/ExG.png>
 Package pdftex.def Info: ./IMAGES/ExG.png  used on input line 47.
@@ -1102,7 +1102,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-<./IMAGES/Gridexpl.png, id=376, 611.28375pt x 223.83624pt>
+<./IMAGES/Gridexpl.png, id=408, 611.28375pt x 223.83624pt>
 File: ./IMAGES/Gridexpl.png Graphic file (type png)
 <use ./IMAGES/Gridexpl.png>
 Package pdftex.def Info: ./IMAGES/Gridexpl.png  used on input line 62.
@@ -1134,11 +1134,15 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 80.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
 [10 <./IMAGES/Gridexpl.png>]
-<./IMAGES/harmonique.png, id=397, 719.68875pt x 751.80875pt>
+<./IMAGES/harmonique.png, id=429, 719.68875pt x 751.80875pt>
 File: ./IMAGES/harmonique.png Graphic file (type png)
 <use ./IMAGES/harmonique.png>
 Package pdftex.def Info: ./IMAGES/harmonique.png  used on input line 83.
 (pdftex.def)             Requested size: 497.92325pt x 520.1596pt.
+
+
+LaTeX Warning: Reference `sub:tides' on page 11 undefined on input line 88.
+
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
 Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 89.
@@ -1147,7 +1151,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 89.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
- [11 <./IMAGES/harmonique.png>]
+[11 <./IMAGES/harmonique.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
@@ -1157,7 +1161,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-<./IMAGES/Logo/Qgis.png, id=417, 1004.75375pt x 480.79625pt>
+<./IMAGES/Logo/Qgis.png, id=448, 1004.75375pt x 480.79625pt>
 File: ./IMAGES/Logo/Qgis.png Graphic file (type png)
 <use ./IMAGES/Logo/Qgis.png>
 Package pdftex.def Info: ./IMAGES/Logo/Qgis.png  used on input line 112.
@@ -1193,7 +1197,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 138.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
 [13 <./IMAGES/Logo/qgis.png>]
-<./IMAGES/capqcroco.png, id=434, 1278.7775pt x 513.92pt>
+<./IMAGES/capqcroco.png, id=465, 1278.7775pt x 513.92pt>
 File: ./IMAGES/capqcroco.png Graphic file (type png)
 <use ./IMAGES/capqcroco.png>
 Package pdftex.def Info: ./IMAGES/capqcroco.png  used on input line 142.
@@ -1207,7 +1211,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 149.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [14 <./IMAGES/capqcroco.png>]
-<./IMAGES/Cheminement.png, id=440, 338.76563pt x 546.54187pt>
+<./IMAGES/Cheminement.png, id=471, 338.76563pt x 546.54187pt>
 File: ./IMAGES/Cheminement.png Graphic file (type png)
 <use ./IMAGES/Cheminement.png>
 Package pdftex.def Info: ./IMAGES/Cheminement.png  used on input line 152.
@@ -1254,7 +1258,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-<./IMAGES/diagG.png, id=460, 676.929pt x 339.669pt>
+<./IMAGES/diagG.png, id=492, 676.929pt x 339.669pt>
 File: ./IMAGES/diagG.png Graphic file (type png)
 <use ./IMAGES/diagG.png>
 Package pdftex.def Info: ./IMAGES/diagG.png  used on input line 30.
@@ -1305,7 +1309,7 @@ Overfull \hbox (21.65012pt too wide) in paragraph at lines 3--4
 b / master / Preprocessing _ tools / make _ grid .
  []
 
-<./IMAGES/figure13.png, id=497, 569.7285pt x 628.3475pt>
+<./IMAGES/figure13.png, id=528, 569.7285pt x 628.3475pt>
 File: ./IMAGES/figure13.png Graphic file (type png)
 <use ./IMAGES/figure13.png>
 Package pdftex.def Info: ./IMAGES/figure13.png  used on input line 10.
@@ -1331,7 +1335,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 24.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [20 <./IMAGES/figure13.png>]
-<./IMAGES/figure14.png, id=513, 554.82281pt x 261.97874pt>
+<./IMAGES/figure14.png, id=544, 554.82281pt x 261.97874pt>
 File: ./IMAGES/figure14.png Graphic file (type png)
 <use ./IMAGES/figure14.png>
 Package pdftex.def Info: ./IMAGES/figure14.png  used on input line 36.
@@ -1345,7 +1349,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 44.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [21 <./IMAGES/figure14.png>]
-<./IMAGES/paramuser.png, id=522, 578.91281pt x 648.92438pt>
+<./IMAGES/paramuser.png, id=553, 578.91281pt x 648.92438pt>
 File: ./IMAGES/paramuser.png Graphic file (type png)
 <use ./IMAGES/paramuser.png>
 Package pdftex.def Info: ./IMAGES/paramuser.png  used on input line 47.
@@ -1359,7 +1363,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 54.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [22 <./IMAGES/paramuser.png>]
-<./IMAGES/BathyF.png, id=531, 1010.27437pt x 608.2725pt>
+<./IMAGES/BathyF.png, id=562, 1010.27437pt x 608.2725pt>
 File: ./IMAGES/BathyF.png Graphic file (type png)
 <use ./IMAGES/BathyF.png>
 Package pdftex.def Info: ./IMAGES/BathyF.png  used on input line 57.
@@ -1373,7 +1377,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 66.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [23 <./IMAGES/BathyF.png>]
-<./IMAGES/Gestioncrs.png, id=545, 1180.41pt x 584.93532pt>
+<./IMAGES/Gestioncrs.png, id=576, 1180.41pt x 584.93532pt>
 File: ./IMAGES/Gestioncrs.png Graphic file (type png)
 <use ./IMAGES/Gestioncrs.png>
 Package pdftex.def Info: ./IMAGES/Gestioncrs.png  used on input line 69.
@@ -1397,7 +1401,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 83.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
 [24 <./IMAGES/Gestioncrs.png>]
-<./IMAGES/Script/gridonmap.png, id=553, 1186.4325pt x 603.0028pt>
+<./IMAGES/Script/gridonmap.png, id=584, 1186.4325pt x 603.0028pt>
 File: ./IMAGES/Script/gridonmap.png Graphic file (type png)
 <use ./IMAGES/Script/gridonmap.png>
 Package pdftex.def Info: ./IMAGES/Script/gridonmap.png  used on input line 86.
@@ -1411,7 +1415,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 101.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [25 <./IMAGES/Script/gridonmap.png>]
-<./IMAGES/Script/scriptdet.png, id=561, 978.65625pt x 511.9125pt>
+<./IMAGES/Script/scriptdet.png, id=592, 978.65625pt x 511.9125pt>
 File: ./IMAGES/Script/scriptdet.png Graphic file (type png)
 <use ./IMAGES/Script/scriptdet.png>
 Package pdftex.def Info: ./IMAGES/Script/scriptdet.png  used on input line 104.
@@ -1461,17 +1465,17 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 180.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
 [27]
-<./IMAGES/ZoneDiag/zone1.png, id=585, 597.73312pt x 414.04688pt>
+<./IMAGES/ZoneDiag/zone1.png, id=616, 597.73312pt x 414.04688pt>
 File: ./IMAGES/ZoneDiag/zone1.png Graphic file (type png)
 <use ./IMAGES/ZoneDiag/zone1.png>
 Package pdftex.def Info: ./IMAGES/ZoneDiag/zone1.png  used on input line 189.
 (pdftex.def)             Requested size: 208.66248pt x 144.54pt.
-<./IMAGES/Script/createnc.png, id=586, 1026.83624pt x 449.68pt>
+<./IMAGES/Script/createnc.png, id=617, 1026.83624pt x 449.68pt>
 File: ./IMAGES/Script/createnc.png Graphic file (type png)
 <use ./IMAGES/Script/createnc.png>
 Package pdftex.def Info: ./IMAGES/Script/createnc.png  used on input line 197.
 (pdftex.def)             Requested size: 497.92325pt x 218.05336pt.
-<./IMAGES/ZoneDiag/zone2.png, id=587, 597.73312pt x 225.84375pt>
+<./IMAGES/ZoneDiag/zone2.png, id=618, 597.73312pt x 225.84375pt>
 File: ./IMAGES/ZoneDiag/zone2.png Graphic file (type png)
 <use ./IMAGES/ZoneDiag/zone2.png>
 Package pdftex.def Info: ./IMAGES/ZoneDiag/zone2.png  used on input line 207.
@@ -1507,7 +1511,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 272.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
 [30]
-<./IMAGES/Interpolation/Interpolation.png, id=617, 468.75125pt x 434.62375pt>
+<./IMAGES/Interpolation/Interpolation.png, id=649, 468.75125pt x 434.62375pt>
 File: ./IMAGES/Interpolation/Interpolation.png Graphic file (type png)
 <use ./IMAGES/Interpolation/Interpolation.png>
 Package pdftex.def Info: ./IMAGES/Interpolation/Interpolation.png  used on inpu
@@ -1522,7 +1526,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 287.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [31 <./IMAGES/Interpolation/Interpolation.png>]
-<./IMAGES/Interpolation/ShemaUser.png, id=629, 400.49625pt x 554.07pt>
+<./IMAGES/Interpolation/ShemaUser.png, id=660, 400.49625pt x 554.07pt>
 File: ./IMAGES/Interpolation/ShemaUser.png Graphic file (type png)
 <use ./IMAGES/Interpolation/ShemaUser.png>
 Package pdftex.def Info: ./IMAGES/Interpolation/ShemaUser.png  used on input li
@@ -1546,7 +1550,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 350.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [33]
-<./IMAGES/Interpolation/interpolationNC.png, id=643, 1159.33125pt x 703.12688pt
+<./IMAGES/Interpolation/interpolationNC.png, id=674, 1159.33125pt x 703.12688pt
 >
 File: ./IMAGES/Interpolation/interpolationNC.png Graphic file (type png)
 <use ./IMAGES/Interpolation/interpolationNC.png>
@@ -1580,7 +1584,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 411.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
 [35]
-<./IMAGES/Interpolation/BathyView.png, id=656, 804.00375pt x 394.47375pt>
+<./IMAGES/Interpolation/BathyView.png, id=687, 804.00375pt x 394.47375pt>
 File: ./IMAGES/Interpolation/BathyView.png Graphic file (type png)
 <use ./IMAGES/Interpolation/BathyView.png>
 Package pdftex.def Info: ./IMAGES/Interpolation/BathyView.png  used on input li
@@ -1606,7 +1610,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 471.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [37]
-<./IMAGES/Interpolation/mask.png, id=674, 636.3775pt x 540.0175pt>
+<./IMAGES/Interpolation/mask.png, id=705, 636.3775pt x 540.0175pt>
 File: ./IMAGES/Interpolation/mask.png Graphic file (type png)
 <use ./IMAGES/Interpolation/mask.png>
 Package pdftex.def Info: ./IMAGES/Interpolation/mask.png  used on input line 47
@@ -1621,13 +1625,60 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 484.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [38 <./IMAGES/Interpolation/mask.png>]
-<./IMAGES/Interpolation/final.png, id=681, 789.70032pt x 508.90125pt>
+<./IMAGES/Interpolation/final.png, id=712, 789.70032pt x 508.90125pt>
 File: ./IMAGES/Interpolation/final.png Graphic file (type png)
 <use ./IMAGES/Interpolation/final.png>
 Package pdftex.def Info: ./IMAGES/Interpolation/final.png  used on input line 4
 87.
 (pdftex.def)             Requested size: 497.92325pt x 320.8735pt.
-))
+) (./chapitre/tide.tex
+File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
+<use ./IMAGES/Logo/LUSAC.png>
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 6.
+(pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
+File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
+<use ./IMAGES/Logo/INTECH.png>
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 6.
+(pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
+ [39 <./IMAGES/Interpolation/final.png>]
+File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
+<use ./IMAGES/Logo/LUSAC.png>
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 36.
+(pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
+File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
+<use ./IMAGES/Logo/INTECH.png>
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 36.
+(pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
+
+[40]
+File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
+<use ./IMAGES/Logo/LUSAC.png>
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 57.
+(pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
+File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
+<use ./IMAGES/Logo/INTECH.png>
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 57.
+(pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
+ [41]
+<./IMAGES/Tide/Qcrocotide.png, id=743, 557.83406pt x 571.38469pt>
+File: ./IMAGES/Tide/Qcrocotide.png Graphic file (type png)
+<use ./IMAGES/Tide/Qcrocotide.png>
+Package pdftex.def Info: ./IMAGES/Tide/Qcrocotide.png  used on input line 60.
+(pdftex.def)             Requested size: 398.3401pt x 408.02255pt.
+File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
+<use ./IMAGES/Logo/LUSAC.png>
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 80.
+(pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
+File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
+<use ./IMAGES/Logo/INTECH.png>
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 80.
+(pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
+ [42 <./IMAGES/Tide/Qcrocotide.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+) (./chapitre/Bulk.tex))
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
 Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 165.
@@ -1636,7 +1687,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 165.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
- [39 <./IMAGES/Interpolation/final.png>]
+ [43]
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
 Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 169.
@@ -1645,7 +1696,7 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 169.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
- [40]
+ [44]
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
 Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 173.
@@ -1654,20 +1705,33 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 173.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
- [41] (./main.bbl
+ [45] (./main.bbl
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
-Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 105.
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 107.
 (pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
-Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 105.
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 107.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
-
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 120--125
+ [46]
+Underfull \hbox (badness 10000) in paragraph at lines 109--114
 \T1/cmtt/m/n/12 ifremer . fr / DOC / PRES _ TRAINING _ CROCO _ 2022 _ 2 / BASIC
 S / 01 _ Basics-[]Monday / PRES01 _ 2022 _
+ []
+
+File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
+<use ./IMAGES/Logo/LUSAC.png>
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 209.
+(pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
+File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
+<use ./IMAGES/Logo/INTECH.png>
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 209.
+(pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 210--215
+[]\T1/cmr/m/n/12 Wikipédia.  Bi-li-near in-ter-po-la-tion.  []$\T1/cmtt/m/n/12 
+https : / / en . wikipedia . org / wiki / Bilinear _
  []
 
 )
@@ -1679,19 +1743,22 @@ File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
 Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 181.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
- [43] (./main.aux)
+ [48] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 312E73E9F91933C8546827993FEB8BEF;7836.
+(rerunfilecheck)             Checksum: A7E9E70EFC2907403358A58F0064C4C4;9449.
  ) 
 Here is how much of TeX's memory you used:
- 28998 strings out of 477428
- 576102 string characters out of 5822547
+ 29063 strings out of 477428
+ 577346 string characters out of 5822547
  1866330 words of memory out of 5000000
- 48494 multiletter control sequences out of 15000+600000
- 532853 words of font info for 67 fonts, out of 8000000 for 9000
+ 48526 multiletter control sequences out of 15000+600000
+ 533196 words of font info for 68 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
  84i,15n,89p,1145b,835s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -1770,6 +1837,7 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
+ </home/john/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk>
  </home/john/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk>
  </home/john/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk>
  </home/john/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk>
@@ -1796,10 +1864,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (49 pages, 4794102 bytes).
+Output written on main.pdf (54 pages, 4900716 bytes).
 PDF statistics:
- 1604 PDF objects out of 1728 (max. 8388607)
- 734 compressed objects within 8 object streams
- 176 named destinations out of 1000 (max. 500000)
- 424 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1699 PDF objects out of 1728 (max. 8388607)
+ 813 compressed objects within 9 object streams
+ 200 named destinations out of 1000 (max. 500000)
+ 477 words of extra memory for PDF output out of 10000 (max. 10000000)
 
