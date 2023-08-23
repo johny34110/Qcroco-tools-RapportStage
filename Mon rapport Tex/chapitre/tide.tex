@@ -94,7 +94,8 @@ Les facteurs nodaux sont des coefficients qui varient dans le temps et sont util
 
 
 \paragraph{Interpolation des données TPXO}
-Les données TPXO pour chaque composant harmonique sont interpolées sur la grille CROCO. Les amplitudes et les phases sont ensuite converties en paramètres d'ellipse de courant de marée, tels que les axes semi-majeur et semi-mineur, l'excentricité, l'inclinaison et la phase.
+Pour ce faire, nous avons employé la même méthode d'interpolation que celle utilisée précédemment pour la topographie, en s'appuyant sur les fichiers netCDF. Chaque composant harmonique des données TPXO est soigneusement interpolé sur la grille CROCO. Suite à cette interpolation, les amplitudes et les phases sont converties en paramètres d'ellipse de courant de marée. Ces paramètres comprennent les axes semi-majeur et semi-mineur\footnote{L'axe semi-mineur est le plus petit rayon d'une ellipse, allant du centre à l'un des points les plus proches de l'ellipse.}, l'excentricité, l'inclinaison\footnote{L'inclinaison est l'angle entre l'axe semi-majeur de l'ellipse et une référence fixe, généralement l'axe des abscisses.} et la phase\footnote{La phase représente le décalage temporel d'un signal périodique par rapport à une référence. Dans le contexte des marées, elle indique le moment où la marée haute ou basse se produit.}.
+
 
 \paragraph{Création du fichier netCDF}
 Un fichier netCDF est généré pour conserver les données de forçage issues de la transformation. Les données, une fois interpolées, sont enregistrées dans ce format, accompagnées des attributs nécessaires pour garantir leur intégrité et leur compréhension. Ce fichier est sauvegardé dans le même répertoire que la grille de travail, et est nommé en suivant la convention : \textit{"titre du projet"}\_tides.nc.
