@@ -304,44 +304,41 @@ Dans les sections suivantes, nous détaillerons les spécificités de chaque scr
 
 \subsubsection{Traitement des fichiers topographiques au format NetCDF}
 
-Le format NetCDF (\textit{\textbf{N}etwork \textbf{C}ommon \textbf{D}ata \textbf{F}orm}) est un format de fichier largement utilisé pour stocker et partager des données scientifiques multidimensionnelles. Dans le contexte de la topographie, un fichier NetCDF offre une structure organisée pour représenter les informations topographiques de manière efficace et interopérable\footnote{Capacité de matériels, de logiciels ou de protocoles différents à fonctionner ensemble et à partager des informations}.
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=1.5] % Ajustez la valeur de "scale" pour agrandir ou réduire la figure
+        % Draw the main rectangle
+        \draw (0,0) rectangle (7,5.5);
+        \node at (3.5,5) {\large Fichier NetCDF};
 
+        % Draw internal rectangles
+        \draw (1,3.5) rectangle (6,4.5);
+        \node[text width=6cm, align=center] at (3.5,4) {\small Dimensions (Latitude, Longitude)};
 
-\newpage
-Un fichier topographique NetCDF est généralement structuré comme suit :
+        \draw (1,3) rectangle (6,2);
+        \node[text width=6cm, align=center] at (3.5,2.5) {\small Variables (Hauteur, Profondeur)};
+
+        \draw (1,1.5) rectangle (6,0.5);
+        \node[text width=5cm, align=center] at (3.5,1) {\small Attributs (Métadonnées)};
+    \end{tikzpicture}
+    \caption{Structure d'un fichier topographique NetCDF.}
+    \label{fig:netcdf_structure}
+\end{figure}
+
+Le format NetCDF (\textit{\textbf{Net}work \textbf{C}ommon \textbf{D}ata \textbf{F}orm}) est un format de fichier largement utilisé pour stocker et partager des données scientifiques multidimensionnelles et de gros volumes. Dans le contexte de la topographie, un fichier NetCDF offre une structure organisée pour représenter les informations topographiques de manière efficace et interopérable\footnote{L'interopérabilité est la capacité de matériels, de logiciels ou de protocoles différents à fonctionner ensemble et à partager des informations.}.
+
+Un fichier topographique NetCDF est généralement structuré de la manière suivante (Fig. \ref{fig:netcdf_structure})~:
 \vspace*{0.5cm}
 
 \begin{itemize}
-	\item \textbf{Dimensions} : Ces dimensions définissent l'espace dans lequel les données topographiques sont représentées. Les plus courantes sont la latitude, la longitude et, dans certains cas, l'altitude ou la profondeur.
+	\item \textbf{Les dimensions}, définissent l'espace dans lequel les données topographiques sont représentées. Les plus courantes sont la latitude, la longitude et dans certains cas, l'altitude ou la profondeur,
 
-	\item \textbf{Variables} : Les variables contiennent les données effectives. Pour un fichier topographique, la variable principale serait la hauteur ou la profondeur à chaque point de coordonnée. D'autres variables peuvent également être présentes, telles que la pente, l'aspect ou d'autres caractéristiques topographiques.
+	\item \textbf{Les variables}, contiennent les données effectives. Pour un fichier topographique, la variable principale serait la hauteur ou la profondeur à chaque point de coordonnée. D'autres variables peuvent également être présentes, telles que la pente, l'aspect ou d'autres caractéristiques topographiques,
 
-	\item \textbf{Attributs} : Les attributs fournissent des métadonnées sur les données contenues dans le fichier. Cela peut inclure des informations sur la source des données, la méthode de collecte, les unités utilisées, et d'autres détails pertinents.
+	\item \textbf{Les attributs}, fournissent des métadonnées sur les données contenues dans le fichier. Cela peut inclure des informations sur la source des données, la méthode de collecte, les unités utilisées et tous détails jugés pertinents à mettre à la connaissance des utilisateurs des données.
 \end{itemize}
 
-
-\begin{figure}[h]
-	\centering
-	\begin{tikzpicture}[scale=1.5] % Ajustez la valeur de "scale" pour agrandir ou réduire la figure
-		% Draw the main rectangle
-		\draw (0,0) rectangle (7,5);
-		\node at (3.5,4.5) {\large Fichier NetCDF};
-
-		% Draw internal rectangles
-		\draw (1,3) rectangle (6,4);
-		\node[text width=4cm, align=center] at (3.5,3.5) {\small Dimensions (Latitude, Longitude)};
-
-		\draw (1,1.5) rectangle (6,2.5);
-		\node[text width=4cm, align=center] at (3.5,2) {\small Variables (Hauteur, Profondeur)};
-
-		\draw (1,0.5) rectangle (6,1.5);
-		\node[text width=4cm, align=center] at (3.5,1) {\small Attributs (Métadonnées)};
-	\end{tikzpicture}
-	\caption{Structure d'un fichier topographique NetCDF.}
-	\label{fig:netcdf_structure}
-\end{figure}
-
-La fonction \texttt{Add\_topo\_nc} est conçue pour interpoler les données topographiques dans la grille CROCO. Cette interpolation est cruciale pour garantir que les caractéristiques topographiques, telles que les montagnes sous-marines et les fosses océaniques, sont correctement représentées dans le modèle.
+La fonction \texttt{Add\_topo\_nc} est conçue pour interpoler les données topographiques sur la grille CROCO. Cette interpolation est cruciale pour garantir que les morphologies des fonds, telles que les montagnes sous-marines et les fosses océaniques, soient correctement retransmise sur la grille de calcul du modèle.
 
 \paragraph{Fonctionnement de la fonction:\\}
 
