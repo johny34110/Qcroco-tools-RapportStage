@@ -50,27 +50,27 @@ Après avoir configuré ses préférences, l'utilisateur n'a plus qu'à appuyer 
 
 \subsubsection{Génération du fichier de forçage à partir du modèle TPXO}
 
-La fonction \texttt{TPXO2CROCO} est conçue pour convertir les données du modèle TPXO en un format de forçage adapté à CROCO. Voici une description détaillée de son fonctionnement :
+La fonction \texttt{TPXO2CROCO} est conçue pour convertir les données du modèle TPXO en un format de forçage adapté à CROCO. Son fonctionnement est organisé de la manière suivante~:
 
-\paragraph{Paramètres d'entrée}
+\paragraph{Paramètres d'entrée~:\\}
+
 \begin{itemize}
-	\item \texttt{t0}: Date initiale choisi par l'utilisateur.
-	\item \texttt{ROMSnames}: Liste des composants harmoniques.
-	\item \texttt{crocoGRD}: Chemin vers le fichier de grille créer précédemment.
-	\item \texttt{fnOut}: Chemin du fichier de sortie.
-	\item \texttt{ndays}: Nombre de jours pour lesquels les données doivent être extraites, calculé à partir des dates fournies par l'utilisateur.
-	\item \texttt{TPXO\_path}: Chemin vers le répertoire du modèle TPXO.
+	\item \texttt{t0}, la date initiale choisi par l'utilisateur,
+	\item \texttt{ROMSnames}, la liste des composants harmoniques,
+	\item \texttt{crocoGRD}, le chemin vers le fichier de grille créer précédemment,
+	\item \texttt{fnOut}, le chemin du fichier de sortie,
+	\item \texttt{ndays}, le nombre de jours pour lesquels les données doivent être extraites, calculé à partir des dates fournies par l'utilisateur,
+	\item \texttt{TPXO\_path}, le chemin vers le répertoire du modèle TPXO.
 \end{itemize}
 
+\paragraph{Extraction des données de grille.\\}
+Les variables pertinentes, telles que la longitude, la latitude et le masque sont extraites du fichier de grille CROCO précédemment créé. Ces informations vont être identiques pour le fichier de forçage par la marée. Il est essentiel qu'il y est une correspondance parfaite en nombre de maille entre les différents fichiers d'entrées d'une simulation CROCO.
 
-\paragraph{Extraction des données de grille}
-Les variables pertinentes, telles que la longitude, la latitude et les masques, sont extraites du fichier de grille CROCO.
+\paragraph{Définition des chemins de données TPXO.\\}
+Un dictionnaire (format Python) est créé pour stocker les chemins des différents fichiers de données TPXO, classés par composant harmonique. Ce dictionnaire aura une taille variable en fonction du choix des harmoniques à prendre en compte.
 
-\paragraph{Définition des chemins de données TPXO}
-Un dictionnaire est créé pour stocker les chemins des différents fichiers de données TPXO, classés par composant harmonique.
-
-\paragraph{Lecture des données TPXO}
-Les données TPXO sont lues et interpolées sur la grille CROCO pour chaque composant harmonique sélectionné.
+\paragraph{Lecture des données TPXO.\\}
+Les données TPXO disponibles dans des fichiers au format NetCDF, sont lues et interpolées sur la grille CROCO pour chaque composante harmonique sélectionnée.
 
 \paragraph{Calcul des corrections nodales}
 Les facteurs nodaux sont des coefficients qui varient dans le temps et sont utilisés pour ajuster les amplitudes et les phases des harmoniques de marée. Ces ajustements sont nécessaires car les forces gravitationnelles qui génèrent les marées varient en fonction de la position relative de la Terre, de la Lune et du Soleil. En calculant ces corrections pour une date spécifique, on s'assure que les prédictions des marées sont précises pour cette période donnée.
