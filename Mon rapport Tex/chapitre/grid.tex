@@ -142,7 +142,7 @@ Comme illustré sur la Figure~\ref{fig:gridRepresentation}, ces coordonnées ne 
 Une fois les coordonnées minimales et maximales en latitude et longitude définies, la grille est élaborée en Python en exploitant la bibliothèque \textit{numpy} et plus précisément, la fonction \texttt{np\_meshgrid}. Cette grille, initialement générée dans le système de coordonnées \textit{WGS84/Pseudo-Mercator} pour bénéficier d'une mesure métrique, est ensuite transformée en \textit{WGS84} afin de convertir les valeurs métriques en degrés, format de coordonnées par défaut dans les fichiers d'entrée CROCO.
 
 La résolution \og \textit{dl} \fg{}, définie par l'utilisateur, joue un rôle crucial dans cette étape. Elle détermine l'écart entre chaque point de la grille, ce qui influence directement la densité et la précision des données générées. Dans le code, \og \textit{dl} \fg{} est utilisé pour calculer les variables \og \textit{pn} \fg{} et \og \textit{pm} \fg{}, qui représentent respectivement les inverses des résolutions en longitude et en latitude\footnote{L'inverse de la résolution, \( \frac{1}{dl} \) est souvent utilisé dans les modèles numériques pour simplifier les calculs. Il permet de représenter le taux de variation d'une quantité par rapport à une unité de distance, facilitant ainsi les opérations sur les équations différentielles et améliorant la stabilité numérique.}
-Ces variables sont fondamentales pour les caractéristiques de la grille CROCO et une attention toute particulière doit être donnée pour vérifier l'exctitude des calculs réalisés. Ci-après, un extrait du code employé pour effectuer cette conversion :
+Ces variables sont fondamentales pour les caractéristiques de la grille CROCO et une attention toute particulière doit être donnée pour vérifier l'exactitude des calculs réalisés. Ci-après, un extrait du code employé pour effectuer cette conversion :
 
 \begin{verbatim}
 	# Create 2D longitude and latitude grids.
@@ -162,17 +162,11 @@ Ces variables sont fondamentales pour les caractéristiques de la grille CROCO e
 	pm = np.full_like(Latr, 1/dl)
 \end{verbatim}
 
-La transition vers Python a nécessité la traduction et l'adaptation de certaines fonctions essentielles du \textit{croco\_tool} en MATLAB. Parmi ces fonctions, \texttt{rho2uvp} \footnote{\url{https://gitlab.inria.fr/croco-ocean/croco_tools/-/blob/master/Preprocessing_tools/rho2uvp.m}}
-. Originellement conçue pour MATLAB, cette fonction a été méticuleusement transposée en Python afin de garantir une compatibilité et une cohérence avec le reste du script.
+La transition vers Python a nécessité la traduction et l'adaptation de certaines fonctions essentielles des \textit{croco\_tool} en MATLAB. Parmi ces fonctions, \texttt{rho2uvp} \footnote{\url{https://gitlab.inria.fr/croco-ocean/croco_tools/-/blob/master/Preprocessing_tools/rho2uvp.m}}. Originellement conçue pour MATLAB, cette fonction a été méticuleusement transposée en Python afin de garantir une compatibilité et une cohérence avec le reste du script.
 
 La fonction \texttt{rho2uvp} est dédiée à la récupération automatique des variables associées aux points $\rho$, $u$, $v$, et $\psi$ sur la grille. Elle assure la conversion entre ces différents points, permettant ainsi d'obtenir les composantes de vitesse $u$ et $v$ à partir des coordonnées centrales $\rho$, et vice versa. Cette étape est primordiale pour assurer la précision et la fiabilité des simulations réalisées avec le modèle CROCO.\\
 
-Après avoir obtenu toutes les coordonnées variables, la dimension exacte de notre grille peut être déterminée à l'aide de la commande suivante :
-\begin{verbatim}
-	# Get grid dimensions.
-	M, L = Latp.shape
-\end{verbatim}
-Après avoir obtenu toutes les coordonnées variables, la dimension exacte de notre grille peut être déterminée à l'aide de la commande suivante :
+Après avoir obtenu toutes les coordonnées variables, la dimension exacte de notre grille peut être déterminée à l'aide du code suivant :
 \begin{verbatim}
 	# Get grid dimensions.
 	M, L = Latp.shape
@@ -182,16 +176,19 @@ Après avoir obtenu toutes les coordonnées variables, la dimension exacte de no
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[height=2in]{./IMAGES/ZoneDiag/zone1.png}
+	\includegraphics[width=12cm]{./IMAGES/ZoneDiag/zone1.png}
 	\caption{Fonction initialisation d'un fichier Modèle NetCDF}
 	\label{fig:zone1}
 \end{figure}
 
-La phase suivante du script concerne la création d'un fichier NetCDF vierge grâce à la fonction \texttt{create\_grid.py}. Cette étape s'appuie sur une approche de \textit{reverse engineering}. En utilisant un fichier grille que mon maître de stage m'a fourni comme référence, j'ai pu recréer un fichier NetCDF possédant les mêmes caractéristiques. Ce fichier est automatiquement créé dans le répertoire de travail que l'utilisateur a préalablement sélectionné, et porte le nom qu'il a choisi. Ce fichier servira de fondation solide pour l'intégration des variables générées ultérieurement.
+La phase suivante du script concerne la création d'un fichier au format NetCDF, initialement vide, grâce à la fonction \texttt{create\_grid.py}. Cette étape a été réalisée via une approche de \textit{reverse engineering}. En utilisant un fichier grille que mon maître de stage m'a fourni comme référence, j'ai pu recréer un fichier NetCDF possédant les mêmes caractéristiques.
+
+Ce fichier est automatiquement créé dans le répertoire de travail que l'utilisateur a préalablement choisi et va servir de fondation solide pour l'intégration des variables générées ultérieurement.
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{./IMAGES/Script/createnc.png}
-	\caption{Extrait du script create\_grid pour la création initiale du fichier NetCDF}
+	\caption{Extrait du script create\_grid pour la création initiale du fichier au format NetCDF.}
 	\label{fig:AlgoGrid}
 \end{figure}
 
