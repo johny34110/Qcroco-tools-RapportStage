@@ -346,11 +346,18 @@ La fonction commence par charger la grille CROCO et extraire les coordonnées, a
 
 Ensuite, une boîte englobante est définit pour extraire les données topographiques pertinentes. Cette boîte englobante est légèrement plus grande que les bords de la grille CROCO pour s'assurer que toutes les données nécessaires sont capturées.
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{./IMAGES/Interpolation/interpolationNC.png}
+    \caption{Interpolation de la topographie : du fichier NetCDF à la grille CROCO}
+    \label{fig:interpolationNC}
+\end{figure}
+
 Après avoir chargé le fichier topographique, la fonction extrait les données topographiques qui se trouvent à l'intérieur de la boîte englobante. Elle ajuste ensuite la résolution des données topographiques pour qu'elle corresponde à celle de la grille CROCO.
 
-Enfin, la fonction utilise une interpolation cubique pour estimer les valeurs de la topographie à chaque point de la grille CROCO.
+Enfin, la fonction utilise une interpolation cubique pour estimer les valeurs de la topographie à chaque point de la grille CROCO (Fig. \ref{fig:interpolationNC}).
 
-\paragraph{Détails des étapes successives dans le code de la fonction.\\}
+\paragraph{Détails des étapes successives dans le code de la fonction.}
 
 \begin{enumerate}
 	\item \textbf{Chargement de la grille CROCO}. La grille est chargée à l'aide de la bibliothèque \texttt{netCDF4} de Pyhton. Les coordonnées et les métriques de la grille sont extraites pour une utilisation ultérieure,
@@ -366,12 +373,7 @@ Enfin, la fonction utilise une interpolation cubique pour estimer les valeurs de
 
 Cette fonction remplie au fur et à mesure les variables du fichier NetCDF précédemment initialisées.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/Interpolation/interpolationNC.png}
-	\caption{Interpolation de la topographie : du fichier NetCDF à la grille CROCO}
-	\label{fig:interpolationNC}
-\end{figure}
+
 Le fichier \og \textit{grid} \fg{} intègre désormais les données topographiques interpolées fournies par l'utilisateur.
 
 \subsubsection{Traitement des fichiers topographiques au format Raster}
