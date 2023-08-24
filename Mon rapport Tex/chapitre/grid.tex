@@ -45,17 +45,17 @@ Pour répondre à cette exigence, j'ai utilisé à l'outil \textit{Qt5 Designer}
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=5in]{./IMAGES/paramuser.png}
-	\caption{Interface graphique de l'outil Qcrocoflow dans QGIS : Gestion des Paramètres d'Entrée}
+	\caption{Interface graphique de l'outil QCrocoFlow dans QGIS pour la gestion des paramètres d'entrée.}
 	\label{fig:GISUSER}
 \end{figure}
 
-Une fois les paramètres saisis, nous exploitons pleinement les capacités offertes par QGIS, en particulier son environnement SIG, pour générer un fichier \og \textit{grid} \fg{} avec la plus grande précision. Dans un souci de clarté et d'efficacité, j'ai intégré une fonctionnalité lors de la sélection du fichier topographique. Cette fonction permet une visualisation instantanée de son contenu directement sur la carte. De plus, dès l'intégration du fichier dans l'outil, celui-ci est stocké dans une base de données SQL\footnote{Structured Query Language}, intégrée à QGIS. Cela offre à l'utilisateur la commodité de sélectionner directement des fichiers topographiques précédemment chargés dans son projet. Voir la Figure~\ref{fig:BathyF}.
+Une fois les paramètres saisis, nous exploitons pleinement les capacités offertes par QGIS, en particulier son API, pour générer un fichier \og \textit{grid} \fg{} avec la plus grande précision. Dans un souci de clarté et d'efficacité, j'ai intégré une fonctionnalité lors de la sélection du fichier topographique (ou bathymétrique). Cette fonction visualise le contenu du fichier choisi instantanément dans QGIS. Dans le même temps, celui-ci est stocké dans une base de données SQL\footnote{\textbf{S}tructured \textbf{Q}uery \textbf{L}anguage}, intégrée à QGIS. Cela offre la possibilité à l'utilisateur d'intégrer directement des données topographiques déjà chargées lors d'un précédent projet (Fig.~\ref{fig:BathyF}).
 
 \newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{./IMAGES/BathyF.png}
-	\caption{Interface graphique de l'outil Qcrocoflow : intégration et Visualisation d'un Fichier Topographique dans QGIS}
+	\caption{Interface graphique de l'outil QCrocoFlow : intégration et visualisation d'un fichier topographique dans QGIS.}
 	\label{fig:BathyF}
 \end{figure}
 
