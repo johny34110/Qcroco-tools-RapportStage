@@ -413,12 +413,18 @@ Cette fonction remplie au fur et à mesure les variables du fichier NetCDF préc
 
 Les fichiers Raster sont des représentations matricielles de données spatiales. Chaque cellule (ou pixel) d'un raster contient une valeur, qui peut représenter divers types d'informations, telles que la température, l'altitude, ou même une couleur pour une image (Fig. \ref{fig:rastergrid}). Ces fichiers sont particulièrement adaptés pour représenter des données continues sur une zone géographique, comme la topographie ou la température de surface.
 
+\paragraph{BathyView : Interface de vérification et de correction des données Raster.\\}
 
-\paragraph{BathyView : Interface de Vérification et de Correction des Données Raster\\}
+QGIS, en tant que logiciel de Système d'Information Géographique, est parfaitement équipé pour lire et traiter les fichiers Raster. Lorsqu'un fichier Raster est chargé dans QGIS, le logiciel interprète les données et les affiche sous forme de carte (Fig.\ref{fig:BathyF}).\\
 
-QGIS, en tant que système d'information géographique (SIG), est parfaitement équipé pour lire et traiter les fichiers Raster. Lorsqu'un fichier Raster est chargé dans QGIS, le logiciel interprète les données et les affiche sous forme de carte comme mentionné dans la figure \ref{fig:BathyF}.\\
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{./IMAGES/Interpolation/BathyView.png}
+    \caption{Interface de BathyView montrant les fonctionnalités de vérification et de correction des données raster}
+    \label{fig:BathyViewInterface}
+\end{figure}
 
-Lors de l'interpolation avec des données raster, une fenêtre intitulée \texttt{bathyview} est automatiquement ouverte. Cette interface offre à l'utilisateur la possibilité de vérifier et, si nécessaire, de corriger le raster. Plusieurs fonctionnalités y sont intégrées :
+Lors de l'interpolation avec des données raster, une fenêtre intitulée \texttt{bathyview} est automatiquement ouverte (Fig. \ref{fig:BathyViewInterface}). Cette interface offre à l'utilisateur la possibilité de vérifier et, si nécessaire, de corriger le raster. Plusieurs fonctionnalités y sont intégrées :
 
 \begin{itemize}
 	\item \textbf{Vérification de la Bathymétrie} : Elle permet de s'assurer que les données bathymétriques sont correctement signées, c'est-à-dire positives ou négatives selon le contexte.
@@ -430,12 +436,7 @@ Lors de l'interpolation avec des données raster, une fenêtre intitulée \textt
 
 Il convient de noter que cette fenêtre a été développée en Python en utilisant l'API de QGIS. Ainsi, non seulement elle offre une interface intuitive, mais elle est également intégrée de manière transparente avec les autres fonctionnalités de QGIS. Cette intégration assure la précision et la fiabilité des données interpolées, tout en offrant à l'utilisateur un contrôle direct et une visualisation immédiate des données raster traitées.
 \newpage
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/Interpolation/BathyView.png}
-	\caption{Interface de BathyView montrant les fonctionnalités de vérification et de correction des données raster}
-	\label{fig:BathyViewInterface}
-\end{figure}
+
 Une fois tous les paramètres vérifiés, le bouton \textit{"Next"} est utilisé pour initier le processus d'interpolation entre le fichier \textit{grid\_croco} et les données présentes dans le raster pour la zone concernée. Dans cette étape, le script \texttt{Add\_topo\_Raster} est invoqué. Ce script récupère directement sur la carte la grille générée pour la zone spécifiée. Il calcule ensuite la valeur moyenne des données du raster pour chaque maille de la grille. Ces valeurs moyennes sont finalement incorporées dans le fichier \textit{grid\_croco}.
 \paragraph{Fonctionnement de la fonction  :\\}
 
