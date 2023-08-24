@@ -1,6 +1,6 @@
-La construction des fichiers d'entrée \og grid \fg{} est une étape cruciale pour le bon fonctionnement du modèle CROCO. Ces fichiers définissent la grille spatiale sur laquelle les simulations sont effectuées. Leur précision et leur exactitude sont essentielles pour garantir des résultats fiables. Dans ce chapitre, nous détaillerons les étapes méthodiques que j'ai suivies pour élaborer le script permettant de générer ces fichiers d'entrée. Nous explorerons les défis rencontrés, les solutions adoptées et les optimisations réalisées pour assurer la qualité et l'efficacité de ce processus.
+La construction des fichiers d'entrée \og \textit{grid} \fg{} est une étape cruciale pour le bon fonctionnement du modèle CROCO. Ces fichiers définissent la grille spatiale sur laquelle les simulations sont effectuées. Leur précision et leur exactitude sont essentielles pour garantir des résultats fiables. Dans ce chapitre, nous détaillerons les étapes méthodiques que j'ai suivies pour élaborer le script permettant de générer ces fichiers d'entrée. Nous explorerons les défis rencontrés, les solutions adoptées et les optimisations réalisées pour assurer la qualité et l'efficacité de ce processus.
 
-La génération des fichiers \og grid \fg{} est une tâche qui exige une compréhension approfondie non seulement de leur contenu et de leur structure, mais aussi du processus sous-jacent de création. Pour faciliter cette tâche, CROCO met à disposition un ensemble d'outils, dont le CROCO\_Tool, accessible via \url{https://gitlab.inria.fr/croco-ocean/croco\_tools/}. Ce dernier est conçu pour fonctionner avec le logiciel MATLAB. Toutefois, ma familiarité limitée avec MATLAB a rendu l'utilisation de cet outil, et en particulier le module \og make\_grid \fg{} (\url{https://gitlab.inria.fr/croco-ocean/croco\_tools/-/blob/master/Preprocessing\_tools/make\_grid.m}), assez compliqué d'utilisation. Bien que la documentation officielle offre des directives, j'ai rencontré des difficultés liées à la spécificité du langage et aux subtilités des choix de programmation dans le script.
+La génération des fichiers \og \textit{grid} \fg{} est une tâche qui exige une compréhension approfondie non seulement de leur contenu et de leur structure, mais aussi du processus sous-jacent de création. Pour faciliter cette tâche, CROCO met à disposition un ensemble d'outils, dont le CROCO\_Tool, accessible via \url{https://gitlab.inria.fr/croco-ocean/croco\_tools/}. Ce dernier est conçu pour fonctionner avec le logiciel MATLAB. Toutefois, ma familiarité limitée avec MATLAB a rendu l'utilisation de cet outil, et en particulier le module \og make\_grid \fg{} (\url{https://gitlab.inria.fr/croco-ocean/croco\_tools/-/blob/master/Preprocessing\_tools/make\_grid.m}), assez compliqué d'utilisation. Bien que la documentation officielle offre des directives, j'ai rencontré des difficultés liées à la spécificité du langage et aux subtilités des choix de programmation dans le script.
 
 Dans le but d'extraire un algorithme clair et compréhensible du script \og make\_grid \fg{}, j'ai entrepris une dissection détaillée de chaque segment de code. Cette démarche a abouti à la découverte de l'algorithme sous-jasent, illustré dans la Figure \ref{fig:AlgoGrid}. Cette étape a été cruciale pour parvenir à reproduire le processus de génération des fichiers \og grid \fg{} de manière autonome, tout en l'adaptant à nos besoins spécifiques.
 
@@ -14,27 +14,27 @@ Dans le but d'extraire un algorithme clair et compréhensible du script \og make
 
 Suite à cette compréhension approfondie de l'algorithme, l'objectif suivant était clair : adapter ces scripts MATLAB pour les rendre opérationnels dans un contexte différent. En effet, bien que MATLAB soit un outil puissant pour le traitement numérique, notre ambition était de rendre ces scripts plus performants, en les intégrant à l'environnement SIG de QGIS. Pour ce faire, la transition vers Python s'est imposée comme une évidence, étant donné sa flexibilité, sa performance et sa compatibilité avec l'API de QGIS. Ainsi, le défi était non seulement de traduire le code, mais aussi d'optimiser et d'adapter les fonctions pour qu'elles s'intègrent harmonieusement dans l'écosystème QGIS, offrant ainsi aux utilisateurs une expérience fluide et intégrée.
 
-Afin d'assurer une compréhension exhaustive du processus de génération des fichiers \og grid \fg{}, il est impératif de décomposer et d'analyser chaque composant de l'algorithme initial. Dans cette section, nous nous attarderons sur les détails techniques de chaque étape de l'algorithme. Nous discuterons également des adaptations nécessaires pour garantir une intégration optimale au sein du plugin QCrocoFlow, tout en respectant les spécificités de l'environnement QGIS. Cette démarche méthodique vise à mettre en lumière les mécanismes fondamentaux, ainsi que les améliorations apportées pour assurer une performance optimale et une compatibilité avec les systèmes d'information géographique (SIG). La suite de ce chapitre se consacrera à une exploration rigoureuse des étapes de transformation et d'adaptation des fichiers \og grid \fg{}.
+Afin d'assurer une compréhension exhaustive du processus de génération des fichiers \og \textit{grid} \fg{}, il est impératif de décomposer et d'analyser chaque composant de l'algorithme initial. Dans cette section, nous nous attarderons sur les détails techniques de chaque étape de l'algorithme. Nous discuterons également des adaptations nécessaires pour garantir une intégration optimale au sein du plugin QCrocoFlow, tout en respectant les spécificités de l'environnement QGIS. Cette démarche méthodique vise à mettre en lumière les mécanismes fondamentaux, ainsi que les améliorations apportées pour assurer une performance optimale et une compatibilité avec les systèmes d'information géographique (SIG). La suite de ce chapitre se consacrera à une exploration rigoureuse des étapes de transformation et d'adaptation des fichiers \og \textit{grid} \fg{}.
 
-\subsubsection{Traitement des Données Utilisateur pour la Création du Fichier Grid}
+\subsubsection{Traitement des Données Utilisateur pour la création d'une grille}
 
-La première étape cruciale dans la création du fichier \textit{grid} a été de définir précisément les entrées nécessaires de la part de l'utilisateur. Ces entrées constituent les informations brutes indispensables pour le bon fonctionnement du script. Plus concrètement, l'utilisateur doit fournir :
+La première étape cruciale dans la création du fichier \og \textit{grid} \fg{} a été de définir précisément quelles sont les données nécessaires à fournir de la part de l'utilisateur. Ces informations brutes sont indispensables car elles définissent les caractéristiques initiales et fondamentales de la grille de calcul. Plus concrètement, l'utilisateur doit fournir :
 
 \begin{itemize}
-	\item Un \textbf{répertoire de travail} : Il s'agit de l'emplacement où les fichiers générés seront sauvegardés et où l'utilisateur pourra les retrouver ultérieurement.
-	\item Un \textbf{nom de projet} : Pour identifier et organiser ses simulations.
-	\item Un \textbf{titre} : Pour une description plus détaillée de la simulation.
-	\item Une \textbf{période de simulation} : L'utilisateur doit spécifier une date de début et une date de fin pour délimiter la durée de sa simulation.
-	\item Un \textbf{fichier de topographie} : L'utilisateur a la flexibilité de travailler avec divers formats de fichiers, tels que NetCDF, GRD\footnote{Gradient} ou même TIF\footnote{Tagged Image File Format}.
-	\item Une \textbf{résolution} : Elle détermine la taille de chaque maille du fichier grid.
+	\item le \textbf{répertoire de travail}, il s'agit de l'emplacement où les fichiers générés seront sauvegardés et où l'utilisateur pourra les retrouver ultérieurement,
+	\item le \textbf{nom de projet} pour identifier et organiser ses simulations,
+	\item le \textbf{titre} qui peut servir à donner une description plus détaillée sur la future simulation,
+	\item la \textbf{période de simulation}. L'utilisateur doit spécifier une date de début et une date de fin sur lesquelles les calculs des vitesses et courants vont être fait,
+	\item un \textbf{fichier de topographie}. L'utilisateur a la flexibilité de travailler avec divers formats de fichiers, tels que NetCDF, GRD\footnote{Format SIG \og GRID \fg{}.} ou TIF\footnote{\og \textbf{T}agged \textbf{I}mage \textbf{F}ile \textbf{F}ormat \fg{}},
+	\item une valeur de \textbf{résolution} qui détermine la taille de chaque maille de la grille de calcul.
 \end{itemize}
 
-Ces informations fournies par l'utilisateur sont essentielles pour adapter le script à des besoins spécifiques et garantir une génération de fichier \textit{grid} conforme aux attentes.
+Ces informations fournies par l'utilisateur sont essentielles pour adapter le script à des besoins spécifiques et garantir une génération de fichier \og \textit{grid} \fg{} conforme aux attentes.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=2in]{./IMAGES/figure14.png}
-	\caption{Schéma du Processus d'Entrée Utilisateur pour la Génération du Fichier Grid}
+	\caption{Schéma du Processus d'Entrée Utilisateur pour la Génération de la grille}
 	\label{fig:AlgoGrid}
 \end{figure}
 
@@ -49,7 +49,7 @@ Pour répondre à cette exigence, j'ai fait appel à l'outil \textit{Qt5 Designe
 	\label{fig:GISUSER}
 \end{figure}
 
-Une fois les paramètres saisis, nous exploitons pleinement les capacités offertes par QGIS, en particulier son environnement SIG, pour générer un fichier \og grid\fg{} avec la plus grande précision. Dans un souci de clarté et d'efficacité, j'ai intégré une fonctionnalité lors de la sélection du fichier topographique. Cette fonction permet une visualisation instantanée de son contenu directement sur la carte. De plus, dès l'intégration du fichier dans l'outil, celui-ci est stocké dans une base de données SQL\footnote{Structured Query Language}, intégrée à QGIS. Cela offre à l'utilisateur la commodité de sélectionner directement des fichiers topographiques précédemment chargés dans son projet. Voir la Figure~\ref{fig:BathyF}.
+Une fois les paramètres saisis, nous exploitons pleinement les capacités offertes par QGIS, en particulier son environnement SIG, pour générer un fichier \og \textit{grid} \fg{} avec la plus grande précision. Dans un souci de clarté et d'efficacité, j'ai intégré une fonctionnalité lors de la sélection du fichier topographique. Cette fonction permet une visualisation instantanée de son contenu directement sur la carte. De plus, dès l'intégration du fichier dans l'outil, celui-ci est stocké dans une base de données SQL\footnote{Structured Query Language}, intégrée à QGIS. Cela offre à l'utilisateur la commodité de sélectionner directement des fichiers topographiques précédemment chargés dans son projet. Voir la Figure~\ref{fig:BathyF}.
 
 \newpage
 \begin{figure}[h]
@@ -67,13 +67,13 @@ Afin d'assurer une intégrité et une précision maximales, j'ai mis en œuvre l
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{./IMAGES/Gestioncrs.png}
-	\caption{Processus de gestion des CRS dans QGIS pour la création de fichiers \og grid\fg{}}
+	\caption{Processus de gestion des CRS dans QGIS pour la création de la grille.}
 	\label{fig:Gestioncrs}
 \end{figure}
 
 Suite à la gestion d'intégration du fichier topographique, l'étape suivante consiste à définir la résolution et à sélectionner une zone de travail. L'utilisateur est invité à spécifier la résolution en mètres. Grâce à l'étape précédente, nous sommes désormais en mesure de travailler en unités métriques, indépendamment du CRS du fichier topographique.\\
 
-Afin de définir précisément la zone d'étude, j'ai mis en place une fonctionnalité permettant à l'utilisateur de dessiner un rectangle directement sur la carte de QGIS, délimitant ainsi sa zone d'intérêt. Cette fonction s'appuie sur l'outil \texttt{qgsMapToolExtent} de QGIS. Une fois cette zone définie, une fonction spécialement conçue pour ce projet, nommée \texttt{on\_extent\_changed}, est appelée pour récupérer les coordonnées longitudinales et latitudinales minimales et maximales du rectangle. Il est à noter que la grille est générée dans le système de coordonnées WGS84/Pseudo-Mercator (EPSG:3857). Ce choix a été fait car ce système de coordonnées traite les mesures en mètres, ce qui facilite grandement la gestion de la résolution, contrairement à d'autres systèmes qui utilisent des degrés. Ces coordonnées, une fois récupérées, sont essentielles pour les étapes ultérieures du processus de génération du fichier grid.
+Afin de définir précisément la zone d'étude, j'ai mis en place une fonctionnalité permettant à l'utilisateur de dessiner un rectangle directement sur la carte de QGIS, délimitant ainsi sa zone d'intérêt. Cette fonction s'appuie sur l'outil \texttt{qgsMapToolExtent} de QGIS. Une fois cette zone définie, une fonction spécialement conçue pour ce projet, nommée \texttt{on\_extent\_changed}, est appelée pour récupérer les coordonnées longitudinales et latitudinales minimales et maximales du rectangle. Il est à noter que la grille est générée dans le système de coordonnées WGS84/Pseudo-Mercator (EPSG:3857). Ce choix a été fait car ce système de coordonnées traite les mesures en mètres, ce qui facilite grandement la gestion de la résolution, contrairement à d'autres systèmes qui utilisent des degrés. Ces coordonnées, une fois récupérées, sont essentielles pour les étapes ultérieures du processus de génération du fichier \og \textit{grid} \fg{}.
 
 
 Afin d'optimiser l'expérience utilisateur, j'ai intégré une fonctionnalité permettant d'afficher les coordonnées selon divers formats : DMS, DD et DM\footnote{DMS : Degrés, Minutes, Secondes. DD : Degrés Décimaux. DM : Degrés, Minutes. Ces notations sont fréquemment employées pour exprimer des coordonnées géographiques.}. L'utilisateur a la flexibilité d'ajuster la zone de travail en modifiant directement ces coordonnées via une interface dédiée. Tout changement apporté est immédiatement reflété sur la carte, assurant une mise à jour en temps réel et un feedback visuel direct. De surcroît, à ce stade, j'ai prévu une option d'enregistrement du projet. Cela offre la possibilité de recharger ultérieurement le projet avec les mêmes configurations, que ce soit pour des corrections, des ajustements ou d'autres besoins.\\
@@ -88,14 +88,14 @@ Afin d'optimiser l'expérience utilisateur, j'ai intégré une fonctionnalité p
 	\label{fig:gridonmap}
 \end{figure}
 
-Après avoir soigneusement configuré toutes les données requises, l'utilisateur n'a plus qu'à cliquer sur le bouton \og \textit{Process} \fg{} pour initier la génération du fichier \textit{grid}.
+Après avoir soigneusement configuré toutes les données requises, l'utilisateur n'a plus qu'à cliquer sur le bouton \og \textit{Process} \fg{} pour initier la génération de la grille.
 
-\subsubsection{Processus de Création du Fichier Grid}
+\subsubsection{Processus de Création de la grille}
 
 
-La création du fichier \og grid\fg{} est le fruit d'une combinaison efficace entre le langage Python et les capacités offertes par l'API de QGIS. Dans ce sous-chapitre, nous détaillerons minutieusement la conception et le fonctionnement du script responsable de cette génération.
+La création du fichier \og \textit{grid} \fg{} est le fruit d'une combinaison efficace entre le langage Python et les capacités offertes par l'API de QGIS. Dans ce sous-chapitre, nous détaillerons minutieusement la conception et le fonctionnement du script responsable de cette génération.
 
-Au cœur de ce processus se trouve la fonction principale nommée \texttt{make\_grid}. Cette fonction est invoquée dès que l'utilisateur lance la génération depuis l'interface du plugin. Elle a pour rôle de collecter l'ensemble des informations et paramètres préalablement renseignés par l'utilisateur, comme discuté dans la section précédente, et de les utiliser comme base pour la création du fichier \og grid\fg{}.
+Au cœur de ce processus se trouve la fonction principale nommée \texttt{make\_grid}. Cette fonction est invoquée dès que l'utilisateur lance la génération depuis l'interface du plugin. Elle a pour rôle de collecter l'ensemble des informations et paramètres préalablement renseignés par l'utilisateur, comme discuté dans la section précédente, et de les utiliser comme base pour la création du fichier \og \textit{grid} \fg{}.
 comme expliqué par la figure \ref{fig:AlgoGrid}.
 
 \newpage
@@ -182,7 +182,7 @@ Après avoir obtenu toutes les coordonnées variables, la dimension exacte de no
 	M, L = Latp.shape
 \end{verbatim}
 
-\subsubsection{Géneration d'un fichier NetCDF Grid}
+\subsubsection{Géneration d'un fichier NetCDF de la grille}
 
 \begin{figure}[h]
 	\centering
@@ -262,17 +262,17 @@ Avec ces étapes, nous avons généré deux nouvelles variables essentielles : l
 
 \subsubsection{Interpolation à partir du fichier topographique}
 
-Après avoir élaboré les variables initiales de la zone d'étude, nous abordons désormais l'intégration des données topographiques au sein du fichier grid. Ces données, fournies par l'utilisateur via le plugin \textit{qcrocoflow}, sont essentielles pour définir les caractéristiques physiques du fond marin dans notre modèle, ainsi que le masque qui définit les partie submergé. Cependant, étant donné la diversité des formats de fichiers topographiques disponibles (tels que netCDF, TIFF, GRD, etc.), il est impératif d'avoir un mécanisme robuste pour traiter chaque type de fichier.
+Après avoir élaboré les variables initiales de la zone d'étude, nous abordons désormais l'intégration des données topographiques au sein du fichier \og \textit{grid} \fg{}. Ces données, fournies par l'utilisateur via le plugin \textit{qcrocoflow}, sont essentielles pour définir les caractéristiques physiques du fond marin dans notre modèle, ainsi que le masque qui définit les partie submergé. Cependant, étant donné la diversité des formats de fichiers topographiques disponibles (tels que netCDF, TIFF, GRD, etc.), il est impératif d'avoir un mécanisme robuste pour traiter chaque type de fichier.
 
 L'interpolation est une méthode mathématique utilisée pour déduire des valeurs à des emplacements non spécifiés, dans notre cas dans chaque maille de la grille généré, à partir d'un ensemble de valeurs connues à savoir le fichier topographique. Plusieurs méthodes d'interpolation peuvent être utilisées, chacune ayant ses propres avantages et inconvénients. Voici quelques-unes des méthodes d'interpolation les plus couramment utilisées :
 
 \begin{itemize}
 	\item \textbf{Interpolation linéaire} : Elle est basée sur la première équation du polynôme de Taylor et est la plus simple et la plus rapide. Elle est idéale pour des données sans grandes variations\citep{Wikipedia2023Linear}.
-	
+
 	\item \textbf{Interpolation bilinéaire} : Utilisée pour les données spatiales 2D, elle prend en compte les valeurs des quatre points les plus proches pour estimer une valeur\citep{Wikipedia2023Bilinear}.
-	
+
 	\item \textbf{Interpolation bicubique} : Plus complexe, elle utilise les valeurs des 16 points les plus proches dans une grille 2D. Elle est plus précise que la bilinéaire, mais aussi plus coûteuse en termes de calcul\citep{Wikipedia2023Bicubic}.
-	
+
 	\item \textbf{Interpolation spline} : Elle utilise des polynômes de degré faible pour interpoler les données, garantissant la continuité et la douceur des courbes interpolées\citep{Wikipedia2023Spline}.
 \end{itemize}
 
@@ -304,9 +304,9 @@ Un fichier topographique NetCDF est généralement structuré comme suit :
 
 \begin{itemize}
 	\item \textbf{Dimensions} : Ces dimensions définissent l'espace dans lequel les données topographiques sont représentées. Les plus courantes sont la latitude, la longitude et, dans certains cas, l'altitude ou la profondeur.
-	
+
 	\item \textbf{Variables} : Les variables contiennent les données effectives. Pour un fichier topographique, la variable principale serait la hauteur ou la profondeur à chaque point de coordonnée. D'autres variables peuvent également être présentes, telles que la pente, l'aspect ou d'autres caractéristiques topographiques.
-	
+
 	\item \textbf{Attributs} : Les attributs fournissent des métadonnées sur les données contenues dans le fichier. Cela peut inclure des informations sur la source des données, la méthode de collecte, les unités utilisées, et d'autres détails pertinents.
 \end{itemize}
 
@@ -317,14 +317,14 @@ Un fichier topographique NetCDF est généralement structuré comme suit :
 		% Draw the main rectangle
 		\draw (0,0) rectangle (7,5);
 		\node at (3.5,4.5) {\large Fichier NetCDF};
-		
+
 		% Draw internal rectangles
 		\draw (1,3) rectangle (6,4);
 		\node[text width=4cm, align=center] at (3.5,3.5) {\small Dimensions (Latitude, Longitude)};
-		
+
 		\draw (1,1.5) rectangle (6,2.5);
 		\node[text width=4cm, align=center] at (3.5,2) {\small Variables (Hauteur, Profondeur)};
-		
+
 		\draw (1,0.5) rectangle (6,1.5);
 		\node[text width=4cm, align=center] at (3.5,1) {\small Attributs (Métadonnées)};
 	\end{tikzpicture}
@@ -348,13 +348,13 @@ Enfin, la fonction utilise une interpolation cubique pour estimer les valeurs de
 
 \begin{itemize}
 	\item \textbf{Chargement de la grille CROCO} : La grille est chargée à l'aide de la bibliothèque \texttt{netCDF4}. Les coordonnées et les métriques de la grille sont extraites pour une utilisation ultérieure.
-	
+
 	\item \textbf{Définition de la boîte englobante} : La boîte englobante est définie en ajoutant un petit tampon à la grille CROCO. Ce tampon est calculé en fonction de la résolution de la grille.
-	
+
 	\item \textbf{Chargement et sous-ensemble des données topographiques} : Les données topographiques sont chargées et un sous-ensemble est extrait en fonction de la boîte englobante.
-	
+
 	\item \textbf{Ajustement de la résolution} : Si la résolution des données topographiques est trop fine par rapport à la grille CROCO, elle est ajustée pour correspondre à la résolution de la grille.
-	
+
 	\item \textbf{Interpolation} : Une fois que les données topographiques ont la bonne résolution, elles sont interpolées dans la grille CROCO à l'aide d'une interpolation cubique.
 \end{itemize}
 
@@ -366,7 +366,7 @@ Cette fonction garantit que les données topographiques sont correctement intég
 	\caption{Interpolation de la topographie : du fichier NetCDF à la grille CROCO}
 	\label{fig:interpolationNC}
 \end{figure}
-Le fichier \texttt{grid} intègre désormais les données topographiques interpolées fournies par l'utilisateur.
+Le fichier \og \textit{grid} \fg{} intègre désormais les données topographiques interpolées fournies par l'utilisateur.
 
 \subsubsection{Traitement des fichiers topographiques au format Raster}
 
@@ -376,18 +376,18 @@ Les fichiers Raster sont des représentations matricielles de données spatiales
 	\centering
 	\begin{tikzpicture}
 		\draw[step=1cm,gray,very thin] (0,0) grid (4,4);
-		
+
 		\node at (0.5, 3.5) {15};
 		\node at (1.5, 3.5) {20};
 		\node at (2.5, 3.5) {18};
 		\node at (3.5, 3.5) {22};
-		
+
 		\node[anchor=east] at (0,0.5) {1};
 		\node[anchor=east] at (0,1.5) {2};
-		
+
 		\node[anchor=north] at (0.5,0) {1};
 		\node[anchor=north] at (1.5,0) {2};
-		
+
 	\end{tikzpicture}
 	\caption{Représentation schématique d'une grille raster avec des données.}
 	\label{fig:rastergrid}
@@ -401,9 +401,9 @@ Lors de l'interpolation avec des données raster, une fenêtre intitulée \textt
 
 \begin{itemize}
 	\item \textbf{Vérification de la Bathymétrie} : Elle permet de s'assurer que les données bathymétriques sont correctement signées, c'est-à-dire positives ou négatives selon le contexte.
-	
+
 	\item \textbf{Ajustement du Niveau de Référence} : Cette fonctionnalité est essentielle pour garantir que le niveau de référence des eaux, souvent déterminé à partir de mesures bathymétriques, est conforme aux attentes de l'utilisateur. Elle est particulièrement utile pour effectuer des corrections après la prise d'une bathymétrie.
-	
+
 	\item \textbf{Visualisation Cartographique} : La fenêtre \texttt{bathyview} permet également de visualiser les données sous forme de carte. Toute modification apportée dans \texttt{bathyview} est immédiatement reflétée dans cette visualisation graphique, offrant ainsi un retour en temps réel à l'utilisateur.
 \end{itemize}
 
@@ -421,14 +421,14 @@ Une fois tous les paramètres vérifiés, le bouton \textit{"Next"} est utilisé
 La fonction \texttt{add\_topo\_Raster} est conçue pour interpoler les données topographiques dans la grille CROCO. Son fonctionnement peut être décomposé en plusieurs étapes clés :
 
 \begin{enumerate}
-	\item \textbf{Initialisation et récupération des couches} : La fonction commence par récupérer les couches raster et grille du projet QGIS. La couche raster est identifiée par le nom de fichier de la topographie, tandis que la couche grille est identifiée par le nom 'grid'.
-	
+	\item \textbf{Initialisation et récupération des couches} : La fonction commence par récupérer les couches raster et grille du projet QGIS. La couche raster est identifiée par le nom de fichier de la topographie, tandis que la couche grille est identifiée par le nom \og grid \fg{}.
+
 	\item \textbf{Reprojection de la grille} : La grille CROCO est re-projetée en WGS84. Cette étape est essentielle pour garantir que les données topographiques et la grille sont dans le même système de coordonnées lors de l'interpolation.
-	
+
 	\item \textbf{Calcul des statistiques zonales} : Les statistiques zonales sont calculées pour chaque cellule de la grille en utilisant les données raster. La statistique clé utilisée ici est la moyenne, qui donne la valeur moyenne de la topographie pour chaque cellule de la grille.
-	
+
 	\item \textbf{Mise à jour des champs de la grille} : Les champs de la grille sont ensuite mis à jour avec les coordonnées et les valeurs topographiques. Si une valeur topographique est manquante (c'est-à-dire \texttt{None}), elle est remplacée par une valeur par défaut de 100.
-	
+
 	\item \textbf{Génération de la grille et mise en forme des données topographiques} : Enfin, les données topographiques sont remodelées pour correspondre à la forme de la grille CROCO. La sortie est un tableau numpy \texttt{h} contenant les données topographiques interpolées.
 \end{enumerate}
 
@@ -439,12 +439,12 @@ La fonction \texttt{add\_topo\_Raster} est conçue pour interpoler les données 
 Le script \texttt{add\_topo\_Raster} est conçu pour interpoler les données topographiques d'un fichier raster dans la grille CROCO. Voici une explication détaillée de son fonctionnement :
 
 \begin{itemize}
-	\item \textbf{Entrées} : 
+	\item \textbf{Entrées} :
 	\begin{itemize}
 		\item \texttt{topofile} : Le chemin vers le fichier topographique raster.
 		\item \texttt{numColumns} et \texttt{numLines} : Dimensions de la grille sur les axes x et y, respectivement.
 	\end{itemize}
-	
+
 	\item \textbf{Processus} :
 	\begin{itemize}
 		\item Les couches raster et grille du projet sont récupérées.
@@ -452,7 +452,7 @@ Le script \texttt{add\_topo\_Raster} est conçu pour interpoler les données top
 		\item Les statistiques zonales sont calculées pour chaque cellule de la grille en utilisant les données du raster. La moyenne des valeurs raster contenues dans chaque cellule est déterminée.
 		\item Les champs de la grille sont mis à jour avec les coordonnées et les valeurs topographiques interpolées.
 	\end{itemize}
-	
+
 	\item \textbf{Sortie} :
 	\begin{itemize}
 		\item \texttt{h} : Un tableau numpy contenant les données topographiques restructurées pour correspondre à la grille CROCO.
