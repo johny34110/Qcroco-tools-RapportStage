@@ -482,37 +482,39 @@ Le script \texttt{add\_topo\_Raster} est conçu pour interpoler les données top
 
 En somme, ce script assure une transition fluide des données topographiques d'un format raster vers le format NetCDF de la grille CROCO, permettant ainsi une intégration précise de la topographie dans les simulations océanographiques de CROCO.
 
-\subsubsection{Génération du masque pour le fichier \texttt{grid\_croco}}
+\subsubsection{Génération du masque pour le fichier \texttt{grid\_croco}.}
 
-Le masque est un élément essentiel dans la configuration du fichier \texttt{grid\_croco} pour le modèle CROCO. Il joue un rôle crucial en définissant les zones actives et inactives de la grille, permettant ainsi au modèle de savoir où effectuer des calculs et où ignorer les interactions. Une zone masquée (ou inactivée) est généralement une région où le modèle ne résout pas les équations, souvent parce qu'elle représente une terre émergée ou une autre caractéristique non pertinente pour la simulation.
+Le masque est un élément essentiel dans la configuration du fichier de grille pour le modèle CROCO. Il permet de définir les zones actives et inactives de la grille, permettant ainsi au modèle de savoir où effectuer des calculs et où les ignorer. Une zone masquée (ou inactivée) est une région où le modèle ne résout pas les équations, souvent parce qu'elle représente une terre émergée ou une autre caractéristique non pertinente pour la simulation.
 
-Afin de garantir une représentation fidèle de la zone d'étude, nous avons décidé d'intégrer un masque basé sur les valeurs de la topographie interpolée. Plus précisément, toutes les régions où la topographie interpolée présente une valeur supérieure à 0 (indiquant une terre émergée) sont masquées. Cette approche assure que le modèle CROCO ne tente pas de simuler des mouvements océaniques dans des zones qui sont en réalité des terres émergées.
+Afin de garantir une représentation fidèle de la zone d'étude, nous avons décidé d'intégrer un masque basé sur les valeurs de la topographie interpolée. Plus précisément, toutes les régions où la topographie interpolée présente une valeur supérieure à 0 (indiquant une terre émergée) sont masquées. Cette approche assure que le modèle CROCO ne tente pas de simuler des mouvements océaniques dans des lieux qui sont en réalité des terres émergées.
 
-Suite à cette étape d'interpolation et de masquage, une fenêtre s'ouvre pour afficher le résultat. Cette visualisation, que nous nommerons \textit{Mask View}, permet à l'utilisateur de vérifier et de valider le masque généré avant de poursuivre les étapes suivantes de la préparation des données.
-\newpage
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{./IMAGES/Interpolation/mask.png}
-	\caption{Visualisation du masque généré pour la grille CROCO.}
-	\label{fig:mask_view}
+    \centering
+    \includegraphics[width=0.8\textwidth]{./IMAGES/Interpolation/mask.png}
+    \caption{Visualisation du masque généré pour la grille CROCO.}
+    \label{fig:mask_view}
 \end{figure}
+
+Suite à cette étape d'interpolation et de masquage, une fenêtre s'ouvre pour afficher le résultat. Cette visualisation qui se nomme \textit{Mask View}, permet à l'utilisateur de vérifier et de valider le masque généré avant de poursuivre les étapes suivantes de la préparation des données (Fig.\ref{fig:mask_view}).
 
 La précision du masque est primordiale pour garantir la qualité des simulations CROCO. Une représentation erronée des zones actives et inactives peut entraîner des erreurs dans les résultats du modèle, d'où l'importance de cette étape de validation visuelle.
 
-\subsubsection{Finalisation, exportation et visualisation du fichier }
+\subsubsection{Finalisation, exportation et visualisation du fichier.}
 
-L'étape finale de ce processus consiste à rassembler toutes les variables générées et à les intégrer de manière structurée dans le fichier \texttt{grid\_croco}. Ce fichier de type NetCDF, consolidant toutes les informations essentielles, est ensuite correctement sauvegardé dans le dossier de travail spécifié par l'utilisateur. Une fois cette étape achevée, le fichier est automatiquement chargé dans QGIS, permettant ainsi une visualisation immédiate des résultats sous le nom \og \textit{grid\_show}\fg{} comme le montre la figure \ref{fig:AlgoGrid}. Grâce à cette intégration, l'utilisateur peut rapidement vérifier et valider la qualité et la pertinence des données générées. Le fichier est ainsi prêt à être utilisé directement par le modèle CROCO, sans nécessiter d'étapes supplémentaires.
-\newpage
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/Interpolation/final.png}
-	\caption{Visualisation du masque généré pour la grille CROCO.}
-	\label{fig:final}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{./IMAGES/Interpolation/final.png}
+    \caption{Visualisation de la grille CROCO générée, ainsi que du masque correspondant, s'il y en a un}
+    \label{fig:gridfinal}
 \end{figure}
-\paragraph{Conclusion sur la génération du fichier \texttt{grid\_croco}:}
+
+L'étape finale de ce processus consiste à rassembler toutes les variables générées et à les intégrer de manière structurée dans le fichier \og \textit{grid} \fg{} de CROCO. Ce fichier de format NetCDF, consolidant toutes les informations essentielles, est ensuite correctement sauvegardé dans le dossier de travail spécifié par l'utilisateur. Une fois cette étape achevée, le fichier est automatiquement chargé dans QGIS, permettant ainsi une visualisation immédiate des résultats sous le nom \og \textit{grid\_show}\fg{} comme le montre la figure \ref{fig:gridfinal}. Grâce à cette intégration, l'utilisateur peut rapidement vérifier et valider la qualité et la pertinence des données générées. Le fichier est ainsi prêt à être utilisé directement par le modèle CROCO, sans nécessiter d'étapes supplémentaires.
+
+\paragraph{Conclusion sur la génération du fichier \texttt{grid\_croco}.\\}
+
 L'interface de génération du fichier offre de multiples avantages. Elle permet, en premier lieu, de réduire considérablement les risques d'erreurs manuelles lors de la préparation des données. De plus, elle accélère le processus de création du fichier, transformant ce qui aurait pu être une tâche laborieuse et chronophage en une procédure rapide et efficace. En l'espace de quelques minutes seulement, l'utilisateur dispose d'un fichier prêt à l'emploi, optimisé pour le modèle CROCO. Cette automatisation garantit non seulement un gain de temps considérable, mais aussi une fiabilité accrue des simulations ultérieures.
 
-C'était l'objectif initial de mon stage. Cependant, grâce à une progression rapide et à un travail assidu, j'ai pu achever cette mission bien avant la date prévue. Par conséquent, une nouvelle tâche m'a été confiée : préparer les fichiers de forçage nécessaires au fonctionnement du modèle CROCO. La conception de ces fichiers de forçage au sein de l'interface \texttt{qcrocoflow} constitue donc la prochaine étape de mon travail, que nous aborderons dans la section suivante.
+La génération du fichier \og \textit{grid} \fg{} initial pour le modèle CROCO était l'objectif initial de mon stage. Cependant, grâce à une progression rapide et à un travail assidu, j'ai pu achever cette mission avant la date prévue. Par conséquent, une nouvelle tâche m'a été confiée~: permettre de créer des fichiers de forçage météo pour le modèle CROCO. La conception et l'intégration de ces fichier au sein de l'interface \texttt{QCrocoFlow} constitue l'étape suivante de mon travail.
 
 
 
