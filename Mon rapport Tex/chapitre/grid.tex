@@ -2,15 +2,14 @@ La construction des fichiers d'entrée \og \textit{grid} \fg{} est une étape cr
 
 La génération des fichiers \og \textit{grid} \fg{} est une tâche qui exige une compréhension approfondie non seulement de leur contenu et de leur structure, mais aussi du processus sous-jacent de création. Pour faciliter cette tâche, CROCO met à disposition un ensemble d'outils, dont le CROCO\_Tool, accessible via \url{https://gitlab.inria.fr/croco-ocean/croco\_tools/}. Ce dernier est conçu pour fonctionner avec le logiciel MATLAB. Toutefois, ma familiarité limitée avec MATLAB a rendu l'utilisation de cet outil, et en particulier le module \og make\_grid \fg{} (\url{https://gitlab.inria.fr/croco-ocean/croco\_tools/-/blob/master/Preprocessing\_tools/make\_grid.m}), assez compliqué d'utilisation. Bien que la documentation officielle offre des directives, j'ai rencontré des difficultés liées à la spécificité du langage et aux subtilités des choix de programmation dans le script.
 
-Dans le but d'extraire un algorithme clair et compréhensible du script \og make\_grid \fg{}, j'ai entrepris une dissection détaillée de chaque segment de code. Cette démarche a abouti à la découverte de l'algorithme sous-jasent, illustré dans la Figure \ref{fig:AlgoGrid}. Cette étape a été cruciale pour parvenir à reproduire le processus de génération des fichiers \og grid \fg{} de manière autonome, tout en l'adaptant à nos besoins spécifiques.
-
-
 \begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/figure13.png}
-	\caption{Schéma fonctionnel général du script make\_grid.}
-	\label{fig:AlgoGrid}
+    \centering
+    \includegraphics[width=\textwidth]{./IMAGES/figure13.png}
+    \caption{Schéma fonctionnel général du script make\_grid.}
+    \label{fig:AlgoGrid01}
 \end{figure}
+
+Dans le but d'extraire un algorithme clair et compréhensible du script \og make\_grid \fg{}, j'ai entrepris une dissection détaillée de chaque segment de code. Cette démarche a abouti à la découverte de l'algorithme sous-jasent, illustré dans la Figure \ref{fig:AlgoGrid01}. Cette étape a été cruciale pour parvenir à reproduire le processus de génération des fichiers \og grid \fg{} de manière autonome, tout en l'adaptant à nos besoins spécifiques.
 
 Suite à cette compréhension approfondie de l'algorithme, l'objectif suivant était clair : adapter ces scripts MATLAB pour les rendre opérationnels dans un contexte différent. En effet, bien que MATLAB soit un outil puissant pour le traitement numérique, notre ambition était de rendre ces scripts plus performants, en les intégrant à l'environnement SIG de QGIS. Pour ce faire, la transition vers Python s'est imposée comme une évidence, étant donné sa flexibilité, sa performance et sa compatibilité avec l'API de QGIS. Ainsi, le défi était non seulement de traduire le code, mais aussi d'optimiser et d'adapter les fonctions pour qu'elles s'intègrent harmonieusement dans l'écosystème QGIS, offrant ainsi aux utilisateurs une expérience fluide et intégrée.
 
@@ -36,10 +35,10 @@ Ces informations fournies par l'utilisateur sont essentielles pour adapter le sc
 	\centering
 	\includegraphics[height=2in]{./IMAGES/figure14.png}
 	\caption{Schéma du processus d'entrée utilisateur pour la génération de la grille}
-	\label{fig:AlgoGrid}
+	\label{fig:AlgoGrid02}
 \end{figure}
 
-La Figure~\ref{fig:AlgoGrid} met en évidence l'importance cruciale des choix de l'utilisateur dans l'ensemble du processus. Dans cette optique, la mise en place d'un interface graphique claire et intuitive est primordiale. Il doit permettre à l'utilisateur de suivre un parcours logique pour renseigner les paramètres essentiels sans ambiguïté.
+La Figure~\ref{fig:AlgoGrid02} met en évidence l'importance cruciale des choix de l'utilisateur dans l'ensemble du processus. Dans cette optique, la mise en place d'un interface graphique claire et intuitive est primordiale. Il doit permettre à l'utilisateur de suivre un parcours logique pour renseigner les paramètres essentiels sans ambiguïté.
 Pour répondre à cette exigence, j'ai utilisé à l'outil \textit{Qt5 Designer} de l'API \textit{Qt} qui donne la possibilité de concevoir un interface sur mesure, adapté aux spécificités de chaque projet. Les composants de cet interface ont été pensés pour optimiser la saisie des informations et assurer une interaction fluide et efficace avec l'utilisateur.
 
 \newpage
@@ -177,20 +176,20 @@ Après avoir obtenu toutes les coordonnées variables, la dimension exacte de no
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=12cm]{./IMAGES/ZoneDiag/zone1.png}
-	\caption{Fonction initialisation d'un fichier Modèle NetCDF}
+	\caption{Fonction initialisation d'un fichier modèle au format NetCDF.}
 	\label{fig:zone1}
 \end{figure}
 
-La phase suivante du script concerne la création d'un fichier au format NetCDF, initialement vide, grâce à la fonction \texttt{create\_grid.py}. Cette étape a été réalisée via une approche de \textit{reverse engineering}. En utilisant un fichier grille que mon maître de stage m'a fourni comme référence, j'ai pu recréer un fichier NetCDF possédant les mêmes caractéristiques.
+La phase suivante du script (Fig.\ref{fig:zone1}), concerne la création d'un fichier au format NetCDF, initialement vide, grâce à la fonction \texttt{create\_grid\_file} (Fig.\ref{fig:AlgoGrid03}). Cette étape a été réalisée via une approche de \textit{reverse engineering}. En utilisant un fichier grille que mon maître de stage m'a fourni comme référence, j'ai pu recréer un fichier NetCDF possédant les mêmes caractéristiques.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=15cm]{./IMAGES/Script/createnc.png}
+    \caption{Extrait du script du fichier create\_grid.py pour la création initiale du fichier au format NetCDF.}
+    \label{fig:AlgoGrid03}
+\end{figure}
 
 Ce fichier est automatiquement créé dans le répertoire de travail que l'utilisateur a préalablement choisi et va servir de fondation solide pour l'intégration des variables générées ultérieurement.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/Script/createnc.png}
-	\caption{Extrait du script create\_grid pour la création initiale du fichier au format NetCDF.}
-	\label{fig:AlgoGrid}
-\end{figure}
 
 \subsubsection{Calcul de l'Angle entre les Coordonnées Géodésiques et Sphériques avec Intégration du Paramètre de Coriolis}
 
@@ -198,93 +197,110 @@ Ce fichier est automatiquement créé dans le répertoire de travail que l'utili
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=2in]{./IMAGES/ZoneDiag/zone2.png}
-	\caption{Fonction Calcul de l'Angle et intégration du Paramètre de Coriolis}
+	\caption{Fonction de calcul de l'angle et intégration du paramètre de Coriolis.}
 	\label{fig:zone2}
 \end{figure}
-Lors de la modélisation océanographique, la représentation précise des coordonnées est cruciale. Les océans ne sont pas simplement des entités plates; ils suivent la courbure de la Terre. Ainsi, lors de la simulation des mouvements océaniques, il est essentiel de prendre en compte cette courbure pour obtenir des résultats précis.
 
-La fonction \texttt{get\_angle.py} joue un rôle clé dans cette représentation. Elle est en réalité une traduction directe en Python du code \texttt{get\_angle} provenant de l'outil \textit{croco\_tools} écrit en MATLAB\footnote{\url{https://www.croco-ocean.org/documentation/croco\_tools/}}. Voici une explication détaillée de son importance et de son fonctionnement :
+Lors de la modélisation océanographique, la représentation précise des coordonnées est cruciale. Les océans ne sont pas des zones plates, ils suivent la courbure de la Terre. Ainsi, lors de la simulation des mouvements océaniques, il est essentiel de prendre en compte cette courbure pour obtenir des résultats précis.
 
-\begin{itemize}
-	\item \textbf{Objectif Principal} : La fonction est conçue pour calculer l'angle entre les coordonnées géodésiques, qui sont basées sur la forme réelle de la Terre (ellipsoïdale), et les coordonnées sphériques, qui simplifient la Terre en une sphère parfaite. Cet angle est crucial pour transformer correctement les données entre ces deux systèmes de coordonnées.
+La fonction \texttt{get\_angle} joue un rôle clé dans cette représentation. Elle est en réalité une traduction directe en Python du code \texttt{get\_angle} provenant de l'outil \textit{croco\_tools}\footnote{\url{https://www.croco-ocean.org/documentation/croco\_tools/}} écrit en MATLAB.
+%Voici une explication détaillée de son fonctionnement~:
 
-	\item \textbf{Pourquoi est-ce Nécessaire?} :
-	\begin{itemize}
-		\item Les coordonnées géodésiques sont couramment utilisées en cartographie et navigation car elles reflètent la forme réelle de la Terre. Cependant, les modèles océanographiques, comme CROCO, peuvent utiliser des coordonnées sphériques pour simplifier les calculs.
-		\item Lors de la simulation des mouvements de l'eau, comme les courants, il est essentiel que les vecteurs de vitesse soient correctement orientés. Sans une transformation appropriée des coordonnées, les vecteurs pourraient pointer dans la mauvaise direction, conduisant à des résultats de simulation inexactes.
-	\end{itemize}
+%\begin{itemize}
+%	\item \textbf{Objectif Principal} : La fonction est conçue pour calculer l'angle entre les coordonnées géodésiques, qui sont basées sur la forme réelle de la Terre (ellipsoïdale), et les coordonnées sphériques, qui simplifient la Terre en une sphère parfaite. Cet angle est crucial pour transformer correctement les données entre ces deux systèmes de coordonnées.
+%
+%	\item \textbf{Pourquoi est-ce Nécessaire?} :
+%	\begin{itemize}
+%		\item Les coordonnées géodésiques sont couramment utilisées en cartographie et navigation car elles reflètent la forme réelle de la Terre. Cependant, les modèles océanographiques, comme CROCO, peuvent utiliser des coordonnées sphériques pour simplifier les calculs.
+%		\item Lors de la simulation des mouvements de l'eau, comme les courants, il est essentiel que les vecteurs de vitesse soient correctement orientés. Sans une transformation appropriée des coordonnées, les vecteurs pourraient pointer dans la mauvaise direction, conduisant à des résultats de simulation inexactes.
+%	\end{itemize}
+%
+%	\item \textbf{Fonctionnement de la Fonction} :
+%	\begin{itemize}
+%		\item La fonction prend en entrée les latitudes et longitudes d'une grille et un sphéroïde de référence (par défaut "wgs84").
+%		\item Elle calcule ensuite l'azimut, ou l'angle, entre les points de grille adjacents en utilisant les coordonnées géodésiques.
+%		\item Cet azimut est ensuite utilisé pour déterminer l'angle de rotation nécessaire pour passer des coordonnées géodésiques aux coordonnées sphériques.
+%	\end{itemize}
+%
+%	\item \textbf{Résultat} :
+%	\begin{itemize}
+%		\item La sortie, \texttt{angle}, donne l'angle de rotation pour chaque point de la grille. Cette information est essentielle pour les étapes ultérieures du processus de modélisation, garantissant que les données sont correctement orientées et que les simulations sont précises.
+%	\end{itemize}
+%\end{itemize}
 
-	\item \textbf{Fonctionnement de la Fonction} :
-	\begin{itemize}
-		\item La fonction prend en entrée les latitudes et longitudes d'une grille et un sphéroïde de référence (par défaut "wgs84").
-		\item Elle calcule ensuite l'azimut, ou l'angle, entre les points de grille adjacents en utilisant les coordonnées géodésiques.
-		\item Cet azimut est ensuite utilisé pour déterminer l'angle de rotation nécessaire pour passer des coordonnées géodésiques aux coordonnées sphériques.
-	\end{itemize}
+%La fonction \texttt{get\_angle} est essentielle dans le processus de préparation des données pour la modélisation océanographique. Elle assure que les coordonnées sont correctement transformées, permettant des simulations précises et fiables.\\
 
-	\item \textbf{Résultat} :
-	\begin{itemize}
-		\item La sortie, \texttt{angle}, donne l'angle de rotation pour chaque point de la grille. Cette information est essentielle pour les étapes ultérieures du processus de modélisation, garantissant que les données sont correctement orientées et que les simulations sont précises.
-	\end{itemize}
-\end{itemize}
-
-En résumé, la fonction \texttt{get\_angle.py} est un outil essentiel dans le processus de préparation des données pour la modélisation océanographique. Elle assure que les coordonnées sont correctement transformées, permettant des simulations précises et fiables.\\
-
-En plus de la transformation des coordonnées, un autre aspect essentiel de la modélisation océanographique est la prise en compte de l'effet de Coriolis. Cet effet, résultant de la rotation de la Terre, influence considérablement la direction et la magnitude des courants océaniques. Pour intégrer cet effet dans le modèle, la ligne de code suivante est utilisée :
+En plus de la transformation des coordonnées, un autre aspect essentiel de la modélisation océanographique est la prise en compte de la force de Coriolis. Cet force, résultant de la rotation de la Terre, influence considérablement la direction et la magnitude des courants océaniques. Pour intégrer cet effet dans le modèle, la ligne de code suivante est utilisée :
 
 \begin{verbatim}
 	# Compute the Coriolis parameter.
-	f = 4 * np.pi * np.sin(np.pi * Latr / 180) * 366.25 / (24 * 3600 * 365.25)
+	f = 4 * np.pi * np.sin(np.pi * Latr / 180) * 366.25 / (24 * 3600 * 365.25),
 \end{verbatim}
 
-Cette ligne calcule le paramètre de Coriolis, souvent noté \( f \). Pour comprendre son importance :
-\begin{itemize}
-	\item \textbf{Rôle du Paramètre de Coriolis} : Il représente la force qui agit perpendiculairement à la direction du mouvement d'un fluide, comme l'eau de mer, en raison de la rotation de la Terre.
+qui correspond à la formule mathématique~:
+\begin{equation}\label{eq:coriolis}
+    f=2\ \Omega_{T} \mid \sin(\phi ) \mid
+\end{equation}
+Avec~:
+\begin{list}{}{}
+    \item $\Omega_{T}$ : la vitesse angulaire du pivotement sidéral de la Terre, \(  \Omega_{T} ={\frac {2\pi }{T_{sideral}}}\ rad\cdot s^{-1} \),
+    \item $T_{sideral}$ : le nombre de secondes dans un jour sidéral (23 h 56 min 4,09 s),
+    \item $\phi$ : la latitude du lieu considéré.
+\end{list}
 
-	\item \textbf{Détails de la Formule} :
-	\begin{itemize}
-		\item \(\pi\) est la constante mathématique Pi.
-		\item \texttt{Latr} est la latitude en degrés.
-		\item La fonction \texttt{np.sin} calcule le sinus de la latitude, convertie en radians.
-		\item Le facteur \( \frac{366.25}{24 \times 3600 \times 365.25} \) convertit la fréquence angulaire de rotation de la Terre en une valeur quotidienne, en tenant compte des jours bissextiles.
-	\end{itemize}
+Le Paramètre de Coriolis représente la force qui agit perpendiculairement à la direction du mouvement d'un fluide, comme l'eau de mer, en raison de la rotation de la Terre.
 
-	\item \textbf{Importance pour la Modélisation} : Sans une estimation précise du paramètre de Coriolis, les simulations océanographiques pourraient ne pas refléter fidèlement les mouvements réels de l'eau, en particulier dans les régions proches de l'équateur où cet effet est le plus prononcé.
-\end{itemize}
+A noter que le facteur \( \frac{366.25}{24 \times 3600 \times 365.25} \), présent dans le code de calcul Python, convertit la fréquence angulaire de rotation de la Terre en une valeur quotidienne, en tenant compte des jours bissextiles.
 
-Avec ces étapes, nous avons généré deux nouvelles variables essentielles : l'angle de rotation et le paramètre de Coriolis. Ces variables seront intégrées progressivement dans le fichier netCDF précédemment généré, enrichissant ainsi notre modèle avec des informations cruciales pour des simulations océanographiques précises. il est temps de nous tourner vers une autre composante essentielle de notre fichier : l'intégration des données topographiques.
+%Détails de la Formule~:
+%	\begin{itemize}
+%		\item \(\pi\) est la constante mathématique Pi.
+%		\item \texttt{Latr} est la latitude en degrés.
+%		\item La fonction \texttt{np.sin} calcule le sinus de la latitude, convertie en radians.
+%		\item Le facteur \( \frac{366.25}{24 \times 3600 \times 365.25} \) convertit la fréquence angulaire de rotation de la Terre en une valeur quotidienne, en tenant compte des jours bissextiles.
+%	\end{itemize}
+
+Sans une estimation précise du paramètre de Coriolis, les simulations océanographiques pourraient ne pas refléter fidèlement les mouvements réels de l'écoulement de l'eau, en particulier dans les régions proches de l'équateur où cet effet est le plus prononcé.\\
+
+Avec ces étapes, nous avons généré deux nouvelles variables essentielles~: l'angle de rotation et le paramètre de Coriolis. Ces variables seront intégrées progressivement dans le fichier NetCDF précédemment généré, enrichissant ainsi notre modèle avec des informations cruciales pour des simulations océanographiques précises.
 
 \subsubsection{Interpolation à partir du fichier topographique}
 
-Après avoir élaboré les variables initiales de la zone d'étude, nous abordons désormais l'intégration des données topographiques au sein du fichier \og \textit{grid} \fg{}. Ces données, fournies par l'utilisateur via le plugin \textit{qcrocoflow}, sont essentielles pour définir les caractéristiques physiques du fond marin dans notre modèle, ainsi que le masque qui définit les partie submergé. Cependant, étant donné la diversité des formats de fichiers topographiques disponibles (tels que netCDF, TIFF, GRD, etc.), il est impératif d'avoir un mécanisme robuste pour traiter chaque type de fichier.
+Après avoir élaboré les variables initiales de la zone d'étude, nous abordons désormais l'intégration des données topographiques au sein du fichier \og \textit{grid} \fg{}. Ces données, fournies par l'utilisateur via le plugin \textit{QCrocoFlow}, sont essentielles pour définir les caractéristiques physiques du fond marin dans notre modèle, ainsi que le masque qui définit les parties émergées de la zone de simulation.
 
-L'interpolation est une méthode mathématique utilisée pour déduire des valeurs à des emplacements non spécifiés, dans notre cas dans chaque maille de la grille généré, à partir d'un ensemble de valeurs connues à savoir le fichier topographique. Plusieurs méthodes d'interpolation peuvent être utilisées, chacune ayant ses propres avantages et inconvénients. Voici quelques-unes des méthodes d'interpolation les plus couramment utilisées :
+Le pas de la grille définie par l'utilisateur ne correspond pas, la majeure partie du temps, avec celui des fichiers bathymétriques donnés en entrée. Avec la diversité des formats de ces fichiers (tels que NetCDF, TIFF, GRD, etc.), il est impératif d'avoir un mécanisme robuste pour réaliser l'interpolation des profondeurs aux n\oe{uds} de la grille utilisateur.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=12cm]{./IMAGES/Interpolation/Interpolation.png}
+    \caption{Différents Types d'Interpolationsource. {\textit{Source: SciPy Documentation}}}
+    \label{fig:Interpolation}
+\end{figure}
+
+L'interpolation est une méthode mathématique utilisée pour déduire des valeurs à des emplacements non spécifiés, dans notre cas, en chaque maille de la grille générée, à partir d'un ensemble de valeurs connues, à savoir le fichier topographique. Plusieurs méthodes d'interpolation peuvent être utilisées, chacune ayant ses propres avantages et inconvénients.
+
+Ci-après quelques-unes des méthodes d'interpolation les plus couramment utilisées (Fig. \ref{fig:Interpolation}) :
 
 \begin{itemize}
-	\item \textbf{Interpolation linéaire} : Elle est basée sur la première équation du polynôme de Taylor et est la plus simple et la plus rapide. Elle est idéale pour des données sans grandes variations\citep{Wikipedia2023Linear}.
+	\item \textbf{Interpolation linéaire} qui est basée sur la première équation du polynôme de Taylor et est la plus simple et la plus rapide. Elle est idéale pour des données sans grandes variations et relativement denses\citep{Wikipedia2023Linear},
 
-	\item \textbf{Interpolation bilinéaire} : Utilisée pour les données spatiales 2D, elle prend en compte les valeurs des quatre points les plus proches pour estimer une valeur\citep{Wikipedia2023Bilinear}.
+	\item \textbf{Interpolation bilinéaire} utilisée pour les données spatiales 2D, elle prend en compte les valeurs des quatre points les plus proches pour estimer une valeur au centre\citep{Wikipedia2023Bilinear},
 
-	\item \textbf{Interpolation bicubique} : Plus complexe, elle utilise les valeurs des 16 points les plus proches dans une grille 2D. Elle est plus précise que la bilinéaire, mais aussi plus coûteuse en termes de calcul\citep{Wikipedia2023Bicubic}.
+	\item \textbf{Interpolation bicubique} est plus complexe. Elle utilise les valeurs des 16 points les plus proches sur une grille 2D. Elle est plus précise que la bilinéaire, mais aussi plus coûteuse en termes de calculs\citep{Wikipedia2023Bicubic},
 
-	\item \textbf{Interpolation spline} : Elle utilise des polynômes de degré faible pour interpoler les données, garantissant la continuité et la douceur des courbes interpolées\citep{Wikipedia2023Spline}.
+	\item \textbf{Interpolation spline} utilise des polynômes de degré faible pour interpoler les données, garantissant la continuité et la douceur des courbes interpolées\citep{Wikipedia2023Spline}.
 \end{itemize}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/Interpolation/Interpolation.png}
-	\caption{Différents Types d'Interpolationsource. {\textit{Source: SciPy Documentation}}}
-	\label{fig:Interpolation}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=15cm]{./IMAGES/Interpolation/ShemaUser.png}
+    \caption{Processus de Détection et de Traitement des Extensions de Fichiers Topographiques}
+    \label{fig:UserTOPO}
 \end{figure}
 
-En fonction de l'extension du fichier topographique fourni, différents scripts sont déclenchés pour garantir que chaque type de fichier est traité avec précision. Dans les sections suivantes, nous détaillerons les spécificités de chaque script en fonction du type de fichier.
+En fonction de l'extension du fichier topographique fourni, différents scripts sont déclenchés pour garantir que chaque type de fichier est traité avec précision (Fig. \ref{fig:UserTOPO}).
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[height=6in]{./IMAGES/Interpolation/ShemaUser.png}
-	\caption{Processus de Détection et de Traitement des Extensions de Fichiers Topographiques}
-	\label{fig:UserTOPO}
-\end{figure}
-
+Dans les sections suivantes, nous détaillerons les spécificités de chaque script en fonction du type de fichier.
 
 \subsubsection{Traitement des fichiers topographiques au format NetCDF}
 
