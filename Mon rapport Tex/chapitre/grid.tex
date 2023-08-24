@@ -340,31 +340,31 @@ Un fichier topographique NetCDF est généralement structuré de la manière sui
 
 La fonction \texttt{Add\_topo\_nc} est conçue pour interpoler les données topographiques sur la grille CROCO. Cette interpolation est cruciale pour garantir que les morphologies des fonds, telles que les montagnes sous-marines et les fosses océaniques, soient correctement retransmise sur la grille de calcul du modèle.
 
-\paragraph{Fonctionnement de la fonction:\\}
+\paragraph{Fonctionnement de \texttt{Add\_topo\_nc}.\\}
 
 La fonction commence par charger la grille CROCO et extraire les coordonnées, ainsi que les métriques de la grille. Elle calcule ensuite la résolution moyenne de la grille CROCO.
 
-Ensuite, la fonction définit une boîte englobante pour extraire les données topographiques pertinentes. Cette boîte englobante est légèrement plus grande que la grille CROCO pour s'assurer que toutes les données nécessaires sont capturées.
+Ensuite, une boîte englobante est définit pour extraire les données topographiques pertinentes. Cette boîte englobante est légèrement plus grande que les bords de la grille CROCO pour s'assurer que toutes les données nécessaires sont capturées.
 
 Après avoir chargé le fichier topographique, la fonction extrait les données topographiques qui se trouvent à l'intérieur de la boîte englobante. Elle ajuste ensuite la résolution des données topographiques pour qu'elle corresponde à celle de la grille CROCO.
 
 Enfin, la fonction utilise une interpolation cubique pour estimer les valeurs de la topographie à chaque point de la grille CROCO.
 
-\paragraph{Détails techniques:\\}
+\paragraph{Détails des étapes successives dans le code de la fonction.\\}
 
-\begin{itemize}
-	\item \textbf{Chargement de la grille CROCO} : La grille est chargée à l'aide de la bibliothèque \texttt{netCDF4}. Les coordonnées et les métriques de la grille sont extraites pour une utilisation ultérieure.
+\begin{enumerate}
+	\item \textbf{Chargement de la grille CROCO}. La grille est chargée à l'aide de la bibliothèque \texttt{netCDF4} de Pyhton. Les coordonnées et les métriques de la grille sont extraites pour une utilisation ultérieure,
 
-	\item \textbf{Définition de la boîte englobante} : La boîte englobante est définie en ajoutant un petit tampon à la grille CROCO. Ce tampon est calculé en fonction de la résolution de la grille.
+	\item \textbf{Définition de la boîte englobante}. La boîte englobante est définie en ajoutant un petit tampon à la grille CROCO. Ce tampon est calculé en fonction de la résolution de la grille,
 
-	\item \textbf{Chargement et sous-ensemble des données topographiques} : Les données topographiques sont chargées et un sous-ensemble est extrait en fonction de la boîte englobante.
+	\item \textbf{Chargement et sous-ensemble des données topographiques}. Les données topographiques sont chargées et un sous-ensemble est extrait en fonction de la boîte englobante,
 
-	\item \textbf{Ajustement de la résolution} : Si la résolution des données topographiques est trop fine par rapport à la grille CROCO, elle est ajustée pour correspondre à la résolution de la grille.
+	\item \textbf{Ajustement de la résolution}. Si la résolution des données topographiques est trop fine par rapport à la grille CROCO, elle est ajustée pour correspondre à la résolution de la grille.
 
-	\item \textbf{Interpolation} : Une fois que les données topographiques ont la bonne résolution, elles sont interpolées dans la grille CROCO à l'aide d'une interpolation cubique.
-\end{itemize}
+	\item \textbf{Interpolation}. Une fois que les données topographiques ont la bonne résolution, elles sont interpolées dans la grille CROCO à l'aide d'une interpolation cubique.
+\end{enumerate}
 
-Cette fonction garantit que les données topographiques sont correctement intégrées dans la grille CROCO, ce qui est essentiel pour des simulations océanographiques précises.
+Cette fonction remplie au fur et à mesure les variables du fichier NetCDF précédemment initialisées.
 
 \begin{figure}[h]
 	\centering
