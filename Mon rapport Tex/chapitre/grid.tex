@@ -424,14 +424,14 @@ QGIS, en tant que logiciel de Système d'Information Géographique, est parfaite
     \label{fig:BathyViewInterface}
 \end{figure}
 
-Lors de l'interpolation avec des données raster, une fenêtre intitulée \texttt{bathyview} est automatiquement ouverte (Fig. \ref{fig:BathyViewInterface}). Cette interface offre à l'utilisateur la possibilité de vérifier et, si nécessaire, de corriger le raster. Plusieurs fonctionnalités y sont intégrées :
+Lors de l'interpolation avec des données raster, une fenêtre intitulée \texttt{bathyview} est automatiquement ouverte (Fig. \ref{fig:BathyViewInterface}). Cette interface offre à l'utilisateur la possibilité de vérifier et, si nécessaire, de corriger le raster. Plusieurs fonctionnalités y sont intégrées~:
 
 \begin{itemize}
-	\item \textbf{Vérification de la Bathymétrie} : Elle permet de s'assurer que les données bathymétriques sont correctement signées, c'est-à-dire positives ou négatives selon le contexte.
+	\item \textbf{La vérification de la Bathymétrie}. Elle permet de s'assurer que les données bathymétriques sont correctement signées par rapport à la convention CROCO, c'est-à-dire positives ou négatives selon le contexte,
 
-	\item \textbf{Ajustement du Niveau de Référence} : Cette fonctionnalité est essentielle pour garantir que le niveau de référence des eaux, souvent déterminé à partir de mesures bathymétriques, est conforme aux attentes de l'utilisateur. Elle est particulièrement utile pour effectuer des corrections après la prise d'une bathymétrie.
+	\item \textbf{L'ajustement du Niveau de Référence}. Cette fonctionnalité est essentielle pour garantir que le niveau de référence des eaux, souvent déterminé à partir de mesures bathymétriques, est conforme aux attentes de l'utilisateur,
 
-	\item \textbf{Visualisation Cartographique} : La fenêtre \texttt{bathyview} permet également de visualiser les données sous forme de carte. Toute modification apportée dans \texttt{bathyview} est immédiatement reflétée dans cette visualisation graphique, offrant ainsi un retour en temps réel à l'utilisateur.
+	\item \textbf{La visualisation Cartographique}. La fenêtre \texttt{bathyview} permet également de visualiser les données sous forme de carte. Toute modification apportée dans \texttt{bathyview} est immédiatement reflétée dans cette visualisation graphique, offrant ainsi un retour en temps réel à l'utilisateur pour une gestion optimale.
 \end{itemize}
 
 Il convient de noter que cette fenêtre a été développée en Python en utilisant l'API de QGIS. Ainsi, non seulement elle offre une interface intuitive, mais elle est également intégrée de manière transparente avec les autres fonctionnalités de QGIS. Cette intégration assure la précision et la fiabilité des données interpolées, tout en offrant à l'utilisateur un contrôle direct et une visualisation immédiate des données raster traitées.
