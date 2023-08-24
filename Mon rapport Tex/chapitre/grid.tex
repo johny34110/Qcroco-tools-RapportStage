@@ -437,49 +437,48 @@ Lors de l'interpolation avec des données raster, une fenêtre intitulée \textt
 Il convient de noter que cette fenêtre a été développée en Python en utilisant l'API de QGIS. Ainsi, non seulement elle offre une interface intuitive, mais elle est également intégrée de manière transparente avec les autres fonctionnalités de QGIS. Cette intégration assure la précision et la fiabilité des données interpolées, tout en offrant à l'utilisateur un contrôle direct et une visualisation immédiate des données raster traitées.
 \newpage
 
-Une fois tous les paramètres vérifiés, le bouton \textit{"Next"} est utilisé pour initier le processus d'interpolation entre le fichier de la grille CROCO et les données présentes dans le raster pour la zone concernée. Dans cette étape, le script \texttt{Add\_topo\_Raster} est invoqué. Ce script récupère directement sur la carte la grille générée pour la zone spécifiée. Il calcule ensuite la valeur moyenne des données du raster pour chaque maille de la grille. Ces valeurs moyennes sont finalement incorporées dans le fichier \og \textit{grid} \fg{} de CROCO.
-\paragraph{Fonctionnement de la fonction  :\\}
+Une fois tous les paramètres vérifiés, le bouton \textit{"Next"} est utilisé pour initier le processus d'interpolation entre le fichier de la grille CROCO et les données présentes dans le raster pour la zone concernée. Dans cette étape, le script \texttt{Add\_topo\_Raster} est invoqué. Ce script récupère directement sur la carte la grille générée pour la zone spécifiée. Il calcule ensuite la valeur moyenne des données du raster pour chaque maille de la grille. Ces valeurs moyennes sont finalement incorporées dans le fichier \og \textit{grid} \fg{} de CROCO.\\
 
-La fonction \texttt{add\_topo\_Raster} est conçue pour interpoler les données topographiques dans la grille CROCO. Son fonctionnement peut être décomposé en plusieurs étapes clés :
+\paragraph{Fonctionnement de \texttt{add\_topo\_Raster}.\\}
 
-\begin{enumerate}
-	\item \textbf{Initialisation et récupération des couches} : La fonction commence par récupérer les couches raster et grille du projet QGIS. La couche raster est identifiée par le nom de fichier de la topographie, tandis que la couche grille est identifiée par le nom \og grid \fg{}.
-
-	\item \textbf{Reprojection de la grille} : La grille CROCO est re-projetée en WGS84. Cette étape est essentielle pour garantir que les données topographiques et la grille sont dans le même système de coordonnées lors de l'interpolation.
-
-	\item \textbf{Calcul des statistiques zonales} : Les statistiques zonales sont calculées pour chaque cellule de la grille en utilisant les données raster. La statistique clé utilisée ici est la moyenne, qui donne la valeur moyenne de la topographie pour chaque cellule de la grille.
-
-	\item \textbf{Mise à jour des champs de la grille} : Les champs de la grille sont ensuite mis à jour avec les coordonnées et les valeurs topographiques. Si une valeur topographique est manquante (c'est-à-dire \texttt{None}), elle est remplacée par une valeur par défaut de 100.
-
-	\item \textbf{Génération de la grille et mise en forme des données topographiques} : Enfin, les données topographiques sont remodelées pour correspondre à la forme de la grille CROCO. La sortie est un tableau numpy \texttt{h} contenant les données topographiques interpolées.
-\end{enumerate}
-
-
-
-\paragraph{Détail techniques :\\}
-
-Le script \texttt{add\_topo\_Raster} est conçu pour interpoler les données topographiques d'un fichier raster dans la grille CROCO. Voici une explication détaillée de son fonctionnement :
+La fonction \texttt{add\_topo\_Raster} est conçue pour interpoler les données topographiques dans la grille CROCO. Son fonctionnement peut être décomposé en plusieurs étapes clés~:
 
 \begin{itemize}
-	\item \textbf{Entrées} :
+	\item \textbf{initialisation et récupération des couches}. La fonction commence par récupérer les couches raster et grille du projet QGIS. La couche raster est identifiée par le nom de fichier de la topographie, tandis que la couche grille est identifiée par le nom \og grid \fg{},
+
+	\item \textbf{reprojection de la grille}. La grille CROCO est re-projetée en WGS84. Cette étape est essentielle pour garantir que les données topographiques et la grille sont dans le même système de coordonnées lors de l'interpolation,
+
+	\item \textbf{calcul des statistiques zonales}. Les statistiques zonales sont calculées pour chaque cellule de la grille en utilisant les données raster. La statistique clé utilisée ici est la moyenne, qui donne la valeur moyenne de la topographie pour chaque cellule de la grille,
+
+	\item \textbf{mise à jour des champs de la grille}. Les champs de la grille sont mis à jour avec les coordonnées et les valeurs topographiques. Si une valeur topographique est manquante (c'est-à-dire \texttt{None}), elle est remplacée par une valeur par défaut de 100,
+
+	\item \textbf{génération de la grille et mise en forme des données topographiques}. Enfin, les données topographiques sont remodelées pour correspondre à la forme de la grille CROCO. La sortie est un tableau au format \textit{numpy}\footnote{Une des bibliothèques mathématiques de Python les plus utilisées.} \texttt{h} contenant les données topographiques interpolées.
+\end{itemize}
+
+\paragraph{Détails des étapes successives dans le code de la fonction.\\}
+
+Le script \texttt{add\_topo\_Raster} est conçu pour interpoler les données topographiques d'un fichier raster dans la grille CROCO. Dans le détail, les étapes sont~:
+
+\begin{enumerate}
+	\item \textbf{Entrées}~:
 	\begin{itemize}
-		\item \texttt{topofile} : Le chemin vers le fichier topographique raster.
-		\item \texttt{numColumns} et \texttt{numLines} : Dimensions de la grille sur les axes x et y, respectivement.
+		\item \texttt{topofile}. Le chemin vers le fichier topographique raster de base,
+		\item \texttt{numColumns} et \texttt{numLines}. Dimensions de la grille sur les axes x et y, respectivement.
 	\end{itemize}
 
-	\item \textbf{Processus} :
+	\item \textbf{Processus}~:
 	\begin{itemize}
-		\item Les couches raster et grille du projet sont récupérées.
-		\item La couche grille est re-projetée en WGS84 pour assurer la compatibilité avec les standards géographiques courants.
-		\item Les statistiques zonales sont calculées pour chaque cellule de la grille en utilisant les données du raster. La moyenne des valeurs raster contenues dans chaque cellule est déterminée.
-		\item Les champs de la grille sont mis à jour avec les coordonnées et les valeurs topographiques interpolées.
+		\item les couches raster et grille du projet sont récupérées,
+		\item la couche grille est re-projetée en WGS84 pour assurer la compatibilité avec les standards géographiques courants,
+		\item les statistiques zonales sont calculées pour chaque cellule de la grille en utilisant les données du raster. La moyenne des valeurs raster contenues dans chaque cellule est déterminée,
+		\item les champs de la grille sont mis à jour avec les coordonnées et les valeurs topographiques interpolées.
 	\end{itemize}
 
 	\item \textbf{Sortie} :
 	\begin{itemize}
 		\item \texttt{h} : Un tableau numpy contenant les données topographiques restructurées pour correspondre à la grille CROCO.
 	\end{itemize}
-\end{itemize}
+\end{enumerate}
 
 En somme, ce script assure une transition fluide des données topographiques d'un format raster vers la grille CROCO, permettant ainsi une intégration précise de la topographie dans les simulations océanographiques.
 
