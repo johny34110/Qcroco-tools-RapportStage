@@ -18,37 +18,37 @@
 \contentsline {subsection}{\numberline {4.1}Recherche d'informations}{17}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Exploration de CROCO-Tool et Autres Ressources}{18}{subsubsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.2}Les fichiers \@FB@og Grid \@FB@fg \relax {}}{19}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Traitement des Données Utilisateur pour la Création du Fichier Grid}{20}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Processus de Création du Fichier Grid}{25}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Géneration d'un fichier NetCDF Grid}{28}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.1}Traitement des Données Utilisateur pour la création d'une grille}{20}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Processus de Création de la grille}{25}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Géneration d'un fichier NetCDF de la grille}{28}{subsubsection.4.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.4}Calcul de l'Angle entre les Coordonnées Géodésiques et Sphériques avec Intégration du Paramètre de Coriolis}{29}{subsubsection.4.2.4}%
 \contentsline {subsubsection}{\numberline {4.2.5}Interpolation à partir du fichier topographique}{30}{subsubsection.4.2.5}%
 \contentsline {subsubsection}{\numberline {4.2.6}Traitement des fichiers topographiques au format NetCDF}{32}{subsubsection.4.2.6}%
-\contentsline {paragraph}{Fonctionnement de la fonction:\\}{33}{section*.30}%
-\contentsline {paragraph}{Détails techniques:\\}{34}{section*.31}%
+\contentsline {paragraph}{Fonctionnement de \texttt {Add\_topo\_nc}.\\}{33}{section*.30}%
+\contentsline {paragraph}{Détails des étapes successives dans le code de la fonction.}{33}{section*.32}%
 \contentsline {subsubsection}{\numberline {4.2.7}Traitement des fichiers topographiques au format Raster}{34}{subsubsection.4.2.7}%
-\contentsline {paragraph}{BathyView : Interface de Vérification et de Correction des Données Raster\\}{35}{section*.34}%
-\contentsline {paragraph}{Fonctionnement de la fonction :\\}{36}{section*.36}%
-\contentsline {paragraph}{Détail techniques :\\}{37}{section*.37}%
-\contentsline {subsubsection}{\numberline {4.2.8}Génération du masque pour le fichier \texttt {grid\_croco}}{37}{subsubsection.4.2.8}%
-\contentsline {subsubsection}{\numberline {4.2.9}Finalisation, exportation et visualisation du fichier }{38}{subsubsection.4.2.9}%
-\contentsline {paragraph}{Conclusion sur la génération du fichier \texttt {grid\_croco}:}{39}{section*.40}%
+\contentsline {paragraph}{BathyView : Interface de vérification et de correction des données Raster.\\}{34}{section*.34}%
+\contentsline {paragraph}{Fonctionnement de \texttt {add\_topo\_Raster}.\\}{36}{section*.36}%
+\contentsline {paragraph}{Détails des étapes successives dans le code de la fonction.\\}{36}{section*.37}%
+\contentsline {subsubsection}{\numberline {4.2.8}Génération du masque pour le fichier \texttt {grid\_croco}.}{37}{subsubsection.4.2.8}%
+\contentsline {subsubsection}{\numberline {4.2.9}Finalisation, exportation et visualisation du fichier.}{38}{subsubsection.4.2.9}%
+\contentsline {paragraph}{Conclusion sur la génération du fichier \texttt {grid\_croco}.\\}{38}{section*.40}%
 \contentsline {subsection}{\numberline {4.3}Les fichiers \@FB@og Tides \@FB@fg \relax {}}{39}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Rôle et importance des fichiers de forçage}{40}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Origine des données de forçage : les harmoniques}{40}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Le modèle TPXO9}{40}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Obtention des données}{41}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Intégration dans le plugin QCrocoFlow}{41}{subsubsection.4.3.5}%
-\contentsline {subsubsection}{\numberline {4.3.6}Génération du fichier de forçage à partir du modèle TPXO}{42}{subsubsection.4.3.6}%
-\contentsline {paragraph}{Paramètres d'entrée}{42}{section*.42}%
-\contentsline {paragraph}{Extraction des données de grille}{43}{section*.43}%
-\contentsline {paragraph}{Définition des chemins de données TPXO}{43}{section*.44}%
-\contentsline {paragraph}{Lecture des données TPXO}{43}{section*.45}%
-\contentsline {paragraph}{Calcul des corrections nodales}{43}{section*.46}%
-\contentsline {paragraph}{Interpolation des données TPXO}{43}{section*.47}%
-\contentsline {paragraph}{Création du fichier netCDF}{43}{section*.48}%
-\contentsline {paragraph}{Message de confirmation}{43}{section*.49}%
-\contentsline {subsection}{\numberline {4.4}Les fichiers \@FB@og Bulk \@FB@fg \relax {}}{44}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Résultats}{45}{section.5}%
-\contentsline {section}{\numberline {6}Conclusion et perspectives}{46}{section.6}%
-\contentsline {section}{\numberline {7}Bibliographie}{47}{section.7}%
+\contentsline {subsubsection}{\numberline {4.3.1}Rôle et importance des fichiers de forçage}{39}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Origine des données de forçage par la marée~: les harmoniques.}{39}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Le modèle TPXO9}{39}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Obtention des données}{40}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Intégration dans le plugin QCrocoFlow}{40}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.6}Génération du fichier de forçage à partir du modèle TPXO}{41}{subsubsection.4.3.6}%
+\contentsline {paragraph}{Paramètres d'entrée~:\\}{41}{section*.42}%
+\contentsline {paragraph}{Extraction des données de grille.\\}{42}{section*.43}%
+\contentsline {paragraph}{Définition des chemins de données TPXO.\\}{42}{section*.44}%
+\contentsline {paragraph}{Lecture des données TPXO.\\}{42}{section*.45}%
+\contentsline {paragraph}{Calcul des corrections nodales.\\}{42}{section*.46}%
+\contentsline {paragraph}{Interpolation des données TPXO.\\}{42}{section*.47}%
+\contentsline {paragraph}{Création du fichier netCDF.\\}{42}{section*.48}%
+\contentsline {paragraph}{Message de confirmation.\\}{43}{section*.49}%
+\contentsline {subsection}{\numberline {4.4}Les fichiers \@FB@og Bulk \@FB@fg \relax {}}{43}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Résultats}{44}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion et perspectives}{45}{section.6}%
+\contentsline {section}{\numberline {7}Bibliographie}{46}{section.7}%

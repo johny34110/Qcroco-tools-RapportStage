@@ -81,15 +81,17 @@ Les facteurs nodaux sont des coefficients qui varient dans le temps et sont util
 
 \paragraph{Interpolation des données TPXO.\\}
 
-Pour ce faire, nous avons employé la même méthode d'interpolation que celle utilisée précédemment pour la topographie, en s'appuyant sur les fichiers netCDF. Chaque composant harmonique des données TPXO est soigneusement interpolé sur la grille CROCO. Suite à cette interpolation, les amplitudes et les phases sont converties en paramètres d'ellipse de courant de marée. Ces paramètres comprennent les axes semi-majeur et semi-mineur\footnote{L'axe semi-mineur est le plus petit rayon d'une ellipse, allant du centre à l'un des points les plus proches de l'ellipse.}, l'excentricité, l'inclinaison\footnote{L'inclinaison est l'angle entre l'axe semi-majeur de l'ellipse et une référence fixe, généralement l'axe des abscisses.} et la phase\footnote{La phase représente le décalage temporel d'un signal périodique par rapport à une référence. Dans le contexte des marées, elle indique le moment où la marée haute ou basse se produit.}.
+Pour ce faire, nous avons employé la même méthode d'interpolation que celle utilisée précédemment pour la topographie, en s'appuyant sur les fichiers NetCDF. Chaque composant harmonique des données TPXO est soigneusement interpolé sur la grille CROCO. Suite à cette interpolation, les amplitudes et les phases sont converties en paramètre d'ellipse de courant de marée. Ces paramètres comprennent les axes semi-majeur et semi-mineur\footnote{L'axe semi-mineur est le plus petit rayon d'une ellipse, allant du centre à l'un des points les plus proches de l'ellipse.}, l'excentricité, l'inclinaison\footnote{L'inclinaison est l'angle entre l'axe semi-majeur de l'ellipse et une référence fixe, généralement l'axe des abscisses.} et la phase\footnote{La phase représente le décalage temporel d'un signal périodique par rapport à une référence. Dans le contexte des marées, elle indique le moment où se produit la marée haute ou la marée basse.}.
 
 
-\paragraph{Création du fichier netCDF}
-Un fichier netCDF est généré pour conserver les données de forçage issues de la transformation. Les données, une fois interpolées, sont enregistrées dans ce format, accompagnées des attributs nécessaires pour garantir leur intégrité et leur compréhension. Ce fichier est sauvegardé dans le même répertoire que la grille de travail, et est nommé en suivant la convention : \textit{"titre du projet"}\_tides.nc.
+\paragraph{Création du fichier netCDF.\\}
+
+Un fichier NetCDF est généré pour conserver les données de forçage issues de la transformation. Les données, une fois interpolées, sont enregistrées dans ce format, accompagnées des attributs nécessaires pour garantir leur intégrité et leur compréhension. Ce fichier est sauvegardé dans le même répertoire que la grille de travail, et est nommé en suivant la convention : \og \textit{"titre du projet"}\_tides.nc \fg{}.
 
 
-\paragraph{Message de confirmation}
-Une fois le processus terminé, un message est affiché pour informer l'utilisateur que le fichier de forçage a été généré avec succès.\\
+\paragraph{Message de confirmation.\\}
+
+Une fois le processus terminé, un message est affiché pour informer l'utilisateur que le fichier de forçage a été généré avec succès. Cette option a été choisie, car le processus d'interpolation et de création du fichier final NetCDF peut être relativement long en fonction de la machine sur laquelle sont réalisées les opérations et du nombre d'harmoniques choisi.\\
 
 En résumé, la fonction \texttt{TPXO2CROCO} a permis d'automatiser le processus de conversion des données TPXO pour les rendre compatibles avec CROCO. Cette automatisation garantit une intégration fluide des effets de marée dans les simulations CROCO, offrant ainsi aux utilisateurs un outil puissant pour leurs études océanographiques.
 
