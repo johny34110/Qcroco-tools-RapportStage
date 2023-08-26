@@ -171,9 +171,48 @@
 \@writefile{toc}{\contentsline {paragraph}{Interpolation des données TPXO}{43}{section*.47}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Création du fichier netCDF}{43}{section*.48}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Message de confirmation}{43}{section*.49}\protected@file@percent }
+\citation{grenier2021modernisation,gatien2023using,delhasse2020brief,levesque2022evaluation,lang2019climate}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Les fichiers \@FB@og  Bulk \@FB@fg  \relax {}}{44}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Résultats}{45}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion et perspectives}{46}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Le modèle ERA5}{44}{subsubsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Accès et récupération des données ERA5}{44}{subsubsection.4.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Données récupérées du modèle ERA5}{44}{subsubsection.4.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4}Implémentation du script dans l'interface Qcrocoflow}{45}{subsubsection.4.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Vue d'ensemble de la section "Bulk" dans l'interface Qcrocoflow.\relax }}{46}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:bulk_interface}{{33}{46}{Vue d'ensemble de la section "Bulk" dans l'interface Qcrocoflow.\relax }{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.5}Fonctionnement du script de génération des fichiers météo}{46}{subsubsection.4.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Récupération des données avec \texttt  {ERA5\_request.py}}{46}{section*.51}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Conversion des données pour CROCO}{46}{section*.52}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Interpolation des données sur la grille CROCO}{47}{section*.53}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Diagramme de flux illustrant le fonctionnement du script de génération des fichiers météo.\relax }}{47}{figure.caption.54}\protected@file@percent }
+\newlabel{fig:script_flow}{{34}{47}{Diagramme de flux illustrant le fonctionnement du script de génération des fichiers météo.\relax }{figure.caption.54}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Résultats}{48}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Paramètres utilisateurs de la zone}{48}{subsection.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces Dossier de sortie nommé \texttt  {"SntVast"}.\relax }}{48}{figure.caption.55}\protected@file@percent }
+\newlabel{fig:chemin_sortie}{{35}{48}{Dossier de sortie nommé \texttt {"SntVast"}.\relax }{figure.caption.55}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces Interface Qcrocoflow montrant les paramètres sélectionnés pour la simulation.\relax }}{49}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:qcroco_param}{{36}{49}{Interface Qcrocoflow montrant les paramètres sélectionnés pour la simulation.\relax }{figure.caption.56}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Choix de la zone d'étude et génération du fichier \texttt  {grid}}{49}{subsection.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces Paramètres de la grille dans Qcrocoflow avec visualisation de la zone d'étude sur la carte.\relax }}{50}{figure.caption.57}\protected@file@percent }
+\newlabel{fig:qcroco_grid}{{37}{50}{Paramètres de la grille dans Qcrocoflow avec visualisation de la zone d'étude sur la carte.\relax }{figure.caption.57}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces Aperçu du fichier \texttt  {SntVast.grd} généré pour la simulation.\relax }}{50}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:gdr_croco}{{38}{50}{Aperçu du fichier \texttt {SntVast.grd} généré pour la simulation.\relax }{figure.caption.58}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Génération des fichiers de forçage par marées}{51}{subsection.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces Interface Qcrocoflow pour la génération des fichiers de forçage par marées.\relax }}{51}{figure.caption.59}\protected@file@percent }
+\newlabel{fig:qcroco_forcing}{{39}{51}{Interface Qcrocoflow pour la génération des fichiers de forçage par marées.\relax }{figure.caption.59}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces Aperçu du fichier de forçage \texttt  {SntVast\_frc01Jan2016.nc} pour la zone de Saint-Vaast-la-Hougue.\relax }}{52}{figure.caption.60}\protected@file@percent }
+\newlabel{fig:sntvast_forcing}{{40}{52}{Aperçu du fichier de forçage \texttt {SntVast\_frc01Jan2016.nc} pour la zone de Saint-Vaast-la-Hougue.\relax }{figure.caption.60}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Génération des fichiers météorologiques : BULK}{52}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Étape 1 : Téléchargement des données ERA5}{52}{section*.61}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces Aperçu des dossiers générés après le téléchargement des données ERA5.\relax }}{52}{figure.caption.62}\protected@file@percent }
+\newlabel{fig:bulk_files}{{41}{52}{Aperçu des dossiers générés après le téléchargement des données ERA5.\relax }{figure.caption.62}{}}
+\@writefile{toc}{\contentsline {paragraph}{Étape 2 : Génération des fichiers BULK}{52}{section*.63}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces Interface QcrocoFlow pour la génération des fichiers BULK.\relax }}{53}{figure.caption.64}\protected@file@percent }
+\newlabel{fig:qcroco_bulk}{{42}{53}{Interface QcrocoFlow pour la génération des fichiers BULK.\relax }{figure.caption.64}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {43}{\ignorespaces Fichiers BULK générés pour la simulation.\relax }}{53}{figure.caption.65}\protected@file@percent }
+\newlabel{fig:bulk_generated}{{43}{53}{Fichiers BULK générés pour la simulation.\relax }{figure.caption.65}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Conclusion de la configuration CROCO pour Saint-Vast-la-Hougue}{53}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion et perspectives}{55}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Perspectives}{55}{subsection.6.1}\protected@file@percent }
 \bibstyle{plainnat}
 \bibdata{./Biblio/STAGE}
 \bibcite{advancingDynamicalCores}{{1}{2019}{{adv}}{{}}}
@@ -185,30 +224,35 @@
 \bibcite{CROCOForum2022}{{7}{2022}{{Community}}{{}}}
 \bibcite{croco_forum}{{8}{2023}{{Community}}{{}}}
 \bibcite{crocoofficial}{{9}{2023}{{CROCO}}{{}}}
-\bibcite{bjerknes1970}{{10}{1970}{{Doe}}{{}}}
-\bibcite{Donoso2022}{{11}{2022}{{Donoso}}{{}}}
-\bibcite{egbert2002efficient}{{12}{2002}{{Egbert and Erofeeva}}{{}}}
-\bibcite{ERA5}{{13}{2023}{{ERA5}}{{}}}
-\bibcite{erofeeva2010high}{{14}{2010}{{Erofeeva and Egbert}}{{}}}
-\bibcite{flather1976}{{15}{1976}{{Flather}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Bibliographie}{47}{section.7}\protected@file@percent }
-\bibcite{croco2022}{{16}{2022}{{IFREMER}}{{}}}
-\bibcite{croco_doc}{{17}{2022}{{Jullien et~al.}}{{Jullien, Caillaud, Benshila, Bordois, Cambon, Dumas, Gentil, Lemarié, Marchesiello, Theetten, Dufois, Corre, Morvan, {Solene Le Gac}, Gula, and Pianezze}}}
-\bibcite{Legrand}{{18}{2017}{{Legrand}}{{}}}
-\bibcite{LUSAC}{{19}{2023}{{LUSAC}}{{}}}
-\bibcite{croco_video}{{20}{2023}{{Model}}{{}}}
-\bibcite{noaa2023}{{21}{2023}{{National Oceanic and Atmospheric Administration}}{{}}}
-\bibcite{crocotool2007}{{22}{2007}{{Penven et~al.}}{{Penven, Marchesiello, Debreu, and Lefevre}}}
-\bibcite{QGIS}{{23}{2023}{{QGIS}}{{}}}
-\bibcite{qt}{{24}{2023}{{Qt}}{{}}}
-\bibcite{ray2012tide}{{25}{2012}{{Ray and Egbert}}{{}}}
-\bibcite{Tide}{{26}{2022}{{Renault and Marchesiello}}{{}}}
-\bibcite{richardson1922}{{27}{1922}{{Richardson}}{{}}}
-\bibcite{stammer2014accuracy}{{28}{2014}{{Stammer et~al.}}{{}}}
-\bibcite{tpxo9}{{29}{2023}{{TPXO9}}{{}}}
-\bibcite{Wikipedia2023Bicubic}{{30}{2023{a}}{{Wikipédia}}{{}}}
-\bibcite{Wikipedia2023Bilinear}{{31}{2023{b}}{{Wikipédia}}{{}}}
-\bibcite{Wikipedia2023Linear}{{32}{2023{c}}{{Wikipédia}}{{}}}
-\bibcite{Wikipedia2023Spline}{{33}{2023{d}}{{Wikipédia}}{{}}}
+\bibcite{delhasse2020brief}{{10}{2020}{{Delhasse et~al.}}{{Delhasse, Kittel, Amory, Hofer, Van~As, et~al.}}}
+\bibcite{bjerknes1970}{{11}{1970}{{Doe}}{{}}}
+\bibcite{Donoso2022}{{12}{2022}{{Donoso}}{{}}}
+\bibcite{egbert2002efficient}{{13}{2002}{{Egbert and Erofeeva}}{{}}}
+\bibcite{ERA5}{{14}{2023}{{ERA5}}{{}}}
+\bibcite{erofeeva2010high}{{15}{2010}{{Erofeeva and Egbert}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Bibliographie}{56}{section.7}\protected@file@percent }
+\bibcite{flather1976}{{16}{1976}{{Flather}}{{}}}
+\bibcite{gatien2023using}{{17}{2023}{{Gatien et~al.}}{{Gatien, Arsenault, Martel, et~al.}}}
+\bibcite{grenier2021modernisation}{{18}{2021}{{Grenier}}{{}}}
+\bibcite{croco2022}{{19}{2022}{{IFREMER}}{{}}}
+\bibcite{croco_doc}{{20}{2022}{{Jullien et~al.}}{{Jullien, Caillaud, Benshila, Bordois, Cambon, Dumas, Gentil, Lemarié, Marchesiello, Theetten, Dufois, Corre, Morvan, {Solene Le Gac}, Gula, and Pianezze}}}
+\bibcite{lang2019climate}{{21}{2019}{{Lang}}{{}}}
+\bibcite{Legrand}{{22}{2017}{{Legrand}}{{}}}
+\bibcite{levesque2022evaluation}{{23}{2022}{{Levesque}}{{}}}
+\bibcite{LUSAC}{{24}{2023}{{LUSAC}}{{}}}
+\bibcite{croco_video}{{25}{2023}{{Model}}{{}}}
+\bibcite{noaa2023}{{26}{2023}{{National Oceanic and Atmospheric Administration}}{{}}}
+\bibcite{crocotool2007}{{27}{2007}{{Penven et~al.}}{{Penven, Marchesiello, Debreu, and Lefevre}}}
+\bibcite{QGIS}{{28}{2023}{{QGIS}}{{}}}
+\bibcite{qt}{{29}{2023}{{Qt}}{{}}}
+\bibcite{ray2012tide}{{30}{2012}{{Ray and Egbert}}{{}}}
+\bibcite{Tide}{{31}{2022}{{Renault and Marchesiello}}{{}}}
+\bibcite{richardson1922}{{32}{1922}{{Richardson}}{{}}}
+\bibcite{stammer2014accuracy}{{33}{2014}{{Stammer et~al.}}{{}}}
+\bibcite{tpxo9}{{34}{2023}{{TPXO9}}{{}}}
+\bibcite{Wikipedia2023Bicubic}{{35}{2023{a}}{{Wikipédia}}{{}}}
+\bibcite{Wikipedia2023Bilinear}{{36}{2023{b}}{{Wikipédia}}{{}}}
+\bibcite{Wikipedia2023Linear}{{37}{2023{c}}{{Wikipédia}}{{}}}
+\bibcite{Wikipedia2023Spline}{{38}{2023{d}}{{Wikipédia}}{{}}}
 \ACRO{total-barriers}{1}
-\gdef \@abspage@last{55}
+\gdef \@abspage@last{66}
