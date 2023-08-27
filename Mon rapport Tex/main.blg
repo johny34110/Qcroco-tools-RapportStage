@@ -23,47 +23,49 @@ Warning--to sort, need author or key in spatioTemporalFeatures
 Warning--empty author in advancingDynamicalCores
 Warning--empty author in challengesProspects
 Warning--empty author in spatioTemporalFeatures
+Warning--empty journal in grenier2021modernisation
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
-You've used 33 entries,
+Warning--empty journal in levesque2022evaluation
+You've used 38 entries,
             2773 wiz_defined-function locations,
-            768 strings with 10599 characters,
-and the built_in function-call counts, 13099 in all, are:
-= -- 1115
-> -- 810
-< -- 27
-+ -- 291
-- -- 255
-* -- 939
-:= -- 2047
-add.period$ -- 114
-call.type$ -- 33
-change.case$ -- 181
-chr.to.int$ -- 30
-cite$ -- 77
-duplicate$ -- 560
-empty$ -- 1086
-format.name$ -- 294
-if$ -- 2723
+            787 strings with 11478 characters,
+and the built_in function-call counts, 15027 in all, are:
+= -- 1269
+> -- 934
+< -- 30
++ -- 335
+- -- 294
+* -- 1073
+:= -- 2362
+add.period$ -- 129
+call.type$ -- 38
+change.case$ -- 207
+chr.to.int$ -- 35
+cite$ -- 89
+duplicate$ -- 661
+empty$ -- 1248
+format.name$ -- 338
+if$ -- 3117
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 16
-newline$ -- 188
-num.names$ -- 120
-pop$ -- 451
+missing$ -- 21
+newline$ -- 213
+num.names$ -- 140
+pop$ -- 514
 preamble$ -- 1
-purify$ -- 150
+purify$ -- 171
 quote$ -- 0
-skip$ -- 490
+skip$ -- 563
 stack$ -- 0
-substring$ -- 165
-swap$ -- 36
+substring$ -- 175
+swap$ -- 40
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 353
-warning$ -- 8
-while$ -- 97
+type$ -- 408
+warning$ -- 10
+while$ -- 112
 width$ -- 0
-write$ -- 437
-(There were 15 warnings)
+write$ -- 495
+(There were 17 warnings)

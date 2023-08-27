@@ -1,4 +1,4 @@
-\begin{thebibliography}{33}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -68,6 +68,13 @@ CROCO.
 \newblock URL \url{https://www.croco-ocean.org/}.
 \newblock Accessed: [date de consultation].
 
+\bibitem[Delhasse et~al.(2020)Delhasse, Kittel, Amory, Hofer, Van~As,
+  et~al.]{delhasse2020brief}
+A~Delhasse, C~Kittel, C~Amory, S~Hofer, D~Van~As, et~al.
+\newblock Brief communication: Evaluation of the near-surface climate in era5
+  over the greenland ice sheet.
+\newblock \emph{The Cryosphere}, 2020.
+
 \bibitem[Doe(1970)]{bjerknes1970}
 John Doe.
 \newblock \emph{Early Meteorological Work of Vilhelm Bjerknes}.
@@ -105,6 +112,18 @@ R.A. Flather.
 \newblock A tidal model of the northwest european continental shelf.
 \newblock \emph{Memories de la Societe Royale des Sciences de Liege}, 1976.
 
+\bibitem[Gatien et~al.(2023)Gatien, Arsenault, Martel, et~al.]{gatien2023using}
+P~Gatien, R~Arsenault, JL~Martel, et~al.
+\newblock Using the era5 and era5-land reanalysis datasets for river water
+  temperature modelling in a data-scarce region.
+\newblock \emph{Water Resources Journal}, 2023.
+
+\bibitem[Grenier(2021)]{grenier2021modernisation}
+D~Grenier.
+\newblock Modernisation des données de réanalyse pour west et impact sur le
+  potentiel éolien analysé: implantation des réanalyses era5.
+\newblock 2021.
+
 \bibitem[IFREMER(2022)]{croco2022}
 IFREMER.
 \newblock Introduction to ocean modelling with croco, 2022.
@@ -123,6 +142,12 @@ Swen Jullien, Matthieu Caillaud, Rachid Benshila, Lucie Bordois, Gildas Cambon,
 \newblock 2022.
 \newblock \doi{10.5281/ZENODO.7400758}.
 
+\bibitem[Lang(2019)]{lang2019climate}
+C~Lang.
+\newblock 1979-2018 climate and surface mass balance of svalbard with the
+  regional climate model mar forced by era-5.
+\newblock In \emph{AGU Fall Meeting Abstracts}, 2019.
+
 \bibitem[Legrand(2017)]{Legrand}
 T{\'e}rence Legrand.
 \newblock Projet de mod{\'e}lisation de la circulation oc{\'e}anique
@@ -130,6 +155,12 @@ T{\'e}rence Legrand.
 \newblock 2017.
 \newblock URL
   \url{https://people.mio.osupytheas.fr/~doglioli/Legrand_rapportOPB205.pdf}.
+
+\bibitem[Levesque(2022)]{levesque2022evaluation}
+G~Levesque.
+\newblock Évaluation de l'utilisation des données des réanalyses era5 et
+  era5-land pour la modélisation de l'évapotranspiration.
+\newblock 2022.
 
 \bibitem[{LUSAC}(2023)]{LUSAC}
 {LUSAC}.

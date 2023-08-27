@@ -1,1 +1,94 @@
-La génération des fichiers météorologiques, également connus sous le nom de fichiers "bulk". Ces fichiers sont essentiels pour améliorer la précision du modèle CROCO. En effet, ils fournissent des informations détaillées sur diverses composantes atmosphériques, telles que la radiation, la température, la vitesse du vent, et bien d'autres. Ces composantes jouent un rôle crucial dans la modélisation des interactions océan-atmosphère, et leur intégration permet d'obtenir des simulations plus réalistes et précises. Nous détaillerons ce processus dans le sous-chapitre suivant.
+Pour améliorer la précision des simulations dans CROCO, il est essentiel d'intégrer des informations météorologiques précises. Ces informations, souvent appelées données "BULK", englobent diverses composantes atmosphériques telles que la radiation, la température, la vitesse du vent, entre autres. Pour ce faire, nous avons choisi d'utiliser le modèle ERA5 développé par le Centre européen pour les prévisions météorologiques à moyen terme (ECMWF)\footnote{\og European Centre for Medium-Range Weather Forecasts\fg{}}.
+
+\subsubsection{Le modèle ERA5}
+Le modèle ERA5 est la cinquième génération de réanalyses atmosphériques de l'ECMWF. Il fournit des données horaires sur de nombreux paramètres atmosphériques, terrestres et océaniques à une résolution spatiale de 31 km. Ces réanalyses sont produites en utilisant la version la plus récente du modèle de prévision ECMWF et sont disponibles de 1979 à près du temps réel (j+10). Le modèle ERA5 est largement reconnu pour sa précision et est utilisé dans de nombreuses études climatologiques et météorologiques(\cite {grenier2021modernisation, gatien2023using, delhasse2020brief, levesque2022evaluation, lang2019climate}).
+
+
+\subsubsection{Accès et récupération des données ERA5}
+
+Le modèle ERA5 est accessible librement au public, ce qui facilite grandement son utilisation pour diverses applications scientifiques et techniques. Pour accéder aux données, la première étape consiste à se rendre sur le site officiel d'ERA5, situé à l'adresse \url{https://cds.climate.copernicus.eu}. Une fois sur le site, il est nécessaire de créer un compte utilisateur. Après avoir confirmé l'inscription, l'utilisateur a accès à une vaste gamme de données climatiques.
+
+Pour faciliter le processus de téléchargement des données, le site propose un guide détaillé, accessible à l'adresse \url{https://cds.climate.copernicus.eu/api-how-to}. Ce guide explique comment configurer un fichier contenant les identifiants de l'utilisateur, permettant ainsi d'automatiser le processus de téléchargement. Une fois ce fichier configuré, le reste du processus est géré par le script que nous détaillerons dans une section ultérieure.
+
+\subsubsection{Données récupérées du modèle ERA5}
+
+Le modèle ERA5 fournit une multitude de paramètres atmosphériques essentiels pour la simulation océanique. Pour notre application, nous avons choisi de récupérer les paramètres suivants :
+
+\begin{itemize}
+	\item Humidité (en kg)
+	\item Radiation solaire nette à la surface (en J m\textsuperscript{-2}\footnote{J m\textsuperscript{-2} représente des joules par mètre carré, une unité de densité d'énergie.})
+	\item Température de la surface de la mer (en K\footnote{K représente Kelvin, l'unité de mesure de la température absolue.})
+	\item Radiation thermique descendante à la surface (en J m\textsuperscript{-2})
+	\item Précipitation totale (en m)
+	\item Température à 2m (en K)
+	\item Composante u du vent à 10m (en m s\textsuperscript{-1}\footnote{m s\textsuperscript{-1} représente des mètres par seconde, une unité de vitesse.})
+	\item Composante v du vent à 10m (en m s\textsuperscript{-1})
+\end{itemize}
+
+Ces paramètres jouent un rôle crucial dans la simulation océanique. Par exemple, la radiation solaire nette à la surface influence la température de la surface de l'eau, ce qui peut affecter les courants océaniques. L'humidité et la précipitation totale, quant à elles, ont un impact sur la salinité de l'eau. Les composantes du vent influencent directement les courants de surface et peuvent générer des vagues. La température à 2m donne une indication sur les échanges thermiques entre l'atmosphère et l'océan.
+
+Il est à noter que le modèle ERA5 offre de nombreux autres paramètres qui peuvent être pertinents pour d'autres applications ou analyses plus approfondies.
+
+\subsubsection{Implémentation du script dans l'interface Qcrocoflow}
+
+L'intégration du script de téléchargement des données ERA5 dans l'interface Qcrocoflow a été conçue pour être aussi intuitive que possible pour l'utilisateur. La Figure \ref{fig:bulkuser} illustre l'interface utilisateur dédiée à cette fonctionnalité.
+
+Une fois toutes les étapes précédentes réalisées (définition des paramètres de sortie, création de la grille, etc.) et après avoir créé son fichier d'accès au modèle ERA5, l'utilisateur peut simplement cliquer sur le bouton \textit{"download era5"}. Le script, grâce à l'API\footnote{API signifie \textit{Application Programming Interface}. C'est un ensemble de définitions et de protocoles qui permet à des logiciels de communiquer entre eux.}, interroge la base de données ERA5 pour récupérer les données correspondant à la zone et à la date sélectionnées par l'utilisateur. Ces données sont ensuite téléchargées automatiquement dans un dossier spécifique, qui sera utilisé ultérieurement par le script.
+
+Il est important de noter que le téléchargement des données peut varier en durée, en fonction de la connexion internet, de la taille de la zone sélectionnée et de la période choisie. Pour optimiser ce processus, si un utilisateur envisage de réaliser plusieurs configurations CROCO pour une même zone et une même période, il est possible de télécharger les données une seule fois pour une zone élargie. Par la suite, en utilisant le bouton \textit{"select folder era5"}, l'utilisateur peut simplement sélectionner le dossier contenant les données déjà téléchargées, évitant ainsi des téléchargements redondants. Par exemple, pour plusieurs configurations dans la zone de la Manche pour des dates identiques, l'utilisateur peut télécharger les données pour l'ensemble de la Manche, puis créer des configurations spécifiques à des sous-zones, sans avoir à retélécharger les données.
+
+Dans les sections suivantes, nous détaillerons le fonctionnement interne du script et les mécanismes mis en place pour assurer cette fluidité d'utilisation.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=5in]{./IMAGES/Bulk/bulk_interface_overview.png}
+	\caption{Vue d'ensemble de la section "Bulk" dans l'interface Qcrocoflow.}
+	\label{fig:bulk_interface}
+\end{figure}
+
+\subsubsection{Fonctionnement du script de génération des fichiers météo}
+
+Le script de génération des fichiers météo est conçu pour automatiser et simplifier le processus de préparation des données atmosphériques pour les simulations CROCO. Il se décompose en trois étapes principales, chacune ayant un rôle spécifique dans le traitement des données.
+
+\paragraph{Récupération des données avec \texttt{ERA5\_request.py}}
+La première étape du script, gérée par le module \texttt{ERA5\_request.py}, consiste à récupérer les données pertinentes de la zone d'étude. Pour ce faire, le script utilise les coordonnées de la grille définie par l'utilisateur. Afin de garantir la complétude des données, la zone est étendue d'un degré supplémentaire. De plus, pour s'assurer que la simulation est entièrement couverte, les données sont récupérées pour une période s'étendant d'un mois avant et après les dates spécifiées par l'utilisateur. Les fichiers récupérés, au format netCDF, sont stockés dans un dossier nommé \texttt{era5} situé dans le répertoire de travail défini par l'utilisateur.
+
+\paragraph{Conversion des données pour CROCO}
+La deuxième étape du script prend en charge la conversion des fichiers netCDF précédemment téléchargés pour les adapter aux besoins spécifiques de CROCO. Cette étape est cruciale pour garantir que les données atmosphériques sont dans un format compatible avec le modèle océanique.
+
+\paragraph{Interpolation des données sur la grille CROCO}
+Enfin, la troisième et dernière étape du script se charge d'interpoler les données atmosphériques sur la grille CROCO. Cette interpolation garantit que chaque cellule de la grille dispose des valeurs atmosphériques appropriées pour la simulation. À l'issue de cette étape, un fichier \texttt{Bulk\_croco.nc} est généré pour chaque mois de la période de simulation. Par exemple, si la période de simulation couvre trois mois, trois fichiers \texttt{Bulk} distincts seront produits.\\
+
+En résumé, ce script offre une solution automatisée pour préparer les données atmosphériques nécessaires aux simulations CROCO, garantissant ainsi une intégration fluide et précise des conditions météorologiques dans le modèle.
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[node distance=2cm]
+
+		\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+		\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+		\tikzstyle{arrow} = [thick,->,>=stealth]
+		
+	
+		\node (start) [startstop] {Qcrocoflow};
+		\node (proc1) [process, below of=start] {Récupération des données avec \texttt{ERA5\_request.py}};
+		\node (proc2) [process, below of=proc1] {Conversion des données pour CROCO};
+		\node (proc3) [process, below of=proc2] {Interpolation sur la grille CROCO};
+		\node (stop) [startstop, below of=proc3] {Fichier Bulk};
+		
+
+		\draw [arrow] (start) -- (proc1);
+		\draw [arrow] (proc1) -- (proc2);
+		\draw [arrow] (proc2) -- (proc3);
+		\draw [arrow] (proc3) -- (stop);
+		
+	\end{tikzpicture}
+	\caption{Diagramme de flux illustrant le fonctionnement du script de génération des fichiers météo.}
+	\label{fig:script_flow}
+\end{figure}
+	
+
