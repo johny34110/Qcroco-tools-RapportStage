@@ -12,60 +12,63 @@ Warning--entry type for "bellayersimulation" isn't style-file defined
 Warning--entry type for "QGIS" isn't style-file defined
 --line 50 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco2022" isn't style-file defined
---line 90 of file ./Biblio/STAGE.bib
+--line 91 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco_forum" isn't style-file defined
---line 173 of file ./Biblio/STAGE.bib
+--line 174 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco_video" isn't style-file defined
---line 180 of file ./Biblio/STAGE.bib
+--line 181 of file ./Biblio/STAGE.bib
+Warning--I didn't find a database entry for "grenier2021modernisation"
+Warning--I didn't find a database entry for "gatien2023using"
+Warning--I didn't find a database entry for "delhasse2020brief"
+Warning--I didn't find a database entry for "levesque2022evaluation"
+Warning--I didn't find a database entry for "lang2019climate"
 Warning--to sort, need author or key in advancingDynamicalCores
 Warning--to sort, need author or key in challengesProspects
 Warning--to sort, need author or key in spatioTemporalFeatures
 Warning--empty author in advancingDynamicalCores
 Warning--empty author in challengesProspects
 Warning--empty author in spatioTemporalFeatures
-Warning--empty journal in grenier2021modernisation
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
-Warning--empty journal in levesque2022evaluation
-You've used 38 entries,
+You've used 33 entries,
             2773 wiz_defined-function locations,
-            787 strings with 11478 characters,
-and the built_in function-call counts, 15027 in all, are:
-= -- 1269
-> -- 934
-< -- 30
-+ -- 335
-- -- 294
-* -- 1073
-:= -- 2362
-add.period$ -- 129
-call.type$ -- 38
-change.case$ -- 207
-chr.to.int$ -- 35
-cite$ -- 89
-duplicate$ -- 661
-empty$ -- 1248
-format.name$ -- 338
-if$ -- 3117
+            774 strings with 10769 characters,
+and the built_in function-call counts, 13113 in all, are:
+= -- 1118
+> -- 810
+< -- 27
++ -- 291
+- -- 255
+* -- 941
+:= -- 2050
+add.period$ -- 115
+call.type$ -- 33
+change.case$ -- 181
+chr.to.int$ -- 30
+cite$ -- 77
+duplicate$ -- 560
+empty$ -- 1086
+format.name$ -- 294
+if$ -- 2726
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 21
-newline$ -- 213
-num.names$ -- 140
-pop$ -- 514
+missing$ -- 16
+newline$ -- 189
+num.names$ -- 120
+pop$ -- 450
 preamble$ -- 1
-purify$ -- 171
+purify$ -- 150
 quote$ -- 0
-skip$ -- 563
+skip$ -- 490
 stack$ -- 0
-substring$ -- 175
-swap$ -- 40
+substring$ -- 165
+swap$ -- 36
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 408
-warning$ -- 10
-while$ -- 112
+type$ -- 353
+warning$ -- 8
+while$ -- 97
 width$ -- 0
-write$ -- 495
-(There were 17 warnings)
+write$ -- 439
+(There were 20 warnings)
