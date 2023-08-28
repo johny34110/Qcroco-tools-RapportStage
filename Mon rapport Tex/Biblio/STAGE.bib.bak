@@ -82,6 +82,7 @@
   title     = {Coastal and Regional Ocean COmmunity model},
   year      = {2022},
   doi       = {10.5281/ZENODO.7415055},
+  url       = {https://gmd.copernicus.org/articles/16/1163/2023/gmd-16-1163-2023-assets.html},
   copyright = {Creative Commons Attribution 4.0 International},
   keywords  = {Ocean Modeling},
   publisher = {Zenodo},
@@ -318,39 +319,6 @@
 	pages={243--282},
 	year={2014},
 	publisher={Wiley Online Library}
-}
-
-@article{grenier2021modernisation,
-	title={Modernisation des données de réanalyse pour WEST et impact sur le potentiel éolien analysé: implantation des réanalyses ERA5},
-	author={Grenier, D},
-	year={2021}
-}
-
-@article{gatien2023using,
-	title={Using the ERA5 and ERA5-Land reanalysis datasets for river water temperature modelling in a data-scarce region},
-	author={Gatien, P and Arsenault, R and Martel, JL and others},
-	journal={Water Resources Journal},
-	year={2023}
-}
-
-@article{delhasse2020brief,
-	title={Brief communication: Evaluation of the near-surface climate in ERA5 over the Greenland Ice Sheet},
-	author={Delhasse, A and Kittel, C and Amory, C and Hofer, S and Van As, D and others},
-	journal={The Cryosphere},
-	year={2020}
-}
-
-@article{levesque2022evaluation,
-	title={Évaluation de l'utilisation des données des réanalyses ERA5 et ERA5-Land pour la modélisation de l'évapotranspiration},
-	author={Levesque, G},
-	year={2022}
-}
-
-@inproceedings{lang2019climate,
-	title={1979-2018 Climate and Surface Mass Balance of Svalbard with the Regional Climate Model MAR Forced by ERA-5},
-	author={Lang, C},
-	booktitle={AGU Fall Meeting Abstracts},
-	year={2019}
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

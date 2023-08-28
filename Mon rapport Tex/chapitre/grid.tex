@@ -55,7 +55,7 @@ Une fois les paramètres saisis, nous exploitons pleinement les capacités offer
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{./IMAGES/BathyF.png}
-	\caption{Interface graphique de l'outil Qcrocoflow : intégration et Visualisation d'un Fichier Topographique dans QGIS}
+	\caption{Interface graphique de l'outil QCrocoflow : intégration et Visualisation d'un Fichier Topographique dans QGIS}
 	\label{fig:BathyF}
 \end{figure}
 
@@ -262,7 +262,7 @@ Avec ces étapes, nous avons généré deux nouvelles variables essentielles : l
 
 \subsubsection{Interpolation à partir du fichier topographique}
 
-Après avoir élaboré les variables initiales de la zone d'étude, nous abordons désormais l'intégration des données topographiques au sein du fichier grid. Ces données, fournies par l'utilisateur via le plugin \textit{qcrocoflow}, sont essentielles pour définir les caractéristiques physiques du fond marin dans notre modèle, ainsi que le masque qui définit les partie submergé. Cependant, étant donné la diversité des formats de fichiers topographiques disponibles (tels que netCDF, TIFF, GRD, etc.), il est impératif d'avoir un mécanisme robuste pour traiter chaque type de fichier.
+Après avoir élaboré les variables initiales de la zone d'étude, nous abordons désormais l'intégration des données topographiques au sein du fichier grid. Ces données, fournies par l'utilisateur via le plugin \textit{QCrocoFlow}, sont essentielles pour définir les caractéristiques physiques du fond marin dans notre modèle, ainsi que le masque qui définit les partie submergé. Cependant, étant donné la diversité des formats de fichiers topographiques disponibles (tels que netCDF, TIFF, GRD, etc.), il est impératif d'avoir un mécanisme robuste pour traiter chaque type de fichier.
 
 L'interpolation est une méthode mathématique utilisée pour déduire des valeurs à des emplacements non spécifiés, dans notre cas dans chaque maille de la grille généré, à partir d'un ensemble de valeurs connues à savoir le fichier topographique. Plusieurs méthodes d'interpolation peuvent être utilisées, chacune ayant ses propres avantages et inconvénients. Voici quelques-unes des méthodes d'interpolation les plus couramment utilisées :
 
@@ -491,7 +491,7 @@ L'étape finale de ce processus consiste à rassembler toutes les variables gén
 \paragraph{Conclusion sur la génération du fichier \texttt{grid\_croco}:}
 L'interface de génération du fichier offre de multiples avantages. Elle permet, en premier lieu, de réduire considérablement les risques d'erreurs manuelles lors de la préparation des données. De plus, elle accélère le processus de création du fichier, transformant ce qui aurait pu être une tâche laborieuse et chronophage en une procédure rapide et efficace. En l'espace de quelques minutes seulement, l'utilisateur dispose d'un fichier prêt à l'emploi, optimisé pour le modèle CROCO. Cette automatisation garantit non seulement un gain de temps considérable, mais aussi une fiabilité accrue des simulations ultérieures.
 
-C'était l'objectif initial de mon stage. Cependant, grâce à une progression rapide et à un travail assidu, j'ai pu achever cette mission bien avant la date prévue. Par conséquent, une nouvelle tâche m'a été confiée : préparer les fichiers de forçage nécessaires au fonctionnement du modèle CROCO. La conception de ces fichiers de forçage au sein de l'interface \texttt{qcrocoflow} constitue donc la prochaine étape de mon travail, que nous aborderons dans la section suivante.
+C'était l'objectif initial de mon stage. Cependant, grâce à une progression rapide et à un travail assidu, j'ai pu achever cette mission bien avant la date prévue. Par conséquent, une nouvelle tâche m'a été confiée : préparer les fichiers de forçage nécessaires au fonctionnement du modèle CROCO. La conception de ces fichiers de forçage au sein de l'interface \texttt{QCrocoFlow} constitue donc la prochaine étape de mon travail, que nous aborderons dans la section suivante.
 
 
 

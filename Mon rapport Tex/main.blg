@@ -32,7 +32,7 @@ Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
 You've used 33 entries,
             2773 wiz_defined-function locations,
-            774 strings with 10769 characters,
+            772 strings with 10703 characters,
 and the built_in function-call counts, 13113 in all, are:
 = -- 1118
 > -- 810

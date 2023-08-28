@@ -57,7 +57,7 @@ CROCO Community.
 \newblock Interannual croco v1.1 with era5 and glorys, 2022.
 \newblock URL
   \url{https://forum.croco-ocean.org/question/647/interannual-croco-v11-with-era5-and-glorys/}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 07/2023.
 
 \bibitem[Community(2023)]{croco_forum}
 CROCO Community.
@@ -68,7 +68,7 @@ CROCO Community.
 CROCO.
 \newblock Croco official website, 2023.
 \newblock URL \url{https://www.croco-ocean.org/}.
-\newblock Accessed: [date de consultation].
+\newblock Accessed: 07/2023.
 
 \bibitem[Doe(1970)]{bjerknes1970}
 John Doe.
@@ -79,7 +79,7 @@ John Doe.
 David Donoso.
 \newblock Era5-request-to-croco-model, 2022.
 \newblock URL \url{https://github.com/d4viddonoso/ERA5-request-to-CROCO-model}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 08/2023.
 
 \bibitem[Egbert and Erofeeva(2002)]{egbert2002efficient}
 Gary~D Egbert and Svetlana~Y Erofeeva.
@@ -93,7 +93,7 @@ ERA5.
   climate, 2023.
 \newblock URL
   \url{https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5}.
-\newblock 2023.
+\newblock Accessed: 07/2023.
 
 \bibitem[Erofeeva and Egbert(2010)]{erofeeva2010high}
 Svetlana~Y Erofeeva and Gary~D Egbert.
@@ -149,7 +149,7 @@ CROCO Model.
 \newblock About harmonic constituents, 2023.
 \newblock URL
   \url{https://tidesandcurrents.noaa.gov/about_harmonic_constituents.html}.
-\newblock [Online; accessed 31-July-2023].
+\newblock Accessed: 07/2023.
 
 \bibitem[Penven et~al.(2007)Penven, Marchesiello, Debreu, and
   Lefevre]{crocotool2007}
@@ -169,7 +169,7 @@ P.~Penven, P.~Marchesiello, L.~Debreu, and J.~Lefevre.
 Qt.
 \newblock Cross-platform software development for embedded \& desktop, 2023.
 \newblock URL \url{https://www.qt.io/}.
-\newblock 2023.
+\newblock Accessed: 07/2023.
 
 \bibitem[Ray and Egbert(2012)]{ray2012tide}
 Richard~D Ray and Gary~D Egbert.
@@ -206,27 +206,27 @@ Wikipédia.
 \newblock Bicubic interpolation.
 \newblock \url{https://en.wikipedia.org/wiki/Bicubic_interpolation},
   2023{\natexlab{a}}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 07/2023.
 
 \bibitem[Wikipédia(2023{\natexlab{b}})]{Wikipedia2023Bilinear}
 Wikipédia.
 \newblock Bilinear interpolation.
 \newblock \url{https://en.wikipedia.org/wiki/Bilinear_interpolation},
   2023{\natexlab{b}}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 07/2023.
 
 \bibitem[Wikipédia(2023{\natexlab{c}})]{Wikipedia2023Linear}
 Wikipédia.
 \newblock Linear interpolation.
 \newblock \url{https://en.wikipedia.org/wiki/Linear_interpolation},
   2023{\natexlab{c}}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 07/2023.
 
 \bibitem[Wikipédia(2023{\natexlab{d}})]{Wikipedia2023Spline}
 Wikipédia.
 \newblock Spline interpolation.
 \newblock \url{https://en.wikipedia.org/wiki/Spline_interpolation},
   2023{\natexlab{d}}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 07/2023.
 
 \end{thebibliography}

@@ -29,9 +29,9 @@ Ces paramètres jouent un rôle crucial dans la simulation océanique. Par exemp
 
 Il est à noter que le modèle ERA5 offre de nombreux autres paramètres qui peuvent être pertinents pour d'autres applications ou analyses plus approfondies.
 
-\subsubsection{Implémentation du script dans l'interface Qcrocoflow}
+\subsubsection{Implémentation du script dans l'interface QCrocoflow}
 
-L'intégration du script de téléchargement des données ERA5 dans l'interface Qcrocoflow a été conçue pour être aussi intuitive que possible pour l'utilisateur. La Figure \ref{fig:bulkuser} illustre l'interface utilisateur dédiée à cette fonctionnalité.
+L'intégration du script de téléchargement des données ERA5 dans l'interface QCrocoflow a été conçue pour être aussi intuitive que possible pour l'utilisateur. La Figure \ref{fig:bulkuser} illustre l'interface utilisateur dédiée à cette fonctionnalité.
 
 Une fois toutes les étapes précédentes réalisées (définition des paramètres de sortie, création de la grille, etc.) et après avoir créé son fichier d'accès au modèle ERA5, l'utilisateur peut simplement cliquer sur le bouton \textit{"download era5"}. Le script, grâce à l'API\footnote{API signifie \textit{Application Programming Interface}. C'est un ensemble de définitions et de protocoles qui permet à des logiciels de communiquer entre eux.}, interroge la base de données ERA5 pour récupérer les données correspondant à la zone et à la date sélectionnées par l'utilisateur. Ces données sont ensuite téléchargées automatiquement dans un dossier spécifique, qui sera utilisé ultérieurement par le script.
 
@@ -42,7 +42,7 @@ Dans les sections suivantes, nous détaillerons le fonctionnement interne du scr
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=5in]{./IMAGES/Bulk/bulk_interface_overview.png}
-	\caption{Vue d'ensemble de la section "Bulk" dans l'interface Qcrocoflow.}
+	\caption{Vue d'ensemble de la section "Bulk" dans l'interface QCrocoflow.}
 	\label{fig:bulk_interface}
 \end{figure}
 
@@ -74,7 +74,7 @@ En résumé, ce script offre une solution automatisée pour préparer les donné
 		\tikzstyle{arrow} = [thick,->,>=stealth]
 		
 	
-		\node (start) [startstop] {Qcrocoflow};
+		\node (start) [startstop] {QCrocoflow};
 		\node (proc1) [process, below of=start] {Récupération des données avec \texttt{ERA5\_request.py}};
 		\node (proc2) [process, below of=proc1] {Conversion des données pour CROCO};
 		\node (proc3) [process, below of=proc2] {Interpolation sur la grille CROCO};
