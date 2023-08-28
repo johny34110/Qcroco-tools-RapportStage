@@ -17,11 +17,6 @@ Warning--entry type for "croco_forum" isn't style-file defined
 --line 178 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco_video" isn't style-file defined
 --line 185 of file ./Biblio/STAGE.bib
-Warning--I didn't find a database entry for "grenier2021modernisation"
-Warning--I didn't find a database entry for "gatien2023using"
-Warning--I didn't find a database entry for "delhasse2020brief"
-Warning--I didn't find a database entry for "levesque2022evaluation"
-Warning--I didn't find a database entry for "lang2019climate"
 Name 1 in "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" has a comma at the end for entry advancingDynamicalCores
 while executing---line 1347 of file plainnat.bst
 Too many commas in name 1 of "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" for entry advancingDynamicalCores
@@ -38,47 +33,49 @@ Name 1 in "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and 
 while executing---line 1429 of file plainnat.bst
 Too many commas in name 1 of "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" for entry advancingDynamicalCores
 while executing---line 1429 of file plainnat.bst
+Warning--empty journal in grenier2021modernisation
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
-You've used 33 entries,
+Warning--empty journal in levesque2022evaluation
+You've used 38 entries,
             2773 wiz_defined-function locations,
-            778 strings with 10973 characters,
-and the built_in function-call counts, 13421 in all, are:
-= -- 1143
-> -- 861
-< -- 30
-+ -- 306
-- -- 270
-* -- 946
-:= -- 2151
-add.period$ -- 121
-call.type$ -- 33
-change.case$ -- 185
-chr.to.int$ -- 30
-cite$ -- 68
-duplicate$ -- 560
-empty$ -- 1077
-format.name$ -- 315
-if$ -- 2772
+            792 strings with 11759 characters,
+and the built_in function-call counts, 15349 in all, are:
+= -- 1297
+> -- 985
+< -- 33
++ -- 350
+- -- 309
+* -- 1080
+:= -- 2466
+add.period$ -- 136
+call.type$ -- 38
+change.case$ -- 211
+chr.to.int$ -- 35
+cite$ -- 80
+duplicate$ -- 661
+empty$ -- 1239
+format.name$ -- 359
+if$ -- 3166
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 16
-newline$ -- 195
-num.names$ -- 132
-pop$ -- 446
+missing$ -- 21
+newline$ -- 220
+num.names$ -- 152
+pop$ -- 509
 preamble$ -- 1
-purify$ -- 154
+purify$ -- 175
 quote$ -- 0
-skip$ -- 494
+skip$ -- 567
 stack$ -- 0
-substring$ -- 162
-swap$ -- 36
+substring$ -- 172
+swap$ -- 40
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 353
-warning$ -- 2
-while$ -- 106
+type$ -- 408
+warning$ -- 4
+while$ -- 121
 width$ -- 0
-write$ -- 451
+write$ -- 509
 (There were 8 error messages)
