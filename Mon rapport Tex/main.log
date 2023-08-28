@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.8)  28 AUG 2023 10:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.8)  28 AUG 2023 11:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1554,22 +1554,26 @@ File: ./IMAGES/Interpolation/Interpolation.png Graphic file (type png)
 <use ./IMAGES/Interpolation/Interpolation.png>
 Package pdftex.def Info: ./IMAGES/Interpolation/Interpolation.png  used on inpu
 t line 281.
-(pdftex.def)             Requested size: 497.92325pt x 461.66722pt.
-File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
-<use ./IMAGES/Logo/LUSAC.png>
-Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 287.
-(pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
-File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
-<use ./IMAGES/Logo/INTECH.png>
-Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 287.
-(pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
- [31 <./IMAGES/Interpolation/Interpolation.png>]
-<./IMAGES/Interpolation/ShemaUser.png, id=754, 400.49625pt x 554.07pt>
+(pdftex.def)             Requested size: 389.74292pt x 361.34999pt.
+<./IMAGES/Interpolation/ShemaUser.png, id=745, 400.49625pt x 552.56438pt>
 File: ./IMAGES/Interpolation/ShemaUser.png Graphic file (type png)
 <use ./IMAGES/Interpolation/ShemaUser.png>
 Package pdftex.def Info: ./IMAGES/Interpolation/ShemaUser.png  used on input li
 ne 290.
-(pdftex.def)             Requested size: 313.4308pt x 433.62pt.
+(pdftex.def)             Requested size: 314.28024pt x 433.62pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
+<use ./IMAGES/Logo/LUSAC.png>
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 299.
+(pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
+File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
+<use ./IMAGES/Logo/INTECH.png>
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 299.
+(pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
+[31 <./IMAGES/Interpolation/Interpolation.png>]
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
 Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 301.
@@ -1597,11 +1601,11 @@ put line 365.
 (pdftex.def)             Requested size: 497.92325pt x 301.9846pt.
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
-Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 374.
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 398.
 (pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
-Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 374.
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 398.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [34 <./IMAGES/Interpolation/interpolationNC.png
 
@@ -1609,65 +1613,65 @@ pdfTeX warning: /usr/bin/pdflatex (file ./IMAGES/Interpolation/interpolationNC.
 png): large interlaced PNG might cause out of memory (use non-interlaced PNG to
  fix this)
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
  []
 
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
-Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 411.
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 415.
 (pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
-Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 411.
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 415.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
 [35]
 <./IMAGES/Interpolation/BathyView.png, id=783, 804.00375pt x 394.47375pt>
 File: ./IMAGES/Interpolation/BathyView.png Graphic file (type png)
 <use ./IMAGES/Interpolation/BathyView.png>
 Package pdftex.def Info: ./IMAGES/Interpolation/BathyView.png  used on input li
-ne 414.
+ne 418.
 (pdftex.def)             Requested size: 497.92325pt x 244.29431pt.
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
-Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 440.
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 444.
 (pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
-Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 440.
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 444.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [36 <./IMAGES/Interpolation/BathyView.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 464.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 468.
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
-Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 471.
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 475.
 (pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
-Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 471.
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 475.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [37]
 <./IMAGES/Interpolation/mask.png, id=800, 636.3775pt x 540.0175pt>
 File: ./IMAGES/Interpolation/mask.png Graphic file (type png)
 <use ./IMAGES/Interpolation/mask.png>
 Package pdftex.def Info: ./IMAGES/Interpolation/mask.png  used on input line 47
-4.
+8.
 (pdftex.def)             Requested size: 398.3401pt x 338.02098pt.
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
 <use ./IMAGES/Logo/LUSAC.png>
-Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 484.
+Package pdftex.def Info: ./IMAGES/Logo/LUSAC.png  used on input line 488.
 (pdftex.def)             Requested size: 49.79535pt x 49.79482pt.
 File: ./IMAGES/Logo/INTECH.png Graphic file (type png)
 <use ./IMAGES/Logo/INTECH.png>
-Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 484.
+Package pdftex.def Info: ./IMAGES/Logo/INTECH.png  used on input line 488.
 (pdftex.def)             Requested size: 99.58313pt x 44.29965pt.
  [38 <./IMAGES/Interpolation/mask.png>]
 <./IMAGES/Interpolation/final.png, id=807, 789.70032pt x 508.90125pt>
 File: ./IMAGES/Interpolation/final.png Graphic file (type png)
 <use ./IMAGES/Interpolation/final.png>
 Package pdftex.def Info: ./IMAGES/Interpolation/final.png  used on input line 4
-87.
+91.
 (pdftex.def)             Requested size: 497.92325pt x 320.8735pt.
 ) (./chapitre/tide.tex
 File: ./IMAGES/Logo/LUSAC.png Graphic file (type png)
@@ -2129,7 +2133,7 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (66 pages, 5949539 bytes).
+Output written on main.pdf (66 pages, 5953931 bytes).
 PDF statistics:
  1998 PDF objects out of 2073 (max. 8388607)
  1025 compressed objects within 11 object streams

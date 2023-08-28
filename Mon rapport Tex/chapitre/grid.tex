@@ -45,7 +45,7 @@ Pour répondre à cette exigence, j'ai fait appel à l'outil \textit{Qt5 Designe
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=5in]{./IMAGES/paramuser.png}
-	\caption{Interface graphique de l'outil Qcrocoflow dans QGIS : Gestion des Paramètres d'Entrée}
+	\caption{Interface graphique de l'outil QCrocoFlow dans QGIS : Gestion des Paramètres d'Entrée}
 	\label{fig:GISUSER}
 \end{figure}
 
@@ -55,7 +55,7 @@ Une fois les paramètres saisis, nous exploitons pleinement les capacités offer
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{./IMAGES/BathyF.png}
-	\caption{Interface graphique de l'outil QCrocoflow : intégration et Visualisation d'un Fichier Topographique dans QGIS}
+	\caption{Interface graphique de l'outil QCrocoFlow : intégration et Visualisation d'un Fichier Topographique dans QGIS}
 	\label{fig:BathyF}
 \end{figure}
 
@@ -278,7 +278,7 @@ L'interpolation est une méthode mathématique utilisée pour déduire des valeu
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{./IMAGES/Interpolation/Interpolation.png}
+	\includegraphics[height=5in]{./IMAGES/Interpolation/Interpolation.png}
 	\caption{Différents Types d'Interpolationsource. {\textit{Source: SciPy Documentation}}}
 	\label{fig:Interpolation}
 \end{figure}
@@ -371,7 +371,6 @@ Le fichier \texttt{grid} intègre désormais les données topographiques interpo
 \subsubsection{Traitement des fichiers topographiques au format Raster}
 
 Les fichiers Raster sont des représentations matricielles de données spatiales. Chaque cellule (ou pixel) d'un raster contient une valeur, qui peut représenter divers types d'informations, telles que la température, l'altitude, ou même une couleur pour une image. Ces fichiers sont particulièrement adaptés pour représenter des données continues sur une zone géographique, comme la topographie ou la température de surface.
-
 \begin{figure}[h]
 	\centering
 	\begin{tikzpicture}
@@ -384,14 +383,19 @@ Les fichiers Raster sont des représentations matricielles de données spatiales
 		
 		\node[anchor=east] at (0,0.5) {1};
 		\node[anchor=east] at (0,1.5) {2};
+		\node[anchor=east] at (0,2.5) {3};
+		\node[anchor=east] at (0,3.5) {4};
 		
 		\node[anchor=north] at (0.5,0) {1};
 		\node[anchor=north] at (1.5,0) {2};
+		\node[anchor=north] at (2.5,0) {3};
+		\node[anchor=north] at (3.5,0) {4};
 		
 	\end{tikzpicture}
 	\caption{Représentation schématique d'une grille raster avec des données.}
 	\label{fig:rastergrid}
 \end{figure}
+
 
 \paragraph{BathyView : Interface de Vérification et de Correction des Données Raster\\}
 
