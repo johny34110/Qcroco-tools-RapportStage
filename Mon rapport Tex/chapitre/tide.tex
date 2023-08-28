@@ -1,4 +1,4 @@
-Les fichiers de forçage jouent un rôle essentiel dans la modélisation océanographique. Ils fournissent au modèle les conditions aux limites et les forçages externes nécessaires pour initier correctement la dynamique océanique. Parmi les différentes sources de forçage, celui par la marée est un des plus courant. Dans cette partie, je vais détailler les étapes qui m'ont permis de générer des fichiers de forçage par la marée pour le code de calcul CROCO.
+Les fichiers de forçage en général jouent un rôle essentiel dans la modélisation océanographique. Ils fournissent au modèle les conditions aux limites et les forçages externes nécessaires pour initier correctement la dynamique océanique. Parmi les différentes sources de forçage, celui par la marée est un des plus courant. Dans cette partie, je vais détailler les étapes qui m'ont permis de générer des fichiers de forçage par la marée pour le code de calcul CROCO.
 
 \subsubsection{Rôle et importance des fichiers de forçage}
 
@@ -26,7 +26,7 @@ L'utilisation du modèle TPXO9 pour la génération de nos fichiers de forçage 
 
 \subsubsection{Obtention des données}
 
-L'accès aux données du modèle TPXO9 n'est pas directement ouvert au public. Pour obtenir ces données, une demande formelle doit être soumise via le site web officiel du modèle, disponible sur \og \textit{https://www.tpxo.net/} \fg{}. Cette procédure vise à garantir que les données sont utilisées de manière appropriée et respectueuse des droits d'auteur.\\
+L'accès aux données du modèle TPXO9 n'est pas directement ouvert au public. Pour obtenir ces données, une demande formelle doit être soumise via le site web officiel du modèle, disponible sur \url{https://www.tpxo.net/}. Cette procédure vise à garantir que les données sont utilisées de manière appropriée et respectueuse des droits d'auteur.\\
 
 Lors de la soumission de la demande, il est essentiel de spécifier clairement l'objectif de l'utilisation des données. Dans la plupart des cas, l'accès est accordé pour des projets à des fins non commerciales, tels que la recherche académique ou les études environnementales. Une fois la demande approuvée par l'équipe de chercheurs responsables du modèle TPXO9, l'utilisateur reçoit un accès pour télécharger les données nécessaires à son étude.
 
@@ -34,16 +34,16 @@ Lors de la soumission de la demande, il est essentiel de spécifier clairement l
 
 L'un des principaux objectifs de l'intégration du modèle TPXO9 dans le plugin QCrocoFlow est de simplifier au maximum pour l'utilisateur le processus de création d'un fichier de forçage par la marée. La facilité d'utilisation est au c\oe{ur} de cette démarche, afin de permettre même aux utilisateurs les moins expérimentés de bénéficier des avantages du modèle sans se heurter à des obstacles techniques.\\
 
-Dès lors qu'un utilisateur a téléchargé le dossier contenant les données du modèle TPXO9, il lui suffit d'indiquer le répertoire de ce dossier au plugin. Un message de confirmation s'affiche alors pour indiquer que le modèle a été correctement chargé. Cette étape, nécessaire, n'a besoin d'être effectuée qu'une seule fois.
+Dès lors qu'un utilisateur a téléchargé le dossier contenant les données du modèle TPXO9, il lui suffit d'indiquer le répertoire de ce dossier. Un message de confirmation s'affiche alors pour indiquer que le modèle a été correctement chargé. Cette étape n'a besoin d'être effectuée qu'une seule fois.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{./IMAGES/Tide/Qcrocotide.png}
-    \caption{Capture d'écran de l'interface QCrocoFlow, section "Forcing".}
+    \caption{Capture d'écran de l'interface QCrocoFlow, section \og Forcing \fg{}.}
     \label{fig:qcrocoflow_forcing}
 \end{figure}
 
-L'interface du plugin QCrocoFlow offre ensuite la possibilité de sélectionner les harmoniques souhaitées. Grâce à une interface intuitive, l'utilisateur peut facilement choisir les composantes de la marée qu'il souhaite intégrer à son fichier de forçage (Fig. \ref{fig:qcrocoflow_forcing}). Une fois cette sélection effectuée, tout est prêt pour lancer le processus de génération du fichier.\\
+L'interface du plugin QCrocoFlow offre ensuite la possibilité de sélectionner les harmoniques qui vont être prises en compte. Grâce à une interface intuitive, l'utilisateur peut facilement choisir les composantes de la marée qu'il souhaite intégrer à son fichier de forçage (Fig. \ref{fig:qcrocoflow_forcing}). Une fois cette sélection effectuée, tout est prêt pour lancer le processus de génération du fichier.\\
 
 Après avoir configuré ses préférences, l'utilisateur n'a plus qu'à appuyer sur le bouton \textit{Process} pour initier la création du fichier de forçage. Dans la section suivante, nous détaillerons les étapes techniques sous-jacentes à cette génération.
 

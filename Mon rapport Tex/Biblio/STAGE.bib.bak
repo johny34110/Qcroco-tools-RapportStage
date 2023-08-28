@@ -79,9 +79,12 @@
 
 @Misc{croco_soft,
   author    = {Auclair, Francis and Benshila, Rachid and Bordois, Lucie and Boutet, Martial and Brémond, Maurice and Caillaud, Matthieu and Cambon, Gildas and Capet, Xavier and Debreu, Laurent and Ducousso, Nicolas and Dufois, François and Dumas, Franck and Ethé, Christian and Gula, Jonathan and Hourdin, Christophe and Illig, Serena and Jullien, Swen and Corre, Matthieu Le and Gac, Solène Le and Gentil, Sylvie Le and Lemarié, Florian and Marchesiello, Patrick and Mazoyer, Camille and Morvan, Guillaume and Nguyen, Cyril and Penven, Pierrick and Person, Renaud and Pianezze, Joris and Pous, Stéphane and Renault, Lionel and Roblou, Laurent and Sepulveda, Andres and Theetten, Sebastien},
+  editor    = {Croco},
   title     = {Coastal and Regional Ocean COmmunity model},
   year      = {2022},
+  note      = {Accessed: 07/2023},
   doi       = {10.5281/ZENODO.7415055},
+  url       = {https://gmd.copernicus.org/articles/16/1163/2023/gmd-16-1163-2023-assets.html},
   copyright = {Creative Commons Attribution 4.0 International},
   keywords  = {Ocean Modeling},
   publisher = {Zenodo},
@@ -118,31 +121,32 @@
   author = {{National Oceanic and Atmospheric Administration}},
   title  = {About Harmonic Constituents},
   year   = {2023},
-  note   = {[Online; accessed 31-July-2023]},
+  note   = {Accessed: 07/2023},
   url    = {https://tidesandcurrents.noaa.gov/about_harmonic_constituents.html},
 }
 
-@misc{CROCOForum2022,
+@Misc{CROCOForum2022,
   author = {CROCO Community},
-  title = {Interannual CROCO v1.1 with ERA5 and GLORYS},
-  year = {2022},
-  url = {https://forum.croco-ocean.org/question/647/interannual-croco-v11-with-era5-and-glorys/},
-  note = {Accessed: 2023-07-31}
+  title  = {Interannual CROCO v1.1 with ERA5 and GLORYS},
+  year   = {2022},
+  note   = {Accessed: 07/2023},
+  url    = {https://forum.croco-ocean.org/question/647/interannual-croco-v11-with-era5-and-glorys/},
 }
 
-@misc{Donoso2022,
+@Misc{Donoso2022,
   author = {David Donoso},
-  title = {ERA5-request-to-CROCO-model},
-  year = {2022},
-  url = {https://github.com/d4viddonoso/ERA5-request-to-CROCO-model},
-  note = {Accessed: 2023-07-31}
+  title  = {ERA5-request-to-CROCO-model},
+  year   = {2022},
+  note   = {Accessed: 08/2023},
+  url    = {https://github.com/d4viddonoso/ERA5-request-to-CROCO-model},
 }
 
 @Misc{,
   author       = {QGIS},
   title        = {Welcome to the QGIS project!},
+  year         = {2023},
   howpublished = {\url{https://qgis.org/en/site/}},
-  note         = {Accessed: 2023-08-04},
+  note         = {Accessed: 08/2023},
 }
 
 @Misc{QGISPlugins,
@@ -150,14 +154,14 @@
   title        = {QGIS Plugins},
   year         = {2023},
   howpublished = {\url{https://docs.qgis.org/3.16/en/docs/user_manual/plugins/plugins.html}},
-  note         = {Accessed: 2023-07-31},
+  note         = {Accessed: 07/2023},
 }
 
 @Misc{crocoofficial,
   author = {CROCO},
   title  = {CROCO Official Website},
   year   = {2023},
-  note   = {Accessed: [date de consultation]},
+  note   = {Accessed: 07/2023},
   url    = {https://www.croco-ocean.org/},
 }
 
@@ -209,40 +213,43 @@
 @Misc{era5,
   author       = {ERA5},
   title        = {Fifth generation of ECMWF atmospheric reanalyses of the global climate},
-  note         = {2023},
+  year         = {2023},
+  note         = {Accessed: 07/2023},
   organization = {European Centre for Medium-Range Weather Forecasts (ECMWF)},
   url          = {https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5},
-  year         = {2023},
 }
 
 @Misc{qt,
   author       = {Qt},
   title        = {Cross-platform software development for embedded \& desktop},
-  note         = {2023},
+  year         = {2023},
+  note         = {Accessed: 07/2023},
   organization = {The Qt Company},
   url          = {https://www.qt.io/},
-  year         = {2023},
 }
 
-@article{advancingDynamicalCores,
-	title={Advancing Dynamical Cores of Oceanic Models across All Scales},
-	url={https://journals.ametsoc.org/view/journals/bams/100/3/bams-d-18-0303.1.xml},
-	journal={Journal of the American Meteorological Society},
-	year={2019}
+@Article{advancingDynamicalCores,
+  author  = {Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie},
+  title   = {Advancing Dynamical Cores of Oceanic Models across All Scales},
+  journal = {Journal of the American Meteorological Society},
+  year    = {2019},
+  url     = {https://journals.ametsoc.org/view/journals/bams/100/3/bams-d-18-0303.1.xml},
 }
 
-@article{challengesProspects,
-	title={Challenges and Prospects in Ocean Circulation Models},
-	url={https://www.frontiersin.org/articles/10.3389/fmars.2019.00065},
-	journal={Frontiers in Marine Science},
-	year={2019}
+@Article{challengesProspects,
+  author  = {Baylor Fox-Kemper, Alistair Adcroft and others},
+  title   = {Challenges and Prospects in Ocean Circulation Models},
+  journal = {Frontiers in Marine Science},
+  year    = {2019},
+  url     = {https://www.frontiersin.org/articles/10.3389/fmars.2019.00065},
 }
 
-@article{spatioTemporalFeatures,
-	title={Assessing the Spatio-Temporal Features and Mechanisms of Oceanic Models},
-	url={https://www.mdpi.com/2077-1312/11/2/431},
-	journal={MDPI},
-	year={2021}
+@Article{spatioTemporalFeatures,
+  author  = {Yifei Jiang, Weimin Zhang, Xiaojiang Zhang},
+  title   = {Assessing the Spatio-Temporal Features and Mechanisms of Oceanic Models},
+  journal = {MDPI},
+  year    = {2021},
+  url     = {https://www.mdpi.com/2077-1312/11/2/431},
 }
 
 @Misc{Wikipedia2023Linear,
@@ -250,7 +257,7 @@
   title        = {Linear interpolation},
   year         = {2023},
   howpublished = {\url{https://en.wikipedia.org/wiki/Linear_interpolation}},
-  note         = {Accessed: 2023-07-31},
+  note         = {Accessed: 07/2023},
 }
 
 @Misc{Wikipedia2023Bilinear,
@@ -258,7 +265,7 @@
   title        = {Bilinear interpolation},
   year         = {2023},
   howpublished = {\url{https://en.wikipedia.org/wiki/Bilinear_interpolation}},
-  note         = {Accessed: 2023-07-31},
+  note         = {Accessed: 07/2023},
 }
 
 @Misc{Wikipedia2023Bicubic,
@@ -266,7 +273,7 @@
   title        = {Bicubic interpolation},
   year         = {2023},
   howpublished = {\url{https://en.wikipedia.org/wiki/Bicubic_interpolation}},
-  note         = {Accessed: 2023-07-31},
+  note         = {Accessed: 07/2023},
 }
 
 @Misc{Wikipedia2023Spline,
@@ -274,7 +281,7 @@
   title        = {Spline interpolation},
   year         = {2023},
   howpublished = {\url{https://en.wikipedia.org/wiki/Spline_interpolation}},
-  note         = {Accessed: 2023-07-31},
+  note         = {Accessed: 07/2023},
 }
 
 @article{egbert2002efficient,

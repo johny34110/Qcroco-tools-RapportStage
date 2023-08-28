@@ -380,36 +380,50 @@ Cette fonction remplie au fur et à mesure les variables du fichier NetCDF préc
 	\begin{tikzpicture}
 		\draw[step=1cm,gray,very thin] (0,0) grid (4,4);
 
+		% Ligne du haut
 		\node at (0.5, 3.5) {15};
 		\node at (1.5, 3.5) {20};
 		\node at (2.5, 3.5) {18};
 		\node at (3.5, 3.5) {22};
 
-        \node at (0.5, 2.5) {16};
-        \node at (1.5, 2.5) {08};
-        \node at (2.5, 2.5) {06};
-        \node at (3.5, 2.5) {51};
+		% Deuxième ligne
+		\node at (0.5, 2.5) {10};
+		\node at (1.5, 2.5) {12};
+		\node at (2.5, 2.5) {14};
+		\node at (3.5, 2.5) {16};
 
-        \node at (0.5, 1.5) {01};
-        \node at (1.5, 1.5) {45};
-        \node at (2.5, 1.5) {13};
-        \node at (3.5, 1.5) {21};
+		% Troisième ligne
+		\node at (0.5, 1.5) {5};
+		\node at (1.5, 1.5) {7};
+		\node at (2.5, 1.5) {9};
+		\node at (3.5, 1.5) {11};
 
-        \node at (0.5, 0.5) {17};
-        \node at (1.5, 0.5) {88};
-        \node at (2.5, 0.5) {12};
-        \node at (3.5, 0.5) {45};
 
-		\node[anchor=east] at (0,0.5) {1};
-		\node[anchor=east] at (0,1.5) {2};
+		% Ligne du bas
+		\node at (0.5, 0.5) {7};
+		\node at (1.5, 0.5) {8};
+		\node at (2.5, 0.5) {23};
+		\node at (3.5, 0.5) {...};
 
-		\node[anchor=north] at (0.5,0) {1};
-		\node[anchor=north] at (1.5,0) {2};
+
+
+		% Indices des lignes
+		\node[anchor=east] at (-0.05,0.5) {\vdots };
+		\node[anchor=east] at (0,1.5) {3};
+		\node[anchor=east] at (0,2.5) {2};
+		\node[anchor=east] at (0,3.5) {1};
+
+		% Indices des colonnes
+		\node[anchor=north] at (0.5,4.5) {1};
+		\node[anchor=north] at (1.5,4.5) {2};
+		\node[anchor=north] at (2.5,4.5) {3};
+		\node[anchor=north] at (3.5,4.4) {...};
 
 	\end{tikzpicture}
 	\caption{Représentation schématique d'une grille raster avec des valeurs sur chaque pixel.}
 	\label{fig:rastergrid}
 \end{figure}
+
 
 Les fichiers Raster sont des représentations matricielles de données spatiales. Chaque cellule (ou pixel) d'un raster contient une valeur, qui peut représenter divers types d'informations, telles que la température, l'altitude, ou même une couleur pour une image (Fig. \ref{fig:rastergrid}). Ces fichiers sont particulièrement adaptés pour représenter des données continues sur une zone géographique, comme la topographie ou la température de surface.
 
@@ -515,6 +529,7 @@ L'étape finale de ce processus consiste à rassembler toutes les variables gén
 L'interface de génération du fichier offre de multiples avantages. Elle permet, en premier lieu, de réduire considérablement les risques d'erreurs manuelles lors de la préparation des données. De plus, elle accélère le processus de création du fichier, transformant ce qui aurait pu être une tâche laborieuse et chronophage en une procédure rapide et efficace. En l'espace de quelques minutes seulement, l'utilisateur dispose d'un fichier prêt à l'emploi, optimisé pour le modèle CROCO. Cette automatisation garantit non seulement un gain de temps considérable, mais aussi une fiabilité accrue des simulations ultérieures.
 
 La génération du fichier \og \textit{grid} \fg{} initial pour le modèle CROCO était l'objectif initial de mon stage. Cependant, grâce à une progression rapide et à un travail assidu, j'ai pu achever cette mission avant la date prévue. Par conséquent, une nouvelle tâche m'a été confiée~: permettre de créer des fichiers de forçage par la marée pour le modèle CROCO. La conception et l'intégration de ces fichiers au sein du plugin \texttt{QCrocoFlow} constitue l'étape suivante de mon travail.
+
 
 
 

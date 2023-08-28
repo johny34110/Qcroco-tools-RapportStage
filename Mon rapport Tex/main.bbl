@@ -5,23 +5,6 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[adv(2019)]{advancingDynamicalCores}
-Advancing dynamical cores of oceanic models across all scales.
-\newblock \emph{Journal of the American Meteorological Society}, 2019.
-\newblock URL
-  \url{https://journals.ametsoc.org/view/journals/bams/100/3/bams-d-18-0303.1.xml}.
-
-\bibitem[cha(2019)]{challengesProspects}
-Challenges and prospects in ocean circulation models.
-\newblock \emph{Frontiers in Marine Science}, 2019.
-\newblock URL
-  \url{https://www.frontiersin.org/articles/10.3389/fmars.2019.00065}.
-
-\bibitem[spa(2021)]{spatioTemporalFeatures}
-Assessing the spatio-temporal features and mechanisms of oceanic models.
-\newblock \emph{MDPI}, 2021.
-\newblock URL \url{https://www.mdpi.com/2077-1312/11/2/431}.
-
 \bibitem[Auclair et~al.(2022)Auclair, Benshila, Bordois, Boutet, Brémond,
   Caillaud, Cambon, Capet, Debreu, Ducousso, Dufois, Dumas, Ethé, Gula,
   Hourdin, Illig, Jullien, Corre, Gac, Gentil, Lemarié, Marchesiello, Mazoyer,
@@ -36,6 +19,16 @@ Francis Auclair, Rachid Benshila, Lucie Bordois, Martial Boutet, Maurice
   Person, Joris Pianezze, Stéphane Pous, Lionel Renault, Laurent Roblou,
   Andres Sepulveda, and Sebastien Theetten.
 \newblock Coastal and regional ocean community model, 2022.
+\newblock URL
+  \url{https://gmd.copernicus.org/articles/16/1163/2023/gmd-16-1163-2023-assets.html}.
+\newblock Accessed: 07/2023.
+
+\bibitem[Baylor Fox-Kemper et~al.(2019)]{challengesProspects}
+Alistair~Adcroft Baylor Fox-Kemper et~al.
+\newblock Challenges and prospects in ocean circulation models.
+\newblock \emph{Frontiers in Marine Science}, 2019.
+\newblock URL
+  \url{https://www.frontiersin.org/articles/10.3389/fmars.2019.00065}.
 
 \bibitem[Bellayer(2023)]{bellayersimulation}
 Tino Bellayer.
@@ -55,7 +48,7 @@ CROCO Community.
 \newblock Interannual croco v1.1 with era5 and glorys, 2022.
 \newblock URL
   \url{https://forum.croco-ocean.org/question/647/interannual-croco-v11-with-era5-and-glorys/}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 07/2023.
 
 \bibitem[Community(2023)]{croco_forum}
 CROCO Community.
@@ -66,7 +59,7 @@ CROCO Community.
 CROCO.
 \newblock Croco official website, 2023.
 \newblock URL \url{https://www.croco-ocean.org/}.
-\newblock Accessed: [date de consultation].
+\newblock Accessed: 07/2023.
 
 \bibitem[Delhasse et~al.(2020)Delhasse, Kittel, Amory, Hofer, Van~As,
   et~al.]{delhasse2020brief}
@@ -84,7 +77,7 @@ John Doe.
 David Donoso.
 \newblock Era5-request-to-croco-model, 2022.
 \newblock URL \url{https://github.com/d4viddonoso/ERA5-request-to-CROCO-model}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 08/2023.
 
 \bibitem[Egbert and Erofeeva(2002)]{egbert2002efficient}
 Gary~D Egbert and Svetlana~Y Erofeeva.
@@ -98,7 +91,7 @@ ERA5.
   climate, 2023.
 \newblock URL
   \url{https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5}.
-\newblock 2023.
+\newblock Accessed: 07/2023.
 
 \bibitem[Erofeeva and Egbert(2010)]{erofeeva2010high}
 Svetlana~Y Erofeeva and Gary~D Egbert.
@@ -111,6 +104,15 @@ Svetlana~Y Erofeeva and Gary~D Egbert.
 R.A. Flather.
 \newblock A tidal model of the northwest european continental shelf.
 \newblock \emph{Memories de la Societe Royale des Sciences de Liege}, 1976.
+
+\bibitem[Florian~Lemarié and Sainte-Marie(2019)]{advancingDynamicalCores}
+Laurent Debreu Knut~Klingbeil Florian~Lemarié, Hans~Burchard and Jacques
+  Sainte-Marie.
+\newblock Advancing dynamical cores of oceanic models across all scales.
+\newblock \emph{Journal of the American Meteorological Society}, 2019.
+\newblock \doi{https://doi.org/10.1175/BAMS-D-18-0303.1}.
+\newblock URL
+  \url{https://journals.ametsoc.org/view/journals/bams/100/3/bams-d-18-0303.1.xml}.
 
 \bibitem[Gatien et~al.(2023)Gatien, Arsenault, Martel, et~al.]{gatien2023using}
 P~Gatien, R~Arsenault, JL~Martel, et~al.
@@ -141,6 +143,7 @@ Swen Jullien, Matthieu Caillaud, Rachid Benshila, Lucie Bordois, Gildas Cambon,
 \newblock Croco technical and numerical documentation.
 \newblock 2022.
 \newblock \doi{10.5281/ZENODO.7400758}.
+\newblock URL \url{https://data-croco.ifremer.fr/DOC/model-v1.2.pdf}.
 
 \bibitem[Lang(2019)]{lang2019climate}
 C~Lang.
@@ -178,7 +181,7 @@ CROCO Model.
 \newblock About harmonic constituents, 2023.
 \newblock URL
   \url{https://tidesandcurrents.noaa.gov/about_harmonic_constituents.html}.
-\newblock [Online; accessed 31-July-2023].
+\newblock Accessed: 07/2023.
 
 \bibitem[Penven et~al.(2007)Penven, Marchesiello, Debreu, and
   Lefevre]{crocotool2007}
@@ -198,7 +201,7 @@ P.~Penven, P.~Marchesiello, L.~Debreu, and J.~Lefevre.
 Qt.
 \newblock Cross-platform software development for embedded \& desktop, 2023.
 \newblock URL \url{https://www.qt.io/}.
-\newblock 2023.
+\newblock Accessed: 07/2023.
 
 \bibitem[Ray and Egbert(2012)]{ray2012tide}
 Richard~D Ray and Gary~D Egbert.
@@ -235,27 +238,34 @@ Wikipédia.
 \newblock Bicubic interpolation.
 \newblock \url{https://en.wikipedia.org/wiki/Bicubic_interpolation},
   2023{\natexlab{a}}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 07/2023.
 
 \bibitem[Wikipédia(2023{\natexlab{b}})]{Wikipedia2023Bilinear}
 Wikipédia.
 \newblock Bilinear interpolation.
 \newblock \url{https://en.wikipedia.org/wiki/Bilinear_interpolation},
   2023{\natexlab{b}}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 07/2023.
 
 \bibitem[Wikipédia(2023{\natexlab{c}})]{Wikipedia2023Linear}
 Wikipédia.
 \newblock Linear interpolation.
 \newblock \url{https://en.wikipedia.org/wiki/Linear_interpolation},
   2023{\natexlab{c}}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 07/2023.
 
 \bibitem[Wikipédia(2023{\natexlab{d}})]{Wikipedia2023Spline}
 Wikipédia.
 \newblock Spline interpolation.
 \newblock \url{https://en.wikipedia.org/wiki/Spline_interpolation},
   2023{\natexlab{d}}.
-\newblock Accessed: 2023-07-31.
+\newblock Accessed: 07/2023.
+
+\bibitem[Yifei~Jiang(2021)]{spatioTemporalFeatures}
+Xiaojiang~Zhang Yifei~Jiang, Weimin~Zhang.
+\newblock Assessing the spatio-temporal features and mechanisms of oceanic
+  models.
+\newblock \emph{MDPI}, 2021.
+\newblock URL \url{https://www.mdpi.com/2077-1312/11/2/431}.
 
 \end{thebibliography}
