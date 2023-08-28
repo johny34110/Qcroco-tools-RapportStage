@@ -72,6 +72,7 @@
   year      = {2022},
   language  = {en},
   doi       = {10.5281/ZENODO.7400758},
+  url       = {https://data-croco.ifremer.fr/DOC/model-v1.2.pdf},
   copyright = {Creative Commons Attribution 4.0 International},
   keywords  = {ocean modeling},
   publisher = {Zenodo},
@@ -79,8 +80,10 @@
 
 @Misc{croco_soft,
   author    = {Auclair, Francis and Benshila, Rachid and Bordois, Lucie and Boutet, Martial and Brémond, Maurice and Caillaud, Matthieu and Cambon, Gildas and Capet, Xavier and Debreu, Laurent and Ducousso, Nicolas and Dufois, François and Dumas, Franck and Ethé, Christian and Gula, Jonathan and Hourdin, Christophe and Illig, Serena and Jullien, Swen and Corre, Matthieu Le and Gac, Solène Le and Gentil, Sylvie Le and Lemarié, Florian and Marchesiello, Patrick and Mazoyer, Camille and Morvan, Guillaume and Nguyen, Cyril and Penven, Pierrick and Person, Renaud and Pianezze, Joris and Pous, Stéphane and Renault, Lionel and Roblou, Laurent and Sepulveda, Andres and Theetten, Sebastien},
+  editor    = {Croco},
   title     = {Coastal and Regional Ocean COmmunity model},
   year      = {2022},
+  note      = {Accessed: 07/2023},
   doi       = {10.5281/ZENODO.7415055},
   url       = {https://gmd.copernicus.org/articles/16/1163/2023/gmd-16-1163-2023-assets.html},
   copyright = {Creative Commons Attribution 4.0 International},
@@ -142,6 +145,7 @@
 @Misc{,
   author       = {QGIS},
   title        = {Welcome to the QGIS project!},
+  year         = {2023},
   howpublished = {\url{https://qgis.org/en/site/}},
   note         = {Accessed: 08/2023},
 }
@@ -225,25 +229,29 @@
   url          = {https://www.qt.io/},
 }
 
-@article{advancingDynamicalCores,
-	title={Advancing Dynamical Cores of Oceanic Models across All Scales},
-	url={https://journals.ametsoc.org/view/journals/bams/100/3/bams-d-18-0303.1.xml},
-	journal={Journal of the American Meteorological Society},
-	year={2019}
+@Article{advancingDynamicalCores,
+  author  = {Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie},
+  title   = {Advancing Dynamical Cores of Oceanic Models across All Scales},
+  journal = {Journal of the American Meteorological Society},
+  year    = {2019},
+  doi     = {https://doi.org/10.1175/BAMS-D-18-0303.1},
+  url     = {https://journals.ametsoc.org/view/journals/bams/100/3/bams-d-18-0303.1.xml},
 }
 
-@article{challengesProspects,
-	title={Challenges and Prospects in Ocean Circulation Models},
-	url={https://www.frontiersin.org/articles/10.3389/fmars.2019.00065},
-	journal={Frontiers in Marine Science},
-	year={2019}
+@Article{challengesProspects,
+  author  = {Baylor Fox-Kemper, Alistair Adcroft and others},
+  title   = {Challenges and Prospects in Ocean Circulation Models},
+  journal = {Frontiers in Marine Science},
+  year    = {2019},
+  url     = {https://www.frontiersin.org/articles/10.3389/fmars.2019.00065},
 }
 
-@article{spatioTemporalFeatures,
-	title={Assessing the Spatio-Temporal Features and Mechanisms of Oceanic Models},
-	url={https://www.mdpi.com/2077-1312/11/2/431},
-	journal={MDPI},
-	year={2021}
+@Article{spatioTemporalFeatures,
+  author  = {Yifei Jiang, Weimin Zhang, Xiaojiang Zhang},
+  title   = {Assessing the Spatio-Temporal Features and Mechanisms of Oceanic Models},
+  journal = {MDPI},
+  year    = {2021},
+  url     = {https://www.mdpi.com/2077-1312/11/2/431},
 }
 
 @Misc{Wikipedia2023Linear,

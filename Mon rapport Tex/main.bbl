@@ -5,23 +5,6 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[adv(2019)]{advancingDynamicalCores}
-Advancing dynamical cores of oceanic models across all scales.
-\newblock \emph{Journal of the American Meteorological Society}, 2019.
-\newblock URL
-  \url{https://journals.ametsoc.org/view/journals/bams/100/3/bams-d-18-0303.1.xml}.
-
-\bibitem[cha(2019)]{challengesProspects}
-Challenges and prospects in ocean circulation models.
-\newblock \emph{Frontiers in Marine Science}, 2019.
-\newblock URL
-  \url{https://www.frontiersin.org/articles/10.3389/fmars.2019.00065}.
-
-\bibitem[spa(2021)]{spatioTemporalFeatures}
-Assessing the spatio-temporal features and mechanisms of oceanic models.
-\newblock \emph{MDPI}, 2021.
-\newblock URL \url{https://www.mdpi.com/2077-1312/11/2/431}.
-
 \bibitem[Auclair et~al.(2022)Auclair, Benshila, Bordois, Boutet, Brémond,
   Caillaud, Cambon, Capet, Debreu, Ducousso, Dufois, Dumas, Ethé, Gula,
   Hourdin, Illig, Jullien, Corre, Gac, Gentil, Lemarié, Marchesiello, Mazoyer,
@@ -38,6 +21,14 @@ Francis Auclair, Rachid Benshila, Lucie Bordois, Martial Boutet, Maurice
 \newblock Coastal and regional ocean community model, 2022.
 \newblock URL
   \url{https://gmd.copernicus.org/articles/16/1163/2023/gmd-16-1163-2023-assets.html}.
+\newblock Accessed: 07/2023.
+
+\bibitem[Baylor Fox-Kemper et~al.(2019)]{challengesProspects}
+Alistair~Adcroft Baylor Fox-Kemper et~al.
+\newblock Challenges and prospects in ocean circulation models.
+\newblock \emph{Frontiers in Marine Science}, 2019.
+\newblock URL
+  \url{https://www.frontiersin.org/articles/10.3389/fmars.2019.00065}.
 
 \bibitem[Bellayer(2023)]{bellayersimulation}
 Tino Bellayer.
@@ -107,6 +98,15 @@ R.A. Flather.
 \newblock A tidal model of the northwest european continental shelf.
 \newblock \emph{Memories de la Societe Royale des Sciences de Liege}, 1976.
 
+\bibitem[Florian~Lemarié and Sainte-Marie(2019)]{advancingDynamicalCores}
+Laurent Debreu Knut~Klingbeil Florian~Lemarié, Hans~Burchard and Jacques
+  Sainte-Marie.
+\newblock Advancing dynamical cores of oceanic models across all scales.
+\newblock \emph{Journal of the American Meteorological Society}, 2019.
+\newblock \doi{https://doi.org/10.1175/BAMS-D-18-0303.1}.
+\newblock URL
+  \url{https://journals.ametsoc.org/view/journals/bams/100/3/bams-d-18-0303.1.xml}.
+
 \bibitem[IFREMER(2022)]{croco2022}
 IFREMER.
 \newblock Introduction to ocean modelling with croco, 2022.
@@ -124,6 +124,7 @@ Swen Jullien, Matthieu Caillaud, Rachid Benshila, Lucie Bordois, Gildas Cambon,
 \newblock Croco technical and numerical documentation.
 \newblock 2022.
 \newblock \doi{10.5281/ZENODO.7400758}.
+\newblock URL \url{https://data-croco.ifremer.fr/DOC/model-v1.2.pdf}.
 
 \bibitem[Legrand(2017)]{Legrand}
 T{\'e}rence Legrand.
@@ -228,5 +229,12 @@ Wikipédia.
 \newblock \url{https://en.wikipedia.org/wiki/Spline_interpolation},
   2023{\natexlab{d}}.
 \newblock Accessed: 07/2023.
+
+\bibitem[Yifei~Jiang(2021)]{spatioTemporalFeatures}
+Xiaojiang~Zhang Yifei~Jiang, Weimin~Zhang.
+\newblock Assessing the spatio-temporal features and mechanisms of oceanic
+  models.
+\newblock \emph{MDPI}, 2021.
+\newblock URL \url{https://www.mdpi.com/2077-1312/11/2/431}.
 
 \end{thebibliography}

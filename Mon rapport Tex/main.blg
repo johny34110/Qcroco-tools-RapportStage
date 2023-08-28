@@ -12,63 +12,73 @@ Warning--entry type for "bellayersimulation" isn't style-file defined
 Warning--entry type for "QGIS" isn't style-file defined
 --line 50 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco2022" isn't style-file defined
---line 91 of file ./Biblio/STAGE.bib
+--line 94 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco_forum" isn't style-file defined
---line 174 of file ./Biblio/STAGE.bib
+--line 178 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco_video" isn't style-file defined
---line 181 of file ./Biblio/STAGE.bib
+--line 185 of file ./Biblio/STAGE.bib
 Warning--I didn't find a database entry for "grenier2021modernisation"
 Warning--I didn't find a database entry for "gatien2023using"
 Warning--I didn't find a database entry for "delhasse2020brief"
 Warning--I didn't find a database entry for "levesque2022evaluation"
 Warning--I didn't find a database entry for "lang2019climate"
-Warning--to sort, need author or key in advancingDynamicalCores
-Warning--to sort, need author or key in challengesProspects
-Warning--to sort, need author or key in spatioTemporalFeatures
-Warning--empty author in advancingDynamicalCores
-Warning--empty author in challengesProspects
-Warning--empty author in spatioTemporalFeatures
+Name 1 in "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" has a comma at the end for entry advancingDynamicalCores
+while executing---line 1347 of file plainnat.bst
+Too many commas in name 1 of "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" for entry advancingDynamicalCores
+while executing---line 1347 of file plainnat.bst
+Name 1 in "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" has a comma at the end for entry advancingDynamicalCores
+while executing---line 1347 of file plainnat.bst
+Too many commas in name 1 of "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" for entry advancingDynamicalCores
+while executing---line 1347 of file plainnat.bst
+Name 1 in "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" has a comma at the end for entry advancingDynamicalCores
+while executing---line 1429 of file plainnat.bst
+Too many commas in name 1 of "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" for entry advancingDynamicalCores
+while executing---line 1429 of file plainnat.bst
+Name 1 in "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" has a comma at the end for entry advancingDynamicalCores
+while executing---line 1429 of file plainnat.bst
+Too many commas in name 1 of "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" for entry advancingDynamicalCores
+while executing---line 1429 of file plainnat.bst
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
 You've used 33 entries,
             2773 wiz_defined-function locations,
-            772 strings with 10703 characters,
-and the built_in function-call counts, 13113 in all, are:
-= -- 1118
-> -- 810
-< -- 27
-+ -- 291
-- -- 255
-* -- 941
-:= -- 2050
-add.period$ -- 115
+            778 strings with 10973 characters,
+and the built_in function-call counts, 13421 in all, are:
+= -- 1143
+> -- 861
+< -- 30
++ -- 306
+- -- 270
+* -- 946
+:= -- 2151
+add.period$ -- 121
 call.type$ -- 33
-change.case$ -- 181
+change.case$ -- 185
 chr.to.int$ -- 30
-cite$ -- 77
+cite$ -- 68
 duplicate$ -- 560
-empty$ -- 1086
-format.name$ -- 294
-if$ -- 2726
+empty$ -- 1077
+format.name$ -- 315
+if$ -- 2772
 int.to.chr$ -- 4
 int.to.str$ -- 1
 missing$ -- 16
-newline$ -- 189
-num.names$ -- 120
-pop$ -- 450
+newline$ -- 195
+num.names$ -- 132
+pop$ -- 446
 preamble$ -- 1
-purify$ -- 150
+purify$ -- 154
 quote$ -- 0
-skip$ -- 490
+skip$ -- 494
 stack$ -- 0
-substring$ -- 165
+substring$ -- 162
 swap$ -- 36
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 353
-warning$ -- 8
-while$ -- 97
+warning$ -- 2
+while$ -- 106
 width$ -- 0
-write$ -- 439
-(There were 20 warnings)
+write$ -- 451
+(There were 8 error messages)
