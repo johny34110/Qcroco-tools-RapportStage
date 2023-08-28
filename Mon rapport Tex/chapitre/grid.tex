@@ -376,20 +376,44 @@ Les fichiers Raster sont des représentations matricielles de données spatiales
 	\begin{tikzpicture}
 		\draw[step=1cm,gray,very thin] (0,0) grid (4,4);
 		
+		% Ligne du haut
 		\node at (0.5, 3.5) {15};
 		\node at (1.5, 3.5) {20};
 		\node at (2.5, 3.5) {18};
 		\node at (3.5, 3.5) {22};
 		
-		\node[anchor=east] at (0,0.5) {1};
-		\node[anchor=east] at (0,1.5) {2};
-		\node[anchor=east] at (0,2.5) {3};
-		\node[anchor=east] at (0,3.5) {4};
+		% Deuxième ligne
+		\node at (0.5, 2.5) {10};
+		\node at (1.5, 2.5) {12};
+		\node at (2.5, 2.5) {14};
+		\node at (3.5, 2.5) {16};
 		
-		\node[anchor=north] at (0.5,0) {1};
-		\node[anchor=north] at (1.5,0) {2};
-		\node[anchor=north] at (2.5,0) {3};
-		\node[anchor=north] at (3.5,0) {4};
+		% Troisième ligne
+		\node at (0.5, 1.5) {5};
+		\node at (1.5, 1.5) {7};
+		\node at (2.5, 1.5) {9};
+		\node at (3.5, 1.5) {11};
+		
+				
+		% Ligne du bas
+		\node at (0.5, 0.5) {7};
+		\node at (1.5, 0.5) {8};
+		\node at (2.5, 0.5) {23};
+		\node at (3.5, 0.5) {...};
+		
+
+		
+		% Indices des lignes
+		\node[anchor=east] at (-0.05,0.5) {\vdots };
+		\node[anchor=east] at (0,1.5) {3};
+		\node[anchor=east] at (0,2.5) {2};
+		\node[anchor=east] at (0,3.5) {1};
+		
+		% Indices des colonnes
+		\node[anchor=north] at (0.5,4.5) {1};
+		\node[anchor=north] at (1.5,4.5) {2};
+		\node[anchor=north] at (2.5,4.5) {3};
+		\node[anchor=north] at (3.5,4.4) {...};
 		
 	\end{tikzpicture}
 	\caption{Représentation schématique d'une grille raster avec des données.}
