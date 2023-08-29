@@ -15,7 +15,7 @@ Suite à cette compréhension approfondie de l'algorithme, l'objectif suivant é
 
 Afin d'assurer une compréhension exhaustive du processus de génération des fichiers \og \textit{grid} \fg{}, il est impératif de décomposer et d'analyser chaque composant de l'algorithme initial. Dans cette section, nous nous attarderons sur les détails techniques de chaque étape de l'algorithme. Nous discuterons également des adaptations nécessaires pour garantir une intégration optimale au sein du plugin QCrocoFlow, tout en respectant les spécificités de l'environnement QGIS. Cette démarche méthodique vise à mettre en lumière les mécanismes fondamentaux, ainsi que les améliorations apportées pour assurer une performance optimale et une compatibilité avec les systèmes d'information géographique (SIG). La suite de ce chapitre se consacrera à une exploration rigoureuse des étapes de transformation et d'adaptation des fichiers \og \textit{grid} \fg{}.
 
-\subsubsection{Traitement des Données Utilisateur pour la création d'une grille}
+\subsubsection{Traitement des Données Utilisateur pour la création d'une grille.}
 \label{subsub:gridcreation}
 
 La première étape cruciale dans la création du fichier \og \textit{grid} \fg{} a été de définir précisément quelles sont les données nécessaires à fournir de la part de l'utilisateur. Ces informations brutes sont indispensables car elles définissent les caractéristiques initiales et fondamentales de la grille de calcul. Plus concrètement, l'utilisateur doit fournir :
@@ -86,7 +86,7 @@ Afin d'optimiser l'expérience utilisateur, j'ai intégré une fonctionnalité p
 
 Après avoir soigneusement configuré toutes les données requises, l'utilisateur n'a plus qu'à cliquer sur le bouton \og \textit{Process} \fg{} (Fig. \ref{fig:gridonmap}) pour initier la génération de la grille.
 
-\subsubsection{Processus de Création de la grille}
+\subsubsection{Processus de Création de la grille.}
 
 La création du fichier \og \textit{grid} \fg{} est le fruit d'une combinaison efficace entre le langage Python et les capacités offertes par l'API de QGIS. Dans cette section, je détaille minutieusement la conception et le fonctionnement du script responsable de cette génération.
 
@@ -171,7 +171,7 @@ Après avoir obtenu toutes les coordonnées variables, la dimension exacte de no
 	M, L = Latp.shape
 \end{verbatim}
 
-\subsubsection{Géneration d'un fichier NetCDF de la grille}
+\subsubsection{Géneration d'un fichier NetCDF de la grille.}
 
 \begin{figure}[h]
 	\centering
@@ -191,8 +191,7 @@ La phase suivante du script (Fig.\ref{fig:zone1}), concerne la création d'un fi
 
 Ce fichier est automatiquement créé dans le répertoire de travail que l'utilisateur a préalablement choisi et va servir de fondation solide pour l'intégration des variables générées ultérieurement.
 
-\subsubsection{Calcul de l'Angle entre les Coordonnées Géodésiques et Sphériques avec Intégration du Paramètre de Coriolis}
-
+\subsubsection{Calcul de l'Angle entre les Coordonnées Géodésiques et Sphériques avec Intégration du Paramètre de Coriolis.
 
 \begin{figure}[h]
 	\centering
@@ -264,7 +263,7 @@ Sans une estimation précise du paramètre de Coriolis, les simulations océanog
 
 Avec ces étapes, nous avons généré deux nouvelles variables essentielles~: l'angle de rotation et le paramètre de Coriolis. Ces variables seront intégrées progressivement dans le fichier NetCDF précédemment généré, enrichissant ainsi notre modèle avec des informations cruciales pour des simulations océanographiques précises.
 
-\subsubsection{Interpolation à partir du fichier topographique}
+\subsubsection{Interpolation à partir du fichier topographique.}
 
 Après avoir élaboré les variables initiales de la zone d'étude, nous abordons désormais l'intégration des données topographiques au sein du fichier \og \textit{grid} \fg{}. Ces données, fournies par l'utilisateur via le plugin \textit{QCrocoFlow}, sont essentielles pour définir les caractéristiques physiques du fond marin dans notre modèle, ainsi que le masque qui définit les parties émergées de la zone de simulation.
 
@@ -302,7 +301,7 @@ En fonction de l'extension du fichier topographique fourni, différents scripts 
 
 Dans les sections suivantes, nous détaillerons les spécificités de chaque script en fonction du type de fichier.
 
-\subsubsection{Traitement des fichiers topographiques au format NetCDF}
+\subsubsection{Traitement des fichiers topographiques au format NetCDF.}
 
 \begin{figure}[h]
     \centering
@@ -373,7 +372,7 @@ Enfin, la fonction utilise une interpolation cubique pour estimer les valeurs de
 
 Cette fonction remplie au fur et à mesure les variables du fichier NetCDF précédemment initialisées.A la fin, le fichier \og \textit{grid} \fg{} intègre désormais les données topographiques interpolées fournies par l'utilisateur.
 
-\subsubsection{Traitement des fichiers topographiques au format Raster}
+\subsubsection{Traitement des fichiers topographiques au format Raster.}
 
 \begin{figure}[h]
 	\centering

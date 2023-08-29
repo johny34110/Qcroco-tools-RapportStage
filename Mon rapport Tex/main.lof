@@ -22,24 +22,15 @@
 \contentsline {figure}{\numberline {20}{\ignorespaces Représentation schématique des différents types de coordonnées de la grille utilisés par CROCO: $\psi $, $\rho $, u, et v.\relax }}{26}{figure.caption.23}%
 \contentsline {figure}{\numberline {21}{\ignorespaces Fonction initialisation d'un fichier modèle au format NetCDF.\relax }}{28}{figure.caption.24}%
 \contentsline {figure}{\numberline {22}{\ignorespaces Extrait du script du fichier create\_grid.py pour la création initiale du fichier au format NetCDF.\relax }}{28}{figure.caption.25}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Fonction de calcul de l'angle et intégration du paramètre de Coriolis.\relax }}{29}{figure.caption.26}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Différents Types d'Interpolationsource. {\textit {Source: SciPy Documentation}}\relax }}{30}{figure.caption.27}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Processus de Détection et de Traitement des Extensions de Fichiers Topographiques\relax }}{31}{figure.caption.28}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Structure d'un fichier topographique NetCDF.\relax }}{32}{figure.caption.29}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Interpolation de la topographie : du fichier NetCDF à la grille CROCO\relax }}{33}{figure.caption.31}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Représentation schématique d'une grille raster avec des valeurs sur chaque pixel.\relax }}{34}{figure.caption.33}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Interface de BathyView montrant les fonctionnalités de vérification et de correction des données raster\relax }}{35}{figure.caption.35}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Visualisation du masque généré pour la grille CROCO.\relax }}{37}{figure.caption.38}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Visualisation de la grille CROCO générée, ainsi que du masque correspondant, s'il y en a un\relax }}{38}{figure.caption.39}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Capture d'écran de l'interface QCrocoFlow, section \@FB@og Forcing \@FB@fg \relax {}.\relax }}{41}{figure.caption.41}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Vue d'ensemble de la section \@FB@og Bulk \@FB@fg \relax {} dans l'interface QCrocoflow.\relax }}{45}{figure.caption.50}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Diagramme de flux illustrant le fonctionnement du script de génération des fichiers météo.\relax }}{46}{figure.caption.54}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Dossier de sortie nommé \@FB@og \texttt {SntVast} \@FB@fg \relax {}.\relax }}{47}{figure.caption.55}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Interface QCrocoFlow remplie de paramètres sélectionnés pour la simulation.\relax }}{48}{figure.caption.56}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Paramètres de la grille dans QCrocoFlow avec visualisation de la zone d'étude sur la carte.\relax }}{49}{figure.caption.57}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Aperçu du fichier \texttt {SntVast.grd} généré pour la simulation.\relax }}{49}{figure.caption.58}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Interface QcrocoFlow pour la génération des fichiers de forçage par marées.\relax }}{50}{figure.caption.59}%
-\contentsline {figure}{\numberline {40}{\ignorespaces Aperçu du fichier de forçage \texttt {SntVast\_frc01Jan2016.nc} pour la zone de Saint-Vaast-la-Hougue.\relax }}{50}{figure.caption.60}%
-\contentsline {figure}{\numberline {41}{\ignorespaces Aperçu des dossiers générés après le téléchargement des données ERA5.\relax }}{51}{figure.caption.62}%
-\contentsline {figure}{\numberline {42}{\ignorespaces Interface QCrocoFlow pour la génération des fichiers BULK.\relax }}{52}{figure.caption.64}%
-\contentsline {figure}{\numberline {43}{\ignorespaces Fichiers BULK générés pour la simulation.\relax }}{52}{figure.caption.65}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Capture d'écran de l'interface QCrocoFlow, section \@FB@og Forcing \@FB@fg \relax {}.\relax }}{31}{figure.caption.26}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Vue d'ensemble de la section \@FB@og Bulk \@FB@fg \relax {} dans l'interface QCrocoflow.\relax }}{35}{figure.caption.35}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Diagramme de flux illustrant le fonctionnement du script de génération des fichiers météo.\relax }}{36}{figure.caption.39}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Dossier de sortie nommé \@FB@og \texttt {SntVast} \@FB@fg \relax {}.\relax }}{37}{figure.caption.40}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Interface QCrocoFlow remplie de paramètres sélectionnés pour la simulation.\relax }}{38}{figure.caption.41}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Paramètres de la grille dans QCrocoFlow avec visualisation de la zone d'étude sur la carte.\relax }}{39}{figure.caption.42}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Aperçu du fichier \texttt {SntVast.grd} généré pour la simulation.\relax }}{39}{figure.caption.43}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Interface QcrocoFlow pour la génération des fichiers de forçage par marées.\relax }}{40}{figure.caption.44}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Aperçu du fichier de forçage \texttt {SntVast\_frc01Jan2016.nc} pour la zone de Saint-Vaast-la-Hougue.\relax }}{40}{figure.caption.45}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Aperçu des dossiers générés après le téléchargement des données ERA5.\relax }}{41}{figure.caption.47}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Interface QCrocoFlow pour la génération des fichiers BULK.\relax }}{42}{figure.caption.49}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Fichiers BULK générés pour la simulation.\relax }}{42}{figure.caption.50}%

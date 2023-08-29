@@ -26,6 +26,8 @@
 \fancyhead{}
 \fancyfoot{}
 \fancyfoot[R]{\thepage} % This line adds page numbers
+\usepackage{pdfpages}
+
 
 \fancyhead[L]{\includegraphics[width=0.10\textwidth]{./IMAGES/Logo/LUSAC.png}}
 \fancyhead[R]{\includegraphics[width=0.20\textwidth]{./IMAGES/Logo/INTECH.png}}
@@ -172,8 +174,14 @@
 	\input{chapitre/conclusion}
 	%----------------------------------------------------
 	\newpage
+	\thispagestyle{plain} 
+	\section*{Annexe}
+	\addcontentsline{toc}{section}{Annexe}
+	\input{chapitre/Annexe}
 
-	\section{Bibliographie.}
+		
+	\newpage
+	\section*{Bibliographie.}
 	\bibliographystyle{plainnat}
 %    \bibliographystyle{authordate1}
 	\bibliography{./Biblio/STAGE}

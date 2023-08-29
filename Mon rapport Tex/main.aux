@@ -2,13 +2,10 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
-\global\let\oldcontentsline\contentsline
-\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
-\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -18,6 +15,10 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \providecommand\babel@aux[2]{}
 \@nameuse{bbl@beforestart}
+\catcode `:\active 
+\catcode `;\active 
+\catcode `!\active 
+\catcode `?\active 
 \@writefile{toc}{\acswitchoff }
 \@writefile{lof}{\acswitchoff }
 \@writefile{lot}{\acswitchoff }
@@ -95,7 +96,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Les fichiers \@FB@og  Grid \@FB@fg  \relax {}.}{19}{subsection.4.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Schéma fonctionnel général du script make\_grid.\relax }}{20}{figure.caption.16}\protected@file@percent }
 \newlabel{fig:AlgoGrid01}{{13}{20}{Schéma fonctionnel général du script make\_grid.\relax }{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Traitement des Données Utilisateur pour la création d'une grille}{20}{subsubsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Traitement des Données Utilisateur pour la création d'une grille.}{20}{subsubsection.4.2.1}\protected@file@percent }
 \newlabel{subsub:gridcreation}{{4.2.1}{20}{Traitement des Données Utilisateur pour la création d'une grille}{subsubsection.4.2.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Schéma du processus d'entrée utilisateur pour la génération de la grille\relax }}{21}{figure.caption.17}\protected@file@percent }
 \newlabel{fig:AlgoGrid02}{{14}{21}{Schéma du processus d'entrée utilisateur pour la génération de la grille\relax }{figure.caption.17}{}}
@@ -107,116 +108,82 @@
 \newlabel{fig:Gestioncrs}{{17}{23}{Processus de gestion des CRS dans QGIS pour la création de la grille.\relax }{figure.caption.20}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Interface de Configuration de la Grille et Affichage des Coordonnées\relax }}{24}{figure.caption.21}\protected@file@percent }
 \newlabel{fig:gridonmap}{{18}{24}{Interface de Configuration de la Grille et Affichage des Coordonnées\relax }{figure.caption.21}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Processus de Création de la grille}{25}{subsubsection.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Processus de Création de la grille.}{25}{subsubsection.4.2.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Détail de la structure d'un script\relax }}{26}{figure.caption.22}\protected@file@percent }
 \newlabel{fig:scriptdet}{{19}{26}{Détail de la structure d'un script\relax }{figure.caption.22}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Représentation schématique des différents types de coordonnées de la grille utilisés par CROCO: $\psi $, $\rho $, u, et v.\relax }}{26}{figure.caption.23}\protected@file@percent }
 \newlabel{fig:gridRepresentation}{{20}{26}{Représentation schématique des différents types de coordonnées de la grille utilisés par CROCO: $\psi $, $\rho $, u, et v.\relax }{figure.caption.23}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}Géneration d'un fichier NetCDF de la grille}{28}{subsubsection.4.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}Géneration d'un fichier NetCDF de la grille.}{28}{subsubsection.4.2.3}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Fonction initialisation d'un fichier modèle au format NetCDF.\relax }}{28}{figure.caption.24}\protected@file@percent }
 \newlabel{fig:zone1}{{21}{28}{Fonction initialisation d'un fichier modèle au format NetCDF.\relax }{figure.caption.24}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Extrait du script du fichier create\_grid.py pour la création initiale du fichier au format NetCDF.\relax }}{28}{figure.caption.25}\protected@file@percent }
 \newlabel{fig:AlgoGrid03}{{22}{28}{Extrait du script du fichier create\_grid.py pour la création initiale du fichier au format NetCDF.\relax }{figure.caption.25}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4}Calcul de l'Angle entre les Coordonnées Géodésiques et Sphériques avec Intégration du Paramètre de Coriolis}{29}{subsubsection.4.2.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Fonction de calcul de l'angle et intégration du paramètre de Coriolis.\relax }}{29}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:zone2}{{23}{29}{Fonction de calcul de l'angle et intégration du paramètre de Coriolis.\relax }{figure.caption.26}{}}
-\newlabel{eq:coriolis}{{1}{29}{Calcul de l'Angle entre les Coordonnées Géodésiques et Sphériques avec Intégration du Paramètre de Coriolis}{equation.4.1}{}}
-\citation{Wikipedia2023Linear}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.5}Interpolation à partir du fichier topographique}{30}{subsubsection.4.2.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Différents Types d'Interpolationsource. {\textit  {Source: SciPy Documentation}}\relax }}{30}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:Interpolation}{{24}{30}{Différents Types d'Interpolationsource. {\textit {Source: SciPy Documentation}}\relax }{figure.caption.27}{}}
-\citation{Wikipedia2023Bilinear}
-\citation{Wikipedia2023Bicubic}
-\citation{Wikipedia2023Spline}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Processus de Détection et de Traitement des Extensions de Fichiers Topographiques\relax }}{31}{figure.caption.28}\protected@file@percent }
-\newlabel{fig:UserTOPO}{{25}{31}{Processus de Détection et de Traitement des Extensions de Fichiers Topographiques\relax }{figure.caption.28}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.6}Traitement des fichiers topographiques au format NetCDF}{32}{subsubsection.4.2.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Structure d'un fichier topographique NetCDF.\relax }}{32}{figure.caption.29}\protected@file@percent }
-\newlabel{fig:netcdf_structure}{{26}{32}{Structure d'un fichier topographique NetCDF.\relax }{figure.caption.29}{}}
-\@writefile{toc}{\contentsline {paragraph}{Fonctionnement de \texttt  {Add\_topo\_nc}.\\}{33}{section*.30}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Interpolation de la topographie : du fichier NetCDF à la grille CROCO\relax }}{33}{figure.caption.31}\protected@file@percent }
-\newlabel{fig:interpolationNC}{{27}{33}{Interpolation de la topographie : du fichier NetCDF à la grille CROCO\relax }{figure.caption.31}{}}
-\@writefile{toc}{\contentsline {paragraph}{Détails des étapes successives dans le code de la fonction.}{33}{section*.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.7}Traitement des fichiers topographiques au format Raster}{34}{subsubsection.4.2.7}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Représentation schématique d'une grille raster avec des valeurs sur chaque pixel.\relax }}{34}{figure.caption.33}\protected@file@percent }
-\newlabel{fig:rastergrid}{{28}{34}{Représentation schématique d'une grille raster avec des valeurs sur chaque pixel.\relax }{figure.caption.33}{}}
-\@writefile{toc}{\contentsline {paragraph}{BathyView : Interface de vérification et de correction des données Raster.\\}{34}{section*.34}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Interface de BathyView montrant les fonctionnalités de vérification et de correction des données raster\relax }}{35}{figure.caption.35}\protected@file@percent }
-\newlabel{fig:BathyViewInterface}{{29}{35}{Interface de BathyView montrant les fonctionnalités de vérification et de correction des données raster\relax }{figure.caption.35}{}}
-\@writefile{toc}{\contentsline {paragraph}{Fonctionnement de \texttt  {add\_topo\_Raster}.\\}{36}{section*.36}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Détails des étapes successives dans le code de la fonction.\\}{36}{section*.37}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.8}Génération du masque pour le fichier \texttt  {grid\_croco}.}{37}{subsubsection.4.2.8}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Visualisation du masque généré pour la grille CROCO.\relax }}{37}{figure.caption.38}\protected@file@percent }
-\newlabel{fig:mask_view}{{30}{37}{Visualisation du masque généré pour la grille CROCO.\relax }{figure.caption.38}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.9}Finalisation, exportation et visualisation du fichier.}{38}{subsubsection.4.2.9}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Visualisation de la grille CROCO générée, ainsi que du masque correspondant, s'il y en a un\relax }}{38}{figure.caption.39}\protected@file@percent }
-\newlabel{fig:gridfinal}{{31}{38}{Visualisation de la grille CROCO générée, ainsi que du masque correspondant, s'il y en a un\relax }{figure.caption.39}{}}
-\@writefile{toc}{\contentsline {paragraph}{Conclusion sur la génération du fichier \texttt  {grid\_croco}.\\}{38}{section*.40}\protected@file@percent }
 \citation{egbert2002efficient,erofeeva2010high}
 \citation{ray2012tide}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Les fichiers \@FB@og  Tides \@FB@fg  \relax {}.}{39}{subsection.4.3}\protected@file@percent }
-\newlabel{sub:tides}{{4.3}{39}{Les fichiers \og Tides \fg {}}{subsection.4.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Rôle et importance des fichiers de forçage}{39}{subsubsection.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Origine des données de forçage par la marée~: les harmoniques.}{39}{subsubsection.4.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}Le modèle TPXO9}{39}{subsubsection.4.3.3}\protected@file@percent }
 \citation{stammer2014accuracy}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4}Obtention des données}{40}{subsubsection.4.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5}Intégration dans le plugin QCrocoFlow}{40}{subsubsection.4.3.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Capture d'écran de l'interface QCrocoFlow, section \@FB@og  Forcing \@FB@fg  \relax {}.\relax }}{41}{figure.caption.41}\protected@file@percent }
-\newlabel{fig:qcrocoflow_forcing}{{32}{41}{Capture d'écran de l'interface QCrocoFlow, section \og Forcing \fg {}.\relax }{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.6}Génération du fichier de forçage à partir du modèle TPXO}{41}{subsubsection.4.3.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Paramètres d'entrée~:\\}{41}{section*.42}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Extraction des données de grille.\\}{42}{section*.43}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Définition des chemins de données TPXO.\\}{42}{section*.44}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Lecture des données TPXO.\\}{42}{section*.45}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Calcul des corrections nodales.\\}{42}{section*.46}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Interpolation des données TPXO.\\}{42}{section*.47}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Création du fichier netCDF.\\}{42}{section*.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Les fichiers \@FB@og  Tides \@FB@fg  \relax {}.}{29}{subsection.4.3}\protected@file@percent }
+\newlabel{sub:tides}{{4.3}{29}{Les fichiers \og Tides \fg {}}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Rôle et importance des fichiers de forçage.}{29}{subsubsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Origine des données de forçage par la marée~: les harmoniques.}{29}{subsubsection.4.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}Le modèle TPXO9.}{29}{subsubsection.4.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4}Obtention des données.}{30}{subsubsection.4.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5}Intégration dans le plugin QCrocoFlow.}{30}{subsubsection.4.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.6}Génération du fichier de forçage à partir du modèle TPXO.}{30}{subsubsection.4.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Paramètres d'entrée~:\\}{30}{section*.27}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Capture d'écran de l'interface QCrocoFlow, section \@FB@og  Forcing \@FB@fg  \relax {}.\relax }}{31}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:qcrocoflow_forcing}{{23}{31}{Capture d'écran de l'interface QCrocoFlow, section \og Forcing \fg {}.\relax }{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {paragraph}{Extraction des données de grille.\\}{31}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Définition des chemins de données TPXO.\\}{32}{section*.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Lecture des données TPXO.\\}{32}{section*.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Calcul des corrections nodales.\\}{32}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Interpolation des données TPXO.\\}{32}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Création du fichier netCDF.\\}{32}{section*.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Message de confirmation.\\}{32}{section*.34}\protected@file@percent }
 \citation{grenier2021modernisation,gatien2023using,delhasse2020brief,levesque2022evaluation,lang2019climate}
-\@writefile{toc}{\contentsline {paragraph}{Message de confirmation.\\}{43}{section*.49}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Les fichiers \@FB@og  Bulk \@FB@fg  \relax {}.}{43}{subsection.4.4}\protected@file@percent }
-\newlabel{sub:bulk}{{4.4}{43}{Les fichiers \og Bulk \fg {}}{subsection.4.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Le modèle ERA5}{43}{subsubsection.4.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Accès et récupération des données ERA5}{43}{subsubsection.4.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Données récupérées du modèle ERA5}{43}{subsubsection.4.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4}Implémentation du script dans l'interface QCrocoflow}{44}{subsubsection.4.4.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Vue d'ensemble de la section \@FB@og  Bulk \@FB@fg  \relax {} dans l'interface QCrocoflow.\relax }}{45}{figure.caption.50}\protected@file@percent }
-\newlabel{fig:bulk_interface}{{33}{45}{Vue d'ensemble de la section \og Bulk \fg {} dans l'interface QCrocoflow.\relax }{figure.caption.50}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.5}Fonctionnement du script de génération des fichiers météo}{45}{subsubsection.4.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Récupération des données avec \texttt  {ERA5\_request}\\}{45}{section*.51}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Conversion des données pour CROCO\\}{45}{section*.52}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Interpolation des données sur la grille CROCO\\}{46}{section*.53}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Diagramme de flux illustrant le fonctionnement du script de génération des fichiers météo.\relax }}{46}{figure.caption.54}\protected@file@percent }
-\newlabel{fig:script_flow}{{34}{46}{Diagramme de flux illustrant le fonctionnement du script de génération des fichiers météo.\relax }{figure.caption.54}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Résultats.}{47}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Paramètres utilisateurs de la zone.}{47}{subsection.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces Dossier de sortie nommé \@FB@og  \texttt  {SntVast} \@FB@fg  \relax {}.\relax }}{47}{figure.caption.55}\protected@file@percent }
-\newlabel{fig:chemin_sortie}{{35}{47}{Dossier de sortie nommé \og \texttt {SntVast} \fg {}.\relax }{figure.caption.55}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Choix de la zone d'étude et génération du fichier \@FB@og  \texttt  {grid} \@FB@fg  \relax {}.}{47}{subsection.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces Interface QCrocoFlow remplie de paramètres sélectionnés pour la simulation.\relax }}{48}{figure.caption.56}\protected@file@percent }
-\newlabel{fig:qcroco_param}{{36}{48}{Interface QCrocoFlow remplie de paramètres sélectionnés pour la simulation.\relax }{figure.caption.56}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces Paramètres de la grille dans QCrocoFlow avec visualisation de la zone d'étude sur la carte.\relax }}{49}{figure.caption.57}\protected@file@percent }
-\newlabel{fig:qcroco_grid}{{37}{49}{Paramètres de la grille dans QCrocoFlow avec visualisation de la zone d'étude sur la carte.\relax }{figure.caption.57}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces Aperçu du fichier \texttt  {SntVast.grd} généré pour la simulation.\relax }}{49}{figure.caption.58}\protected@file@percent }
-\newlabel{fig:gdr_croco}{{38}{49}{Aperçu du fichier \texttt {SntVast.grd} généré pour la simulation.\relax }{figure.caption.58}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Génération des fichiers de forçage par marées.}{49}{subsection.5.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces Interface QcrocoFlow pour la génération des fichiers de forçage par marées.\relax }}{50}{figure.caption.59}\protected@file@percent }
-\newlabel{fig:qcroco_forcing}{{39}{50}{Interface QcrocoFlow pour la génération des fichiers de forçage par marées.\relax }{figure.caption.59}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces Aperçu du fichier de forçage \texttt  {SntVast\_frc01Jan2016.nc} pour la zone de Saint-Vaast-la-Hougue.\relax }}{50}{figure.caption.60}\protected@file@percent }
-\newlabel{fig:sntvast_forcing}{{40}{50}{Aperçu du fichier de forçage \texttt {SntVast\_frc01Jan2016.nc} pour la zone de Saint-Vaast-la-Hougue.\relax }{figure.caption.60}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Génération des fichiers météorologiques : BULK.}{51}{subsection.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Étape 1 : Téléchargement des données ERA5.\\}{51}{section*.61}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces Aperçu des dossiers générés après le téléchargement des données ERA5.\relax }}{51}{figure.caption.62}\protected@file@percent }
-\newlabel{fig:bulk_files}{{41}{51}{Aperçu des dossiers générés après le téléchargement des données ERA5.\relax }{figure.caption.62}{}}
-\@writefile{toc}{\contentsline {paragraph}{Étape 2 : Génération des fichiers BULK.\\}{51}{section*.63}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces Interface QCrocoFlow pour la génération des fichiers BULK.\relax }}{52}{figure.caption.64}\protected@file@percent }
-\newlabel{fig:qcroco_bulk}{{42}{52}{Interface QCrocoFlow pour la génération des fichiers BULK.\relax }{figure.caption.64}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {43}{\ignorespaces Fichiers BULK générés pour la simulation.\relax }}{52}{figure.caption.65}\protected@file@percent }
-\newlabel{fig:bulk_generated}{{43}{52}{Fichiers BULK générés pour la simulation.\relax }{figure.caption.65}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Conclusion de la configuration CROCO pour Saint-Vast-la-Hougue.}{53}{subsection.5.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion et perspectives.}{54}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Conclusion}{54}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Future Prospects}{54}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Les fichiers \@FB@og  Bulk \@FB@fg  \relax {}.}{33}{subsection.4.4}\protected@file@percent }
+\newlabel{sub:bulk}{{4.4}{33}{Les fichiers \og Bulk \fg {}}{subsection.4.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Le modèle ERA5}{33}{subsubsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Accès et récupération des données ERA5}{33}{subsubsection.4.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Données récupérées du modèle ERA5}{33}{subsubsection.4.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4}Implémentation du script dans l'interface QCrocoflow}{34}{subsubsection.4.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Vue d'ensemble de la section \@FB@og  Bulk \@FB@fg  \relax {} dans l'interface QCrocoflow.\relax }}{35}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:bulk_interface}{{24}{35}{Vue d'ensemble de la section \og Bulk \fg {} dans l'interface QCrocoflow.\relax }{figure.caption.35}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.5}Fonctionnement du script de génération des fichiers météo}{35}{subsubsection.4.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Récupération des données avec \texttt  {ERA5\_request}\\}{35}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Conversion des données pour CROCO\\}{35}{section*.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Interpolation des données sur la grille CROCO\\}{36}{section*.38}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Diagramme de flux illustrant le fonctionnement du script de génération des fichiers météo.\relax }}{36}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:script_flow}{{25}{36}{Diagramme de flux illustrant le fonctionnement du script de génération des fichiers météo.\relax }{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Résultats.}{37}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Paramètres utilisateurs de la zone.}{37}{subsection.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Dossier de sortie nommé \@FB@og  \texttt  {SntVast} \@FB@fg  \relax {}.\relax }}{37}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:chemin_sortie}{{26}{37}{Dossier de sortie nommé \og \texttt {SntVast} \fg {}.\relax }{figure.caption.40}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Choix de la zone d'étude et génération du fichier \@FB@og  \texttt  {grid} \@FB@fg  \relax {}.}{37}{subsection.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Interface QCrocoFlow remplie de paramètres sélectionnés pour la simulation.\relax }}{38}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:qcroco_param}{{27}{38}{Interface QCrocoFlow remplie de paramètres sélectionnés pour la simulation.\relax }{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Paramètres de la grille dans QCrocoFlow avec visualisation de la zone d'étude sur la carte.\relax }}{39}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:qcroco_grid}{{28}{39}{Paramètres de la grille dans QCrocoFlow avec visualisation de la zone d'étude sur la carte.\relax }{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Aperçu du fichier \texttt  {SntVast.grd} généré pour la simulation.\relax }}{39}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:gdr_croco}{{29}{39}{Aperçu du fichier \texttt {SntVast.grd} généré pour la simulation.\relax }{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Génération des fichiers de forçage par marées.}{39}{subsection.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Interface QcrocoFlow pour la génération des fichiers de forçage par marées.\relax }}{40}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:qcroco_forcing}{{30}{40}{Interface QcrocoFlow pour la génération des fichiers de forçage par marées.\relax }{figure.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Aperçu du fichier de forçage \texttt  {SntVast\_frc01Jan2016.nc} pour la zone de Saint-Vaast-la-Hougue.\relax }}{40}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:sntvast_forcing}{{31}{40}{Aperçu du fichier de forçage \texttt {SntVast\_frc01Jan2016.nc} pour la zone de Saint-Vaast-la-Hougue.\relax }{figure.caption.45}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Génération des fichiers météorologiques : BULK.}{41}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Étape 1 : Téléchargement des données ERA5.\\}{41}{section*.46}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Aperçu des dossiers générés après le téléchargement des données ERA5.\relax }}{41}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:bulk_files}{{32}{41}{Aperçu des dossiers générés après le téléchargement des données ERA5.\relax }{figure.caption.47}{}}
+\@writefile{toc}{\contentsline {paragraph}{Étape 2 : Génération des fichiers BULK.\\}{41}{section*.48}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Interface QCrocoFlow pour la génération des fichiers BULK.\relax }}{42}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:qcroco_bulk}{{33}{42}{Interface QCrocoFlow pour la génération des fichiers BULK.\relax }{figure.caption.49}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Fichiers BULK générés pour la simulation.\relax }}{42}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:bulk_generated}{{34}{42}{Fichiers BULK générés pour la simulation.\relax }{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Conclusion de la configuration CROCO pour Saint-Vast-la-Hougue.}{43}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion et perspectives.}{44}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Conclusion}{44}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Future Prospects}{44}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Annexe}{45}{section*.51}\protected@file@percent }
 \bibstyle{plainnat}
 \bibdata{./Biblio/STAGE}
 \bibcite{croco_soft}{{1}{2022}{{Auclair et~al.}}{{Auclair, Benshila, Bordois, Boutet, Brémond, Caillaud, Cambon, Capet, Debreu, Ducousso, Dufois, Dumas, Ethé, Gula, Hourdin, Illig, Jullien, Corre, Gac, Gentil, Lemarié, Marchesiello, Mazoyer, Morvan, Nguyen, Penven, Person, Pianezze, Pous, Renault, Roblou, Sepulveda, and Theetten}}}
@@ -233,7 +200,6 @@
 \bibcite{ERA5}{{12}{2023}{{ERA5}}{{}}}
 \bibcite{erofeeva2010high}{{13}{2010}{{Erofeeva and Egbert}}{{}}}
 \bibcite{flather1976}{{14}{1976}{{Flather}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Bibliographie.}{55}{section.7}\protected@file@percent }
 \bibcite{advancingDynamicalCores}{{15}{2019}{{Florian~Lemarié and Sainte-Marie}}{{}}}
 \bibcite{gatien2023using}{{16}{2023}{{Gatien et~al.}}{{Gatien, Arsenault, Martel, et~al.}}}
 \bibcite{grenier2021modernisation}{{17}{2021}{{Grenier}}{{}}}
@@ -259,8 +225,4 @@
 \bibcite{Wikipedia2023Spline}{{37}{2023{d}}{{Wikipédia}}{{}}}
 \bibcite{spatioTemporalFeatures}{{38}{2021}{{Yifei~Jiang}}{{}}}
 \ACRO{total-barriers}{1}
-\ACRO{usage}{}
-\ACRO{pages}{}
-\ACRO{barriers}{}
-\ACRO{readaux}
-\gdef \@abspage@last{66}
+\gdef \@abspage@last{58}
