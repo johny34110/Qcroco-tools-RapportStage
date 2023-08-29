@@ -17,65 +17,49 @@ Warning--entry type for "croco_forum" isn't style-file defined
 --line 178 of file ./Biblio/STAGE.bib
 Warning--entry type for "croco_video" isn't style-file defined
 --line 185 of file ./Biblio/STAGE.bib
-Name 1 in "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" has a comma at the end for entry advancingDynamicalCores
-while executing---line 1347 of file plainnat.bst
-Too many commas in name 1 of "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" for entry advancingDynamicalCores
-while executing---line 1347 of file plainnat.bst
-Name 1 in "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" has a comma at the end for entry advancingDynamicalCores
-while executing---line 1347 of file plainnat.bst
-Too many commas in name 1 of "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" for entry advancingDynamicalCores
-while executing---line 1347 of file plainnat.bst
-Name 1 in "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" has a comma at the end for entry advancingDynamicalCores
-while executing---line 1429 of file plainnat.bst
-Too many commas in name 1 of "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" for entry advancingDynamicalCores
-while executing---line 1429 of file plainnat.bst
-Name 1 in "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" has a comma at the end for entry advancingDynamicalCores
-while executing---line 1429 of file plainnat.bst
-Too many commas in name 1 of "Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie" for entry advancingDynamicalCores
-while executing---line 1429 of file plainnat.bst
 Warning--empty journal in grenier2021modernisation
 Warning--empty journal in croco_doc
 Warning--empty journal in Legrand
 Warning--empty journal in levesque2022evaluation
-You've used 38 entries,
+You've used 34 entries,
             2773 wiz_defined-function locations,
-            792 strings with 11759 characters,
-and the built_in function-call counts, 15349 in all, are:
-= -- 1297
-> -- 985
-< -- 33
-+ -- 350
-- -- 309
-* -- 1080
-:= -- 2466
-add.period$ -- 136
-call.type$ -- 38
-change.case$ -- 211
-chr.to.int$ -- 35
-cite$ -- 80
-duplicate$ -- 661
-empty$ -- 1239
-format.name$ -- 359
-if$ -- 3166
-int.to.chr$ -- 4
+            775 strings with 10967 characters,
+and the built_in function-call counts, 14461 in all, are:
+= -- 1206
+> -- 1003
+< -- 26
++ -- 349
+- -- 315
+* -- 1076
+:= -- 2334
+add.period$ -- 120
+call.type$ -- 34
+change.case$ -- 201
+chr.to.int$ -- 34
+cite$ -- 72
+duplicate$ -- 604
+empty$ -- 1114
+format.name$ -- 360
+if$ -- 2963
+int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 21
-newline$ -- 220
-num.names$ -- 152
-pop$ -- 509
+newline$ -- 196
+num.names$ -- 136
+pop$ -- 470
 preamble$ -- 1
-purify$ -- 175
+purify$ -- 169
 quote$ -- 0
-skip$ -- 567
+skip$ -- 529
 stack$ -- 0
-substring$ -- 172
-swap$ -- 40
+substring$ -- 164
+swap$ -- 32
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 408
+type$ -- 364
 warning$ -- 4
-while$ -- 121
+while$ -- 109
 width$ -- 0
-write$ -- 509
-(There were 8 error messages)
+write$ -- 453
+(There were 11 warnings)

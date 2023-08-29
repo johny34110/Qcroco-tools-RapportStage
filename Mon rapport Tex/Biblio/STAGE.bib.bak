@@ -37,7 +37,7 @@
 }
 
 @Article{pianezze2018new,
-  author    = {Pianezze, Joris and Barthe, Christelle and Bielli, Soline and Tulet, Pierre and Jullien, Swen and Cambon, Gildas and Bousquet, Olivier and Claeys, Marine and Cordier, Emmanuel},
+  author    = {Pianezze, J. and Barthe, C. and Bielli, S. and Tulet, P. and Jullien, S. and Cambon, G. and Bousquet, O. and Claeys, M. and Cordier, E.},
   title     = {A new coupled ocean-waves-atmosphere model designed for tropical storm studies: Example of tropical cyclone Bejisa (2013--2014) in the South-West Indian Ocean},
   journal   = {Journal of Advances in Modeling Earth Systems},
   year      = {2018},
@@ -58,27 +58,28 @@
 }
 
 @Article{Legrand,
-  author = {Legrand, T{\'e}rence},
-  date   = {2017-04-27},
+  author = {Legrand, T.},
   title  = {Projet de mod{\'e}lisation de la circulation oc{\'e}anique r{\'e}gionale},
+  year   = {2017},
+  date   = {2017-04-27},
   url    = {https://people.mio.osupytheas.fr/~doglioli/Legrand_rapportOPB205.pdf},
   groups = {john:6},
-  year   = {2017},
 }
 
 @Article{croco_doc,
-  author    = {Jullien, Swen and Caillaud, Matthieu and Benshila, Rachid and Bordois, Lucie and Cambon, Gildas and Dumas, Franck and Gentil, Sylvie Le and Lemarié, Florian and Marchesiello, Patrick and Theetten, Sébastien and Dufois, François and Corre, Matthieu Le and Morvan, Guillaume and {Solene Le Gac} and Gula, Jonathan and Pianezze, Joris},
+  author    = {Jullien, S. and Caillaud, M. and Benshila, R. and Bordois, L. and Cambon, G.s and Dumas, F. and Gentil, S. and Lemarié, F. and Marchesiello, P. and Theetten, S. and Dufois, F. and Corre, M. and Morvan, G. and Gula, J. and Pianezze, J.},
   title     = {CROCO Technical and Numerical Documentation},
   year      = {2022},
   language  = {en},
   doi       = {10.5281/ZENODO.7400758},
+  url       = {https://data-croco.ifremer.fr/DOC/model-v1.2.pdf},
   copyright = {Creative Commons Attribution 4.0 International},
   keywords  = {ocean modeling},
   publisher = {Zenodo},
 }
 
 @Misc{croco_soft,
-  author    = {Auclair, Francis and Benshila, Rachid and Bordois, Lucie and Boutet, Martial and Brémond, Maurice and Caillaud, Matthieu and Cambon, Gildas and Capet, Xavier and Debreu, Laurent and Ducousso, Nicolas and Dufois, François and Dumas, Franck and Ethé, Christian and Gula, Jonathan and Hourdin, Christophe and Illig, Serena and Jullien, Swen and Corre, Matthieu Le and Gac, Solène Le and Gentil, Sylvie Le and Lemarié, Florian and Marchesiello, Patrick and Mazoyer, Camille and Morvan, Guillaume and Nguyen, Cyril and Penven, Pierrick and Person, Renaud and Pianezze, Joris and Pous, Stéphane and Renault, Lionel and Roblou, Laurent and Sepulveda, Andres and Theetten, Sebastien},
+  author    = {Auclair, F. and Benshila, R. and Bordois, L. and Boutet, M. and Brémond, M. and Caillaud, M. and Cambon, G. and Capet, X. and Debreu, L. and Ducousso, N. and Dufois, F. and Dumas, F. and Ethé, C. and Gula, J. and Hourdin, C. and Illig, S. and Jullien, S. and Le Corre, M. and Le Gac, S. and Le Gentil, S. and Lemarié, F. and Marchesiello, P. and Mazoyer, C. and Morvan, G. and Nguyen, C. and Penven, P. and Person, R. and Pianezze, J. and Pous, S. and Renault, L. and Roblou, L. and Sepulveda, A. and Theetten, S.},
   editor    = {Croco},
   title     = {Coastal and Regional Ocean COmmunity model},
   year      = {2022},
@@ -99,7 +100,7 @@
 }
 
 @Article{Tide,
-  author    = {Lionel Renault and Patrick Marchesiello},
+  author    = {Renault, L. and Marchesiello, P.},
   title     = {Ocean tides can drag the atmosphere and cause tidal winds over broad continental shelves},
   journal   = {Communications Earth E Environment},
   year      = {2022},
@@ -118,7 +119,7 @@
 }
 
 @Misc{noaa2023,
-  author = {{National Oceanic and Atmospheric Administration}},
+  author = {National Oceanic and Atmospheric Administration},
   title  = {About Harmonic Constituents},
   year   = {2023},
   note   = {Accessed: 07/2023},
@@ -134,7 +135,7 @@
 }
 
 @Misc{Donoso2022,
-  author = {David Donoso},
+  author = {Donoso, D.},
   title  = {ERA5-request-to-CROCO-model},
   year   = {2022},
   note   = {Accessed: 08/2023},
@@ -189,14 +190,14 @@
 }
 
 @Book{bjerknes1970,
-  author    = {John Doe},
+  author    = {Doe, J.},
   title     = {Early Meteorological Work of Vilhelm Bjerknes},
   year      = {1970},
   publisher = {Meteorological History Press},
 }
 
 @Book{richardson1922,
-  author    = {Lewis Fry Richardson},
+  author    = {Richardson, L. F.},
   title     = {Weather Prediction by Numerical Process},
   year      = {1922},
   publisher = {Cambridge University Press},
@@ -229,15 +230,16 @@
 }
 
 @Article{advancingDynamicalCores,
-  author  = {Florian Lemarié, Hans Burchard, Laurent Debreu, Knut Klingbeil, and Jacques Sainte-Marie},
+  author  = {Lemarié, F. and Burchard, H. and Debreu, L. and Klingbeil, K. and Sainte-Marie, J.},
   title   = {Advancing Dynamical Cores of Oceanic Models across All Scales},
   journal = {Journal of the American Meteorological Society},
   year    = {2019},
+  doi     = {https://doi.org/10.1175/BAMS-D-18-0303.1},
   url     = {https://journals.ametsoc.org/view/journals/bams/100/3/bams-d-18-0303.1.xml},
 }
 
 @Article{challengesProspects,
-  author  = {Baylor Fox-Kemper, Alistair Adcroft and others},
+  author  = {Fox-Kemper, B. and Adcroft, A. and others},
   title   = {Challenges and Prospects in Ocean Circulation Models},
   journal = {Frontiers in Marine Science},
   year    = {2019},
@@ -245,7 +247,7 @@
 }
 
 @Article{spatioTemporalFeatures,
-  author  = {Yifei Jiang, Weimin Zhang, Xiaojiang Zhang},
+  author  = {Jiang, Y. and Zhang, W. and Zhang, X.},
   title   = {Assessing the Spatio-Temporal Features and Mechanisms of Oceanic Models},
   journal = {MDPI},
   year    = {2021},
@@ -284,47 +286,80 @@
   note         = {Accessed: 07/2023},
 }
 
-@article{egbert2002efficient,
-	title={Efficient inverse modeling of barotropic ocean tides},
-	author={Egbert, Gary D and Erofeeva, Svetlana Y},
-	journal={Journal of Atmospheric and Oceanic Technology},
-	volume={19},
-	number={2},
-	pages={183--204},
-	year={2002},
-	publisher={American Meteorological Society}
+@Article{egbert2002efficient,
+  author    = {Egbert, G. D. and Erofeeva, S. Y.},
+  title     = {Efficient inverse modeling of barotropic ocean tides},
+  journal   = {Journal of Atmospheric and Oceanic Technology},
+  year      = {2002},
+  volume    = {19},
+  number    = {2},
+  pages     = {183--204},
+  publisher = {American Meteorological Society},
 }
 
-@article{erofeeva2010high,
-	title={High-resolution harmonic analysis based on 17 years of TOPEX/Poseidon altimetry},
-	author={Erofeeva, Svetlana Y and Egbert, Gary D},
-	journal={Journal of Geophysical Research: Oceans},
-	volume={115},
-	number={C12},
-	year={2010},
-	publisher={Wiley Online Library}
+@Article{erofeeva2010high,
+  author    = {Erofeeva, S. Y. and Egbert, G. D.},
+  title     = {High-resolution harmonic analysis based on 17 years of TOPEX/Poseidon altimetry},
+  journal   = {Journal of Geophysical Research: Oceans},
+  year      = {2010},
+  volume    = {115},
+  number    = {C12},
+  publisher = {Wiley Online Library},
 }
 
-@article{ray2012tide,
-	title={Tide prediction at ungauged locations using the TPXO tide model},
-	author={Ray, Richard D and Egbert, Gary D},
-	journal={Journal of Atmospheric and Oceanic Technology},
-	volume={29},
-	number={4},
-	pages={514--522},
-	year={2012},
-	publisher={American Meteorological Society}
+@Article{ray2012tide,
+  author    = {Ray, R. D. and Egbert, G. D.},
+  title     = {Tide prediction at ungauged locations using the TPXO tide model},
+  journal   = {Journal of Atmospheric and Oceanic Technology},
+  year      = {2012},
+  volume    = {29},
+  number    = {4},
+  pages     = {514--522},
+  publisher = {American Meteorological Society},
 }
 
-@article{stammer2014accuracy,
-	title={Accuracy assessment of global barotropic ocean tide models},
-	author={Stammer, Detlef and others},
-	journal={Reviews of Geophysics},
-	volume={52},
-	number={3},
-	pages={243--282},
-	year={2014},
-	publisher={Wiley Online Library}
+@Article{stammer2014accuracy,
+  author    = {Stammer, D. and others},
+  title     = {Accuracy assessment of global barotropic ocean tide models},
+  journal   = {Reviews of Geophysics},
+  year      = {2014},
+  volume    = {52},
+  number    = {3},
+  pages     = {243--282},
+  publisher = {Wiley Online Library},
+}
+
+@Article{grenier2021modernisation,
+  author = {Grenier, D.},
+  title  = {Modernisation des données de réanalyse pour WEST et impact sur le potentiel éolien analysé: implantation des réanalyses ERA5},
+  year   = {2021},
+}
+
+@Article{gatien2023using,
+  author  = {Gatien, P. and Arsenault, R. and Martel, J.L. and others},
+  title   = {Using the ERA5 and ERA5-Land reanalysis datasets for river water temperature modelling in a data-scarce region},
+  journal = {Water Resources Journal},
+  year    = {2023},
+}
+
+@Article{delhasse2020brief,
+  author  = {Delhasse, A. and Kittel, C. and Amory, C. and Hofer, S. and Van As, D. and others},
+  title   = {Brief communication: Evaluation of the near-surface climate in ERA5 over the Greenland Ice Sheet},
+  journal = {The Cryosphere},
+  year    = {2020},
+}
+
+@Article{levesque2022evaluation,
+  author = {Levesque, G.},
+  title  = {Évaluation de l'utilisation des données des réanalyses ERA5 et ERA5-Land pour la modélisation de l'évapotranspiration},
+  year   = {2022},
+}
+
+@InProceedings{lang2019climate,
+  author    = {Lang, C.},
+  title     = {1979-2018 Climate and Surface Mass Balance of Svalbard with the Regional Climate Model MAR Forced by ERA-5},
+  booktitle = {AGU Fall Meeting Abstracts},
+  year      = {2019},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
